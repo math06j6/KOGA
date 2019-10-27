@@ -689,19 +689,22 @@ footer .tider ul {
 7. ANIMATIONER - SLUT
 \*------------------------------------*/
 
-/*Hover animation #Portfolio*/
+/*Hover animation*/
 
+.menu_wrapper li > a.underline,
 footer .find > a.underline,
 footer li > a.underline {
     position: relative;
     text-decoration: none;
 }
 
+.menu_wrapper li > a.underline:hover,
 footer .find > a.underline:hover,
 footer li > a.underline:hover {
     color: var(--colorOne);
 }
 
+.menu_wrapper li > a.underline:before,
 footer .find > a.underline:before,
 footer li > a.underline:before {
     content: "";
@@ -716,6 +719,7 @@ footer li > a.underline:before {
     transition: all 0.3s ease-in-out 0s;
 }
 
+.menu_wrapper li > a.underline:hover:before,
 footer .find > a.underline:hover:before,
 footer li > a.underline:hover:before {
     visibility: visible;
@@ -723,7 +727,7 @@ footer li > a.underline:hover:before {
 
 }
 
-/* Hover Animation slut*/
+/* Hover Animation - SLUT*/
 
 /*------------------------------------*\
 7. ANIMATIONER - SLUT
@@ -853,6 +857,20 @@ footer li > a.underline:hover:before {
     .searchButton:hover {
         filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
     }
+
+
+
+    /*Hover Animationer -> Header Menu */
+
+    .menu_wrapper li > a.underline:hover {
+        color: var(--colorFive);
+    }
+
+    .menu_wrapper li > a.underline:before {
+        background-color: var(--colorFive);
+    }
+
+    /*Hover Animationer -> Header Menu  - SLUT*/
 
 }
 
