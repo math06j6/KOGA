@@ -1,0 +1,832 @@
+/*------------------------------------*\
+****************************************
+
+
+INDHOLDSFORTEGNELSE:
+********************
+
+1: VARIABLER
+2. LAYOUT
+3. TYPOGRAFI
+4. HEADER
+5. FOOTER
+6. KNAPPER
+7. STYLING AF SPECIFIKKE SIDER
+    7.1 FORSIDE
+    7.2 ???
+7.2 Huskeliste - interaktion
+8. MEDIA QUERIES
+
+
+****************************************
+\*------------------------------------*/
+
+/*------------------------------------*\
+1: VARIABLER
+\*------------------------------------*/
+
+:root {
+
+    /* Nøjagtig de samme farvekoder som anvendes på https://www.sikkertrafik.dk/ */
+    --colorOne: #fff;
+
+    --colorTwo: #EEEFEF;
+    --colorThree: #656D73;
+    --colorFour: #DCDCE5;
+    --colorFive: #0E7DC7;
+    --colorSix: #FF8700;
+    --colorSeven: #E75F41;
+
+
+
+
+    --colorEight: #B7D8EE;
+    --colorNine: #27333B;
+    --colorTen: #6E7D87;
+
+
+
+    --colorTwelve: rgba(0, 0, 0, 0.7);
+    --colorTwelve: rgba(0, 0, 0, 0.7);
+
+
+    --colorXXX: #1a1a1a;
+}
+
+
+
+/*------------------------------------*\
+1. VARIABLER - SLUT
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+2. LAYOUT
+\*------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--colorTwo);
+    color: var(--colorThree);
+    overflow-wrap: break-word;
+    hyphens: auto;
+    font-family: Arial, Verdana, Sans-Serif;
+}
+
+main {}
+
+img {
+    width: 100%;
+    height: auto;
+
+}
+
+ul {
+    list-style: none;
+}
+
+/*------------------------------------*\
+2. LAYOUT - SLUT
+\*------------------------------------*/
+
+/*------------------------------------*\
+2. LAYOUT - SLUT
+\*------------------------------------*/
+
+/*------------------------------------*\
+3. TYPOGRAFI
+\*------------------------------------*/
+
+/* @font-face */
+
+@font-face {
+    font-family: 'safety_bold';
+    src: url('') format('woff2'),
+        url('') format('woff');
+    font-weight: normal;
+    font-style: normal
+}
+
+
+/* @font-face Slut */
+
+h1 {
+    font-family: ;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 100;
+
+
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 1rem 0;
+}
+
+h4 {}
+
+p {
+    font-family: 'Open Sans', Helvetica, Arial, Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 650px;
+    padding: 1rem 0;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+figure {
+    padding: 1rem 0;
+}
+
+section {
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+.section_header {
+    margin: 0 auto;
+    max-width: 1400px;
+    /*    padding-bottom: 1rem;*/
+    padding: 1rem 0;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.col_left {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0 1rem;
+
+}
+
+.col_right {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0 1rem;
+}
+
+button {
+    cursor: pointer;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+/*------------------------------------*\
+3. TYPOGRAFI - SLUT
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+4. HEADER
+\*------------------------------------*/
+
+.site_header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.home {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.menuTop {
+    background-color: var(--colorFive);
+
+
+}
+
+.menu_bottom {
+    background-color: var(--colorThree);
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+
+/*MENUKNAP*/
+.menuknap {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--colorOne);
+    padding: 0 1rem;
+}
+
+
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: var(--colorOne);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.menuknap:hover .bar1,
+.menuknap:hover .bar2,
+.menuknap:hover .bar3 {
+    background-color: white;
+}
+
+/* Roterer den fÃ¸rste bar */
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+/* Fjerner den anden bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Roterer den anden bar */
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/*MENUKNAP*/
+
+.menu_wrapper {
+    width: 100%;
+}
+
+.menu_wrapper ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+
+}
+
+.menu_wrapper li {
+    font-size: 1rem;
+    cursor: pointer;
+    /*    margin: auto 0;*/
+    padding: 21px;
+    text-align: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+
+
+}
+
+.menu_wrapper li a {
+    font-size: 1rem;
+    text-align: center;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.menu_wrapper li:hover,
+.menu_wrapper li:active {
+    color: var(--colorFive);
+}
+
+li.menu_ikon {
+    padding: 0;
+}
+
+/* logo */
+
+
+.logo-container {
+    cursor: pointer;
+    height: 60px;
+    padding: 0 2rem;
+    /*    height: 100%;*/
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: var(--colorFive);
+}
+
+.logo-container svg {
+    height: 34px;
+    width: 180px;
+    fill: #fff;
+    margin: auto 0;
+}
+
+.logo-container:hover svg {
+    /*    fill: #3f0;*/
+}
+
+
+
+
+.nyt_logo {
+    /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
+    background-image: url("files/logo.svg");
+    display: inline-block;
+    padding: 10px;
+    width: 100px;
+    height: 100%;
+    margin: auto 0;
+    background-position: center;
+    background-size: contain;
+    /*Vi bruger filter til at vælge hvid som farve*/
+    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
+    background-position: center;
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+}
+
+a.hjem:hover .nyt_logo,
+a.hjem:active .nyt_logo {
+    /*SVG-filen skifter vores farve ved hover*/
+    filter: invert(86%) sepia(14%) saturate(497%) hue-rotate(165deg) brightness(96%) contrast(94%);
+}
+
+/* logo - slut */
+
+/* Styling af link i navigations bar */
+a.hjem {
+    color: var(--colorOne);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+    display: flex;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    /*    flex-direction: column;*/
+}
+
+a.hjem p {
+    font-family: 'Open Sans', Helvetica, Arial, Roboto, sans-serif;
+    padding: 0 0.5rem;
+    margin: auto 0;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+a.hjem:hover p,
+a.hjem:active p {
+    color: var(--colorEight);
+}
+
+.searchButton {
+    background-image: url(files/search.svg);
+    display: inline-block;
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    background-position: center;
+    background-size: contain;
+    filter: invert(98%) sepia(24%) saturate(207%) hue-rotate(133deg) brightness(120%) contrast(100%);
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    filter: invert(98%) sepia(24%) saturate(207%) hue-rotate(133deg) brightness(120%) contrast(100%);
+}
+
+/*------------------------------------*\
+4. HEADER - SLUT
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+5. FOOTER
+\*------------------------------------*/
+
+footer {
+    background: var(--colorFive);
+    color: var(--colorEight);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.footer_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+a.github_link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: auto;
+    padding: 0 1rem;
+}
+
+.social .fa {
+    font-size: 24px;
+    color: var(--colorEight);
+    padding: 1rem;
+    cursor: pointer;
+
+}
+
+.social .fa:hover {
+    color: white;
+
+}
+
+footer .servicemenu,
+footer address,
+social,
+.footerCykler {
+    display: flex;
+}
+
+footer address,
+.footerCykler {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+footer address,
+.footerCykler {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 2rem;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer address ul {
+    padding-bottom: 1rem;
+}
+
+.footerCykler li {
+    cursor: pointer;
+}
+
+.servicemenu {
+    flex-grow: 1;
+    flex-basis: 300px;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.find {
+    flex-grow: 1;
+    flex-basis: 300px;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.find a {
+    color: var(--colorOne);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: .3s;
+    transition: .3s;
+    /*    padding: 0.5rem 0;*/
+}
+
+.find a:hover {
+    color: white;
+}
+
+a.map {
+    padding: 0 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+footer ul {}
+
+footer li,
+footer li a {
+    color: var(--colorEight);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer li a {
+    text-decoration: none;
+}
+
+footer span.navn {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.aabningstider,
+footer .footerCykler ul :first-child,
+footer .centerLokalitet :first-child {
+    color: var(--colorOne);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.aabningstider {
+    padding: 0;
+}
+
+.overblik {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+footer .tider {
+    padding: 0 2rem;
+}
+
+footer .dage ul,
+footer .tider ul {
+    padding: 0;
+}
+
+
+/*------------------------------------*\
+5. FOOTER - SLUT
+\*------------------------------------*/
+
+/*------------------------------------*\
+6. KNAPPER
+\*------------------------------------*/
+
+/* Knap: Tilbage til toppen */
+.tilbage {
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+.top_link {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.top_link a {
+    padding: 1rem;
+    margin-left: auto;
+    text-decoration: none;
+    font-family: ;
+    display: block;
+}
+
+.top_link h4 {
+    font-size: 2rem;
+    transition: all 0.25s ease 0s;
+    color: var(--colorEight);
+}
+
+.top_link h4:hover {
+    color: var(--colorThree);
+
+}
+
+.arrowUp {
+    background-image: url(files/arrowUp.svg);
+    display: inline-block;
+    padding: 30px;
+    width: 40px;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    filter: invert(44%) sepia(6%) saturate(553%) hue-rotate(163deg) brightness(94%) contrast(94%);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .3s;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.arrowUp:hover {
+    filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
+}
+
+/* Knap: Tilbage til toppen SLUT*/
+
+/*------------------------------------*\
+6. KNAPPER - SLUT
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+7. STYLING AF SPECIFIKKE SIDER
+\*------------------------------------*/
+
+
+
+
+/*------------------------------------*\
+7.1 FORSIDE
+\*------------------------------------*/
+
+
+.video_wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+#youtubeVideo {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*------------------------------------*\
+7.1 FORSIDE - SLUT
+\*------------------------------------*/
+
+/*------------------------------------*\
+7.2
+\*------------------------------------*/
+
+/*------------------------------------*\
+7.2 - SLUT
+\*------------------------------------*/
+
+/*------------------------------------*\
+7. STYLING AF SPECIFIKKE SIDER  - SLUT
+\*------------------------------------*/
+
+/*------------------------------------*\
+8: MEDIA QUERIES
+\*------------------------------------*/
+
+/*------------------------------------*\
+8: MEDIA QUERIES - SLUT
+\*------------------------------------*/
+
+
+@media (max-width: 800px) {
+
+    /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
+    .topnav.change {
+        position: relative;
+        background-color: var(--colorFive);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .topnav.change .menu_wrapper li,
+    .topnav.change .menu_wrapper li a {
+        font-size: calc(1rem + 1vw);
+        background-color: inherit;
+    }
+
+    .menu_wrapper ul {
+        flex-direction: column;
+    }
+
+    .menu_wrapper {
+        display: none;
+    }
+
+    .navbar {
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+    }
+
+    .menu_wrapper li a {
+        color: var(--colorOne);
+    }
+
+}
+
+.topnav.change .menu_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 15vh 0;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    .topnav .menuknap {
+        display: none;
+    }
+
+
+    .change .bar1,
+    .change .bar2,
+    .change .bar3 {}
+
+    .menuTop {
+        background-color: rgba(255, 255, 255, 0.97);
+    }
+
+    .searchButton {
+        filter: invert(44%) sepia(6%) saturate(553%) hue-rotate(163deg) brightness(94%) contrast(94%);
+    }
+
+    .searchButton:hover {
+        filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
+    }
+
+}
+
+/*------------------------------------*\
+8: MEDIA QUERIES - SLUT
+\*------------------------------------*/
