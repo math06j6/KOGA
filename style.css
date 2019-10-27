@@ -14,9 +14,7 @@ INDHOLDSFORTEGNELSE:
 7. STYLING AF SPECIFIKKE SIDER
     7.1 FORSIDE
     7.2 ???
-7.2 Huskeliste - interaktion
 8. MEDIA QUERIES
-
 
 ****************************************
 \*------------------------------------*/
@@ -29,31 +27,17 @@ INDHOLDSFORTEGNELSE:
 
     /* Nøjagtig de samme farvekoder som anvendes på https://www.sikkertrafik.dk/ */
     --colorOne: #fff;
-
     --colorTwo: #EEEFEF;
     --colorThree: #656D73;
     --colorFour: #DCDCE5;
     --colorFive: #0E7DC7;
     --colorSix: #FF8700;
     --colorSeven: #E75F41;
-
-
-
-
     --colorEight: #B7D8EE;
     --colorNine: #27333B;
     --colorTen: #6E7D87;
-
-
-
     --colorTwelve: rgba(0, 0, 0, 0.7);
-    --colorTwelve: rgba(0, 0, 0, 0.7);
-
-
-    --colorXXX: #1a1a1a;
 }
-
-
 
 /*------------------------------------*\
 1. VARIABLER - SLUT
