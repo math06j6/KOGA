@@ -25,8 +25,7 @@ INDHOLDSFORTEGNELSE:
 \*------------------------------------*/
 
 :root {
-
-    /* Nøjagtig de samme farvekoder som anvendes på https://www.sikkertrafik.dk/ */
+    /* Nøjagtig de samme farvekoder som anvendes på www.koga.com */
     --colorOne: #fff;
     --colorTwo: #EEEFEF;
     --colorThree: #656D73;
@@ -100,14 +99,16 @@ ul {
 
 /* @font-face */
 
+
+/* KOGA benytter Futura på deres hjemmeside: https://fonts.adobe.com/fonts/futura-pt?red=a */
+
 @font-face {
-    font-family: 'safety_bold';
+    font-family: '';
     src: url('') format('woff2'),
         url('') format('woff');
     font-weight: normal;
     font-style: normal
 }
-
 
 /* @font-face Slut */
 
@@ -304,8 +305,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    padding: 0 2rem;
-
+    padding-right: 2rem;
 }
 
 .menu_wrapper li {
@@ -500,7 +500,7 @@ a.github_link {
 
 }
 
-footer .servicemenu,
+footer .aabningstider,
 footer address,
 social,
 .footerCykler {
@@ -532,7 +532,7 @@ footer address ul {
     cursor: pointer;
 }
 
-.servicemenu {
+.aabningstider {
     flex-grow: 1;
     flex-basis: 300px;
     flex-direction: column;
@@ -587,7 +587,7 @@ footer span.navn {
     text-transform: uppercase;
 }
 
-.aabningstider,
+.aabningstider p,
 footer .footerCykler ul li:first-child,
 footer .footerCykler ul li:first-child a,
 footer .centerLokalitet :first-child {
@@ -596,7 +596,7 @@ footer .centerLokalitet :first-child {
     text-transform: uppercase;
 }
 
-.aabningstider {
+.aabningstider p {
     padding: 0;
 }
 
