@@ -274,7 +274,7 @@ nav {
     display: inline-block;
     cursor: pointer;
     color: var(--colorOne);
-    padding: 1rem;
+    padding: 1.25rem;
 }
 
 
@@ -328,7 +328,7 @@ nav {
     font-size: 1rem;
     cursor: pointer;
     /*    margin: auto 0;*/
-    padding: 1rem;
+    padding: 1.25rem;
     text-align: center;
     height: 100%;
     text-transform: uppercase;
