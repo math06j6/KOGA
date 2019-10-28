@@ -115,27 +115,35 @@ ul {
 /* @font-face Slut */
 
 h1 {
-    font-family: ;
-    font-size: 2.5rem;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
     padding: 0 2rem;
 
 }
 
 
 h2 {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 2.5rem;
-    font-weight: 100;
-
-
 }
 
 h3 {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 1.5rem;
-    font-weight: 100;
     margin: 1rem 0;
 }
 
-h4 {}
+h4 {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
 
 p {
     font-family: 'Open Sans', Helvetica, Arial, Roboto, sans-serif;
@@ -143,6 +151,12 @@ p {
     line-height: 1.6;
     max-width: 650px;
     padding: 1rem 0;
+    /*
+
+    font-family: futura-pt, sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
 }
 
 
@@ -329,6 +343,9 @@ nav {
     height: 100%;
     color: inherit;
     text-decoration: none;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
+
 
 }
 
@@ -411,13 +428,11 @@ a.hjem {
 }
 
 a.hjem p {
-    font-family: 'Open Sans', Helvetica, Arial, Roboto, sans-serif;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
     padding: 0 0.5rem;
     margin: auto 0;
     text-transform: uppercase;
-    text-transform: uppercase;
-    font-weight: 500;
-
 }
 
 a.hjem:hover p,
@@ -549,14 +564,10 @@ footer address ul {
 }
 
 .find a {
-    color: var(--colorOne);
-    font-size: 1rem;
-    line-height: 1.6;
     text-decoration: none;
     text-transform: uppercase;
     -webkit-transition: .3s;
     transition: .3s;
-    /*    padding: 0.5rem 0;*/
 }
 
 .find a:hover {
@@ -589,12 +600,16 @@ footer span.navn {
     text-transform: uppercase;
 }
 
+.find a,
 .aabningstider p,
 footer .footerCykler ul li:first-child,
 footer .footerCykler ul li:first-child a,
 footer .centerLokalitet :first-child {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
     color: var(--colorOne);
-    font-weight: 700;
     text-transform: uppercase;
 }
 
