@@ -508,34 +508,32 @@ a.github_link {
 
 .social .fa:hover {
     color: white;
-
 }
 
-footer .aabningstider,
-footer address,
+address,
 social,
 .footerCykler {
     display: flex;
 }
 
-footer address,
+address,
 .footerCykler {
     flex-grow: 1;
     flex-basis: 300px;
 }
 
-footer address,
+address,
 .footerCykler {
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 2rem;
 }
 
-footer address {
+address {
     font-style: normal;
 }
 
-footer address ul {
+address ul {
     padding-bottom: 1rem;
 }
 
@@ -544,10 +542,14 @@ footer address ul {
 }
 
 .aabningstider {
-    flex-grow: 1;
-    flex-basis: 300px;
+    display: flex;
     flex-direction: column;
     padding: 2rem;
+}
+
+footer .aabningstider {
+    flex-grow: 1;
+    flex-basis: 300px;
 }
 
 .find {
@@ -598,7 +600,7 @@ footer span.navn {
 .aabningstider p,
 footer .footerCykler ul li:first-child,
 footer .footerCykler ul li:first-child a,
-footer .centerLokalitet :first-child {
+footer .lokalitet :first-child {
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
@@ -606,6 +608,7 @@ footer .centerLokalitet :first-child {
     color: var(--colorOne);
     text-transform: uppercase;
 }
+
 
 .aabningstider p {
     padding: 0;
@@ -617,12 +620,12 @@ footer .centerLokalitet :first-child {
 }
 
 
-footer .tider {
+.tider {
     padding: 0 2rem;
 }
 
-footer .dage ul,
-footer .tider ul {
+.dage ul,
+.tider ul {
     padding: 0;
 }
 
@@ -753,7 +756,7 @@ footer li > a.underline:hover:before {
 
 
 /*------------------------------------*\
-9.1 FORSIDE
+8.1 FORSIDE
 \*------------------------------------*/
 
 /*** Splash ***/
@@ -788,11 +791,7 @@ footer li > a.underline:hover:before {
 /*** Splash - Slut ***/
 
 
-/*
-  AUTO GRID
-  Set the minimum item size with `--auto-grid-min-size` and you'll
-  get a fully responsive grid with no media queries.
-*/
+/* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
 .auto-grid {
     --auto-grid-min-size: 268px;
 
@@ -805,26 +804,20 @@ footer li > a.underline:hover:before {
     max-width: unset;
 }
 
-/*
-  WRAPPER
-  A utility with a max width that contains child elements and horizontal centers them
-*/
 .grid-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-
-/* Presentational styles */
 .kategori {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--colorOne);
-
     padding: 1rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
     row-gap: 1em;
 }
 
@@ -835,7 +828,6 @@ footer li > a.underline:hover:before {
 }
 
 .kategori img {
-    /*    height: 300px;*/
     object-fit: cover;
 }
 
@@ -873,8 +865,6 @@ footer li > a.underline:hover:before {
 .kategori button:hover {
     background: 0;
 }
-
-
 
 #signature button {
     color: var(--colorOne);
@@ -967,7 +957,6 @@ footer li > a.underline:hover:before {
         left: 0;
         width: 100%;
         height: 100%;
-
     }
 
     .topnav.change .menu_wrapper li,
