@@ -152,15 +152,7 @@ p {
     line-height: 1.6;
     max-width: 650px;
     padding: 1rem 0;
-    /*
-
-    font-family: futura-pt, sans-serif;
-font-weight: 400;
-font-style: normal;
-*/
 }
-
-
 
 ul {
     list-style: none;
@@ -172,7 +164,7 @@ figure {
 
 section {
     width: 100%;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
 }
 
 .section_header {
@@ -216,10 +208,10 @@ button {
 
 }
 
-
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
 \*------------------------------------*/
+
 
 
 /*------------------------------------*\
@@ -284,8 +276,6 @@ nav {
     color: var(--colorOne);
     padding: 1.25rem;
 }
-
-
 
 .bar1,
 .bar2,
@@ -390,9 +380,6 @@ li.menu_ikon {
 .logo-container:hover svg {
     /*    fill: #3f0;*/
 }
-
-
-
 
 .nyt_logo {
     /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
@@ -788,7 +775,7 @@ footer li > a.underline:hover:before {
     max-width: 1400px;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    row-gap: 1em;
+    row-gap: 1rem;
     margin: 0 1rem;
 }
 
@@ -926,11 +913,39 @@ footer li > a.underline:hover:before {
 
 
 /*------------------------------------*\
-8.2
+8.2 CYKLER
 \*------------------------------------*/
 
+.filtrering {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    max-width: 1400px;
+    margin: 2rem auto 0;
+}
+
+.filter {
+    color: var(--colorOne);
+    background: var(--colorFive);
+    border: 1px solid var(--colorFive);
+    margin: 1rem;
+    transition: 0.25s;
+}
+
+.filter:hover {
+    color: var(--colorFive);
+    background: 0;
+}
+
+.kategori button:hover {
+    background: 0;
+}
+
+
+
+
 /*------------------------------------*\
-8.2 - SLUT
+8.2 CYKLER - SLUT
 \*------------------------------------*/
 
 /*------------------------------------*\
