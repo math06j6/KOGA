@@ -210,7 +210,10 @@ button {
     font-size: 1rem;
     line-height: 1.6;
     font-style: normal;
-    padding: 0.75rem 1.75rem;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    min-width: 160px;
+
 }
 
 
@@ -766,25 +769,55 @@ footer li > a.underline:hover:before {
 9.1 FORSIDE
 \*------------------------------------*/
 
-
-.video_wrapper {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
+/*** Splash ***/
+#splash {
+    width: 100vw;
+    height: calc(56.25vw - 60px);
+    background-image: url(files/images/splash.jpg);
+    background-size: cover;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
     position: relative;
-    margin-top: 1rem;
+    background-position: 50% 50%;
+    min-height: 300px;
 }
 
-#youtubeVideo {
+.logo-splash {
+    cursor: pointer;
+    padding: 2rem 0;
     height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
 }
 
+/*
+#splash .wrapper {
+    display: flex;
+    flex-wrap: wrap;
 
+    margin: 0 auto;
+    padding: 1rem;
+}
+*/
+
+#splash .wrapper {
+    padding: 6rem 1rem 0;
+    max-width: 1400px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1em;
+    margin: 0 1rem;
+}
+
+#splash .wrapper img {
+    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
+    min-width: 200px;
+    max-width: 25%;
+}
+
+/*** Splash - Slut ***/
 
 
 /*
@@ -793,7 +826,8 @@ footer li > a.underline:hover:before {
   get a fully responsive grid with no media queries.
 */
 .auto-grid {
-    --auto-grid-min-size: 300px;
+    --auto-grid-min-size: 268px;
+
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     grid-gap: 1rem;
@@ -818,8 +852,7 @@ footer li > a.underline:hover:before {
 .kategori {
     /*    padding: 5rem 1rem;*/
     text-align: center;
-    background: var(--colorFive);
-    color: var(--colorOne);
+    background: var(--colorOne);
 
     padding: 1rem;
     display: grid;
@@ -830,10 +863,11 @@ footer li > a.underline:hover:before {
 .cardHeader,
 .cardBottom {
     padding: 1rem 0;
+    text-transform: uppercase;
 }
 
 .kategori img {
-/*    height: 300px;*/
+    /*    height: 300px;*/
     object-fit: cover;
 }
 
@@ -846,12 +880,64 @@ footer li > a.underline:hover:before {
     flex-wrap: wrap;
 }
 
+#splash button,
+.kategori button,
+#signature button {
+    color: var(--colorOne);
+    background: var(--colorFive);
+    border: 1px solid var(--colorFive);
+    margin: 1rem 0;
+}
+
+#splash button:hover,
+.kategori button:hover {
+    color: var(--colorFive);
+    background: var(--colorOne);
+}
+
+#splash button:hover {
+    color: var(--colorOne);
+    background: var(--colorOne);
+    background: 0;
+    border: 1px solid var(--colorOne);
+}
+
+.kategori button:hover {
+    background: 0;
+}
+
+
+
 #signature button {
     color: var(--colorOne);
     background: var(--colorSeven);
-    border: 1px solid #E75F41;
-    margin: 1.5rem 0;
+    border: 1px solid var(--colorSeven);
 }
+
+#signature button:hover {
+    color: var(--colorSeven);
+    background: 0;
+}
+
+/*** YouTube Video er en mulighed ***/
+.video_wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+#youtubeVideo {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*** YouTube Video  - SLUT***/
 
 /*------------------------------------*\
 8.1 FORSIDE - SLUT
