@@ -783,25 +783,6 @@ footer li > a.underline:hover:before {
     min-height: 300px;
 }
 
-.logo-splash {
-    cursor: pointer;
-    padding: 2rem 0;
-    height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-}
-
-/*
-#splash .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-
-    margin: 0 auto;
-    padding: 1rem;
-}
-*/
-
 #splash .wrapper {
     padding: 6rem 1rem 0;
     max-width: 1400px;
