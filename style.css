@@ -119,7 +119,7 @@ h1 {
     font-weight: 700;
     font-style: normal;
     font-size: 3rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
 
 }
 
@@ -142,6 +142,7 @@ h3 {
 h4 {
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
+    font-size: 1.25rem;
     font-style: normal;
 }
 
@@ -186,7 +187,7 @@ section {
     flex-wrap: wrap;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem;
+    /*    padding: 1rem;*/
 }
 
 .col_left {
@@ -204,9 +205,14 @@ section {
 
 button {
     cursor: pointer;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
     font-size: 1rem;
+    line-height: 1.6;
+    font-style: normal;
+    padding: 0.75rem 1.75rem;
 }
+
 
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
@@ -387,7 +393,7 @@ li.menu_ikon {
 
 .nyt_logo {
     /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
-    background-image: url("files/logo.svg");
+    background-image: url("files/svg/logo.svg");
     display: inline-block;
     padding: 10px;
     width: 100px;
@@ -439,7 +445,7 @@ a.hjem:active p {
 }
 
 .searchButton {
-    background-image: url(files/search.svg);
+    background-image: url(files/svg/search.svg);
     display: inline-block;
     padding: 20px;
     width: 40px;
@@ -639,6 +645,7 @@ footer .tider ul {
 6. KNAPPER
 \*------------------------------------*/
 
+
 /* Knap: Tilbage til toppen */
 .tilbage {
     max-width: 1400px;
@@ -672,7 +679,7 @@ footer .tider ul {
 }
 
 .arrowUp {
-    background-image: url(files/arrowUp.svg);
+    background-image: url(files/svg/arrowUp.svg);
     display: inline-block;
     padding: 30px;
     width: 40px;
@@ -775,6 +782,75 @@ footer li > a.underline:hover:before {
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+
+
+
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+.auto-grid {
+    --auto-grid-min-size: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+}
+
+.auto-grid > * {
+    max-width: unset;
+}
+
+/*
+  WRAPPER
+  A utility with a max width that contains child elements and horizontal centers them
+*/
+.grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+/* Presentational styles */
+.kategori {
+    /*    padding: 5rem 1rem;*/
+    text-align: center;
+    background: var(--colorFive);
+    color: var(--colorOne);
+
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1em;
+}
+
+.cardHeader,
+.cardBottom {
+    padding: 1rem 0;
+}
+
+.kategori img {
+/*    height: 300px;*/
+    object-fit: cover;
+}
+
+#signature {
+    background: var(--colorOne);
+}
+
+#signature .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#signature button {
+    color: var(--colorOne);
+    background: var(--colorSeven);
+    border: 1px solid #E75F41;
+    margin: 1.5rem 0;
 }
 
 /*------------------------------------*\
