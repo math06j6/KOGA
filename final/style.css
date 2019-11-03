@@ -200,7 +200,6 @@ button {
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    line-height: 1.6;
     font-style: normal;
     padding: 0.75rem 2rem;
     text-transform: uppercase;
@@ -788,6 +787,36 @@ footer li > a.underline:hover:before {
     max-width: 25%;
 }
 
+#splash a.action {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: normal;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    min-width: 160px;
+    color: var(--colorOne);
+    background: var(--colorFive);
+    border: 1px solid var(--colorFive);
+    margin: 1rem 0;
+
+}
+
+#splash a.action:hover {
+    color: var(--colorFive);
+    background: var(--colorOne);
+}
+
+#splash a.action:hover {
+    color: var(--colorOne);
+    background: var(--colorOne);
+    background: 0;
+    border: 1px solid var(--colorOne);
+}
+
 /*** Splash - Slut ***/
 
 
@@ -840,7 +869,6 @@ footer li > a.underline:hover:before {
     flex-wrap: wrap;
 }
 
-#splash button,
 .kategori button,
 #signature button {
     color: var(--colorOne);
@@ -849,17 +877,9 @@ footer li > a.underline:hover:before {
     margin: 1rem 0;
 }
 
-#splash button:hover,
 .kategori button:hover {
     color: var(--colorFive);
     background: var(--colorOne);
-}
-
-#splash button:hover {
-    color: var(--colorOne);
-    background: var(--colorOne);
-    background: 0;
-    border: 1px solid var(--colorOne);
 }
 
 .kategori button:hover {
@@ -1002,6 +1022,13 @@ table td span {
     left: 0;
 }
 
+
+.luk {
+
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2rem;
+}
 
 
 /*------------------------------------*\
