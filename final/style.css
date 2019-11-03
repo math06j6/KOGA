@@ -932,11 +932,83 @@ footer li > a.underline:hover:before {
 }
 
 
-
-
 /*------------------------------------*\
 8.2 CYKLER - SLUT
 \*------------------------------------*/
+
+
+
+/*------------------------------------*\
+8.3 Singleview
+\*------------------------------------*/
+
+
+.single-content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background: ;
+    overflow: auto;
+    /*    max-width: 1400px;*/
+    padding: 2rem;
+    margin: auto;
+    padding: 2rem;
+    background: var(--colorOne);
+}
+
+.single-header {
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.single-header h4 {
+    text-transform: uppercase;
+    color: var(--colorFive);
+    padding: 0;
+}
+
+.single-content {
+    object-fit: cover;
+}
+
+/* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+table tr {
+    background: white;
+    border-bottom: 1px solid
+}
+
+table th,
+table td {
+    padding: 10px 20px;
+}
+
+table td span {
+    background: var(--colorTwo);
+    color: var(--colorThree);
+    display: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+}
+
+
+
+/*------------------------------------*\
+8.3 Singleview - SLUT
+\*------------------------------------*/
+
+
 
 /*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
@@ -981,6 +1053,36 @@ footer li > a.underline:hover:before {
 
     .menu_wrapper li a {
         color: var(--colorOne);
+    }
+
+    /* Tabeller på mobil */
+    @media(max-width: 800px) {
+        table thead {
+            left: -9999px;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        table tr {
+            border-bottom: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        table td {
+            border: 1px solid;
+            margin: 0 -1px -1px 0;
+            padding-top: 35px;
+            position: relative;
+            width: 50%;
+            font-size: 0.9rem;
+        }
+
+        table td span {
+            display: block;
+        }
     }
 
 }
