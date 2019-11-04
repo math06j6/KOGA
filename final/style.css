@@ -998,12 +998,12 @@ footer li > a.underline:hover:before {
     max-width: 1400px;
     padding: 1rem;
     margin: 0 auto;
+/*
     top: 20vh;
     margin-bottom: 108px;
+*/
     background-color: var(--colorOne);
 }
-
-
 
 .filter {
     color: var(--colorOne);
@@ -1025,6 +1025,14 @@ footer li > a.underline:hover:before {
 /* Pile */
 
 button i {
+    border: solid var(--colorFive);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 8px;
+}
+
+#cykler button i {
     border: solid var(--colorOne);
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -1032,13 +1040,15 @@ button i {
     margin: 3px 8px;
 }
 
-button:hover i {
+#cykler button:hover i {
     border: solid var(--colorFive);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
     margin: 3px 8px;
 }
+
+
 
 .up {
     transform: rotate(-135deg);
@@ -1056,12 +1066,12 @@ button:hover i {
     -webkit-transform: rotate(-45deg);
 }
 
-.left {
+button .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
 
-/* Pile */
+/* Pile - Slut*/
 
 /*------------------------------------*\
 8.2 CYKLER - SLUT
@@ -1274,6 +1284,12 @@ table td span {
 
     /*Hover Animationer -> Header Menu  - SLUT*/
 
+
+    /*  Cykler  */
+    .filtrering {
+        top: 20vh;
+        margin-bottom: 108px;
+    }
 }
 
 /*------------------------------------*\
