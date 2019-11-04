@@ -976,7 +976,7 @@ footer li > a.underline:hover:before {
 
 .sidebar {
     grid-area: sidebar;
-    background-color: var(--colorOne);
+    /*    background-color: var(--colorOne);*/
     margin: 1rem;
 }
 
@@ -997,9 +997,10 @@ footer li > a.underline:hover:before {
     grid-gap: 0.5rem;
     max-width: 1400px;
     padding: 1rem;
-
-    margin: 1rem auto;
+    margin: 0 auto;
     top: 20vh;
+    margin-bottom: 108px;
+    background-color: var(--colorOne);
 }
 
 
