@@ -14,7 +14,7 @@ async function loadMenu() {
 }
 
 function opretMenu(e) {
-    document.querySelector("nav").innerHTML = e;
+    document.querySelector("#myTopnav").innerHTML = e;
     console.log(opretMenu);
 
     document.querySelector(".menuknap").addEventListener("click", menuFunction);
