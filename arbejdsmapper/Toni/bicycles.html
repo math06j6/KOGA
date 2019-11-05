@@ -53,140 +53,39 @@
 
 -->
             <hr class="line">
+
+            <!-- -->
             <div class="grid-container">
-                <section class="auto-grid">
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <figure>
-                            <img src="files/images/card1_Ebike2020.jpg" alt="E-bikes">
-                        </figure>
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card2_CITY2020.jpg" alt="City &#38; Touring">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card3_Trekking2018.jpg" alt="Trekking">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card4_RACE2020.jpg" alt="Race">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <figure>
-                            <img src="files/images/card1_Ebike2020.jpg" alt="E-bikes">
-                        </figure>
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card2_CITY2020.jpg" alt="City &#38; Touring">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card3_Trekking2018.jpg" alt="Trekking">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card4_RACE2020.jpg" alt="Race">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <figure>
-                            <img src="files/images/card1_Ebike2020.jpg" alt="E-bikes">
-                        </figure>
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card2_CITY2020.jpg" alt="City &#38; Touring">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card3_Trekking2018.jpg" alt="Trekking">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
-
-                    <article class="kategori">
-                        <header class="cardHeader">
-                            <h4>Cykel</h4>
-                        </header>
-                        <img src="files/images/card4_RACE2020.jpg" alt="Race">
-                        <div class="cardBottom">
-                            <button>Læs mere</button>
-                        </div>
-                    </article>
+                <section class="liste">
                 </section>
-            </div>
-            <div class="tilbage">
-                <div class="top_link">
-                    <a href="#">
-                        <span class="arrowUp"></span>
-                    </a>
+
+
+                <div class="tilbage">
+                    <div class="top_link">
+                        <a href="#">
+                            <span class="arrowUp"></span>
+                        </a>
+                    </div>
                 </div>
+
+
+                <template>
+                    <article class="kategori">
+                        <figure>
+                            <img class="billede_1" src="" alt=""> </figure>
+                        <header class="cardHeader">
+                            <h4 class="cykelmodel"></h4>
+                        </header>
+                        <p class="kort"></p>
+
+                        <div class="cardBottom">
+                            <button>Læs mere</button>
+                        </div>
+                    </article>
+                </template>
             </div>
+
+
         </section>
 
 
@@ -273,4 +172,40 @@
         </div>
     </footer>
     <script src="script.js"> </script>
+    <script>
+        let posts = [];
+        const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            posts = await response.json();
+            console.log(posts);
+            vis();
+
+        }
+
+        function vis() {
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".liste");
+
+            posts.forEach(post => {
+                const klon = skabelon.cloneNode(true).content;
+
+                klon.querySelector(".billede_1").src = post.billede_side.guid;
+                klon.querySelector("h4").textContent = post.cykelmodel;
+
+                klon.querySelector(".kort").textContent = post.kort_tagline;
+
+
+                liste.appendChild(klon);
+            });
+
+        }
+    </script>
 </body></html>
