@@ -54,12 +54,12 @@
 -->
             <hr class="line">
 
-            <!-- -->
+            <!-- Gridcontainer ved jeg ikke helt hvad gør, section .liste er containeren for vores template -->
             <div class="grid-container">
                 <section class="liste">
                 </section>
 
-
+                <!-- en tilbageknap jeg ikke ved hvor hører til -->
                 <div class="tilbage">
                     <div class="top_link">
                         <a href="#">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
 
-
+                <!-- template for vores listevisning -->
                 <template>
                     <article class="kategori">
                         <figure>
@@ -204,6 +204,46 @@
 
 
                 liste.appendChild(klon);
+
+
+                /* Hej Mathias, skriver udkommenterede linjer til dig her:
+                Først har vi de venstrestillede elementer som består af et stort billede og 3 mindre billeder under - du kan bare ændre class på elementerne hvis du har lyst*/
+
+                /*
+                        klon.querySelector(".billede_stor").src = post.billede_side.guid;
+
+                       klon.querySelector(".billede_thumb").src = post.billede_side.guid;
+
+                       klon.querySelector(".billede_thumb").src = post.billede_front.guid;
+
+                       klon.querySelector(".billede_thumb").src = post.billede_back.guid;
+
+                */
+
+                /* Her er de højrestillede elementer: */
+                /* class kan laves om til hvilket som helst navn*/
+
+                /*   klon.querySelector(".cykel_model").textContent = post.cykelmodel;
+                   klon.querySelector(".cykel_type").textContent = post.cykel_type;
+                   klon.querySelector(".lang_beskrivelse").textContent = post.lang_beskrivelse;
+                   klon.querySelector(".vaagt").textContent = post.vaagt;
+                   klon.querySelector(".cykel_maal").textContent = post.maal;
+                   klon.querySelector(".cykel_farve").textContent = post.farve;
+                   klon.querySelector(".koen").textContent = post.koen;
+                   klon.querySelector(".pris").textContent = post.pris;*/
+
+                /* Elementer under: */
+
+                /* klon.querySelector(".fordele").textContent = post.fordel_1;
+                 klon.querySelector(".fordele").textContent = post.fordel_2;
+                 klon.querySelector(".fordele").textContent = post.fordel_3;
+                 klon.querySelector(".fordele").textContent = post.fordel_4;*/
+
+                /* NB. data for lang_beskrivelse, cykel_maal og fordele er endnu ikke udfyldt på wordpress*/
+
+                /* Det skulle gerne være det hele! */
+
+
             });
 
         }
