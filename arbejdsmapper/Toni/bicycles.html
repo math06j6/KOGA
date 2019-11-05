@@ -25,62 +25,34 @@
 
 <body>
     <header class="site_header">
-        <nav id="myTopnav" class="topnav">
-            <div class="menuTop">
-                <div class="navbar">
-                    <div class="home">
-                        <div class="logo-container">
-                            <a href="index.html" class="hjem">
-                                <div class="nyt_logo"></div>
-                                <p>Center</p>
-                            </a>
-                        </div>
-                        <div class="menuknap">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                        </div>
-                    </div>
-                    <div class="menu_wrapper">
-                        <ul>
-                            <li>
-                                <a href="bicycles.html" class="dropbtn underline">Cykler
-                                </a>
-                            </li>
-                            <li>
-                                <a href="about.html" class="dropbtn underline">Om os
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html" class="dropbtn underline">Kontakt
-                                </a>
-                            </li>
-                            <li class="menu_ikon">
-                                <div class="searchButton"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!--       Vores Menu Loades med JS -->
+        <nav id="myTopnav" class="topnav"></nav>
     </header>
     <main>
-        <section id="">
-            <header class="section_header">
+        <section id="cykler">
+            <header class="section-header">
                 <h1>Vores Cykler</h1>
             </header>
-            <div class="">
+            <aside class="sidebar">
                 <nav class="filtrering">
                     <!--Filtreringsmenu-->
-                    <button class="filter valgt" data-cykel="alle">Alle Cykler</button>
-                    <button class="filter" data-cykel="el-cykler">El-cykler</button>
-                    <button class="filter" data-cykel="city-touring">City &#38; Touring</button>
-                    <button class="filter" data-cykel="trekking; Touring">Trekking</button>
-                    <button class="filter" data-cykel="race">Race</button>
+                    <button class="filter valgt" data-cykel="alle">Kategori<i class="down"></i></button>
+                    <!--                    <button class="filter" data-cykel="el-cykler">El-cykler</button>-->
+                    <!--                    <button class="filter" data-cykel="city-touring">City &#38; Touring</button>-->
+                    <!--                    <button class="filter" data-cykel="trekking; Touring">Trekking</button>-->
+                    <!--                    <button class="filter" data-cykel="race">Race</button>-->
+                    <button class="filter" data-cykel="alle">Køn<i class="down"></i></button>
+                    <button class="filter" data-cykel="alle">Vægt<i class="down"></i></button>
+                    <button class="filter" data-cykel="alle">Farve<i class="down"></i></button>
+                    <button class="filter" data-cykel="alle">Pris<i class="down"></i></button>
                 </nav>
-            </div>
+            </aside>
+            <!--
         </section>
         <section>
+
+-->
+            <hr class="line">
             <div class="grid-container">
                 <section class="auto-grid">
                     <article class="kategori">
@@ -208,15 +180,16 @@
                     </article>
                 </section>
             </div>
+            <div class="tilbage">
+                <div class="top_link">
+                    <a href="#">
+                        <span class="arrowUp"></span>
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <div class="tilbage">
-            <div class="top_link">
-                <a href="#">
-                    <span class="arrowUp"></span>
-                </a>
-            </div>
-        </div>
+
     </main>
 
     <footer>
@@ -300,6 +273,4 @@
         </div>
     </footer>
     <script src="script.js"> </script>
-</body>
-
-</html>
+</body></html>

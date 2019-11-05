@@ -167,7 +167,7 @@ section {
     padding: 2rem 0;
 }
 
-.section_header {
+.section-header {
     margin: 0 auto;
     max-width: 1400px;
     /*    padding-bottom: 1rem;*/
@@ -200,13 +200,37 @@ button {
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    line-height: 1.6;
     font-style: normal;
     padding: 0.75rem 2rem;
     text-transform: uppercase;
     min-width: 160px;
 
 }
+
+/* Pile (benyttes bl.a. til knapper) */
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+/* Pile - Slut*/
 
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
@@ -788,6 +812,36 @@ footer li > a.underline:hover:before {
     max-width: 25%;
 }
 
+#splash a.action {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: normal;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    min-width: 160px;
+    color: var(--colorOne);
+    background: var(--colorFive);
+    border: 1px solid var(--colorFive);
+    margin: 1rem 0;
+
+}
+
+#splash a.action:hover {
+    color: var(--colorFive);
+    background: var(--colorOne);
+}
+
+#splash a.action:hover {
+    color: var(--colorOne);
+    background: var(--colorOne);
+    background: 0;
+    border: 1px solid var(--colorOne);
+}
+
 /*** Splash - Slut ***/
 
 
@@ -840,7 +894,6 @@ footer li > a.underline:hover:before {
     flex-wrap: wrap;
 }
 
-#splash button,
 .kategori button,
 #signature button {
     color: var(--colorOne);
@@ -849,17 +902,9 @@ footer li > a.underline:hover:before {
     margin: 1rem 0;
 }
 
-#splash button:hover,
 .kategori button:hover {
     color: var(--colorFive);
     background: var(--colorOne);
-}
-
-#splash button:hover {
-    color: var(--colorOne);
-    background: var(--colorOne);
-    background: 0;
-    border: 1px solid var(--colorOne);
 }
 
 .kategori button:hover {
@@ -906,12 +951,83 @@ footer li > a.underline:hover:before {
 8.2 CYKLER
 \*------------------------------------*/
 
+#cykler {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: var(--colorThree);
+    display: grid;
+    grid-gap: 1rem;
+    padding-bottom: 0;
+    background: var(--colorTwo);
+    padding: 0;
+    grid-template-areas:
+        "hd"
+        "sidebar"
+        "line"
+        "modeller"
+        "ft";
+}
+
+@media (min-width: 640px) {
+    #cykler {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "hd      hd   hd   hd"
+            "line    line line   line"
+            "sidebar modeller modeller modeller"
+            "sidebar ft   ft   ft";
+    }
+}
+
+#cykler .section-header {
+    grid-area: hd;
+    padding: 2.5rem 0;
+}
+
+#cykler hr.line {
+    grid-area: line;
+
+    margin: 0 1rem;
+    border: 1px solid var(--colorFour);
+}
+
+#cykler .grid-container {
+    grid-area: modeller;
+    margin: 1rem;
+    padding: 0;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    /*    background-color: var(--colorOne);*/
+    margin: 1rem;
+}
+
+#cykler .tilbage {
+    grid-area: ft;
+
+    margin: 0;
+}
+
+#cykler .auto-grid {
+    padding: 0;
+}
+
+
 .filtrering {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
+    grid-auto-rows: auto;
+    grid-gap: 0.5rem;
     max-width: 1400px;
-    margin: 2rem auto 0;
+    padding: 1rem;
+    margin: 0 auto;
+    /*
+    top: 20vh;
+    margin-bottom: 108px;
+*/
+    background-color: var(--colorOne);
 }
 
 .filter {
@@ -931,12 +1047,128 @@ footer li > a.underline:hover:before {
     background: 0;
 }
 
+/* Pile */
+
+button i {
+    border: solid var(--colorFive);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 8px;
+}
+
+#cykler button i {
+    border: solid var(--colorOne);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 8px;
+}
+
+#cykler button:hover i {
+    border: solid var(--colorFive);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 8px;
+}
 
 
+/* Pile */
+
+/*
+button .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+*/
+
+/* Pile - Slut*/
 
 /*------------------------------------*\
 8.2 CYKLER - SLUT
 \*------------------------------------*/
+
+
+
+/*------------------------------------*\
+8.3 Singleview
+\*------------------------------------*/
+
+
+.single-content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background: ;
+    overflow: auto;
+    /*    max-width: 1400px;*/
+    padding: 2rem;
+    margin: auto;
+    padding: 2rem;
+    background: var(--colorOne);
+}
+
+.single-header {
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.single-header h4 {
+    text-transform: uppercase;
+    color: var(--colorFive);
+    padding: 0;
+}
+
+.single-content {
+    object-fit: cover;
+}
+
+/* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+table tr {
+    background: white;
+    border-bottom: 1px solid
+}
+
+table th,
+table td {
+    padding: 10px 20px;
+}
+
+table td span {
+    background: var(--colorTwo);
+    color: var(--colorThree);
+    display: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+}
+
+
+.luk {
+
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+
+/*------------------------------------*\
+8.3 Singleview - SLUT
+\*------------------------------------*/
+
+
 
 /*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
@@ -981,6 +1213,36 @@ footer li > a.underline:hover:before {
 
     .menu_wrapper li a {
         color: var(--colorOne);
+    }
+
+    /* Tabeller på mobil */
+    @media(max-width: 800px) {
+        table thead {
+            left: -9999px;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        table tr {
+            border-bottom: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        table td {
+            border: 1px solid;
+            margin: 0 -1px -1px 0;
+            padding-top: 35px;
+            position: relative;
+            width: 50%;
+            font-size: 0.9rem;
+        }
+
+        table td span {
+            display: block;
+        }
     }
 
 }
@@ -1034,6 +1296,12 @@ footer li > a.underline:hover:before {
 
     /*Hover Animationer -> Header Menu  - SLUT*/
 
+
+    /*  Cykler  */
+    .filtrering {
+        top: 20vh;
+        margin-bottom: 108px;
+    }
 }
 
 /*------------------------------------*\
