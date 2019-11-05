@@ -207,6 +207,31 @@ button {
 
 }
 
+/* Pile (benyttes bl.a. til knapper) */
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+/* Pile - Slut*/
+
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
 \*------------------------------------*/
@@ -998,7 +1023,7 @@ footer li > a.underline:hover:before {
     max-width: 1400px;
     padding: 1rem;
     margin: 0 auto;
-/*
+    /*
     top: 20vh;
     margin-bottom: 108px;
 */
@@ -1049,27 +1074,14 @@ button i {
 }
 
 
+/* Pile */
 
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
+/*
 button .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
+*/
 
 /* Pile - Slut*/
 
