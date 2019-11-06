@@ -161,41 +161,6 @@ ul {
     list-style: none;
 }
 
-.wrapper figure {
-    padding: 0;
-    overflow: hidden;
-    height: 1rem;
-}
-
-figure {
-    padding: 0;
-    overflow: hidden;
-    height: 8rem;
-}
-
-article.kategori_ebike {
-    background-image: url("files/images/ebike.jpg");
-    background-size: 120vw;
-    background-position: -50vw;
-}
-
-article.kategori_city {
-    background-image: url("files/images/city6.jpg");
-    background-size: 120vw;
-    background-position: -37vw;
-}
-
-article.kategori_trekking {
-    background-image: url("files/images/trekking1.jpg");
-    background-size: 120vw;
-    background-position: -90vw;
-}
-
-article.kategori_racer {
-    background-image: url("files/images/race1.jpg");
-    background-size: 120vw;
-    background-position: -70vw;
-}
 
 
 section {
@@ -233,7 +198,11 @@ section {
 
 button {
     cursor: pointer;
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-family: futura-pt,
+        Arial,
+        Helvetica,
+        Roboto,
+        sans-serif;
     font-weight: 500;
     font-size: 1rem;
     font-style: normal;
@@ -892,6 +861,48 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--colorOne);
 }
 
+
+.wrapper figure {
+    padding: 0;
+    overflow: hidden;
+    height: 1rem;
+}
+
+figure {
+    padding: 0;
+    overflow: hidden;
+    height: 8rem;
+}
+
+article.kategori_ebike {
+    background-image: url("files/images/ebike.jpg");
+    background-size: 120vw;
+    background-position: -50vw;
+}
+
+article.kategori_city {
+    background-image: url("files/images/city6.jpg");
+    background-size: 120vw;
+    background-position: -37vw;
+}
+
+article.kategori_trekking {
+    background-image: url("files/images/trekking1.jpg");
+    background-size: 120vw;
+    background-position: -90vw;
+}
+
+article.kategori_racer {
+    background-image: url("files/images/race1.jpg");
+    background-size: 120vw;
+    background-position: -70vw;
+}
+
+.forside_overskrift h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /*** Splash - Slut ***/
 
 
@@ -927,7 +938,7 @@ footer li > a.underline:hover:before {
 
 .cardHeader,
 .cardBottom {
-    padding: 1rem 0;
+    padding: 1rem;
     text-transform: uppercase;
 }
 
