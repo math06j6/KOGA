@@ -161,28 +161,40 @@ ul {
     list-style: none;
 }
 
+.wrapper figure {
+    padding: 0;
+    overflow: hidden;
+    height: 1rem;
+}
+
 figure {
     padding: 0;
     overflow: hidden;
-    height: 15rem;
-
+    height: 8rem;
 }
-
 
 article.kategori_ebike {
     background-image: url("files/images/ebike.jpg");
+    background-size: 120vw;
+    background-position: -50vw;
 }
 
 article.kategori_city {
     background-image: url("files/images/city6.jpg");
+    background-size: 120vw;
+    background-position: -37vw;
 }
 
 article.kategori_trekking {
     background-image: url("files/images/trekking1.jpg");
+    background-size: 120vw;
+    background-position: -90vw;
 }
 
 article.kategori_racer {
     background-image: url("files/images/race1.jpg");
+    background-size: 120vw;
+    background-position: -70vw;
 }
 
 
@@ -885,7 +897,7 @@ footer li > a.underline:hover:before {
 
 /* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
 .auto-grid {
-    --auto-grid-min-size: 268px;
+    --auto-grid-min-size: 168px;
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
