@@ -144,8 +144,7 @@ h4 {
     font-weight: 500;
     font-size: 1.25rem;
     font-style: normal;
-    color: var(--colorOne);
-    text-align: center;
+
 
 }
 
@@ -886,13 +885,11 @@ article.kategori_city {
 article.kategori_trekking {
     background-image: url("files/images/trekking1.jpg");
     background-size: 120vw;
-<<<<<<< HEAD
-    background-position: -75vw;
+    <<<<<<< HEAD background-position: -75vw;
     height: 60vw;
-=======
-    background-position: -90vw;
+    =======background-position: -90vw;
 
->>>>>>> origin/master
+    > > > > > > > origin/master
 }
 
 article.kategori_racer {
