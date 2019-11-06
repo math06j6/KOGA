@@ -213,8 +213,8 @@ button {
 
 }
 
-/* Pile (benyttes bl.a. til knapper) */
 
+/***** Pile (benyttes bl.a. til knapper) *****/
 .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
@@ -236,8 +236,32 @@ button {
     -webkit-transform: rotate(135deg);
 }
 
-/* Pile - Slut*/
+/***** Pile - Slut *****/
 
+
+
+/***** Grid *****/
+
+/* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
+.auto-grid {
+    --auto-grid-min-size: 268px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+}
+
+.auto-grid > * {
+    max-width: unset;
+}
+
+.grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/***** Grid - Slut *****/
 
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
@@ -411,7 +435,7 @@ li.menu_ikon {
 
 .nyt_logo {
     /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
-    background-image: url("files/svg/koga_logo_black.svg");
+    background-image: url("files/svg/logo.svg");
     display: inline-block;
     padding: 10px;
     width: 100px;
@@ -804,7 +828,7 @@ footer li > a.underline:hover:before {
 8.1 FORSIDE
 \*------------------------------------*/
 
-/*** Splash ***/
+/***** Splash *****/
 #splash {
     width: 100vw;
     height: calc(56.25vw - 60px);
@@ -907,27 +931,8 @@ article.kategori_racer {
     color: var(--colorTwelve);
 }
 
-/*** Splash - Slut ***/
+/***** Splash - Slut *****/
 
-
-/* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
-.auto-grid {
-    --auto-grid-min-size: 268px;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: 1rem;
-}
-
-.auto-grid > * {
-    max-width: unset;
-}
-
-.grid-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
 
 #forside .kategori {
     /*    padding: 5rem 1rem;*/
@@ -953,7 +958,7 @@ article.kategori_racer {
     margin-top: 5rem;
 }
 
-.kategori img {
+#forside .kategori img {
     object-fit: cover;
 }
 
@@ -1004,7 +1009,7 @@ article.kategori_racer {
     width: 100%;
 }
 
-/*** YouTube Video  - SLUT***/
+/***** YouTube Video  - SLUT *****/
 
 /*------------------------------------*\
 8.1 FORSIDE - SLUT
@@ -1077,33 +1082,33 @@ article.kategori_racer {
     padding: 0;
 }
 
-#cykler .kategori {
+#cykler .card-cykel {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--colorOne);
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
     /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
     row-gap: 1em;
 }
 
-#cykler .kategori button:hover {
+#cykler .card-cykel button:hover {
     background: 0;
 }
 
-#cykler .kategori img {
+#cykler .card-cykel img {
     object-fit: cover;
 }
 
-#cykler .kategori button {
+#cykler .card-cykel button {
     color: var(--colorOne);
     background: var(--colorFive);
     border: 1px solid var(--colorFive);
     margin: 1rem 0;
 }
 
-#cykler .kategori button:hover {
+#cykler .card-cykel button:hover {
     color: var(--colorFive);
     background: 0;
 }
@@ -1132,10 +1137,6 @@ article.kategori_racer {
 
 .filter:hover {
     color: var(--colorFive);
-    background: 0;
-}
-
-.kategori button:hover {
     background: 0;
 }
 
