@@ -1189,7 +1189,7 @@ table td p {
 /*------------------------------------*\
 8.4 About
 \*------------------------------------*/
-.sectionwrapper_om {
+.sectionwrapper_historie {
     background: white;
     display: flex;
     flex-wrap: wrap;
@@ -1197,7 +1197,7 @@ table td p {
     margin: 0 auto;
 }
 
-.col_left_om {
+.col_left_historie {
     flex-grow: 1;
     flex-basis: 500px;
     margin: 0 1rem;
@@ -1205,7 +1205,7 @@ table td p {
 
 }
 
-.col_right_om {
+.col_right_historie {
     flex-grow: 1;
     flex-basis: 500px;
     margin: 0 1rem;
@@ -1230,6 +1230,27 @@ table td p {
 
 .citat2 {
     text-align: right;
+}
+
+#mereom {
+    padding: 0;
+}
+
+.billede_mereom figure {
+    height: 100%;
+    padding: 0;
+}
+
+#service {
+    background: white;
+}
+
+.col_left_om {
+    padding: 3rem;
+}
+
+.col_right_om {
+    padding: 3rem;
 }
 
 
