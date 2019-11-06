@@ -15,6 +15,8 @@ INDHOLDSFORTEGNELSE:
 8. STYLING AF SPECIFIKKE SIDER
     8.1 FORSIDE
     8.2 ???
+    8.3
+    8.4
 9. MEDIA QUERIES
 
 ****************************************
@@ -37,6 +39,7 @@ INDHOLDSFORTEGNELSE:
     --colorNine: #27333B;
     --colorTen: #6E7D87;
     --colorTwelve: #313131;
+    --colorThirteen: rgba(14, 125, 199, 0.7);
 
 
 }
@@ -144,8 +147,7 @@ h4 {
     font-weight: 500;
     font-size: 1.25rem;
     font-style: normal;
-    color: var(--colorOne);
-    text-align: center;
+
 
 }
 
@@ -212,8 +214,8 @@ button {
 
 }
 
-/* Pile (benyttes bl.a. til knapper) */
 
+/***** Pile (benyttes bl.a. til knapper) *****/
 .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
@@ -235,7 +237,32 @@ button {
     -webkit-transform: rotate(135deg);
 }
 
-/* Pile - Slut*/
+/***** Pile - Slut *****/
+
+
+
+/***** Grid *****/
+
+/* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
+.auto-grid {
+    --auto-grid-min-size: 268px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+}
+
+.auto-grid > * {
+    max-width: unset;
+}
+
+.grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/***** Grid - Slut *****/
 
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
@@ -409,7 +436,7 @@ li.menu_ikon {
 
 .nyt_logo {
     /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
-    background-image: url("files/svg/koga_logo_black.svg");
+    background-image: url("files/svg/logo.svg");
     display: inline-block;
     padding: 10px;
     width: 100px;
@@ -802,10 +829,10 @@ footer li > a.underline:hover:before {
 8.1 FORSIDE
 \*------------------------------------*/
 
-/*** Splash ***/
+/***** Splash *****/
 #splash {
     width: 100vw;
-    height: calc(56.25vw - 60px);
+    height: calc(56.25vw - 0px);
     background-image: url(files/images/trekking3.jpg);
     background-size: cover;
     padding: 0;
@@ -813,16 +840,22 @@ footer li > a.underline:hover:before {
     margin-right: 0;
     position: relative;
     background-position: 90% 50%;
-    min-height: 200px;
+    min-height: 100px;
+    filter:
 }
 
 #splash .wrapper {
-    padding: 6rem 1rem 0;
-    max-width: 1400px;
+    padding: 2rem 1rem 0;
+    max-width: 1200px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     row-gap: 1rem;
     margin: 0 1rem;
+}
+
+#splash .cardBottom {
+    display: flex;
+    justify-content: flex-start;
 }
 
 #splash .wrapper img {
@@ -843,7 +876,7 @@ footer li > a.underline:hover:before {
     text-transform: uppercase;
     min-width: 160px;
     color: var(--colorOne);
-    background: var(--colorFive);
+    background: var(--colorThirteen);
     border: 1px solid var(--colorFive);
     margin: 1rem 0;
 
@@ -865,7 +898,7 @@ footer li > a.underline:hover:before {
 .wrapper figure {
     padding: 0;
     overflow: hidden;
-    height: 1rem;
+    height: 100%;
 }
 
 
@@ -889,9 +922,14 @@ article.kategori_trekking {
 <<<<<<< HEAD
     background-position: -75vw;
     height: 60vw;
-=======
-    background-position: -90vw;
+    background-position: -70vw;
 
+=======
+    <<<<<<< HEAD background-position: -75vw;
+    height: 60vw;
+    =======background-position: -90vw;
+
+    > > > > > > > origin/master
 >>>>>>> origin/master
 }
 
@@ -901,35 +939,32 @@ article.kategori_racer {
     background-position: -70vw;
 }
 
+#forside button {
+    background-color: var(--colorThirteen);
+    border: 0px;
+}
+
+#forside p {
+    color: white;
+    font-size: 0.6rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+#forside .cardBottom button {
+    color: white;
+}
+
 .forside_overskrift h1 {
     text-align: center;
     margin-bottom: 20px;
     color: var(--colorTwelve);
 }
 
-/*** Splash - Slut ***/
+/***** Splash - Slut *****/
 
 
-/* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
-.auto-grid {
-    --auto-grid-min-size: 168px;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: 1rem;
-}
-
-.auto-grid > * {
-    max-width: unset;
-}
-
-.grid-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.kategori {
+#forside .kategori {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--colorOne);
@@ -940,16 +975,21 @@ article.kategori_racer {
     row-gap: 1em;
 }
 
-.cardHeader,
-.cardBottom {
+#forside .cardHeader,
+#forside .cardBottom {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
 .cardHeader h4 {
+    margin-top: 3rem;
+=======
+
+#forside .cardHeader h4 {
     margin-top: 5rem;
+>>>>>>> origin/master
 }
 
 .kategori img {
@@ -973,14 +1013,6 @@ article.kategori_racer {
     margin: 1rem 0;
 }
 
-.kategori button:hover {
-    color: var(--colorFive);
-    background: var(--colorOne);
-}
-
-.kategori button:hover {
-    background: 0;
-}
 
 #signature button {
     color: var(--colorOne);
@@ -1011,7 +1043,7 @@ article.kategori_racer {
     width: 100%;
 }
 
-/*** YouTube Video  - SLUT***/
+/***** YouTube Video  - SLUT *****/
 
 /*------------------------------------*\
 8.1 FORSIDE - SLUT
@@ -1041,21 +1073,18 @@ article.kategori_racer {
         "ft";
 }
 
-@media (min-width: 640px) {
-    #cykler {
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas:
-            "hd      hd   hd   hd"
-            "line    line line   line"
-            "sidebar modeller modeller modeller"
-            "sidebar ft   ft   ft";
-    }
-}
-
 #cykler .section-header {
     grid-area: hd;
     padding: 2.5rem 0;
 }
+
+
+#cykler .cardHeader,
+#cykler .cardBottom {
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
 
 #cykler hr.line {
     grid-area: line;
@@ -1083,10 +1112,40 @@ article.kategori_racer {
     margin: 0;
 }
 
-.auto-grid {
+#cykler .auto-grid {
     padding: 0;
 }
 
+#cykler .card-cykel {
+    /*    padding: 5rem 1rem;*/
+    text-align: center;
+    background: var(--colorOne);
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
+    row-gap: 1em;
+}
+
+#cykler .card-cykel button:hover {
+    background: 0;
+}
+
+#cykler .card-cykel img {
+    object-fit: cover;
+}
+
+#cykler .card-cykel button {
+    color: var(--colorOne);
+    background: var(--colorFive);
+    border: 1px solid var(--colorFive);
+    margin: 1rem 0;
+}
+
+#cykler .card-cykel button:hover {
+    color: var(--colorFive);
+    background: 0;
+}
 
 .filtrering {
     display: grid;
@@ -1112,10 +1171,6 @@ article.kategori_racer {
 
 .filter:hover {
     color: var(--colorFive);
-    background: 0;
-}
-
-.kategori button:hover {
     background: 0;
 }
 
@@ -1351,6 +1406,16 @@ table td p {
     padding: 15vh 0;
 }
 
+@media (min-width: 640px) {
+    #cykler {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "hd      hd   hd   hd"
+            "line    line line   line"
+            "sidebar modeller modeller modeller"
+            "sidebar ft   ft   ft";
+    }
+}
 
 @media only screen and (min-width: 800px) {
 
