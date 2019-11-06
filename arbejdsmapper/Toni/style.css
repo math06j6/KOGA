@@ -68,7 +68,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--colorTwo);
+    background-color: #EEEFEF;
     color: var(--colorThree);
     overflow-wrap: break-word;
     hyphens: auto;
@@ -201,7 +201,7 @@ button {
     font-weight: 500;
     font-size: 1rem;
     font-style: normal;
-    padding: 0.75rem 2rem;
+    padding: 0.75rem 1.5rem;
     text-transform: uppercase;
     min-width: 160px;
 
@@ -276,13 +276,13 @@ nav {
 
 
 .menuTop {
-    background-color: var(--colorFive);
+    background-color: #313131;
 
 
 }
 
 .menu_bottom {
-    background-color: var(--colorThree);
+    background-color: #313131;
     display: none;
 }
 
@@ -391,7 +391,7 @@ li.menu_ikon {
     flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: center;
-    background-color: var(--colorFive);
+    background-color: #313131;
 }
 
 .logo-container svg {
@@ -401,13 +401,10 @@ li.menu_ikon {
     margin: auto 0;
 }
 
-.logo-container:hover svg {
-    /*    fill: #3f0;*/
-}
 
 .nyt_logo {
     /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
-    background-image: url("files/svg/logo.svg");
+    background-image: url("files/svg/koga_logo_black.svg");
     display: inline-block;
     padding: 10px;
     width: 100px;
@@ -677,24 +674,37 @@ footer .lokalitet :first-child {
 }
 
 .top_link a {
-    padding: 1rem;
-    margin-left: auto;
+    margin: 1rem 1rem 1rem auto;
     text-decoration: none;
-    font-family: ;
     display: block;
+    width: 60px;
+    height: 60px;
+    background: var(--colorFive);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*    border-radius: 100%;*/
 }
 
-.top_link h4 {
-    font-size: 2rem;
-    transition: all 0.25s ease 0s;
-    color: var(--colorEight);
+.top_link a i.up {
+    border: solid var(--colorOne);
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 7px;
+    margin-top: 10px;
 }
 
-.top_link h4:hover {
-    color: var(--colorThree);
-
+.top_link a:hover i.up {
+    border: solid var(--colorEight);
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 45;
 }
 
+
+/*
 .arrowUp {
     background-image: url(files/svg/arrowUp.svg);
     display: inline-block;
@@ -715,6 +725,10 @@ footer .lokalitet :first-child {
 .arrowUp:hover {
     filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
 }
+*/
+
+
+
 
 /* Knap: Tilbage til toppen SLUT*/
 
@@ -787,14 +801,14 @@ footer li > a.underline:hover:before {
 #splash {
     width: 100vw;
     height: calc(56.25vw - 60px);
-    background-image: url(files/images/splash.jpg);
+    background-image: url(files/images/trekking3.jpg);
     background-size: cover;
     padding: 0;
     margin-left: 0;
     margin-right: 0;
     position: relative;
-    background-position: 50% 50%;
-    min-height: 300px;
+    background-position: 90% 50%;
+    min-height: 200px;
 }
 
 #splash .wrapper {
@@ -868,7 +882,7 @@ footer li > a.underline:hover:before {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--colorOne);
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
     /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
@@ -951,6 +965,7 @@ footer li > a.underline:hover:before {
 8.2 CYKLER
 \*------------------------------------*/
 
+
 #cykler {
     max-width: 1400px;
     margin: 0 auto;
@@ -1011,7 +1026,7 @@ footer li > a.underline:hover:before {
     margin: 0;
 }
 
-#cykler .auto-grid {
+.auto-grid {
     padding: 0;
 }
 
@@ -1121,7 +1136,7 @@ button .left {
 }
 
 .single-content {
-    object-fit: cover;
+    max-width: 800px;
 }
 
 /* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
@@ -1155,12 +1170,15 @@ table td span {
     left: 0;
 }
 
+table td p {
+    padding: 0;
+}
 
 .luk {
 
     font-size: 1rem;
     cursor: pointer;
-    margin: 2rem;
+    margin: 0 1rem;
 }
 
 
@@ -1168,7 +1186,30 @@ table td span {
 8.3 Singleview - SLUT
 \*------------------------------------*/
 
+/*------------------------------------*\
+8.4 About
+\*------------------------------------*/
 
+/*------------------------------------*\
+8.4 About - SLUT
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+8.5 Kontakt
+\*------------------------------------*/
+
+.kontakt telefon,
+.kontakt email,
+.kontakt adresse {
+    padding: 32px;
+    FIS
+}
+
+
+/*------------------------------------*\
+8.5 Kontakt - SLUT
+\*------------------------------------*/
 
 /*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
