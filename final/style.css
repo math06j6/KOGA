@@ -958,7 +958,7 @@ article.kategori_racer {
     margin-top: 5rem;
 }
 
-#forside .kategori img {
+.kategori img {
     object-fit: cover;
 }
 
@@ -971,7 +971,7 @@ article.kategori_racer {
     flex-wrap: wrap;
 }
 
-#forside .kategori button,
+.kategori button,
 #signature button {
     color: var(--colorOne);
     background: var(--colorFive);
