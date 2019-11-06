@@ -206,9 +206,9 @@ button {
     font-weight: 500;
     font-size: 1rem;
     font-style: normal;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem;
     text-transform: uppercase;
-    min-width: 160px;
+    min-width: 150px;
 
 }
 
@@ -868,29 +868,31 @@ footer li > a.underline:hover:before {
     height: 1rem;
 }
 
-figure {
-    padding: 0;
-    overflow: hidden;
-    height: 8rem;
-}
 
 article.kategori_ebike {
     background-image: url("files/images/ebike.jpg");
-    background-size: 120vw;
+    background-size: 140vw;
     background-position: -50vw;
+    height: 60vw;
 }
 
 article.kategori_city {
     background-image: url("files/images/city6.jpg");
     background-size: 120vw;
     background-position: -37vw;
+    height: 60vw;
 }
 
 article.kategori_trekking {
     background-image: url("files/images/trekking1.jpg");
     background-size: 120vw;
+<<<<<<< HEAD
+    background-position: -75vw;
+    height: 60vw;
+=======
     background-position: -90vw;
 
+>>>>>>> origin/master
 }
 
 article.kategori_racer {
@@ -902,6 +904,7 @@ article.kategori_racer {
 .forside_overskrift h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: var(--colorTwelve);
 }
 
 /*** Splash - Slut ***/
@@ -939,8 +942,14 @@ article.kategori_racer {
 
 .cardHeader,
 .cardBottom {
-    padding: 1rem;
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.cardHeader h4 {
+    margin-top: 5rem;
 }
 
 .kategori img {
