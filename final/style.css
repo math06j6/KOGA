@@ -36,8 +36,8 @@ INDHOLDSFORTEGNELSE:
     --colorEight: #B7D8EE;
     --colorNine: #27333B;
     --colorTen: #6E7D87;
-    --colorTwelve: rgba(0, 0, 0, 0.7);
-    --colorTwelve: #ac632f;
+    --colorTwelve: #313131;
+
 
 }
 
@@ -69,7 +69,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #EEEFEF;
-    color: var(--colorThree);
+    color: var(--colorTwelve);
     overflow-wrap: break-word;
     hyphens: auto;
     font-family: Arial, Verdana, Sans-Serif;
@@ -144,6 +144,9 @@ h4 {
     font-weight: 500;
     font-size: 1.25rem;
     font-style: normal;
+    color: var(--colorOne);
+    text-align: center;
+
 }
 
 p {
@@ -158,9 +161,7 @@ ul {
     list-style: none;
 }
 
-figure {
-    padding: 1rem 0;
-}
+
 
 section {
     width: 100%;
@@ -197,7 +198,11 @@ section {
 
 button {
     cursor: pointer;
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-family: futura-pt,
+        Arial,
+        Helvetica,
+        Roboto,
+        sans-serif;
     font-weight: 500;
     font-size: 1rem;
     font-style: normal;
@@ -276,13 +281,13 @@ nav {
 
 
 .menuTop {
-    background-color: #313131;
+    background-color: var(--colorTwelve);
 
 
 }
 
 .menu_bottom {
-    background-color: #313131;
+    background-color: var(--colorTwelve);
     display: none;
 }
 
@@ -391,7 +396,7 @@ li.menu_ikon {
     flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: center;
-    background-color: #313131;
+    background-color: var(--colorTwelve);
 }
 
 .logo-container svg {
@@ -856,12 +861,55 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--colorOne);
 }
 
+
+.wrapper figure {
+    padding: 0;
+    overflow: hidden;
+    height: 1rem;
+}
+
+figure {
+    padding: 0;
+    overflow: hidden;
+    height: 8rem;
+}
+
+article.kategori_ebike {
+    background-image: url("files/images/ebike.jpg");
+    background-size: 120vw;
+    background-position: -50vw;
+}
+
+article.kategori_city {
+    background-image: url("files/images/city6.jpg");
+    background-size: 120vw;
+    background-position: -37vw;
+}
+
+article.kategori_trekking {
+    background-image: url("files/images/trekking1.jpg");
+    background-size: 120vw;
+    background-position: -90vw;
+
+}
+
+article.kategori_racer {
+    background-image: url("files/images/race1.jpg");
+    background-size: 120vw;
+    background-position: -70vw;
+}
+
+.forside_overskrift h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /*** Splash - Slut ***/
 
 
 /* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
 .auto-grid {
-    --auto-grid-min-size: 268px;
+    --auto-grid-min-size: 168px;
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
@@ -891,7 +939,7 @@ footer li > a.underline:hover:before {
 
 .cardHeader,
 .cardBottom {
-    padding: 1rem 0;
+    padding: 1rem;
     text-transform: uppercase;
 }
 
@@ -1131,7 +1179,7 @@ button .left {
 
 .single-header h4 {
     text-transform: uppercase;
-    color: var(--colorFive);
+    color: var(--colorOne);
     padding: 0;
 }
 
@@ -1207,6 +1255,9 @@ table td p {
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
 \*------------------------------------*/
 
+
+
+
 /*------------------------------------*\
 9: MEDIA QUERIES
 \*------------------------------------*/
@@ -1216,7 +1267,7 @@ table td p {
     /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
     .topnav.change {
         position: relative;
-        background-color: var(--colorFive);
+        background-color: var(--colorTwelve);
         position: fixed;
         top: 0;
         left: 0;
