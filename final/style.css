@@ -36,8 +36,8 @@ INDHOLDSFORTEGNELSE:
     --colorEight: #B7D8EE;
     --colorNine: #27333B;
     --colorTen: #6E7D87;
-    --colorTwelve: rgba(0, 0, 0, 0.7);
-    --colorTwelve: #ac632f;
+    --colorTwelve: #313131;
+
 
 }
 
@@ -276,13 +276,13 @@ nav {
 
 
 .menuTop {
-    background-color: #313131;
+    background-color: var(--colorTwelve);
 
 
 }
 
 .menu_bottom {
-    background-color: #313131;
+    background-color: var(--colorTwelve);
     display: none;
 }
 
@@ -391,7 +391,7 @@ li.menu_ikon {
     flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: center;
-    background-color: #313131;
+    background-color: var(--colorTwelve);
 }
 
 .logo-container svg {
@@ -1216,7 +1216,7 @@ table td p {
     /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
     .topnav.change {
         position: relative;
-        background-color: var(--colorFive);
+        background-color: var(--colorTwelve);
         position: fixed;
         top: 0;
         left: 0;
