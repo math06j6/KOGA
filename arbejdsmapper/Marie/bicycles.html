@@ -47,14 +47,10 @@
                     <button class="filter" data-cykel="alle">Pris<i class="down"></i></button>
                 </nav>
             </aside>
-            <!--
-        </section>
-        <section>
-
--->
             <hr class="line">
             <div class="grid-container">
                 <section class="auto-grid">
+                    <!--
                     <article class="kategori">
                         <header class="cardHeader">
                             <h4>Cykel</h4>
@@ -168,7 +164,9 @@
                             <button>Læs mere</button>
                         </div>
                     </article>
+-->
 
+                    <!--
                     <article class="kategori">
                         <header class="cardHeader">
                             <h4>Cykel</h4>
@@ -178,17 +176,53 @@
                             <button>Læs mere</button>
                         </div>
                     </article>
+-->
+
+
+                    <!--
+                <section class="liste">
+                </section>
+-->
+
+                    <!--
+                 en tilbageknap jeg ikke ved hvor hører til
+                <div class="tilbage">
+                    <div class="top_link">
+                        <a href="#">
+                            <span class="arrowUp"></span>
+                        </a>
+                    </div>
+                </div>
+-->
+
+                    <!-- template for vores listevisning -->
+                    <template>
+                        <article class="kategori">
+                            <header class="cardHeader">
+                                <h4 class="cykelmodel"></h4>
+                            </header>
+                            <figure>
+                                <img class="billede_1" src="" alt=""> </figure>
+
+                            <p class="kort"></p>
+
+<!--                            <div class="cardBottom">-->
+                                <button>Læs mere</button>
+<!--                            </div>-->
+                        </article>
+                    </template>
+
                 </section>
             </div>
             <div class="tilbage">
                 <div class="top_link">
                     <a href="#">
-                        <span class="arrowUp"></span>
+                        <!--                        <span class="arrowUp"></span>-->
+                        <i class="up"></i>
                     </a>
                 </div>
             </div>
         </section>
-
 
     </main>
 
@@ -273,4 +307,41 @@
         </div>
     </footer>
     <script src="script.js"> </script>
+    <script>
+        let posts = [];
+        const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            posts = await response.json();
+            console.log(posts);
+            vis();
+
+        }
+
+        function vis() {
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".auto-grid");
+
+            posts.forEach(post => {
+                const klon = skabelon.cloneNode(true).content;
+
+                klon.querySelector(".billede_1").src = post.billede_side.guid;
+                klon.querySelector("h4").textContent = post.cykelmodel;
+
+                klon.querySelector(".kort").textContent = post.kort_tagline;
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = `singleview.html?id=${post.id}`;
+                })
+
+                liste.appendChild(klon);
+            });
+        }
+    </script>
 </body></html>
