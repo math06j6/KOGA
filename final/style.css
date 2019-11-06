@@ -15,6 +15,8 @@ INDHOLDSFORTEGNELSE:
 8. STYLING AF SPECIFIKKE SIDER
     8.1 FORSIDE
     8.2 ???
+    8.3
+    8.4
 9. MEDIA QUERIES
 
 ****************************************
@@ -235,6 +237,7 @@ button {
 }
 
 /* Pile - Slut*/
+
 
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
@@ -909,7 +912,7 @@ article.kategori_racer {
 
 /* --auto-grid-min-size`gør det muligt at lave grid uden brug af media queries */
 .auto-grid {
-    --auto-grid-min-size: 168px;
+    --auto-grid-min-size: 268px;
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
@@ -926,7 +929,7 @@ article.kategori_racer {
     padding: 0 1rem;
 }
 
-.kategori {
+#forside .kategori {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--colorOne);
@@ -937,15 +940,16 @@ article.kategori_racer {
     row-gap: 1em;
 }
 
-.cardHeader,
-.cardBottom {
+#forside .cardHeader,
+#forside .cardBottom {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     margin-bottom: 40px;
 }
 
-.cardHeader h4 {
+
+#forside .cardHeader h4 {
     margin-top: 5rem;
 }
 
@@ -962,7 +966,7 @@ article.kategori_racer {
     flex-wrap: wrap;
 }
 
-.kategori button,
+#forside .kategori button,
 #signature button {
     color: var(--colorOne);
     background: var(--colorFive);
@@ -970,14 +974,6 @@ article.kategori_racer {
     margin: 1rem 0;
 }
 
-.kategori button:hover {
-    color: var(--colorFive);
-    background: var(--colorOne);
-}
-
-.kategori button:hover {
-    background: 0;
-}
 
 #signature button {
     color: var(--colorOne);
@@ -1038,25 +1034,14 @@ article.kategori_racer {
         "ft";
 }
 
-@media (min-width: 640px) {
-    #cykler {
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas:
-            "hd      hd   hd   hd"
-            "line    line line   line"
-            "sidebar modeller modeller modeller"
-            "sidebar ft   ft   ft";
-    }
-}
-
 #cykler .section-header {
     grid-area: hd;
     padding: 2.5rem 0;
 }
 
 
-#cykler.cardHeader,
-#cykler.cardBottom {
+#cykler .cardHeader,
+#cykler .cardBottom {
     padding: 1rem 0;
     text-transform: uppercase;
 }
@@ -1116,6 +1101,11 @@ article.kategori_racer {
     background: var(--colorFive);
     border: 1px solid var(--colorFive);
     margin: 1rem 0;
+}
+
+#cykler .kategori button:hover {
+    color: var(--colorFive);
+    background: 0;
 }
 
 .filtrering {
@@ -1381,6 +1371,16 @@ table td p {
     padding: 15vh 0;
 }
 
+@media (min-width: 640px) {
+    #cykler {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "hd      hd   hd   hd"
+            "line    line line   line"
+            "sidebar modeller modeller modeller"
+            "sidebar ft   ft   ft";
+    }
+}
 
 @media only screen and (min-width: 800px) {
 
