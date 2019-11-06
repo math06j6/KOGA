@@ -69,7 +69,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #EEEFEF;
-    color: var(--colorThree);
+    color: var(--colorTwelve);
     overflow-wrap: break-word;
     hyphens: auto;
     font-family: Arial, Verdana, Sans-Serif;
@@ -886,8 +886,13 @@ article.kategori_city {
 article.kategori_trekking {
     background-image: url("files/images/trekking1.jpg");
     background-size: 120vw;
+<<<<<<< HEAD
     background-position: -75vw;
     height: 60vw;
+=======
+    background-position: -90vw;
+
+>>>>>>> origin/master
 }
 
 article.kategori_racer {
@@ -1258,6 +1263,9 @@ table td p {
 /*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
 \*------------------------------------*/
+
+
+
 
 /*------------------------------------*\
 9: MEDIA QUERIES
