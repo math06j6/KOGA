@@ -1028,18 +1028,15 @@ article.kategori_city {
 article.kategori_trekking {
     background-image: url("files/images/trekking1.jpg");
     background-size: 120vw;
-<<<<<<< HEAD
-    background-position: -75vw;
+    <<<<<<< HEAD background-position: -75vw;
     height: 60vw;
     background-position: -70vw;
 
-=======
-    <<<<<<< HEAD background-position: -75vw;
+    =======<<<<<<< HEAD background-position: -75vw;
     height: 60vw;
     =======background-position: -90vw;
 
-    > > > > > > > origin/master
->>>>>>> origin/master
+    > > > > > > > origin/master > > > > > > > origin/master
 }
 
 article.kategori_racer {
@@ -1091,14 +1088,14 @@ article.kategori_racer {
     text-transform: uppercase;
 }
 
-<<<<<<< HEAD
+
 .cardHeader h4 {
     margin-top: 3rem;
-=======
+}
 
 #forside .cardHeader h4 {
     margin-top: 5rem;
->>>>>>> origin/master
+
 }
 
 .kategori img {
