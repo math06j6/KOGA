@@ -1005,7 +1005,44 @@ footer li > a.underline:hover:before {
     height: 100%;
 }
 
+#forside button {
+    background-color: var(--colorThirteen);
+    border: 0px;
+}
 
+#forside p {
+    color: var(--colorOne);
+    font-size: 0.6rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+#forside .cardBottom button {
+    color: var(--colorOne);
+}
+
+.forside_overskrift h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--colorTwelve);
+}
+
+/***** Splash - Slut *****/
+
+
+#forside .card-forside {
+    /*    padding: 5rem 1rem;*/
+    text-align: center;
+    background: var(--colorOne);
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
+    row-gap: 1em;
+}
+
+
+/*
 article.kategori_ebike {
     background-image: url("files/images/ebike.jpg");
     background-size: 140vw;
@@ -1032,42 +1069,40 @@ article.kategori_racer {
     background-size: 120vw;
     background-position: -70vw;
 }
+*/
 
-#forside button {
-    background-color: var(--colorThirteen);
-    border: 0px;
+
+/*
+article.kategori_ebike {
+    background-image: url("files/images/ebike.jpg");
+    background-size: 140vw;
+    background-position: -50vw;
+    height: 60vw;
 }
 
-#forside p {
-    color: var(--colorOne);
-    font-size: 0.6rem;
-    text-align: center;
-    margin: 1rem;
+article.kategori_city {
+    background-image: url("files/images/city6.jpg");
+    background-size: 120vw;
+    background-position: -37vw;
+    height: 60vw;
 }
 
-#forside .cardBottom button {
-    color: var(--colorOne);
+article.kategori_trekking {
+    background-image: url("files/images/trekking1.jpg");
+    background-size: 120vw;
+    background-position: -75vw;
+    height: 60vw;
+    background-position: -70vw;
+
 }
 
-.forside_overskrift h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--colorTwelve);
+article.kategori_racer {
+    background-image: url("files/images/race1.jpg");
+    background-size: 120vw;
+    background-position: -70vw;
 }
+*/
 
-/***** Splash - Slut *****/
-
-
-#forside .kategori {
-    /*    padding: 5rem 1rem;*/
-    text-align: center;
-    background: var(--colorOne);
-    padding: 1rem 2rem;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
-    row-gap: 1em;
-}
 
 #forside .cardHeader,
 #forside .cardBottom {
@@ -1097,35 +1132,6 @@ article.kategori_racer {
     height: 60vw;
 }
 
-
-article.kategori_ebike {
-    background-image: url("files/images/ebike.jpg");
-    background-size: 140vw;
-    background-position: -50vw;
-    height: 60vw;
-}
-
-article.kategori_city {
-    background-image: url("files/images/city6.jpg");
-    background-size: 120vw;
-    background-position: -37vw;
-    height: 60vw;
-}
-
-article.kategori_trekking {
-    background-image: url("files/images/trekking1.jpg");
-    background-size: 120vw;
-    background-position: -75vw;
-    height: 60vw;
-    background-position: -70vw;
-
-}
-
-article.kategori_racer {
-    background-image: url("files/images/race1.jpg");
-    background-size: 120vw;
-    background-position: -70vw;
-}
 
 #signature {
     background-image: url(files/images/city2.jpg);
