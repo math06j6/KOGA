@@ -21,6 +21,12 @@
     <!--  Vi gør brug af ikoner fra Font Awesome - via W3schools.
    Link: https://www.w3schools.com/icons/fontawesome_icons_intro.asp  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .single-header {
+            background-color: aquamarine;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -29,56 +35,30 @@
         <nav id="myTopnav" class="topnav"></nav>
     </header>
     <main>
-        <section>
-            <button class="luk"><i class="left"></i>Tilbage</button>
-            <div class="sectionwrapper">
-                <article class="single-content ">
-                    <header class="single-header">
-                        <h2>E-NOVA EVO PT AUTOMATIC</h2>
-                        <h4>E-bikes</h4>
-                    </header>
-                    <figure>
-                        <img src="files/images/card1_Ebike2020.jpg" alt="E-bikes">
-                    </figure>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Model</th>
-                                <th>Kategori</th>
-                                <th>Køn</th>
-                                <th>Vægt</th>
-                                <th>Farve</th>
-                                <th>Pris</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span>Model</span>
-                                    <p class="cykelmodel_td"></p>
-                                </td>
-                                <td><span>Kategori</span>
-                                    <p class="cykeltype"></p>
-                                </td>
-                                <td><span>Køn</span>
-                                    <p class="koen"></p>
-                                </td>
-                                <td><span>Vægt</span>
-                                    <p class="vaegt"></p>
-                                </td>
-                                <td><span>Farve</span>
-                                    <p class="farve"></p>
-                                </td>
-                                <td><span>Pris</span>
-                                    <p class="pris"></p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </article>
-            </div>
+        <section id="breadcrumb">
+            <ul class="">
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#">Cykler</a></li>
+                <li><a href="#" class="">Cykeltype</a></li>
+                <li><a href="#" class="">Cykelmodel</a></li>
+            </ul>
         </section>
+        <button class="luk"><i class="left"></i>Tilbage</button>
+        <section class="liste">
+        </section>
+        <template>
+            <article class="single-content">
 
+                <h2 class="model"></h2>
+                <h4 class="type"></h4>
+                <h5 class="køn"></h5>
+                <img src="" alt="">
+                <p class="pris"></p>
+
+
+
+            </article>
+        </template>
     </main>
 
     <footer>
@@ -161,7 +141,7 @@
             </address>
         </div>
     </footer>
-    <script src="script.js"> </script>
+    <!--    <script src="script.js"> </script>-->
     <!--
     <script>
         document.querySelector(".luk").addEventListener("click", () => {
@@ -170,36 +150,45 @@
     </script>
 -->
     <script>
+        let cykler = [];
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
-        let cykel;
-        document.addEventListener("DOMContentLoaded", getJson);
+        const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler/" + id;
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            getJson();
+        }
+
         async function getJson() {
-            let jsonData = await fetch(`http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler/${id}`);
-            cykel = await jsonData.json();
+            const response = await fetch(url);
+            console.log(response);
+            cykler = await response.json();
             visCykel();
         }
 
         function visCykel() {
-            document.querySelector("h2").textContent = cykel.title.rendered;
-            document.querySelector("img").src = cykel.billede_side.guid;
-            document.querySelector(".cykelmodel_td").innerHTML = cykel.title.rendered;
-            document.querySelector(".cykeltype").innerHTML = cykel.cykeltype;
 
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".liste");
 
+            cykler.forEach((cykel) => {
+                if (cykel.id == id) {
+                    const klon = skabelon.cloneNode(true).content;
+                    klon.querySelector(".model").textContent = cykel.title.rendered;
+                    klon.querySelector(".type").textContent = cykel.title.rendered;
+                    klon.querySelector(".køn").textContent = cykel.title.rendered;
+                    klon.querySelector(".pris").textContent = cykel.title.rendered;
+                    klon.querySelector("img").src = cykel.billede_side.guid;
+                    klon.querySelector("img").alt = "billede af" + cykel.billede_side.guid;
+                    liste.appendChild(klon);
 
-            document.querySelector(".koen").innerHTML = cykel.koen;
-            document.querySelector(".vaegt").innerHTML = cykel.vaegt;
-            document.querySelector(".farve").innerHTML = cykel.farve;
-            document.querySelector(".pris").innerHTML = cykel.pris;
-            //            document.querySelector(".koen_td").innerHTML = cykel.koen;
-
+                }
+            });
 
         }
-        document.querySelector(".luk").addEventListener("click", () => {
-            history.back();
-        })
-
     </script>
 </body>
 
