@@ -234,6 +234,8 @@ button {
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    padding: 3px;
+    margin: 3px 10px;
 }
 
 /***** Pile - Slut *****/
@@ -263,6 +265,105 @@ button {
 
 /***** Grid - Slut *****/
 
+
+
+/***** Breadcrumbs - *****/
+
+#breadcrumb {
+    padding: 1rem 0;
+}
+
+#breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0rem 2rem;
+}
+
+#breadcrumb li {
+    display: inline;
+    color: var(--colorThree);
+    /*    color: var(--colorTwelve);*/
+    font-size: 0.75rem;
+}
+
+#breadcrumb li:before {
+    content: " / "
+}
+
+#breadcrumb li:first-child:before {
+    content: normal;
+}
+
+#breadcrumb li a {
+    color: var(--colorThree);
+    /*    color: var(--colorTwelve);*/
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 700;
+}
+
+#breadcrumb li:hover a,
+#breadcrumb li:hover {
+    color: var(--colorFive);
+}
+
+
+
+/***** Breadcrumbs - Slut *****/
+
+
+
+/***** Accordion/Collapsible *****/
+
+details {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+details .filter {
+    color: var(--colorTwelve);
+    background: 0;
+    border: none;
+    border-bottom: 1px solid var(--colorTwelve);
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    text-transform: capitalize;
+    color: var(--colorThree);
+
+}
+
+details .summary:hover,
+details .filter:hover {
+    /*    background-color: var(--colorEight);*/
+    color: var(--colorFive);
+}
+
+
+
+summary {
+    padding: 1rem;
+    display: block;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid var(--colorTwelve);
+    color: var(--colorTwelve);
+    min-width: 150px;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+}
+
+
+summary &::-webkit-details-marker {
+    display: none;
+}
+
+/***** Accordion/Collapsible - Slut *****/
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
 \*------------------------------------*/
@@ -705,7 +806,7 @@ footer .lokalitet :first-child {
 }
 
 .top_link a {
-    margin: 1rem 1rem 1rem auto;
+    margin: 0 1rem 2rem auto;
     text-decoration: none;
     display: block;
     width: 60px;
@@ -715,6 +816,7 @@ footer .lokalitet :first-child {
     justify-content: center;
     align-items: center;
     /*    border-radius: 100%;*/
+
 }
 
 .top_link a i.up {
@@ -1025,7 +1127,6 @@ article.kategori_racer {
     max-width: 1400px;
     margin: 0 auto;
     background-color: #fff;
-    color: var(--colorThree);
     display: grid;
     grid-gap: 1rem;
     padding-bottom: 0;
@@ -1116,9 +1217,9 @@ article.kategori_racer {
 .filtrering {
     display: grid;
     grid-auto-rows: auto;
-    grid-gap: 0.5rem;
+    grid-gap: 0;
     max-width: 1400px;
-    padding: 1rem;
+    padding: 2rem;
     margin: 0 auto;
     /*
     top: 20vh;
@@ -1138,6 +1239,18 @@ article.kategori_racer {
 .filter:hover {
     color: var(--colorFive);
     background: 0;
+}
+
+
+
+.cykeltype summary {
+    border-top: 1px solid var(--colorTwelve);
+}
+
+
+details .valgt-cykeltype,
+details .valgt {
+    color: var(--colorFive);
 }
 
 /* Pile */
@@ -1209,7 +1322,7 @@ button .left {
 
 .single-header h4 {
     text-transform: uppercase;
-    color: var(--colorOne);
+    color: var(--colorFive);
     padding: 0;
 }
 
@@ -1223,6 +1336,7 @@ table {
     border-collapse: collapse;
     text-align: left;
     width: 100%;
+    margin: 2rem 0 1rem;
 }
 
 table tr {
@@ -1246,10 +1360,13 @@ table td span {
     text-transform: uppercase;
     top: 0;
     left: 0;
+
 }
 
 table td p {
     padding: 0;
+    text-transform: capitalize;
+
 }
 
 .luk {
@@ -1257,6 +1374,8 @@ table td p {
     font-size: 1rem;
     cursor: pointer;
     margin: 0 1rem;
+    border: none;
+    background: 0;
 }
 
 
