@@ -39,6 +39,7 @@ INDHOLDSFORTEGNELSE:
     --colorNine: #27333B;
     --colorTen: #6E7D87;
     --colorTwelve: #313131;
+    --colorThirteen: rgba(14, 125, 199, 0.7);
 
 
 }
@@ -940,7 +941,7 @@ footer li > a.underline:hover:before {
 /***** Splash *****/
 #splash {
     width: 100vw;
-    height: calc(56.25vw - 60px);
+    height: calc(56.25vw - 0px);
     background-image: url(files/images/trekking3.jpg);
     background-size: cover;
     padding: 0;
@@ -948,16 +949,22 @@ footer li > a.underline:hover:before {
     margin-right: 0;
     position: relative;
     background-position: 90% 50%;
-    min-height: 200px;
+    min-height: 100px;
+    filter:
 }
 
 #splash .wrapper {
-    padding: 6rem 1rem 0;
-    max-width: 1400px;
+    padding: 2rem 1rem 0;
+    max-width: 1200px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     row-gap: 1rem;
     margin: 0 1rem;
+}
+
+#splash .cardBottom {
+    display: flex;
+    justify-content: flex-start;
 }
 
 #splash .wrapper img {
@@ -978,7 +985,7 @@ footer li > a.underline:hover:before {
     text-transform: uppercase;
     min-width: 160px;
     color: var(--colorOne);
-    background: var(--colorFive);
+    background: var(--colorThirteen);
     border: 1px solid var(--colorFive);
     margin: 1rem 0;
 
@@ -1000,7 +1007,7 @@ footer li > a.underline:hover:before {
 .wrapper figure {
     padding: 0;
     overflow: hidden;
-    height: 1rem;
+    height: 100%;
 }
 
 
@@ -1021,17 +1028,40 @@ article.kategori_city {
 article.kategori_trekking {
     background-image: url("files/images/trekking1.jpg");
     background-size: 120vw;
+<<<<<<< HEAD
+    background-position: -75vw;
+    height: 60vw;
+    background-position: -70vw;
+
+=======
     <<<<<<< HEAD background-position: -75vw;
     height: 60vw;
     =======background-position: -90vw;
 
     > > > > > > > origin/master
+>>>>>>> origin/master
 }
 
 article.kategori_racer {
     background-image: url("files/images/race1.jpg");
     background-size: 120vw;
     background-position: -70vw;
+}
+
+#forside button {
+    background-color: var(--colorThirteen);
+    border: 0px;
+}
+
+#forside p {
+    color: white;
+    font-size: 0.6rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+#forside .cardBottom button {
+    color: white;
 }
 
 .forside_overskrift h1 {
@@ -1059,12 +1089,16 @@ article.kategori_racer {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
+.cardHeader h4 {
+    margin-top: 3rem;
+=======
 
 #forside .cardHeader h4 {
     margin-top: 5rem;
+>>>>>>> origin/master
 }
 
 .kategori img {
