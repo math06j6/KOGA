@@ -182,7 +182,7 @@ section {
     flex-wrap: wrap;
     max-width: 1400px;
     margin: 0 auto;
-    /*    padding: 1rem;*/
+    padding: 1rem;
 }
 
 .col_left {
@@ -954,7 +954,7 @@ footer li > a.underline:hover:before {
 
 #splash .box_black {
     background-color: rgba(0, 0, 0, 0.5);
-    height: calc(56.25vw - 0px);
+    height: 100%;
 }
 
 #splash .wrapper {
@@ -1064,6 +1064,12 @@ footer li > a.underline:hover:before {
 */
     /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
     /*    row-gap: 1em;*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    height: 60vw;
+    max-height: 400px;
 }
 
 
@@ -1077,30 +1083,38 @@ footer li > a.underline:hover:before {
 .kategori_ebike {
     grid-area: ebike;
     background-image: url(files/images/ebike.jpg);
-    background-size: 110vw;
-    background-position: -45vw;
+    background-position: 65% 0%;
 }
 
 .kategori_city {
     grid-area: city;
     background-image: url(files/images/city6.jpg);
+    background-position: 90% 0%;
+    /*
     background-size: 110vw;
     background-position: -55vw;
+*/
 }
 
 .kategori_trekking {
     grid-area: trekking;
     background-image: url(files/images/trekking1.jpg);
+    background-position: 100% 0;
+    /*
     background-size: 110vw;
     background-position: -65vw;
+*/
 
 }
 
 .kategori_racer {
     grid-area: racer;
     background-image: url(files/images/race1.jpg);
+    background-position: 100% 100%;
+    /*
     background-size: 110vw;
     background-position: -65vw;
+*/
 }
 
 .test-container > div {
@@ -1109,43 +1123,16 @@ footer li > a.underline:hover:before {
 
 .test-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
     grid-template-areas:
-        "ebike city"
-        "trekking racer";
+        "ebike"
+        "city"
+        "trekking"
+        "racer";
+
 
     /*    grid-template-rows: auto 1fr auto;*/
-
-}
-
-
-@media screen and (min-width:800px) {
-    .test-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "ebike city trekking racer";
-    }
-
-    article.kategori_ebike {
-        background-size: 80vw;
-        background-position: 48vw;
-    }
-
-    article.kategori_city {
-        background-size: 80vw;
-        background-position: -30vw;
-    }
-
-    article.kategori_trekking {
-        background-size: 80vw;
-        background-position: 25vw;
-    }
-
-    article.kategori_racer {
-        background-size: 80vw;
-        background-position: -55vw;
-    }
 
 }
 
@@ -1155,11 +1142,11 @@ footer li > a.underline:hover:before {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    margin: 1rem 0;
 }
 
 
 #forside .cardHeader h4 {
-    margin-top: 2rem;
     color: var(--colorOne);
 
 }
@@ -1168,9 +1155,15 @@ footer li > a.underline:hover:before {
     object-fit: cover;
 }
 
+
 .box {
     background-color: rgba(0, 0, 0, 0.5);
-    height: 60vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+
 }
 
 .box_blue {
@@ -1179,14 +1172,38 @@ footer li > a.underline:hover:before {
 
 }
 
+.signature-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+
+}
 
 #signature {
     background-image: url(files/images/city2.jpg);
-    background-size: 105vw;
     height: 60vw;
-    background-repeat: no-repeat;
-    background-position: 0vw;
-    margin: -5rem rem;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 0%;
+}
+
+#signature .box_blue {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+}
+
+#signature .blue-container {
+    padding: 5rem;
+    margin: auto auto 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: end;
 }
 
 #signature h2,
@@ -1195,17 +1212,23 @@ footer li > a.underline:hover:before {
 }
 
 #signature h2 {
-    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: calc(1.5rem + 3vw);
+    grid-area: signature-header;
 }
 
 #signature p {
     margin-top: -1rem;
+    grid-area: signature-tekst;
 }
 
 .kategori button {
     color: var(--colorOne);
     border: 1px solid var(--colorOne);
     margin: 1rem 0;
+    grid-area: signature-knap;
+
+
 }
 
 
@@ -1213,6 +1236,7 @@ footer li > a.underline:hover:before {
     color: var(--colorOne);
     background: none;
     border: 1px solid var(--colorOne);
+    max-width: 200px;
 }
 
 #signature button:hover {
@@ -1747,6 +1771,16 @@ table td p {
 9: MEDIA QUERIES
 \*------------------------------------*/
 
+@media (min-width: 350px) {
+    .test-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "ebike city"
+            "trekking racer";
+    }
+
+}
+
 @media (max-width: 800px) {
 
 
@@ -1831,6 +1865,12 @@ table td p {
 
 @media (min-width: 640px) {
 
+
+    #forside .cardHeader,
+    #forside .cardBottom {
+        margin: 2rem 0;
+    }
+
     .menu_wrapper {
         color: var(--colorOne);
         background-color: var(--colorTwelve);
@@ -1857,6 +1897,7 @@ table td p {
         max-width: 500px;
     }
 
+    /*
     #forside .box,
     #forside .kategori_ebike,
     #forside .kategori_racer,
@@ -1864,22 +1905,12 @@ table td p {
     #forside .kategori_city {
         height: 400px;
     }
+*/
 
-    #forside button {
-        background-color: var(--colorThirteen);
-        border: 0px;
-    }
 
     #forside p {
-        color: var(--colorOne);
         font-size: 1rem;
-        text-align: center;
-        margin: 2rem 2rem;
-    }
-
-
-    #forside .cardHeader {
-        padding-top: 30px;
+        /*        margin: 2rem 2rem;*/
     }
 
 
@@ -1891,6 +1922,41 @@ table td p {
             "sidebar modeller modeller modeller"
             "sidebar ft   ft   ft";
     }
+}
+
+
+@media screen and (min-width:800px) {
+
+    /*****  FORSIDE - GRID  *****/
+    .test-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "ebike city trekking racer";
+    }
+
+    /*
+    article.kategori_ebike {
+        background-size: 80vw;
+        background-position: 48vw;
+    }
+
+    article.kategori_city {
+        background-size: 80vw;
+        background-position: -30vw;
+    }
+
+    article.kategori_trekking {
+        background-size: 80vw;
+        background-position: 25vw;
+    }
+
+    article.kategori_racer {
+        background-size: 80vw;
+        background-position: -55vw;
+    }
+*/
+
+    /*****  FORSIDE - GRID  *****/
 }
 
 @media only screen and (min-width: 800px) {
@@ -1921,6 +1987,7 @@ table td p {
         filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
     }
 
+    /*
     #signature {
         background-image: url(files/images/city2.jpg);
         background-size: 100vw;
@@ -1929,16 +1996,13 @@ table td p {
         background-position: 0vw;
         margin: -2rem 1rem;
     }
+*/
 
+    /*
     #signature .box_blue {
         background-size: 100vw;
         height: 40vw;
-    }
-
-    #signature h2 {
-        font-size: 7rem;
-        padding-top: 5rem;
-    }
+    }*/
 
 
 
