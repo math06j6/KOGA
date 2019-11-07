@@ -1556,6 +1556,164 @@ table td p {
 /*------------------------------------*\
 8.4 About
 \*------------------------------------*/
+#historie {
+    padding: 0;
+}
+
+#historie h2 {
+    font-size: 2rem;
+}
+
+.sectionwrapper_historie {
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    /*    margin: 0 auto;*/
+}
+
+.col_left_historie {
+    flex-grow: 1;
+    flex-basis: 500px;
+    /*    margin: 0 1rem;*/
+    padding: 3rem;
+    padding-bottom: 0;
+
+}
+
+.col_right_historie {
+    flex-grow: 1;
+    flex-basis: 500px;
+    /*    margin: 0 1rem;*/
+    padding-top: 0;
+    padding: 3rem;
+
+}
+
+.sectionwrapper_citat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sectionwrapper_citat h1 {
+    font-size: 2rem;
+    font-weight:
+}
+
+
+.citat1 {
+    text-align: left;
+}
+
+.citat2 {
+    text-align: right;
+}
+
+.sectionwrapper_mereom {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+#mereom {
+    padding: 0;
+}
+
+.billede_mereom {
+    background-image: url(files/images/trekking1.jpg);
+    width: 100%;
+
+}
+
+.billede_mereom p {
+    max-width: 1400px;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    background-color: rgba(14, 125, 199, 0.6);
+
+
+}
+
+#service {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+#service h2 {
+    font-size: 2rem;
+}
+
+.sectionwrapper_service {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+
+.col_left_service {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 3rem;
+    padding-bottom: 0rem;
+}
+
+.col_right_service {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 3rem;
+
+}
+
+#om {
+    padding: 0;
+}
+
+#om h2 {
+    font-size: 2rem;
+}
+
+.sectionwrapper_om {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+.col_left_om {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 3rem;
+    padding-bottom: 0;
+}
+
+.col_right_om {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 3rem;
+}
+
+@media (min-width: 800px) {
+    .sectionwrapper_historie {
+        flex-direction: row-reverse;
+    }
+
+    .sectionwrapper_citat h1 {
+        font-size: 3rem;
+        padding: 0 15rem;
+
+    }
+
+    .billede_mereom p {
+        padding: 10rem;
+
+    }
+
+    .sectionwrapper_om {
+        flex-direction: row-reverse;
+    }
+}
 
 /*------------------------------------*\
 8.4 About - SLUT
