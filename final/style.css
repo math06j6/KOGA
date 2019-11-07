@@ -404,6 +404,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: var(--colorTwelve);
 }
 
 
@@ -731,7 +732,6 @@ a.map {
 }
 
 
-footer ul {}
 
 footer li,
 footer li a {
@@ -941,7 +941,7 @@ footer li > a.underline:hover:before {
     margin-left: 0;
     margin-right: 0;
     position: relative;
-    background-position: 90% 50%;
+    background-position: 100% 50%;
     min-height: 230px;
 }
 
@@ -961,7 +961,7 @@ footer li > a.underline:hover:before {
     max-width: 1200px;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    row-gap: 1rem;
+    row-gap: 0.8rem;
     margin: 0 1rem;
 }
 
@@ -1129,34 +1129,31 @@ footer li > a.underline:hover:before {
         grid-template-areas:
             "ebike city trekking racer";
     }
-}
 
+    article.kategori_ebike {
+        background-image: url("files/images/ebike.jpg");
+        background-size: 80vw;
+        background-position: 48vw;
+    }
 
-article.kategori_ebike {
-    background-image: url("files/images/ebike.jpg");
-    background-size: 140vw;
-    background-position: -50vw;
-    height: 60vw;
-}
+    article.kategori_city {
+        background-image: url("files/images/city6.jpg");
+        background-size: 80vw;
+        background-position: -30vw;
+    }
 
-article.kategori_city {
-    background-image: url("files/images/city6.jpg");
-    background-size: 120vw;
-    background-position: -37vw;
-    height: 60vw;
-}
+    article.kategori_trekking {
+        background-image: url("files/images/trekking1.jpg");
+        background-size: 80vw;
+        background-position: 25vw;
+    }
 
-article.kategori_trekking {
-    background-image: url("files/images/trekking1.jpg");
-    background-size: 120vw;
-    background-position: -75vw;
-    height: 60vw;
-}
+    article.kategori_racer {
+        background-image: url("files/images/race1.jpg");
+        background-size: 80vw;
+        background-position: -55vw;
+    }
 
-article.kategori_racer {
-    background-image: url("files/images/race1.jpg");
-    background-size: 120vw;
-    background-position: -70vw;
 }
 
 /*
@@ -1223,17 +1220,24 @@ article.kategori_racer {
 
 #signature {
     background-image: url(files/images/city2.jpg);
-    background-size: 100vw;
+    background-size: 105vw;
+    height: 60vw;
+    background-repeat: no-repeat;
     background-position: 0vw;
-    height: 50vw;
-    max-width: 1400px;
-    margin: 0 1rem;
+    margin: -5rem rem;
 }
 
 #signature h2,
 #signature p {
     color: var(--colorOne);
+}
 
+#signature h2 {
+    margin-top: 2rem;
+}
+
+#signature p {
+    margin-top: -1rem;
 }
 
 .kategori button {
@@ -1621,6 +1625,8 @@ table td p {
 
 @media (max-width: 800px) {
 
+
+
     /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
     .topnav.change {
         position: relative;
@@ -1700,6 +1706,59 @@ table td p {
 }
 
 @media (min-width: 640px) {
+
+    .menu_wrapper {
+        color: var(--colorOne);
+        background-color: var(--colorTwelve);
+    }
+
+    #splash,
+    #splash .box_black {
+        max-height: 400px;
+        width: 100%;
+        background-size: 100vw;
+        background-position: 0vw 55vw;
+    }
+
+    #splash .wrapper img {
+        min-width: 40vw;
+        max-width: 25%;
+        margin-top: -100px;
+    }
+
+    #splash p {
+        font-size: 1.4rem;
+        margin-top: -6vw;
+        margin-bottom: 1vw;
+        max-width: 500px;
+    }
+
+    #forside .box,
+    #forside .kategori_ebike,
+    #forside .kategori_racer,
+    #forside .kategori_trekking,
+    #forside .kategori_city {
+        height: 400px;
+    }
+
+    #forside button {
+        background-color: var(--colorThirteen);
+        border: 0px;
+    }
+
+    #forside p {
+        color: var(--colorOne);
+        font-size: 1rem;
+        text-align: center;
+        margin: 2rem 2rem;
+    }
+
+
+    #forside .cardHeader {
+        padding-top: 30px;
+    }
+
+
     #cykler {
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
@@ -1731,6 +1790,25 @@ table td p {
 
     .searchButton:hover {
         filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
+    }
+
+    #signature {
+        background-image: url(files/images/city2.jpg);
+        background-size: 100vw;
+        height: 40vw;
+        background-repeat: no-repeat;
+        background-position: 0vw;
+        margin: -2rem 1rem;
+    }
+
+    #signature .box_blue {
+        background-size: 100vw;
+        height: 40vw;
+    }
+
+    #signature h2 {
+        font-size: 7rem;
+        padding-top: 5rem;
     }
 
 
