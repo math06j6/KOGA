@@ -694,7 +694,7 @@ address ul {
     cursor: pointer;
 }
 
-.aabningstider {
+footer .aabningstider {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -749,8 +749,8 @@ footer span.navn {
     text-transform: uppercase;
 }
 
-.find a,
-.aabningstider p,
+footer .find a,
+footer .aabningstider p,
 footer .footerCykler ul li:first-child,
 footer .footerCykler ul li:first-child a,
 footer .lokalitet :first-child {
@@ -773,13 +773,14 @@ footer .lokalitet :first-child {
 }
 
 
-.tider {
-    padding: 0 2rem;
-}
 
 .dage ul,
 .tider ul {
     padding: 0;
+}
+
+.tider {
+    padding-left: 20px;
 }
 
 
@@ -941,7 +942,13 @@ footer li > a.underline:hover:before {
     margin-right: 0;
     position: relative;
     background-position: 90% 50%;
-    min-height: 100px;
+    min-height: 230px;
+}
+
+#splash figure {
+    margin-left: -1vw;
+    margin-top: 15vw;
+    margin-bottom: 4vw;
 }
 
 #splash .box_black {
@@ -961,10 +968,11 @@ footer li > a.underline:hover:before {
 #splash .cardBottom {
     display: flex;
     justify-content: flex-start;
+    margin-top: -10px;
 }
 
 #splash .wrapper img {
-    min-width: 200px;
+    min-width: 60vw;
     max-width: 25%;
 }
 
@@ -976,13 +984,13 @@ footer li > a.underline:hover:before {
     font-size: 1rem;
     line-height: 1.6;
     font-style: normal;
-    padding: 0.75rem 2rem;
+    padding: 0.7rem 2rem;
     text-transform: uppercase;
     min-width: 160px;
     color: var(--colorOne);
     background: var(--colorThirteen);
     border: 1px solid var(--colorFive);
-    margin: 1rem 0;
+    margin: -1.2rem 0;
 
 }
 
@@ -997,6 +1005,17 @@ footer li > a.underline:hover:before {
     background: 0;
     border: 1px solid var(--colorOne);
 }
+
+#splash p {
+    font-size: 0.6rem;
+    color: white;
+    margin-top: -50px;
+}
+
+/***** Splash - Slut *****/
+
+/***** forside ******/
+
 
 
 #forside .wrapper figure {
@@ -1014,7 +1033,7 @@ footer li > a.underline:hover:before {
     color: var(--colorOne);
     font-size: 0.6rem;
     text-align: center;
-    margin: 1rem;
+    margin: 0rem 1rem;
 }
 
 #forside .cardBottom button {
@@ -1027,7 +1046,11 @@ footer li > a.underline:hover:before {
     color: var(--colorTwelve);
 }
 
-/***** Splash - Slut *****/
+#forside h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
 
 #forside .card-forside {
@@ -1042,13 +1065,13 @@ footer li > a.underline:hover:before {
     /*    row-gap: 1em;*/
 }
 
-/***** Test ******/
 
 .test-wrapper {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
+
 
 .kategori_ebike {
     grid-area: ebike;
@@ -1177,7 +1200,7 @@ article.kategori_racer {
 
 
 #forside .cardHeader h4 {
-    margin-top: 5rem;
+    margin-top: 2rem;
     color: var(--colorOne);
 
 }
@@ -1204,7 +1227,6 @@ article.kategori_racer {
     background-position: 0vw;
     height: 50vw;
     max-width: 1400px;
-    margin: 0 auto;
     margin: 0 1rem;
 }
 
@@ -1540,9 +1562,51 @@ table td p {
 8.5 Kontakt
 \*------------------------------------*/
 
+
+#kontakt_side .kontakt_citat .sectionwrapper {
+    background-image: url(files/images/trekking1.jpg);
+    color: white;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    background-size: 100vw;
+    background-position: 0vw;
+}
+
+#kontakt_side .kontakt_citat .blue_photo {
+    background-color: var(--colorThirteen);
+    padding: 10vw;
+}
+
+#kontakt_side .aabningstider p {
+    color: var(--colorTwelve);
+    margin-top: -5px;
+
+}
+
+#kontakt_side .aabningstider {
+    margin-top: 20px;
+}
+
+#kontakt_side {
+    margin-top: -40px;
+}
+
+#kontakt_side .kort_map {
+    margin: 25px;
+}
+
+
+#kontakt_side .aabningstider {
+    display: flex;
+    flex-direction: row;
+}
+
+
 /*------------------------------------*\
 8.5 Kontakt - SLUT
 \*------------------------------------*/
+
 
 /*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
@@ -1689,6 +1753,31 @@ table td p {
         top: 20vh;
         margin-bottom: 108px;
     }
+
+    /* kontaktside */
+    #kontakt_side .sectionwrapper {
+        display: flex;
+    }
+
+    #kontakt_side .col_right,
+    #kontakt_side .col_left {
+        width: 40vw;
+        margin: 5vw;
+    }
+
+    #kontakt_side h1 {
+        padding-left: 5vw;
+    }
+
+    .kontakt_citat p {
+        font-size: 2rem;
+    }
+
+    .kontakt_citat .blue_photo {
+        width: 100%;
+    }
+
+
 }
 
 /*------------------------------------*\
