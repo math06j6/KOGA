@@ -1033,16 +1033,82 @@ footer li > a.underline:hover:before {
 #forside .card-forside {
     /*    padding: 5rem 1rem;*/
     text-align: center;
-    background: var(--colorOne);
-    padding: 1rem 2rem;
+    /*    background: var(--colorOne);*/
+    /*
     display: grid;
     grid-template-rows: auto 1fr auto;
+*/
     /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
-    row-gap: 1em;
+    /*    row-gap: 1em;*/
+}
+
+/***** Test ******/
+
+.test-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.kategori_ebike {
+    grid-area: ebike;
+
+}
+
+.kategori_city {
+    grid-area: city;
+
+    background-image: url("files/images/city6.jpg");
+    background-size: 120vw;
+    background-position: -37vw;
+    height: 60vw;
+}
+
+.kategori_trekking {
+    grid-area: trekking;
+
+}
+
+.ikategori_racer {
+    grid-area: racer;
+
+}
+
+.test-container > div {
+    padding: 3rem;
+}
+
+.test-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "ebike city"
+        "trekking racer";
+
+    /*    grid-template-rows: auto 1fr auto;*/
+
+}
+
+@media screen and (min-width:550px) {
+    /*
+    .test-container {
+        grid-template-areas:
+            " main main main sidebar header"
+            "footer footer footer footer header";
+    }
+*/
+}
+
+@media screen and (min-width:800px) {
+    .test-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "ebike city trekking racer";
+    }
 }
 
 
-/*
 article.kategori_ebike {
     background-image: url("files/images/ebike.jpg");
     background-size: 140vw;
@@ -1069,8 +1135,6 @@ article.kategori_racer {
     background-size: 120vw;
     background-position: -70vw;
 }
-*/
-
 
 /*
 article.kategori_ebike {
@@ -1130,6 +1194,7 @@ article.kategori_racer {
 .box_blue {
     background-color: var(--colorThirteen);
     height: 60vw;
+
 }
 
 
@@ -1138,6 +1203,9 @@ article.kategori_racer {
     background-size: 100vw;
     background-position: 0vw;
     height: 50vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin: 0 1rem;
 }
 
 #signature h2,
@@ -1163,6 +1231,9 @@ article.kategori_racer {
     color: var(--colorSeven);
     background: 0;
 }
+
+
+/***** Test SLUT******/
 
 
 /*** YouTube Video er en mulighed ***/
