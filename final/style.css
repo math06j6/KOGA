@@ -804,10 +804,11 @@ footer .lokalitet :first-child {
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
+    margin: auto 0 1rem;
 }
 
 .top_link a {
-    margin: 0 1rem 2rem auto;
+    margin: 0 1rem 1rem auto;
     text-decoration: none;
     display: block;
     width: 60px;
