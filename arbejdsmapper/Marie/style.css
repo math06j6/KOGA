@@ -1257,6 +1257,7 @@ table td p {
 .billede_mereom {
     background-image: url(files/images/trekking1.jpg);
     width: 100%;
+
 }
 
 .billede_mereom p {
@@ -1264,7 +1265,8 @@ table td p {
     padding: 3rem;
     color: white;
     text-align: center;
-    background-color: rgba(14, 125, 199, 0.8);
+    background-color: rgba(14, 125, 199, 0.6);
+
 
 }
 
