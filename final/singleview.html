@@ -22,8 +22,69 @@
    Link: https://www.w3schools.com/icons/fontawesome_icons_intro.asp  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .single-header {
-            background-color: aquamarine;
+        .pris {
+            text-align: right;
+            padding: 0;
+            font-size: 21px;
+        }
+
+        .pris_style {
+            text-align: right;
+            color: #0E7DC7;
+            padding: 0;
+            font-size: 10px;
+        }
+
+        .praesentation {
+            padding: 20px;
+        }
+
+        .vmf {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px;
+        }
+
+        .vaegt,
+        .maal,
+        .farve {
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .fordele {
+            margin: 10px 0;
+        }
+
+        .fordel1,
+        .fordel2,
+        .fordel3,
+        .fordel4 {
+            margin: 20px;
+            flex-basis: 50px;
+            flex-grow: 2;
+        }
+
+        .icon1,
+        .icon2,
+        .icon3,
+        .icon4 {
+            flex-grow: 1;
+
+            background-color: red;
+            /*Slettes når billeder virker*/
+            height: 10px;
+            width: 10px;
+
+        }
+
+        .fordel1_flex,
+        .fordel2_flex,
+        .fordel3_flex,
+        .fordel4_flex {
+            display: flex;
+            flex-wrap: wrap;
         }
     </style>
 
@@ -52,13 +113,38 @@
                 <h5 class="køn"></h5>
                 <img src="" alt="">
                 <p class="pris"></p>
-
-
+                <p class="pris_style">Vejl. udsalgspris inkl. moms</p>
 
             </article>
+            <p class="praesentation"></p>
+            <div class="vmf">
+                <p class="vaegt"></p>
+                <p class="maal"></p>
+                <p class="farve"></p>
+            </div>
+            <div class="fordele">
+                <div class="fordel1_flex">
+                    <img class="icon1" src="" alt="">
+                    <div class="fordel1"></div>
+                </div>
+                <div class="fordel2_flex">
+                    <img class="icon2" src="" alt="">
+                    <div class="fordel2"></div>
+                </div>
+                <div class="fordel3_flex">
+                    <img class="icon3" src="" alt="">
+                    <div class="fordel3"></div>
+                </div>
+                <div class="fordel4_flex">
+                    <img class="icon4" src="" alt="">
+                    <div class="fordel4"></div>
+                </div>
+            </div>
         </section>
 
     </main>
+
+
 
     <footer>
         <div class="footer_wrapper">
@@ -176,13 +262,33 @@
 
 
             liste.querySelector(".model").textContent = cykel.title.rendered;
-            liste.querySelector(".type").textContent = cykel.title.rendered;
-            liste.querySelector(".køn").textContent = cykel.title.rendered;
-            liste.querySelector(".pris").textContent = cykel.title.rendered;
+            liste.querySelector(".type").textContent = cykel.cykeltype;
+            liste.querySelector(".køn").textContent = cykel.koen;
+            liste.querySelector(".pris").textContent = "DKK " + cykel.pris + ",-";
             liste.querySelector("img").src = cykel.billede_side.guid;
             liste.querySelector("img").alt = "billede af" + cykel.billede_side.guid;
 
+            liste.querySelector(".praesentation").textContent = cykel.lang_beskrivelse;
+            liste.querySelector(".vaegt").textContent = "Vægt: " + cykel.vaegt;
+            liste.querySelector(".maal").textContent = "Mål: " + cykel.maal;
+            liste.querySelector(".farve").textContent = "Farve: " + cykel.farve;
 
+            liste.querySelector(".icon1").src = cykel.icon1;
+            liste.querySelector(".icon1").alt = "billede af" + cykel.icon1;
+            liste.querySelector(".fordel1").textContent = cykel.fordel_1;
+            liste.querySelector(".icon2").src = cykel.icon2;
+            liste.querySelector(".icon2").alt = "billede af" + cykel.icon2;
+            liste.querySelector(".fordel2").textContent = cykel.fordel_2;
+            liste.querySelector(".icon3").src = cykel.icon3;
+            liste.querySelector(".icon3").alt = "billede af" + cykel.icon3;
+            liste.querySelector(".fordel3").textContent = cykel.fordel_3;
+            liste.querySelector(".icon4").src = cykel.icon4;
+            liste.querySelector(".icon4").alt = "billede af" + cykel.icon4;
+            liste.querySelector(".fordel4").textContent = cykel.fordel_4;
+
+            document.querySelector(".luk").addEventListener("click", () => {
+                history.back();
+            });
         }
     </script>
 </body>
