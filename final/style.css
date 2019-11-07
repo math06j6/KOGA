@@ -1006,9 +1006,7 @@ footer li > a.underline:hover:before {
 }
 
 
-<<<<<<< HEAD
-=======
-article.kategori_ebike {
+<<<<<<< HEAD=======article.kategori_ebike {
     background-image: url("files/images/ebike.jpg");
     background-size: 140vw;
     background-position: -50vw;
@@ -1041,9 +1039,8 @@ article.kategori_racer {
     background-size: 120vw;
     background-position: -70vw;
 }
->>>>>>> origin/master
 
-#forside button {
+> > > > > > > origin/master #forside button {
     background-color: var(--colorThirteen);
     border: 0px;
 }
@@ -1086,24 +1083,21 @@ article.kategori_racer {
     text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-.cardHeader h4 {
-    margin-top: 3rem;
-
-=======
 
 .cardHeader h4 {
     margin-top: 3rem;
->>>>>>> origin/master
+}
+
+
+.cardHeader h4 {
+    margin-top: 3rem;
+
 }
 
 #forside .cardHeader h4 {
     margin-top: 5rem;
-<<<<<<< HEAD
     color: var(--colorOne);
-=======
 
->>>>>>> origin/master
 }
 
 .kategori img {
