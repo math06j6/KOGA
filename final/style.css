@@ -1076,26 +1076,31 @@ footer li > a.underline:hover:before {
 
 .kategori_ebike {
     grid-area: ebike;
-
+    background-image: url(files/images/ebike.jpg);
+    background-size: 110vw;
+    background-position: -45vw;
 }
 
 .kategori_city {
     grid-area: city;
-
-    background-image: url("files/images/city6.jpg");
-    background-size: 120vw;
-    background-position: -37vw;
-    height: 60vw;
+    background-image: url(files/images/city6.jpg);
+    background-size: 110vw;
+    background-position: -55vw;
 }
 
 .kategori_trekking {
     grid-area: trekking;
+    background-image: url(files/images/trekking1.jpg);
+    background-size: 110vw;
+    background-position: -65vw;
 
 }
 
-.ikategori_racer {
+.kategori_racer {
     grid-area: racer;
-
+    background-image: url(files/images/race1.jpg);
+    background-size: 110vw;
+    background-position: -65vw;
 }
 
 .test-container > div {
@@ -1114,15 +1119,6 @@ footer li > a.underline:hover:before {
 
 }
 
-@media screen and (min-width:550px) {
-    /*
-    .test-container {
-        grid-template-areas:
-            " main main main sidebar header"
-            "footer footer footer footer header";
-    }
-*/
-}
 
 @media screen and (min-width:800px) {
     .test-container {
@@ -1132,61 +1128,26 @@ footer li > a.underline:hover:before {
     }
 
     article.kategori_ebike {
-        background-image: url("files/images/ebike.jpg");
         background-size: 80vw;
         background-position: 48vw;
     }
 
     article.kategori_city {
-        background-image: url("files/images/city6.jpg");
         background-size: 80vw;
         background-position: -30vw;
     }
 
     article.kategori_trekking {
-        background-image: url("files/images/trekking1.jpg");
         background-size: 80vw;
         background-position: 25vw;
     }
 
     article.kategori_racer {
-        background-image: url("files/images/race1.jpg");
         background-size: 80vw;
         background-position: -55vw;
     }
 
 }
-
-/*
-article.kategori_ebike {
-    background-image: url("files/images/ebike.jpg");
-    background-size: 140vw;
-    background-position: -50vw;
-    height: 60vw;
-}
-
-article.kategori_city {
-    background-image: url("files/images/city6.jpg");
-    background-size: 120vw;
-    background-position: -37vw;
-    height: 60vw;
-}
-
-article.kategori_trekking {
-    background-image: url("files/images/trekking1.jpg");
-    background-size: 120vw;
-    background-position: -75vw;
-    height: 60vw;
-    background-position: -70vw;
-
-}
-
-article.kategori_racer {
-    background-image: url("files/images/race1.jpg");
-    background-size: 120vw;
-    background-position: -70vw;
-}
-*/
 
 
 #forside .cardHeader,
