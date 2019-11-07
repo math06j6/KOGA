@@ -176,11 +176,11 @@
 
 
             liste.querySelector(".model").textContent = cykel.title.rendered;
-            liste.querySelector(".type").textContent = cykel.title.rendered;
-            liste.querySelector(".køn").textContent = cykel.title.rendered;
-            liste.querySelector(".pris").textContent = cykel.title.rendered;
-            liste.querySelector("img").src = cykel.billede_side.guid;
-            liste.querySelector("img").alt = "billede af" + cykel.billede_side.guid;
+            liste.querySelector(".type").textContent = cykel.cykeltype;
+            liste.querySelector(".køn").textContent = cykel.koen;
+            liste.querySelector(".pris").textContent = cykel.pris;
+            liste.querySelector("img").src = cykel.guid.rendered;
+            liste.querySelector("img").alt = "billede af" + cykel.guid.rendered;
 
 
         }
