@@ -1165,6 +1165,7 @@ footer li > a.underline:hover:before {
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
+    padding: 1rem 0;
 
 }
 
