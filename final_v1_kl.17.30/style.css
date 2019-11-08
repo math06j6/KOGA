@@ -1944,9 +1944,7 @@ table td p {
 
     /*Hover Animationer -> Header Menu */
 
-    .menu_wrapper li > a.underline:hover {
-        color: var(--colorFive);
-    }
+    .menu_wrapper li > a.underline:hover {}
 
     .menu_wrapper li > a.underline:before {
         background-color: var(--colorFive);
