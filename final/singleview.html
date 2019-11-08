@@ -22,6 +22,11 @@
    Link: https://www.w3schools.com/icons/fontawesome_icons_intro.asp  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        .single-content {
+            background-image: url(files/images/trekantbaggrund.png);
+            background-repeat: no-repeat;
+        }
+
         .pris {
             text-align: right;
             padding: 0;
@@ -40,15 +45,13 @@
         }
 
         .vmf {
-            display: flex;
-            justify-content: space-between;
             margin: 0 20px;
         }
 
         .vaegt,
         .maal,
         .farve {
-            font-size: 14px;
+            font-size: 17px;
             font-weight: bold;
             color: black;
         }
@@ -67,14 +70,16 @@
             padding-left: 100px;
         }
 
+
+
         @media screen and (min-width: 800px) {
 
             .praesentation {
-                margin: 0 205px;
+                margin: 0 220px;
             }
 
             .vmf {
-                margin: 100px;
+                margin: 120px;
             }
 
 
@@ -92,8 +97,23 @@
                 flex-basis: 400px;
                 width: 600px;
             }
-        }
 
+
+            .single-content {
+                background-image: url(files/images/trekantbaggrund.png);
+                background-repeat: no-repeat;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                max-width: 100vw;
+            }
+
+            img {
+                max-width: 40vw;
+            }
+
+
+        }
     </style>
 
 </head>
@@ -112,18 +132,20 @@
                 <li><a href="#" class="">Cykelmodel</a></li>
             </ul>
         </section>
-        <button class="luk"><i class="left"></i>Tilbage</button>
-        <section class="liste">
-            <article class="single-content">
 
+        <button class="luk"><i class="left"></i>Tilbage</button>
+
+        <section class="liste">
+
+            <article class="single-content">
                 <h2 class="model"></h2>
                 <h4 class="type"></h4>
                 <h5 class="køn"></h5>
                 <img src="" alt="">
                 <p class="pris"></p>
                 <p class="pris_style">Vejl. udsalgspris inkl. moms</p>
-
             </article>
+
             <p class="praesentation"></p>
             <div class="vmf">
                 <p class="vaegt"></p>
@@ -226,6 +248,8 @@
             </address>
         </div>
     </footer>
+
+
     <script src="script.js"> </script>
     <script>
         let cykel;
@@ -261,7 +285,7 @@
             liste.querySelector("img").src = cykel.billede_side.guid;
             liste.querySelector("img").alt = "billede af" + cykel.billede_side.guid;
 
-            liste.querySelector(".praesentation").textContent = cykel.lang_beskrivelse;
+            liste.querySelector(".praesentation").textContent = cykel.lang;
             liste.querySelector(".vaegt").textContent = "Vægt: " + cykel.vaegt;
             liste.querySelector(".maal").textContent = "Mål: " + cykel.maal;
             liste.querySelector(".farve").textContent = "Farve: " + cykel.farve;
@@ -276,7 +300,6 @@
                 history.back();
             });
         }
-
     </script>
 </body>
 

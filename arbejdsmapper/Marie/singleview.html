@@ -86,7 +86,6 @@
             display: flex;
             flex-wrap: wrap;
         }
-
     </style>
 
 </head>
@@ -107,14 +106,18 @@
         </section>
         <button class="luk"><i class="left"></i>Tilbage</button>
         <section class="liste">
-            <article class="single-content">
 
-                <h2 class="model"></h2>
-                <h4 class="type"></h4>
-                <h5 class="køn"></h5>
-                <img src="" alt="">
-                <p class="pris"></p>
-                <p class="pris_style">Vejl. udsalgspris inkl. moms</p>
+            <article class="single-content">
+                <div class="col">
+                    <img src="" alt="">
+                </div>
+                <div class="col">
+                    <h2 class="model"></h2>
+                    <h4 class="type"></h4>
+                    <h5 class="køn"></h5>
+                    <p class="pris"></p>
+                    <p class="pris_style">Vejl. udsalgspris inkl. moms</p>
+                </div>
 
             </article>
             <p class="praesentation"></p>
@@ -291,7 +294,6 @@
                 history.back();
             });
         }
-
     </script>
 </body>
 
