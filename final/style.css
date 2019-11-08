@@ -331,7 +331,7 @@ details .filter {
     border: none;
     border-bottom: 1px solid var(--colorTwelve);
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.75rem;
     width: 100%;
     text-align: left;
     text-transform: capitalize;
@@ -348,7 +348,7 @@ details .filter:hover {
 
 
 summary {
-    padding: 1rem;
+    padding: 0.75rem;
     display: block;
     position: relative;
     font-weight: bold;
@@ -975,7 +975,7 @@ footer li > a.underline:hover:before {
     max-width: 25%;
 }
 
-#splash a.action {
+#splash a.cta {
     text-decoration: none;
     cursor: pointer;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
@@ -991,12 +991,12 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--colorFive);
 }
 
-#splash a.action:hover {
+#splash a.cta:hover {
     color: var(--colorFive);
     background: var(--colorOne);
 }
 
-#splash a.action:hover {
+#splash a.cta:hover {
     color: var(--colorOne);
     background: var(--colorOne);
     background: 0;
