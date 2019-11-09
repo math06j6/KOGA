@@ -263,24 +263,24 @@ button {
 
 /***** Breadcrumbs - *****/
 
-#breadcrumb {
+#breadcrumbs {
     padding: 1rem 0;
 }
 
-#breadcrumb ul {
+#breadcrumbs ul {
     list-style: none;
     padding: 0;
     margin: 0rem 2rem;
 }
 
-#breadcrumb li {
+#breadcrumbs li {
     display: inline;
     color: var(--colorThree);
     /*    color: var(--colorTwelve);*/
     font-size: 0.75rem;
 }
 
-#breadcrumb ul li + li:before {
+#breadcrumbs ul li + li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
@@ -291,11 +291,11 @@ button {
     content: " / "
 }*/
 
-#breadcrumb li:first-child:before {
+#breadcrumbs li:first-child:before {
     content: normal;
 }
 
-#breadcrumb li a {
+#breadcrumbs li a {
     color: var(--colorThree);
     /*    color: var(--colorTwelve);*/
     text-decoration: none;
@@ -304,8 +304,8 @@ button {
     font-weight: 700;
 }
 
-#breadcrumb li:hover a,
-#breadcrumb li:hover {
+#breadcrumbs li:hover a,
+#breadcrumbs li:hover {
     color: var(--colorFive);
 }
 
@@ -535,21 +535,21 @@ li.menu_ikon {
     margin: auto 0;
 }
 
-
 .nyt_logo {
     /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
-    background-image: url("files/images/koga_logo_white.png");
+    background-image: url("files/svg/nyt_logo.svg");
     display: inline-block;
-    padding: 10px;
-    width: 100px;
+    padding: 32px 0;
+    width: 120px;
     height: 100%;
     margin: auto 0;
     background-position: center;
     background-size: contain;
-    /*Vi bruger filter til at vælge hvid som farve
-    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);*/
+    /*Vi bruger filter til at vælge hvid som farve*/
+    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
     background-position: center;
     background-size: contain;
+
     background-repeat: no-repeat;
 
 }
@@ -947,8 +947,8 @@ footer li > a.underline:hover:before {
 }
 
 #splash figure {
-    margin-left: -1vw;
     margin-top: 10vw;
+    padding: 1rem 0;
 }
 
 #splash .box_black {
@@ -972,6 +972,9 @@ footer li > a.underline:hover:before {
 
 #splash .wrapper img {
     min-width: 60vw;
+    max-width: 25%;
+    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
+    /*    min-width: 200px;*/
     max-width: 25%;
 }
 
@@ -1882,20 +1885,19 @@ table td p {
 
     #splash,
     #splash .box_black {
-        max-height: 400px;
+        max-height: 500px;
         width: 100%;
         background-size: 100vw;
         background-position: 0vw 55vw;
     }
 
     #splash .wrapper img {
-        min-width: 40vw;
+        min-width: 35vw;
         max-width: 25%;
         margin-top: -100px;
     }
 
     #splash p {
-        max-width: 50%;
         display: block;
     }
 
