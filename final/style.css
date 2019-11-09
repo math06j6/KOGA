@@ -185,9 +185,18 @@ section {
     padding: 1rem;
 }
 
-.col_left {
-    margin: 2rem;
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
+.col_left,
+.col_right {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0 1rem;
 }
 
 
@@ -965,7 +974,7 @@ footer li > a.underline:hover:before {
     margin: 0 1rem;
 }
 
-#splash .cardBottom {
+#splash .card-bottom {
     display: flex;
     justify-content: flex-start;
 }
@@ -978,7 +987,9 @@ footer li > a.underline:hover:before {
     max-width: 25%;
 }
 
-#splash a.cta {
+
+#splash a.cta,
+#forside a.knap-cykler {
     text-decoration: none;
     cursor: pointer;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
@@ -986,20 +997,19 @@ footer li > a.underline:hover:before {
     font-size: 1rem;
     line-height: 1.4;
     font-style: normal;
-    padding: 0.7rem 2rem;
+    padding: 0.75rem 2rem;
     text-transform: uppercase;
-    min-width: 160px;
+    min-width: 120px;
     color: var(--colorOne);
     background: var(--colorThirteen);
     border: 1px solid var(--colorFive);
 }
 
-#splash a.cta:hover {
-    color: var(--colorFive);
-    background: var(--colorOne);
-}
 
-#splash a.cta:hover {
+#splash a.cta:hover,
+#splash a.cta:active,
+#forside a.knap-cykler:hover,
+#forside a.knap-cykler:active {
     color: var(--colorOne);
     background: var(--colorOne);
     background: 0;
@@ -1032,12 +1042,10 @@ footer li > a.underline:hover:before {
 
 #forside p {
     color: var(--colorOne);
-    font-size: 0.6rem;
-    text-align: center;
     margin: 0rem 1rem;
 }
 
-#forside .cardBottom button {
+#forside .card-bottom button {
     color: var(--colorOne);
 }
 
@@ -1142,8 +1150,8 @@ footer li > a.underline:hover:before {
 }
 
 
-#forside .cardHeader,
-#forside .cardBottom {
+#forside .card-header,
+#forside .card-bottom {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
@@ -1151,7 +1159,7 @@ footer li > a.underline:hover:before {
 }
 
 
-#forside .cardHeader h4 {
+#forside .card-header h4 {
     color: var(--colorOne);
 
 }
@@ -1199,7 +1207,7 @@ footer li > a.underline:hover:before {
 #signature .box_blue {
     width: 100%;
     height: 100%;
-    padding: 2rem;
+    padding: 1rem;
     min-height: 400px;
 
 }
@@ -1214,31 +1222,34 @@ footer li > a.underline:hover:before {
 }
 
 #signature h2,
-#signature p {
+#signature p,
+#signature a.knap-cykler {
     color: var(--colorOne);
+    margin: 1rem;
 }
 
 #signature h2 {
     padding-top: 2rem;
     font-size: calc(1.5rem + 3vw);
-    grid-area: signature-header;
 }
 
 #signature p {
-    margin-top: -1rem;
-    grid-area: signature-tekst;
+    padding-bottom: 2rem;
+}
+
+#signature .card-bottom {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .kategori button {
     color: var(--colorOne);
     border: 1px solid var(--colorOne);
     margin: 1rem 0;
-    grid-area: signature-knap;
-
 
 }
 
-
+#signature a.knap-cykler,
 #signature button {
     color: var(--colorOne);
     background: none;
@@ -1246,6 +1257,7 @@ footer li > a.underline:hover:before {
     max-width: 200px;
 }
 
+#signature a.knap-cykler:hover,
 #signature button:hover {
     color: var(--colorSeven);
     background: 0;
@@ -1308,7 +1320,7 @@ footer li > a.underline:hover:before {
 }
 
 
-#cykler .cardHeader,
+#cykler .card-header,
 #cykler .cardBottom {
     padding: 1rem 0;
     text-transform: uppercase;
@@ -1369,7 +1381,7 @@ footer li > a.underline:hover:before {
     color: var(--colorOne);
     background: var(--colorFive);
     border: 1px solid var(--colorFive);
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 #cykler .card-cykel button:hover {
@@ -1873,9 +1885,9 @@ table td p {
 @media (min-width: 640px) {
 
 
-    #forside .cardHeader,
-    #forside .cardBottom {
-        margin: 2rem 0;
+    #forside .card-header,
+    #forside .card-bottom {
+        margin: 1rem 0;
     }
 
     .menu_wrapper {
@@ -1919,7 +1931,6 @@ table td p {
 
     #forside p {
         font-size: 1rem;
-        /*        margin: 2rem 2rem;*/
     }
 
 
@@ -1995,24 +2006,6 @@ table td p {
     .searchButton:hover {
         filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
     }
-
-    /*
-    #signature {
-        background-image: url(files/images/city2.jpg);
-        background-size: 100vw;
-        height: 40vw;
-        background-repeat: no-repeat;
-        background-position: 0vw;
-        margin: -2rem 1rem;
-    }
-*/
-
-    /*
-    #signature .box_blue {
-        background-size: 100vw;
-        height: 40vw;
-    }*/
-
 
 
     /*Hover Animationer -> Header Menu */
