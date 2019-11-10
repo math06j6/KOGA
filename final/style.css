@@ -366,10 +366,14 @@ summary {
     color: var(--colorTwelve);
     min-width: 150px;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+
+
+    &::-webkit-details-marker {
+        display: none;
+    }
 }
 
-
-summary &::-webkit-details-marker {
+summary&::-webkit-details-marker {
     display: none;
 }
 
@@ -826,7 +830,7 @@ footer .lokalitet :first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*    border-radius: 100%;*/
+    border-radius: 100%;
 
 }
 
@@ -846,33 +850,6 @@ footer .lokalitet :first-child {
     margin-top: 10px;
     border-radius: 45;
 }
-
-
-/*
-.arrowUp {
-    background-image: url(files/svg/arrowUp.svg);
-    display: inline-block;
-    padding: 30px;
-    width: 40px;
-    height: 100%;
-    background-position: center;
-    background-size: contain;
-    filter: invert(44%) sepia(6%) saturate(553%) hue-rotate(163deg) brightness(94%) contrast(94%);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: .3s;
-    cursor: pointer;
-    vertical-align: bottom;
-}
-
-.arrowUp:hover {
-    filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
-}
-*/
-
-
-
 
 /* Knap: Tilbage til toppen SLUT*/
 
@@ -1262,8 +1239,8 @@ footer li > a.underline:hover:before {
 
 #signature a.knap-cykler:hover,
 #signature button:hover {
-    color: var(--colorSeven);
-    background: 0;
+    color: var(--colorFive);
+    background: var(--colorOne);
 }
 
 
