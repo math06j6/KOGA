@@ -284,16 +284,16 @@
         function addEventListenersToButtons() {
             console.log("addEventListenersToButtons");
             document.querySelectorAll(".filter-model").forEach(elm => {
-                elm.addEventListener("click", filtrering);
+                elm.addEventListener("click", filtreringCykeltype);
             })
             document.querySelectorAll(".filter-koen").forEach(elm => {
-                elm.addEventListener("click", koenFiltrering);
+                elm.addEventListener("click", filtreringKoen);
             })
         }
 
         // funktion der filtrerer cyklerne efter cykeltype (json)
-        function filtrering() {
-            console.log("filtrering");
+        function filtreringCykeltype() {
+            console.log("filtreringCykeltype");
             filterModel = this.dataset.cykeltype; // sæt variabel "filter" til aktuel værdi
             document.querySelector(".filter-model.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
             this.classList.add("valgt") // marker den nyvalgte knap
@@ -304,8 +304,8 @@
         }
 
         // funktion der filtrerer cyklerne efter køn (json)
-        function koenFiltrering() {
-            console.log("koenFiltrering");
+        function filtreringKoen() {
+            console.log("filtreringKoen");
             filterKoen = this.dataset.koen; // sæt variabel "filter" til aktuel værdi
             document.querySelector(".filter-koen.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
             this.classList.add("valgt") // marker den nyvalgte knap
@@ -316,10 +316,10 @@
         }
 
         // funktion der filtrerer cyklernes farve (json)
-        function koenFiltrering() {
-            console.log("koenFiltrering");
-            filterKoen = this.dataset.koen; // sæt variabel "filter" til aktuel værdi
-            document.querySelector(".filter-koen.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
+        function koenFarve() {
+            console.log("koenFarve");
+            filterKoen = this.dataset.farve; // sæt variabel "filter" til aktuel værdi
+            document.querySelector(".filter-farve.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
             this.classList.add("valgt") // marker den nyvalgte knap
 
             // document.querySelector("#inddeling").textContent = this.textContent;
