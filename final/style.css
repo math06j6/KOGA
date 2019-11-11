@@ -169,10 +169,8 @@ h4 {
     /*    font-family: 'Racing Sans One', cursive;*/
     /*    font-family: 'Bowlby One', cursive;*/
     /*    font-family: 'Wallpoet', cursive;*/
-<<<<<<< HEAD
+
     text-transform: uppercase;
-=======
->>>>>>> origin/master
     font-family: 'Archivo Black', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
@@ -183,7 +181,6 @@ h4 {
 
 #splash p {
     /*    font-family: 'Racing Sans One', cursive;*/
-
     /*    font-family: 'Wallpoet', cursive;*/
     font-family: 'Archivo Black', sans-serif;
 }
