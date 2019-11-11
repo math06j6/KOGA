@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KOGA CENTER COPENHAGEN</title>
+    <title>KOGA CENTER</title>
     <meta name="KOGA Center Copenhagen" content="KOGA Cykler">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
@@ -18,8 +18,6 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/sbr1wbe.css">
-    <!-- googlefont forslag-->
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Bowlby+One|Jockey+One|Racing+Sans+One|Wallpoet&display=swap" rel="stylesheet">
     <!--  Vi gør brug af ikoner fra Font Awesome - via W3schools.
    Link: https://www.w3schools.com/icons/fontawesome_icons_intro.asp  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,93 +29,102 @@
         <nav id="myTopnav" class="topnav"></nav>
     </header>
     <main>
-        <section id="splash">
-            <video autoplay muted loop id="myVideo">
-                <source src="/video/myVideo.mp4" type="video/mp4">
-            </video>
-            <div class="wrapper">
-                <figure>
-                    <img src="files/svg/nyt_logo.svg" alt="Logo">
-                </figure>
-                <p>DET ENESTE CENTER PÅ VERDENSPLAN KUN MED KOGA CYKLER. BESØG BUTIKKEN OG FÅ PROFESSIONEL RÅDGIVING SAMT EN PRØVETUR OG MÆRK FORSKELLEN..</p>
-                <div class="card-bottom">
-                    <!--                       CTA = Forkortelse for Call to Action-->
-                    <a href="bicycles.html" class="cta">Se vores cykler</a>
+        <!--
+        <section id="">
+            <header class="section-header">
+                <h1>Velkommen til verdens eneste KOGA Center</h1>
+            </header>
+            <div class="sectionwrapper">
+            </div>
+        </section>
+-->
+        <section id="breadcrumbs">
+            <ul class="">
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#">Om Koga Center</a></li>
+            </ul>
+        </section>
+        <section id="historie">
+            <div class="sectionwrapper_historie">
+                <div class="col_left_historie">
+                    <header class="section-header">
+                        <h2>HISTORIEN BAG..</h2>
+                    </header>
+                    <p>Siden 1974 har Koga været indbegrebet af høj kvalitet, specielle cykler.. Innovativ i udvikling, visuelt konsekvente og individuelt bygget til hver enkelt kunde, af en special uddannet mekaniker.
+                        Koga kunder, forhandlere og medarbejdere over hele verden deler en stor lidenskab: Nemlig cykling, hos Koga handler det om solid kvalitet, stabilitet og holdbarhed.</p><br>
+                    <p>Det er derfor, vi - når det kommer til udvikling og ibrugtagning af nye komponenter, teknologier og materialer - udelukkende samarbejder med de bedste leverandører og samarbejdspartnere.</p>
+                </div>
+
+                <div class="col_right_historie">
+                    <img src="files/images/historie.jpg" alt="billede">
+                </div>
+
+            </div>
+        </section>
+        <section id="citat">
+            <div class="sectionwrapper_citat">
+                <div class="citat1">
+                    <h1>"EN GANG KOGA..</h1>
+                </div>
+                <div class="citat2">
+                    <h1>ALTID KOGA.."</h1>
                 </div>
             </div>
         </section>
 
-        <section id="forside">
-            <h1>VORES CYKLER</h1>
-            <div class="test-wrapper">
-                <div class="test-container">
-                    <article class="card-forside kategori_ebike">
-                        <div class="box">
-                            <header class="card-header">
-                                <h4>Elcykler</h4>
-                            </header>
-                            <div class="card-bottom">
-                                <a href="bicycles.html" class="knap-cykler">Se cyklerne</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card-forside kategori_city">
-                        <div class="box">
-                            <header class="card-header">
-                                <h4>City cykler</h4>
-                            </header>
-                            <div class="card-bottom">
-                                <a href="bicycles.html" class="knap-cykler">Se cyklerne</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card-forside kategori_trekking">
-                        <div class="box">
-                            <header class="card-header">
-                                <h4>Trekking</h4>
-                            </header>
-                            <div class="card-bottom">
-                                <a href="bicycles.html" class="knap-cykler">Se cyklerne</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card-forside kategori_racer">
-                        <div class="box">
-                            <header class="card-header">
-                                <h4>Racercykel</h4>
-                            </header>
-                            <div class="card-bottom">
-                                <a href="bicycles.html" class="knap-cykler">Se cyklerne</a>
-                            </div>
-                        </div>
-                    </article>
+        <section id="mereom">
+            <div class="sectionwrapper_mereom">
+                <div class="billede_mereom">
+                    <p>jkjskdjkkddckjkxjvkxvk fhdsjhfksjdhf dhsjfshdjfh dshjf sdjh
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa distinctio, beatae commodi, architecto laboriosam alias, aliquam voluptatibus neque dolore libero, veritatis at obcaecati quidem! Doloribus ad nobis quo dolore ratione!</p>
                 </div>
             </div>
         </section>
-        <section id="forside">
-            <div class="signature-wrapper">
-                <div id="signature">
-                    <div class="box_blue">
-                        <div class="blue-content">
-                            <h2>SIGNATURE</h2>
-                            <p>Design din egen KOGA cykel</p>
-                            <!--                            <button>Læs mere</button>-->
-                            <div class="card-bottom">
-                                <a href="signature.html" class="knap-cykler">Læs mere</a>
-                            </div>
-                        </div>
+
+        <section id="service">
+            <div class="sectionwrapper_service">
+                <div class="col_left_service">
+                    <header class="section-header">
+                        <h2>SERVICE</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor ducimus repellendus porro laborum nostrum iste in debitis magnam eligendi. Modi at maiores aliquam fugit aut voluptas illo suscipit consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor ducimus repellendus porro laborum nostrum iste in debitis magnam eligendi. Modi at maiores aliquam fugit aut voluptas illo suscipit consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor ducimus repellendus porro laborum nostrum iste in debitis magnam eligendi. Modi at maiores aliquam fugit aut voluptas illo suscipit consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor ducimus repellendus porro laborum nostrum iste in debitis magnam eligendi. Modi at maiores aliquam fugit aut voluptas illo suscipit consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor ducimus repellendus porro laborum nostrum iste in debitis magnam eligendi. Modi at maiores aliquam fugit aut voluptas illo suscipit consectetur.</p>
+                </div>
+                <div class="col_right_service">
+                    <div class="billede_service">
+                        <img src="files/images/service.jpg" alt="billede">
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="tilbage">
-            <div class="top_link">
-                <a href="#">
-                    <i class="up"></i>
-                </a>
+        <section id="om">
+            <div class="sectionwrapper_om">
+                <div class="col_left_om">
+                    <header class="section-header">
+                        <h2>OM KOGA CENTER</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetursdsksajflasjfljaskljskldkldshgkhdskgs
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae deleniti unde, expedita at debitis maiores accusamus ullam! Vel placeat odit, eos ipsum reprehenderit, obcaecati quod libero consectetur porro quam commodi.</p>
+                </div>
+                <div class="col_right_om">
+                    <figure>
+                        <img src="files/images/jonas.jpg" alt="billede">
+                    </figure>
+                </div>
             </div>
-        </div>
+
+        </section>
+
+
+        <!--
+<div class="tilbage">
+    <div class="top_link">
+        <a href="#">
+            <span class="arrowUp"></span>
+        </a>
+    </div>
+</div>
+-->
     </main>
 
     <footer>
@@ -201,6 +208,4 @@
         </div>
     </footer>
     <script src="script.js"> </script>
-</body>
-
-</html>
+</body></html>

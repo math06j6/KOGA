@@ -39,7 +39,8 @@ INDHOLDSFORTEGNELSE:
     --colorNine: #27333B;
     --colorTen: #6E7D87;
     --colorTwelve: #313131;
-    --colorThirteen: rgba(14, 125, 199, 0.6);
+    --colorThirteen: rgba(14, 125, 199, 0.8);
+    --colorFourteen: rgba(14, 125, 199, 0.6);
 
 
 }
@@ -118,7 +119,18 @@ ul {
 /* @font-face Slut */
 
 h1 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt,
+Arial,
+Helvetica,
+Roboto,
+sans-serif;*/
+    /*    font-family: 'Racing Sans One',
+cursive;*/
+/*    font-family: 'Wallpoet',
+    cursive;*/
+    /*    font-family: 'Bowlby One',
+cursive;*/
+    font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 3rem;
@@ -128,14 +140,21 @@ h1 {
 
 
 h2 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
+    /*    font-family: 'Racing Sans One',
+ cursive;*/
+/*    font-family: 'Wallpoet', cursive;*/
+font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 2.5rem;
 }
 
 h3 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
+/*    font-family: 'Wallpoet', cursive;*/
+    font-family: 'Archivo Black', sans-serif;
+    /*    font-family: 'Racing Sans One', cursive;*/
     font-weight: 500;
     font-style: normal;
     font-size: 1.5rem;
@@ -143,12 +162,23 @@ h3 {
 }
 
 h4 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
+    /*    font-family: 'Racing Sans One', cursive;*/
+    /*    font-family: 'Bowlby One', cursive;*/
+/*    font-family: 'Wallpoet', cursive;*/
+    font-family: 'Archivo Black', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
     font-style: normal;
 
 
+}
+
+#splash p {
+    /*    font-family: 'Racing Sans One', cursive;*/
+
+    /*    font-family: 'Wallpoet', cursive;*/
+    font-family: 'Archivo Black', sans-serif;
 }
 
 p {
@@ -400,7 +430,7 @@ summary&::-webkit-details-marker {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 300;
 }
 
 .topnav {
@@ -446,6 +476,7 @@ nav {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin: 0 auto;
+
 }
 
 /*MENUKNAP*/
@@ -927,6 +958,7 @@ footer li > a.underline:hover:before {
 \*------------------------------------*/
 
 /***** Splash *****/
+/*
 #splash {
     width: 100vw;
     height: calc(56.25vw - 0px);
@@ -939,16 +971,32 @@ footer li > a.underline:hover:before {
     background-position: 100% 50%;
     min-height: 230px;
 }
+*/
+
+/*****SPLASH BAGGRUNDSVIDEO****/
+
+#myVideo {
+    width: 200vw;
+    height: 100%;
+    top: 0px;
+    right: 200px;
+    position: relative;
+    margin-top: -35px;
+    z-index: 0;
+
+}
+
+#splash {
+    overflow: hidden;
+    position: relative;
+}
 
 #splash figure {
     margin-top: 10vw;
     padding: 1rem 0;
+
 }
 
-#splash .box_black {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-}
 
 #splash .wrapper {
     padding: 2rem 1rem 0;
@@ -957,6 +1005,10 @@ footer li > a.underline:hover:before {
     grid-template-rows: auto 1fr auto;
     row-gap: 0.8rem;
     margin: 0 1rem;
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: -10px;
 }
 
 #splash .card-bottom {
@@ -970,6 +1022,7 @@ footer li > a.underline:hover:before {
     filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
     /*    min-width: 200px;*/
     max-width: 25%;
+    margin-bottom: -20px;
 }
 
 
@@ -1013,7 +1066,6 @@ footer li > a.underline:hover:before {
 /***** forside ******/
 
 
-
 #forside .wrapper figure {
     padding: 0;
     overflow: hidden;
@@ -1044,6 +1096,7 @@ footer li > a.underline:hover:before {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: -4vw;
 }
 
 
@@ -1146,7 +1199,6 @@ footer li > a.underline:hover:before {
 
 #forside .card-header h4 {
     color: var(--colorOne);
-
 }
 
 .kategori img {
@@ -1161,12 +1213,12 @@ footer li > a.underline:hover:before {
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
-    padding: 1rem 0;
+    padding: 3rem 0;
 
 }
 
 .box_blue {
-    background-color: var(--colorThirteen);
+    background-color: var(--colorFourteen);
     height: 60vw;
     width: 100%;
     height: 100%;
@@ -1499,6 +1551,200 @@ button .left {
 
 /* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
 
+.luk {
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0;
+    border: none;
+    background: 0;
+}
+
+.liste {
+    padding: 0;
+}
+
+.title_box {
+    background-color: white;
+    padding: 10px;
+}
+
+.billede_box {
+    align-self: center;
+    margin: auto;
+}
+
+.pris {
+    text-align: right;
+    padding: 10px 20px 0 0;
+    font-size: 21px;
+}
+
+.pris_style {
+    text-align: right;
+    color: #0E7DC7;
+    padding: 0 20px;
+    font-size: 10px;
+}
+
+.praesentation {
+    padding: 20px;
+}
+
+.vmf_box {
+    padding: 0 20px;
+}
+
+.vaegt,
+.maal,
+.farve {
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+.fordele_overskrift {
+    margin: 10px 20px;
+}
+
+.fordel1,
+.fordel2,
+.fordel3,
+.fordel4 {
+    background-image: url(files/images/flueben.png);
+    background-repeat: no-repeat;
+    margin: 20px 30px;
+    padding-left: 100px;
+    min-height: 52px;
+}
+
+.link_box {
+    background-color: dimgray;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.link_container {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+}
+
+.link_tekst {
+    width: 430px;
+    padding: 10px 30px;
+}
+
+.laes_mere_link {
+    text-align: center;
+
+}
+
+.laes_mere_link p {
+    border: 2px solid white;
+    padding: 10px;
+    width: 130px;
+    color: white;
+}
+
+.link_container a {
+    text-decoration: none;
+    align-self: center;
+}
+
+
+@media screen and (min-width: 800px) {
+
+    #singleview {
+        background-color: white;
+    }
+
+    .liste {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        height: 110vh;
+    }
+
+    .title_box {
+        grid-area: 1 / 2 / 1 / 2;
+        padding: 0 20px;
+
+    }
+
+    .billede_box {
+        grid-area: 1 / 1 / 5 / 1;
+    }
+
+    .pris_box {
+        grid-area: 4 / 2 / 4 / 2;
+    }
+
+    .praesentation_box {
+        grid-area: 2 / 2 / 2 / 2;
+
+    }
+
+    .vmf_box {
+        grid-area: 3 / 2 / 3 / 2;
+        background-color: white;
+    }
+
+    .fordele_box {
+        grid-area: 5 / 1 / 5 / 3;
+        /*        border-top: 1px solid #b1adad;*/
+        margin-top: 15px;
+        background-color: #EEEFEF;
+    }
+
+
+    .link_box {
+        grid-area: 6 / 1 / 6 / 3;
+
+
+    }
+
+    .fordele_overskrift {
+        text-align: center;
+
+    }
+
+    .fordele {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1000px;
+        margin: auto;
+
+    }
+
+
+
+
+    .fordel1,
+    .fordel2,
+    .fordel3,
+    .fordel4 {
+        padding: 10px 10px 10px 100px;
+        margin: 40px;
+        flex-basis: 400px;
+    }
+
+    img {
+        max-width: 40vw;
+    }
+
+    .link_tekst {
+        margin-right: 90px;
+    }
+
+
+
+}
+
+/*
 table {
     border-collapse: collapse;
     text-align: left;
@@ -1535,15 +1781,10 @@ table td p {
     text-transform: capitalize;
 
 }
+*/
 
-.luk {
 
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 0;
-    border: none;
-    background: 0;
-}
+
 
 
 /*------------------------------------*\
@@ -1553,77 +1794,43 @@ table td p {
 /*------------------------------------*\
 8.4 About
 \*------------------------------------*/
+
 #historie {
-    padding: 0;
+    background-color: white;
 }
 
-#historie h2 {
-    font-size: 2rem;
+#om {
+    background-color: white;
 }
-
-.sectionwrapper_historie {
-    background: white;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1400px;
-    /*    margin: 0 auto;*/
-}
-
-.col_left_historie {
-    flex-grow: 1;
-    flex-basis: 500px;
-    /*    margin: 0 1rem;*/
-    padding: 3rem;
-    padding-bottom: 0;
-
-}
-
-.col_right_historie {
-    flex-grow: 1;
-    flex-basis: 500px;
-    /*    margin: 0 1rem;*/
-    padding-top: 0;
-    padding: 3rem;
-
-}
-
-.sectionwrapper_citat {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.sectionwrapper_citat h1 {
-    font-size: 2rem;
-    font-weight:
-}
-
 
 .citat1 {
+    font-size: 2rem;
     text-align: left;
 }
 
 .citat2 {
+    font-size: 2rem;
     text-align: right;
 }
 
-.sectionwrapper_mereom {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1400px;
+.citat .box_blue h2 {
+    font-size: 1.7rem;
 }
 
-#mereom {
-    padding: 0;
-}
-
-.billede_mereom {
+.citat_section .citat {
     background-image: url(files/images/trekking1.jpg);
+    color: white;
+    margin-top: 50px;
     width: 100%;
     height: 100%;
     background-size: 100vw;
     background-position: 0vw;
-    background-repeat: no-repeat;
+}
+
+
+.citat_section .citat .box_blue {
+    background-color: var(--colorThirteen);
+    padding: 5vw;
 
 }
 
@@ -1632,7 +1839,7 @@ table td p {
     padding: 3rem;
     color: white;
     text-align: center;
-    background-color: rgba(14, 125, 199, 0.6);
+    background-color: var(--colorFourteen);
 
 
 }
@@ -1647,10 +1854,15 @@ table td p {
     font-size: 2rem;
 }
 
+
 .sectionwrapper_service {
     display: flex;
     flex-wrap: wrap;
     max-width: 1400px;
+}
+
+#om {
+    padding: 0;
 }
 
 
@@ -1668,52 +1880,47 @@ table td p {
 
 }
 
-#om {
-    padding: 0;
-}
-
-#om h2 {
-    font-size: 2rem;
-}
-
-.sectionwrapper_om {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1400px;
-}
-
-.col_left_om {
-    flex-grow: 1;
-    flex-basis: 500px;
-    padding: 3rem;
-    padding-bottom: 0;
-}
-
-.col_right_om {
-    flex-grow: 1;
-    flex-basis: 500px;
-    padding: 3rem;
-}
-
 @media (min-width: 800px) {
-    .sectionwrapper_historie {
+
+    #historie .sectionwrapper {
+        display: flex;
         flex-direction: row-reverse;
     }
 
-    .sectionwrapper_citat h1 {
+    .citat .box_blue h2 {
         font-size: 3rem;
-        padding: 0 15rem;
-
     }
 
-    .billede_mereom p {
-        padding: 10rem;
-
+    #historie figure {
+        margin-top: 28px;
     }
 
-    .sectionwrapper_om {
+    .citat_section {
+        padding: 0;
+    }
+
+    .citat_tekst {
+        margin-left: 250px;
+        text-align: center;
+    }
+
+    .box_blue h2 {
+        font-size: 3rem;
+    }
+
+    #om .sectionwrapper {
+        display: flex;
         flex-direction: row-reverse;
     }
+
+    #service figure {
+        margin-top: 110px;
+    }
+
+    #om figure {
+        margin-top: 30px;
+    }
+
 }
 
 /*------------------------------------*\
@@ -1745,7 +1952,7 @@ table td p {
 }
 
 #kontakt_side .kontakt_citat .box_blue {
-    background-color: var(--colorThirteen);
+    background-color: var(--colorFourteen);
     padding: 10vw;
 }
 
@@ -1797,6 +2004,9 @@ table td p {
             "ebike city"
             "trekking racer";
     }
+
+
+
 
 }
 
@@ -1884,10 +2094,27 @@ table td p {
 
 @media (min-width: 640px) {
 
+    #myVideo {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        top: 0px;
+        right: 0px;
+    }
+
 
     #forside .card-header,
     #forside .card-bottom {
         margin: 1rem 0;
+    }
+
+    #forside .card-header h4 {
+        font-size: 2rem;
+    }
+
+    #forside .box {
+        padding: 8rem 0;
     }
 
     .menu_wrapper {
@@ -1895,18 +2122,15 @@ table td p {
         background-color: var(--colorTwelve);
     }
 
-    #splash,
-    #splash .box_black {
-        max-height: 500px;
-        width: 100%;
-        background-size: 100vw;
-        background-position: 0vw 55vw;
+
+    #splash .wrapper {
+        top: -50px;
+        left: 20px;
     }
 
     #splash .wrapper img {
         min-width: 35vw;
         max-width: 25%;
-        margin-top: -100px;
     }
 
     #splash p {
@@ -1917,16 +2141,6 @@ table td p {
         display: block;
 
     }
-
-    /*
-    #forside .box,
-    #forside .kategori_ebike,
-    #forside .kategori_racer,
-    #forside .kategori_trekking,
-    #forside .kategori_city {
-        height: 400px;
-    }
-*/
 
 
     #forside p {

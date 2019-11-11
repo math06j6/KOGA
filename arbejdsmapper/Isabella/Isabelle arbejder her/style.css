@@ -182,12 +182,21 @@ section {
     flex-wrap: wrap;
     max-width: 1400px;
     margin: 0 auto;
-    /*    padding: 1rem;*/
+    padding: 1rem;
 }
 
-.col_left {
-    margin: 2rem;
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
+.col_left,
+.col_right {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0 1rem;
 }
 
 
@@ -263,24 +272,24 @@ button {
 
 /***** Breadcrumbs - *****/
 
-#breadcrumb {
+#breadcrumbs {
     padding: 1rem 0;
 }
 
-#breadcrumb ul {
+#breadcrumbs ul {
     list-style: none;
     padding: 0;
     margin: 0rem 2rem;
 }
 
-#breadcrumb li {
+#breadcrumbs li {
     display: inline;
     color: var(--colorThree);
     /*    color: var(--colorTwelve);*/
     font-size: 0.75rem;
 }
 
-#breadcrumb ul li + li:before {
+#breadcrumbs ul li + li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
@@ -291,11 +300,11 @@ button {
     content: " / "
 }*/
 
-#breadcrumb li:first-child:before {
+#breadcrumbs li:first-child:before {
     content: normal;
 }
 
-#breadcrumb li a {
+#breadcrumbs li a {
     color: var(--colorThree);
     /*    color: var(--colorTwelve);*/
     text-decoration: none;
@@ -304,8 +313,8 @@ button {
     font-weight: 700;
 }
 
-#breadcrumb li:hover a,
-#breadcrumb li:hover {
+#breadcrumbs li:hover a,
+#breadcrumbs li:hover {
     color: var(--colorFive);
 }
 
@@ -331,7 +340,7 @@ details .filter {
     border: none;
     border-bottom: 1px solid var(--colorTwelve);
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.75rem;
     width: 100%;
     text-align: left;
     text-transform: capitalize;
@@ -348,7 +357,7 @@ details .filter:hover {
 
 
 summary {
-    padding: 1rem;
+    padding: 0.75rem;
     display: block;
     position: relative;
     font-weight: bold;
@@ -535,21 +544,21 @@ li.menu_ikon {
     margin: auto 0;
 }
 
-
 .nyt_logo {
     /*SVG-filen er indsat som background-image. Derfor benyttes filter til at skifte farve på filen*/
-    background-image: url("files/images/koga_logo_white.png");
+    background-image: url("files/svg/nyt_logo.svg");
     display: inline-block;
-    padding: 10px;
-    width: 100px;
+    padding: 32px 0;
+    width: 120px;
     height: 100%;
     margin: auto 0;
     background-position: center;
     background-size: contain;
-    /*Vi bruger filter til at vælge hvid som farve
-    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);*/
+    /*Vi bruger filter til at vælge hvid som farve*/
+    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
     background-position: center;
     background-size: contain;
+
     background-repeat: no-repeat;
 
 }
@@ -947,14 +956,13 @@ footer li > a.underline:hover:before {
 }
 
 #splash figure {
-    margin-left: -1vw;
-    margin-top: 15vw;
-    margin-bottom: 4vw;
+    margin-top: 10vw;
+    padding: 1rem 0;
 }
 
 #splash .box_black {
     background-color: rgba(0, 0, 0, 0.5);
-    height: calc(56.25vw - 0px);
+    height: 100%;
 }
 
 #splash .wrapper {
@@ -966,41 +974,42 @@ footer li > a.underline:hover:before {
     margin: 0 1rem;
 }
 
-#splash .cardBottom {
+#splash .card-bottom {
     display: flex;
     justify-content: flex-start;
-    margin-top: -10px;
 }
 
 #splash .wrapper img {
     min-width: 60vw;
     max-width: 25%;
+    filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
+    /*    min-width: 200px;*/
+    max-width: 25%;
 }
 
-#splash a.action {
+
+#splash a.cta,
+#forside a.knap-cykler {
     text-decoration: none;
     cursor: pointer;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.4;
     font-style: normal;
-    padding: 0.7rem 2rem;
+    padding: 0.75rem 2rem;
     text-transform: uppercase;
-    min-width: 160px;
+    min-width: 120px;
     color: var(--colorOne);
     background: var(--colorThirteen);
     border: 1px solid var(--colorFive);
-    margin: -1.2rem 0;
-
 }
 
-#splash a.action:hover {
-    color: var(--colorFive);
-    background: var(--colorOne);
-}
 
-#splash a.action:hover {
+#splash a.cta:hover,
+#splash a.cta:active,
+#forside a.knap-cykler:hover,
+#forside a.knap-cykler:active {
     color: var(--colorOne);
     background: var(--colorOne);
     background: 0;
@@ -1008,9 +1017,10 @@ footer li > a.underline:hover:before {
 }
 
 #splash p {
-    font-size: 0.6rem;
     color: white;
-    margin-top: -50px;
+    display: none;
+    padding: 0;
+
 }
 
 /***** Splash - Slut *****/
@@ -1032,12 +1042,10 @@ footer li > a.underline:hover:before {
 
 #forside p {
     color: var(--colorOne);
-    font-size: 0.6rem;
-    text-align: center;
     margin: 0rem 1rem;
 }
 
-#forside .cardBottom button {
+#forside .card-bottom button {
     color: var(--colorOne);
 }
 
@@ -1064,8 +1072,19 @@ footer li > a.underline:hover:before {
 */
     /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
     /*    row-gap: 1em;*/
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    height: 60vw;
+    max-height: 400px;
 }
 
+
+#forside .card-forside p {
+    display: none;
+
+}
 
 .test-wrapper {
     max-width: 1400px;
@@ -1077,30 +1096,38 @@ footer li > a.underline:hover:before {
 .kategori_ebike {
     grid-area: ebike;
     background-image: url(files/images/ebike.jpg);
-    background-size: 110vw;
-    background-position: -45vw;
+    background-position: 65% 0%;
 }
 
 .kategori_city {
     grid-area: city;
     background-image: url(files/images/city6.jpg);
+    background-position: 90% 0%;
+    /*
     background-size: 110vw;
     background-position: -55vw;
+*/
 }
 
 .kategori_trekking {
     grid-area: trekking;
     background-image: url(files/images/trekking1.jpg);
+    background-position: 100% 0;
+    /*
     background-size: 110vw;
     background-position: -65vw;
+*/
 
 }
 
 .kategori_racer {
     grid-area: racer;
     background-image: url(files/images/race1.jpg);
+    background-position: 100% 100%;
+    /*
     background-size: 110vw;
     background-position: -65vw;
+*/
 }
 
 .test-container > div {
@@ -1109,57 +1136,30 @@ footer li > a.underline:hover:before {
 
 .test-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
     grid-template-areas:
-        "ebike city"
-        "trekking racer";
+        "ebike"
+        "city"
+        "trekking"
+        "racer";
+
 
     /*    grid-template-rows: auto 1fr auto;*/
 
 }
 
 
-@media screen and (min-width:800px) {
-    .test-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "ebike city trekking racer";
-    }
-
-    article.kategori_ebike {
-        background-size: 80vw;
-        background-position: 48vw;
-    }
-
-    article.kategori_city {
-        background-size: 80vw;
-        background-position: -30vw;
-    }
-
-    article.kategori_trekking {
-        background-size: 80vw;
-        background-position: 25vw;
-    }
-
-    article.kategori_racer {
-        background-size: 80vw;
-        background-position: -55vw;
-    }
-
-}
-
-
-#forside .cardHeader,
-#forside .cardBottom {
+#forside .card-header,
+#forside .card-bottom {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    margin: 1rem 0;
 }
 
 
-#forside .cardHeader h4 {
-    margin-top: 2rem;
+#forside .card-header h4 {
     color: var(--colorOne);
 
 }
@@ -1168,53 +1168,99 @@ footer li > a.underline:hover:before {
     object-fit: cover;
 }
 
+
 .box {
     background-color: rgba(0, 0, 0, 0.5);
-    height: 60vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 0;
+
 }
 
 .box_blue {
     background-color: var(--colorThirteen);
     height: 60vw;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
 
 }
 
+.signature-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+
+}
 
 #signature {
     background-image: url(files/images/city2.jpg);
-    background-size: 105vw;
     height: 60vw;
-    background-repeat: no-repeat;
-    background-position: 0vw;
-    margin: -5rem rem;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 0%;
+}
+
+#signature .box_blue {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    min-height: 400px;
+
+}
+
+#signature .blue-container {
+    padding: 5rem;
+    margin: auto auto 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: end;
 }
 
 #signature h2,
-#signature p {
+#signature p,
+#signature a.knap-cykler {
     color: var(--colorOne);
+    margin: 1rem;
 }
 
 #signature h2 {
-    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: calc(1.5rem + 3vw);
 }
 
 #signature p {
-    margin-top: -1rem;
+    padding-bottom: 2rem;
+}
+
+#signature .card-bottom {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .kategori button {
     color: var(--colorOne);
     border: 1px solid var(--colorOne);
     margin: 1rem 0;
+
 }
 
-
+#signature a.knap-cykler,
 #signature button {
     color: var(--colorOne);
     background: none;
     border: 1px solid var(--colorOne);
+    max-width: 200px;
 }
 
+#signature a.knap-cykler:hover,
 #signature button:hover {
     color: var(--colorSeven);
     background: 0;
@@ -1277,7 +1323,7 @@ footer li > a.underline:hover:before {
 }
 
 
-#cykler .cardHeader,
+#cykler .card-header,
 #cykler .cardBottom {
     padding: 1rem 0;
     text-transform: uppercase;
@@ -1338,7 +1384,7 @@ footer li > a.underline:hover:before {
     color: var(--colorOne);
     background: var(--colorFive);
     border: 1px solid var(--colorFive);
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 #cykler .card-cykel button:hover {
@@ -1464,189 +1510,6 @@ button .left {
 
 /* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
 
-.liste {
-    padding: 0;
-}
-
-.title_box {
-    background-color: white;
-    padding: 10px;
-}
-
-.billede_box {
-    align-self: center;
-    margin: auto;
-}
-
-.pris {
-    text-align: right;
-    padding: 10px 20px 0 0;
-    font-size: 21px;
-}
-
-.pris_style {
-    text-align: right;
-    color: #0E7DC7;
-    padding: 0 20px;
-    font-size: 10px;
-}
-
-.praesentation {
-    padding: 20px;
-}
-
-.vmf_box {
-    padding: 0 20px;
-}
-
-.vaegt,
-.maal,
-.farve {
-    font-size: 17px;
-    font-weight: bold;
-    color: black;
-}
-
-.fordele_overskrift {
-    margin: 10px 20px;
-}
-
-.fordel1,
-.fordel2,
-.fordel3,
-.fordel4 {
-    background-image: url(files/images/flueben.png);
-    background-repeat: no-repeat;
-    margin: 20px 30px;
-    padding-left: 100px;
-    min-height: 52px;
-}
-
-.link_box {
-    background-color: dimgray;
-    color: white;
-    margin: 10px 0;
-    padding: 10px;
-}
-
-.link_container {
-    max-width: 950px;
-    margin: auto;
-    display: flex;
-}
-
-.link_tekst {
-    width: 430px;
-    padding: 10px 30px;
-}
-
-.laes_mere_link {
-    text-align: center;
-
-}
-
-.laes_mere_link p {
-    border: 2px solid white;
-    padding: 10px;
-    width: 130px;
-    color: white;
-}
-
-.link_container a {
-    text-decoration: none;
-    align-self: center;
-}
-
-
-@media screen and (min-width: 800px) {
-
-    #singleview {
-        background-color: white;
-    }
-
-    .liste {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr;
-        height: 120vh;
-    }
-
-    .title_box {
-        grid-area: 1 / 2 / 1 / 2;
-        padding: 0 20px;
-
-    }
-
-    .billede_box {
-        grid-area: 1 / 1 / 5 / 1;
-    }
-
-    .pris_box {
-        grid-area: 4 / 2 / 4 / 2;
-    }
-
-    .praesentation_box {
-        grid-area: 2 / 2 / 2 / 2;
-
-    }
-
-    .vmf_box {
-        grid-area: 3 / 2 / 3 / 2;
-        background-color: white;
-    }
-
-    .fordele_box {
-        grid-area: 5 / 1 / 5 / 3;
-        border-top: 1px solid #b1adad;
-        margin-top: 15px;
-
-    }
-
-    .link_box {
-        grid-area: 6 / 1 / 6 / 3;
-
-
-    }
-
-    .fordele_overskrift {
-        text-align: center;
-
-    }
-
-    .fordele {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 1000px;
-        margin: auto;
-
-    }
-
-
-
-
-    .fordel1,
-    .fordel2,
-    .fordel3,
-    .fordel4 {
-        padding: 10px 10px 10px 100px;
-        margin: 40px;
-        flex-basis: 400px;
-    }
-
-    img {
-        max-width: 30vw;
-    }
-
-    .link_tekst {
-        margin-right: 90px;
-    }
-
-
-
-}
-
-/*
 table {
     border-collapse: collapse;
     text-align: left;
@@ -1683,7 +1546,6 @@ table td p {
     text-transform: capitalize;
 
 }
-*/
 
 .luk {
 
@@ -1875,7 +1737,15 @@ table td p {
 \*------------------------------------*/
 
 
-#kontakt_side .kontakt_citat .sectionwrapper {
+#kontakt_side .section-header {
+    margin: 0 0 2rem;
+}
+
+#kontakt_side h1 {
+    padding: 0;
+}
+
+#kontakt_side .kontakt_citat {
     background-image: url(files/images/trekking1.jpg);
     color: white;
     margin-top: 50px;
@@ -1885,7 +1755,7 @@ table td p {
     background-position: 0vw;
 }
 
-#kontakt_side .kontakt_citat .blue_photo {
+#kontakt_side .kontakt_citat .box_blue {
     background-color: var(--colorThirteen);
     padding: 10vw;
 }
@@ -1897,7 +1767,7 @@ table td p {
 }
 
 #kontakt_side .aabningstider {
-    margin-top: 20px;
+    margin: 2rem 0;
 }
 
 #kontakt_side {
@@ -1905,7 +1775,7 @@ table td p {
 }
 
 #kontakt_side .kort_map {
-    margin: 25px;
+    margin: 2rem 0;
 }
 
 
@@ -1930,6 +1800,16 @@ table td p {
 /*------------------------------------*\
 9: MEDIA QUERIES
 \*------------------------------------*/
+
+@media (min-width: 350px) {
+    .test-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "ebike city"
+            "trekking racer";
+    }
+
+}
 
 @media (max-width: 800px) {
 
@@ -2015,6 +1895,12 @@ table td p {
 
 @media (min-width: 640px) {
 
+
+    #forside .card-header,
+    #forside .card-bottom {
+        margin: 1rem 0;
+    }
+
     .menu_wrapper {
         color: var(--colorOne);
         background-color: var(--colorTwelve);
@@ -2022,25 +1908,28 @@ table td p {
 
     #splash,
     #splash .box_black {
-        max-height: 400px;
+        max-height: 500px;
         width: 100%;
         background-size: 100vw;
         background-position: 0vw 55vw;
     }
 
     #splash .wrapper img {
-        min-width: 40vw;
+        min-width: 35vw;
         max-width: 25%;
         margin-top: -100px;
     }
 
     #splash p {
-        font-size: 1.4rem;
-        margin-top: -6vw;
-        margin-bottom: 1vw;
-        max-width: 500px;
+        display: block;
     }
 
+    #forside .card-forside p {
+        display: block;
+
+    }
+
+    /*
     #forside .box,
     #forside .kategori_ebike,
     #forside .kategori_racer,
@@ -2048,22 +1937,11 @@ table td p {
     #forside .kategori_city {
         height: 400px;
     }
+*/
 
-    #forside button {
-        background-color: var(--colorThirteen);
-        border: 0px;
-    }
 
     #forside p {
-        color: var(--colorOne);
         font-size: 1rem;
-        text-align: center;
-        margin: 2rem 2rem;
-    }
-
-
-    #forside .cardHeader {
-        padding-top: 30px;
     }
 
 
@@ -2075,6 +1953,41 @@ table td p {
             "sidebar modeller modeller modeller"
             "sidebar ft   ft   ft";
     }
+}
+
+
+@media screen and (min-width:800px) {
+
+    /*****  FORSIDE - GRID  *****/
+    .test-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "ebike city trekking racer";
+    }
+
+    /*
+    article.kategori_ebike {
+        background-size: 80vw;
+        background-position: 48vw;
+    }
+
+    article.kategori_city {
+        background-size: 80vw;
+        background-position: -30vw;
+    }
+
+    article.kategori_trekking {
+        background-size: 80vw;
+        background-position: 25vw;
+    }
+
+    article.kategori_racer {
+        background-size: 80vw;
+        background-position: -55vw;
+    }
+*/
+
+    /*****  FORSIDE - GRID  *****/
 }
 
 @media only screen and (min-width: 800px) {
@@ -2105,30 +2018,12 @@ table td p {
         filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
     }
 
-    #signature {
-        background-image: url(files/images/city2.jpg);
-        background-size: 100vw;
-        height: 40vw;
-        background-repeat: no-repeat;
-        background-position: 0vw;
-        margin: -2rem 1rem;
-    }
-
-    #signature .box_blue {
-        background-size: 100vw;
-        height: 40vw;
-    }
-
-    #signature h2 {
-        font-size: 7rem;
-        padding-top: 5rem;
-    }
-
-
 
     /*Hover Animationer -> Header Menu */
 
-    .menu_wrapper li > a.underline:hover {}
+    .menu_wrapper li > a.underline:hover {
+        /*        color: var(--colorFive);*/
+    }
 
     .menu_wrapper li > a.underline:before {
         background-color: var(--colorFive);
@@ -2144,26 +2039,13 @@ table td p {
     }
 
     /* kontaktside */
-    #kontakt_side .sectionwrapper {
-        display: flex;
-    }
+    #kontakt_side .sectionwrapper {}
 
     #kontakt_side .col_right,
-    #kontakt_side .col_left {
-        width: 40vw;
-        margin: 5vw;
-    }
-
-    #kontakt_side h1 {
-        padding-left: 5vw;
-    }
+    #kontakt_side .col_left {}
 
     .kontakt_citat p {
         font-size: 2rem;
-    }
-
-    .kontakt_citat .blue_photo {
-        width: 100%;
     }
 
 

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>KOGA CENTER</title>
+    <meta name="KOGA Center Copenhagen" content="KOGA Cykler">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sbr1wbe.css">
+    <!--  Vi gør brug af ikoner fra Font Awesome - via W3schools.
+   Link: https://www.w3schools.com/icons/fontawesome_icons_intro.asp  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="site_header">
+        <!--       Vores Menu Loades med JS -->
+        <nav id="myTopnav" class="topnav"></nav>
+    </header>
+
+    <main>
+        <section id="breadcrumbs">
+            <ul class="">
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#">Cykler</a></li>
+            </ul>
+        </section>
+        <section id="cykler">
+            <header class="section-header">
+                <h1 id="inddeling" data-overskrift>Vores Cykler</h1>
+            </header>
+            <aside class="sidebar">
+                <nav class="filtrering">
+                    <!--Filtreringsmenu-->
+                    <details class="cykeltype">
+                        <summary>Kategori</summary>
+                        <button class="filter valgt" data-filter="alle">Alle</button>
+                        <button class="filter" data-filter="e-bikes">Elcykler</button>
+                        <button class="filter" data-filter="city">City cykler</button>
+                        <button class="filter" data-filter="trekking">Trekking</button>
+                        <button class="filter" data-filter="race">Racer</button>
+                    </details>
+
+                    <details class="">
+                        <summary>Køn</summary>
+                        <button class="filter" data-koen="alle">Alle</button>
+                        <button class="filter" data-koen="herre">Herre</button>
+                        <button class="filter" data-koen="dame">Dame</button>
+                    </details>
+
+                    <details class="">
+                        <summary>Vægt</summary>
+                        <button class="filter" data-vaegt="alle">Alle</button>
+                        <button class="filter" data-vaegt="alle">Under XXX</button>
+                        <button class="filter" data-vaegt="alle">Over XXX</button>
+                    </details>
+
+                    <details class="">
+                        <summary>Farve</summary>
+                        <button class="filter" data-farve="alle">Alle</button>
+                        <button class="filter" data-farve="">farve 1</button>
+                        <button class="filter" data-farve="">farve 2</button>
+                        <button class="filter" data-farve="">farve 3</button>
+                    </details>
+
+                    <details class="">
+                        <summary>Pris</summary>
+                        <button class="filter" data-filter="">Alle</button>
+                        <button class="filter" data-pris="">Under XXX</button>
+                        <button class="filter" data-pris="">Over XXX</button>
+                    </details>
+
+
+                    <!--
+                    <button class="filter valgt" data-cykel="alle">Kategori<i class="down"></i></button>
+                    <button class="filter" data-cykel="alle">Køn<i class="down"></i></button>
+                    <button class="filter" data-cykel="alle">Vægt<i class="down"></i></button>
+                    <button class="filter" data-cykel="alle">Farve<i class="down"></i></button>
+                    <button class="filter" data-cykel="alle">Pris<i class="down"></i></button>
+-->
+                </nav>
+            </aside>
+            <hr class="line">
+            <div class="grid-container">
+                <section class="auto-grid">
+
+                </section>
+            </div>
+            <div class="tilbage">
+                <div class="top_link">
+                    <a href="#">
+                        <!--                        <span class="arrowUp"></span>-->
+                        <i class="up"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer_wrapper">
+            <div class="footerCykler">
+                <ul>
+                    <li>
+                        <a href="bicycles.html" class="underline">Cykler</a>
+                    </li>
+                    <li>
+                        <a href="bicycles.html#eBike" class="underline">E-bike</a>
+                    </li>
+                    <li>
+                        <a href="bicycles.html#cityTouring" class="underline">City &#38; Touring</a>
+                    </li>
+                    <li>
+                        <a href="bicycles.html#trekking" class="underline">Trekking</a>
+                    </li>
+                    <li>
+                        <a href="bicycles.html#race" class="underline">Race</a>
+                    </li>
+                    <li>
+                        <a href="bicycles.html#signature" class="underline">KOGA Signature</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="find">
+                <a class="map underline" href="https://www.google.dk/maps/place/KOGA+Center+Copenhagen/@55.679209,12.5147843,17z/data=!3m1!4b1!4m5!3m4!1s0x465253c0f812fc99:0xbad7fb89d5bd5f06!8m2!3d55.679206!4d12.516973" target="_blank">Find os</a>
+                <div class="social">
+                    <!-- Ikoner fra Font Awesome-->
+                    <a href="https://www.facebook.com/kogacenter/">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kogabikes/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/koga_bikes">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/kogachannel">
+                        <i class="fa fa-youtube-play"></i>
+                    </a>
+                    <a href="https://github.com/math06j6/KOGA">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="aabningstider">
+                <p>Åbningstider</p>
+                <div class="overblik">
+                    <div class="dage">
+                        <ul>
+                            <li>Mandag - Fredag</li>
+                            <li>Lørdag</li>
+                            <li>Søndag</li>
+                        </ul>
+                    </div>
+                    <div class="tider">
+                        <ul>
+                            <li>11.00 - 18.00</li>
+                            <li>09.00 - 14.00</li>
+                            <li>Lukket</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <address>
+                <ul class="lokalitet">
+                    <li>
+                        <a href="index.html" class="underline">Koga Center Copenhagen</a>
+                    </li>
+                    <li>Peter Bangsvej 18</li>
+                    <li>2000 Frederiksberg</li>
+                </ul>
+                <ul>
+                    <li>CVR: 30899822</li>
+                    <li>Tlf.: +45 38 86 43 25</li>
+                    <li><a href="mailto:info@kogacenter.dk" class="underline">E-mail: info@kogacenter.dk</a></li>
+                </ul>
+            </address>
+        </div>
+    </footer>
+    <!-- template for vores listevisning -->
+    <template>
+        <article class="card-cykel">
+            <header class="card-header">
+                <h4 class="cykelmodel"></h4>
+            </header>
+            <figure>
+                <img class="billede_1" src="" alt=""> </figure>
+
+            <p class="kort"></p>
+
+            <button>Læs mere</button>
+        </article>
+    </template>
+    <script src="script.js"> </script>
+    <script>
+        let posts = [];
+        let filter = "alle";
+        let filterKøn = "alle";
+        const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+
+            const filterKnapper = document.querySelectorAll(".filter");
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtreringCykler));
+
+            //            const sortKnapper = document.querySelectorAll(".sort");
+
+            //            sortKnapper.forEach(knap => knap.addEventListener("click", sorterRetter)); //gør filtreringsknapper klikbare
+
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            posts = await response.json();
+            //            console.log(posts);
+            visCykler();
+
+        }
+
+        // funktion der filtrerer cykler (json)
+        function filtreringCykler() {
+            console.log("filtrering");
+            filter = this.dataset.filter; // sæt variabel "filter" til aktuel værdi
+            document.querySelector(".filter.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
+            this.classList.add("valgt") // marker den nyvalgte knap
+
+            document.querySelector("#inddeling").textContent = this.textContent;
+
+            visCykler(); // kald funktionen visCykler igen med nyt filter
+        }
+
+
+        function visCykler() {
+            console.log("visCykler");
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".auto-grid");
+            //            console.log(skabelon, liste);
+            liste.textContent = "";
+
+            posts.forEach(post => {
+                if (filter == "alle" || filter == post.cykeltype[0]) {
+
+                    const klon = skabelon.cloneNode(true).content;
+                    console.log(klon)
+                    klon.querySelector(".billede_1").src = post.billede_side.guid;
+                    klon.querySelector("h4").textContent = post.cykelmodel;
+                    //                    klon.querySelector("h4").textContent = post.cykelmodel + "_" + post.cykeltype[0];
+                    //                    klon.querySelector("h5").textContent = post.cykeltype[0];
+                    klon.querySelector(".kort").textContent = post.kort;
+                    klon.querySelector("article").addEventListener("click", () => {
+                        location.href = `singleview.html?id=${post.id}`;
+                    })
+
+                    liste.appendChild(klon);
+
+                }
+            });
+        }
+    </script>
+</body></html>
