@@ -1464,6 +1464,189 @@ button .left {
 
 /* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
 
+.liste {
+    padding: 0;
+}
+
+.title_box {
+    background-color: white;
+    padding: 10px;
+}
+
+.billede_box {
+    align-self: center;
+    margin: auto;
+}
+
+.pris {
+    text-align: right;
+    padding: 10px 20px 0 0;
+    font-size: 21px;
+}
+
+.pris_style {
+    text-align: right;
+    color: #0E7DC7;
+    padding: 0 20px;
+    font-size: 10px;
+}
+
+.praesentation {
+    padding: 20px;
+}
+
+.vmf_box {
+    padding: 0 20px;
+}
+
+.vaegt,
+.maal,
+.farve {
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+
+.fordele_overskrift {
+    margin: 10px 20px;
+}
+
+.fordel1,
+.fordel2,
+.fordel3,
+.fordel4 {
+    background-image: url(files/images/flueben.png);
+    background-repeat: no-repeat;
+    margin: 20px 30px;
+    padding-left: 100px;
+    min-height: 52px;
+}
+
+.link_box {
+    background-color: dimgray;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.link_container {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+}
+
+.link_tekst {
+    width: 430px;
+    padding: 10px 30px;
+}
+
+.laes_mere_link {
+    text-align: center;
+
+}
+
+.laes_mere_link p {
+    border: 2px solid white;
+    padding: 10px;
+    width: 130px;
+    color: white;
+}
+
+.link_container a {
+    text-decoration: none;
+    align-self: center;
+}
+
+
+@media screen and (min-width: 800px) {
+
+    #singleview {
+        background-color: white;
+    }
+
+    .liste {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        height: 120vh;
+    }
+
+    .title_box {
+        grid-area: 1 / 2 / 1 / 2;
+        padding: 0 20px;
+
+    }
+
+    .billede_box {
+        grid-area: 1 / 1 / 5 / 1;
+    }
+
+    .pris_box {
+        grid-area: 4 / 2 / 4 / 2;
+    }
+
+    .praesentation_box {
+        grid-area: 2 / 2 / 2 / 2;
+
+    }
+
+    .vmf_box {
+        grid-area: 3 / 2 / 3 / 2;
+        background-color: white;
+    }
+
+    .fordele_box {
+        grid-area: 5 / 1 / 5 / 3;
+        border-top: 1px solid #b1adad;
+        margin-top: 15px;
+
+    }
+
+    .link_box {
+        grid-area: 6 / 1 / 6 / 3;
+
+
+    }
+
+    .fordele_overskrift {
+        text-align: center;
+
+    }
+
+    .fordele {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1000px;
+        margin: auto;
+
+    }
+
+
+
+
+    .fordel1,
+    .fordel2,
+    .fordel3,
+    .fordel4 {
+        padding: 10px 10px 10px 100px;
+        margin: 40px;
+        flex-basis: 400px;
+    }
+
+    img {
+        max-width: 30vw;
+    }
+
+    .link_tekst {
+        margin-right: 90px;
+    }
+
+
+
+}
+
+/*
 table {
     border-collapse: collapse;
     text-align: left;
@@ -1500,6 +1683,7 @@ table td p {
     text-transform: capitalize;
 
 }
+*/
 
 .luk {
 
