@@ -119,7 +119,18 @@ ul {
 /* @font-face Slut */
 
 h1 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt,
+Arial,
+Helvetica,
+Roboto,
+sans-serif;*/
+    /*    font-family: 'Racing Sans One',
+cursive;*/
+/*    font-family: 'Wallpoet',
+    cursive;*/
+    /*    font-family: 'Bowlby One',
+cursive;*/
+    font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 3rem;
@@ -129,14 +140,21 @@ h1 {
 
 
 h2 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
+    /*    font-family: 'Racing Sans One',
+ cursive;*/
+/*    font-family: 'Wallpoet', cursive;*/
+font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 2.5rem;
 }
 
 h3 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
+/*    font-family: 'Wallpoet', cursive;*/
+    font-family: 'Archivo Black', sans-serif;
+    /*    font-family: 'Racing Sans One', cursive;*/
     font-weight: 500;
     font-style: normal;
     font-size: 1.5rem;
@@ -144,12 +162,23 @@ h3 {
 }
 
 h4 {
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
+    /*    font-family: 'Racing Sans One', cursive;*/
+    /*    font-family: 'Bowlby One', cursive;*/
+/*    font-family: 'Wallpoet', cursive;*/
+    font-family: 'Archivo Black', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
     font-style: normal;
 
 
+}
+
+#splash p {
+    /*    font-family: 'Racing Sans One', cursive;*/
+
+    /*    font-family: 'Wallpoet', cursive;*/
+    font-family: 'Archivo Black', sans-serif;
 }
 
 p {
@@ -200,6 +229,10 @@ section {
     margin: 0 1rem;
 }
 
+.col_left,
+.col_right {
+    max-width: 500px;
+}
 
 button {
     cursor: pointer;
@@ -335,7 +368,9 @@ details {
     flex-direction: column;
 }
 
-details .filter {
+details .filter-model,
+details .filter-koen,
+details .filter-farve {
     color: var(--colorTwelve);
     background: 0;
     border: none;
@@ -350,7 +385,9 @@ details .filter {
 }
 
 details .summary:hover,
-details .filter:hover {
+details .filter-model:hover,
+details .filter-koen:hover,
+details .filter-farve:hover {
     /*    background-color: var(--colorEight);*/
     color: var(--colorFive);
 }
@@ -1162,7 +1199,6 @@ footer li > a.underline:hover:before {
 
 #forside .card-header h4 {
     color: var(--colorOne);
-
 }
 
 .kategori img {
@@ -1177,7 +1213,7 @@ footer li > a.underline:hover:before {
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
-    padding: 1rem 0;
+    padding: 3rem 0;
 
 }
 
@@ -1407,7 +1443,10 @@ footer li > a.underline:hover:before {
     background-color: var(--colorOne);
 }
 
-.filter {
+
+.filter-model,
+.filter-koen,
+.filter-farve {
     color: var(--colorOne);
     background: var(--colorFive);
     border: 1px solid var(--colorFive);
@@ -1415,7 +1454,9 @@ footer li > a.underline:hover:before {
     transition: 0.25s;
 }
 
-.filter:hover {
+.filter-model:hover,
+.filter-koen:hover,
+.filter-farve:hover {
     color: var(--colorFive);
     background: 0;
 }
@@ -1427,7 +1468,6 @@ footer li > a.underline:hover:before {
 }
 
 
-details .valgt-cykeltype,
 details .valgt {
     color: var(--colorFive);
 }
@@ -2073,6 +2113,14 @@ table td p {
         margin: 1rem 0;
     }
 
+    #forside .card-header h4 {
+        font-size: 2rem;
+    }
+
+    #forside .box {
+        padding: 8rem 0;
+    }
+
     .menu_wrapper {
         color: var(--colorOne);
         background-color: var(--colorTwelve);
@@ -2097,16 +2145,6 @@ table td p {
         display: block;
 
     }
-
-    /*
-    #forside .box,
-    #forside .kategori_ebike,
-    #forside .kategori_racer,
-    #forside .kategori_trekking,
-    #forside .kategori_city {
-        height: 400px;
-    }
-*/
 
 
     #forside p {
