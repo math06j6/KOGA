@@ -937,6 +937,12 @@ footer li > a.underline:hover:before {
 
 /*****SPLASH BAGGRUNDSVIDEO****/
 
+
+#ramme {
+    width: 20px;
+    height: 20px;
+}
+
 #myVideo {
     position: absolute;
     right: 0;
