@@ -1590,318 +1590,305 @@ table td p {
     background-position: 0vw;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD .citat_section .citat .box_blue {
-    background-color: var(--colorThirteen);
-    padding: 5vw;
-=======
-HEAD .citat_section .citat .box_blue {
+
+.citat_section .citat .box_blue {
     background-color: var(--colorThirteen);
     padding: 5vw;
 
 }
->>>>>>> origin/master
 
-    =======.billede_mereom p {
-        max-width: 1400px;
-        padding: 3rem;
-        color: white;
-        text-align: center;
-        background-color: var(--colorFourteen);
+.billede_mereom p {
+    max-width: 1400px;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    background-color: var(--colorFourteen);
 
 
-    }
+}
 
-    #service {
-        background: white;
-        margin: 0;
-        padding: 0;
-    }
+#service {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
 
-    #service h2 {
-        font-size: 2rem;
-    }
+#service h2 {
+    font-size: 2rem;
+}
 
-<<<<<<< HEAD
-    .sectionwrapper_service {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1400px;
-    }
-=======
+
+.sectionwrapper_service {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
 #om {
     padding: 0;
 }
->>>>>>> origin/master
 
 
-    .col_left_service {
-        flex-grow: 1;
-        flex-basis: 500px;
-        padding: 3rem;
-        padding-bottom: 0rem;
+.col_left_service {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 3rem;
+    padding-bottom: 0rem;
+}
+
+.col_right_service {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 3rem;
+
+}
+
+@media (min-width: 800px) {
+
+    #historie .sectionwrapper {
+        display: flex;
+        flex-direction: row-reverse;
     }
 
-    .col_right_service {
-        flex-grow: 1;
-        flex-basis: 500px;
-        padding: 3rem;
-
-    }
-
-    #om {
-        padding: 0;
-        > > > > > > > origin/master
-    }
-
-    @media (min-width: 800px) {
-
-<<<<<<< HEAD
-        #historie .sectionwrapper {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-=======
     .citat .box_blue h2 {
         font-size: 3rem;
     }
->>>>>>> origin/master
 
-        #historie figure {
-            margin-top: 28px;
-        }
-
-        .citat_section {
-            padding: 0;
-        }
-
-        .citat_tekst {
-            margin-left: 250px;
-            text-align: center;
-        }
-
-        .box_blue h2 {
-            font-size: 3rem;
-        }
-
-        #om .sectionwrapper {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-
-        #service figure {
-            margin-top: 110px;
-        }
-
-        #om figure {
-            margin-top: 30px;
-        }
-
+    #historie figure {
+        margin-top: 28px;
     }
 
-    /*------------------------------------*\
+    .citat_section {
+        padding: 0;
+    }
+
+    .citat_tekst {
+        margin-left: 250px;
+        text-align: center;
+    }
+
+    .box_blue h2 {
+        font-size: 3rem;
+    }
+
+    #om .sectionwrapper {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #service figure {
+        margin-top: 110px;
+    }
+
+    #om figure {
+        margin-top: 30px;
+    }
+
+}
+
+/*------------------------------------*\
 8.4 About - SLUT
 \*------------------------------------*/
 
 
-    /*------------------------------------*\
+/*------------------------------------*\
 8.5 Kontakt
 \*------------------------------------*/
 
 
-    #kontakt_side .section-header {
-        margin: 0 0 2rem;
-    }
+#kontakt_side .section-header {
+    margin: 0 0 2rem;
+}
 
-    #kontakt_side h1 {
-        padding: 0;
-    }
+#kontakt_side h1 {
+    padding: 0;
+}
 
-    #kontakt_side .kontakt_citat {
-        background-image: url(files/images/trekking1.jpg);
-        color: white;
-        margin-top: 50px;
-        width: 100%;
-        height: 100%;
-        background-size: 100vw;
-        background-position: 0vw;
-    }
+#kontakt_side .kontakt_citat {
+    background-image: url(files/images/trekking1.jpg);
+    color: white;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    background-size: 100vw;
+    background-position: 0vw;
+}
 
-    #kontakt_side .kontakt_citat .box_blue {
-        background-color: var(--colorFourteen);
-        padding: 10vw;
-    }
+#kontakt_side .kontakt_citat .box_blue {
+    background-color: var(--colorFourteen);
+    padding: 10vw;
+}
 
-    #kontakt_side .aabningstider p {
-        color: var(--colorTwelve);
-        margin-top: -5px;
+#kontakt_side .aabningstider p {
+    color: var(--colorTwelve);
+    margin-top: -5px;
 
-    }
+}
 
-    #kontakt_side .aabningstider {
-        margin: 2rem 0;
-    }
+#kontakt_side .aabningstider {
+    margin: 2rem 0;
+}
 
-    #kontakt_side {
-        margin-top: -40px;
-    }
+#kontakt_side {
+    margin-top: -40px;
+}
 
-    #kontakt_side .kort_map {
-        margin: 2rem 0;
-    }
-
-
-    #kontakt_side .aabningstider {
-        display: flex;
-        flex-direction: row;
-    }
+#kontakt_side .kort_map {
+    margin: 2rem 0;
+}
 
 
-    /*------------------------------------*\
+#kontakt_side .aabningstider {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*------------------------------------*\
 8.5 Kontakt - SLUT
 \*------------------------------------*/
 
 
-    /*------------------------------------*\
+/*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
 \*------------------------------------*/
 
 
 
 
-    /*------------------------------------*\
+/*------------------------------------*\
 9: MEDIA QUERIES
 \*------------------------------------*/
 
-    @media (min-width: 350px) {
-        .test-container {
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas:
-                "ebike city"
-                "trekking racer";
-        }
-
+@media (min-width: 350px) {
+    .test-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "ebike city"
+            "trekking racer";
     }
 
-    @media (max-width: 800px) {
+}
+
+@media (max-width: 800px) {
 
 
 
-        /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
-        .topnav.change {
-            position: relative;
-            background-color: var(--colorTwelve);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .topnav.change .menu_wrapper li,
-        .topnav.change .menu_wrapper li a {
-            font-size: calc(1rem + 1vw);
-            background-color: inherit;
-        }
-
-        .menu_wrapper ul {
-            flex-direction: column;
-        }
-
-        .menu_wrapper {
-            display: none;
-        }
-
-        .navbar {
-            flex-wrap: nowrap;
-            flex-direction: column;
-
-        }
-
-        .menu_wrapper li a {
-            color: var(--colorOne);
-        }
-
-        /* Tabeller på mobil */
-        @media(max-width: 800px) {
-            table thead {
-                left: -9999px;
-                position: absolute;
-                visibility: hidden;
-            }
-
-            table tr {
-                border-bottom: 0;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                margin-bottom: 40px;
-            }
-
-            table td {
-                border: 1px solid;
-                margin: 0 -1px -1px 0;
-                padding-top: 35px;
-                position: relative;
-                width: 50%;
-                font-size: 0.9rem;
-            }
-
-            table td span {
-                display: block;
-            }
-        }
-
-    }
-
-    .topnav.change .menu_wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
+    .topnav.change {
+        position: relative;
+        background-color: var(--colorTwelve);
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        padding: 15vh 0;
+        height: 100%;
     }
 
-    @media (min-width: 640px) {
+    .topnav.change .menu_wrapper li,
+    .topnav.change .menu_wrapper li a {
+        font-size: calc(1rem + 1vw);
+        background-color: inherit;
+    }
 
+    .menu_wrapper ul {
+        flex-direction: column;
+    }
 
-        #forside .card-header,
-        #forside .card-bottom {
-            margin: 1rem 0;
+    .menu_wrapper {
+        display: none;
+    }
+
+    .navbar {
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+    }
+
+    .menu_wrapper li a {
+        color: var(--colorOne);
+    }
+
+    /* Tabeller på mobil */
+    @media(max-width: 800px) {
+        table thead {
+            left: -9999px;
+            position: absolute;
+            visibility: hidden;
         }
 
-        .menu_wrapper {
-            color: var(--colorOne);
-            background-color: var(--colorTwelve);
+        table tr {
+            border-bottom: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
         }
 
-        #splash,
-        #splash .box_black {
-            max-height: 500px;
-            width: 100%;
-            background-size: 100vw;
-            background-position: 0vw 55vw;
+        table td {
+            border: 1px solid;
+            margin: 0 -1px -1px 0;
+            padding-top: 35px;
+            position: relative;
+            width: 50%;
+            font-size: 0.9rem;
         }
 
-        #splash .wrapper img {
-            min-width: 35vw;
-            max-width: 25%;
-            margin-top: -100px;
-        }
-
-        #splash p {
+        table td span {
             display: block;
         }
+    }
 
-        #forside .card-forside p {
-            display: block;
+}
 
-        }
+.topnav.change .menu_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 15vh 0;
+}
 
-        /*
+@media (min-width: 640px) {
+
+
+    #forside .card-header,
+    #forside .card-bottom {
+        margin: 1rem 0;
+    }
+
+    .menu_wrapper {
+        color: var(--colorOne);
+        background-color: var(--colorTwelve);
+    }
+
+    #splash,
+    #splash .box_black {
+        max-height: 500px;
+        width: 100%;
+        background-size: 100vw;
+        background-position: 0vw 55vw;
+    }
+
+    #splash .wrapper img {
+        min-width: 35vw;
+        max-width: 25%;
+        margin-top: -100px;
+    }
+
+    #splash p {
+        display: block;
+    }
+
+    #forside .card-forside p {
+        display: block;
+
+    }
+
+    /*
     #forside .box,
     #forside .kategori_ebike,
     #forside .kategori_racer,
@@ -1912,32 +1899,32 @@ HEAD .citat_section .citat .box_blue {
 */
 
 
-        #forside p {
-            font-size: 1rem;
-        }
-
-
-        #cykler {
-            grid-template-columns: 1fr 3fr;
-            grid-template-areas:
-                "hd      hd   hd   hd"
-                "line    line line   line"
-                "sidebar modeller modeller modeller"
-                "sidebar ft   ft   ft";
-        }
+    #forside p {
+        font-size: 1rem;
     }
 
 
-    @media screen and (min-width:800px) {
+    #cykler {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "hd      hd   hd   hd"
+            "line    line line   line"
+            "sidebar modeller modeller modeller"
+            "sidebar ft   ft   ft";
+    }
+}
 
-        /*****  FORSIDE - GRID  *****/
-        .test-container {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-areas:
-                "ebike city trekking racer";
-        }
 
-        /*
+@media screen and (min-width:800px) {
+
+    /*****  FORSIDE - GRID  *****/
+    .test-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "ebike city trekking racer";
+    }
+
+    /*
     article.kategori_ebike {
         background-size: 80vw;
         background-position: 48vw;
@@ -1959,70 +1946,70 @@ HEAD .citat_section .citat .box_blue {
     }
 */
 
-        /*****  FORSIDE - GRID  *****/
+    /*****  FORSIDE - GRID  *****/
+}
+
+@media only screen and (min-width: 800px) {
+
+
+    .col_right_service {
+        margin-top: 6rem;
     }
 
-    @media only screen and (min-width: 800px) {
-
-
-        .col_right_service {
-            margin-top: 6rem;
-        }
-
-        .topnav .menuknap {
-            display: none;
-        }
-
-
-        .change .bar1,
-        .change .bar2,
-        .change .bar3 {}
-
-        .menuTop {
-            background-color: rgba(255, 255, 255, 0.97);
-        }
-
-        .searchButton {
-            filter: invert(44%) sepia(6%) saturate(553%) hue-rotate(163deg) brightness(94%) contrast(94%);
-        }
-
-        .searchButton:hover {
-            filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
-        }
-
-
-        /*Hover Animationer -> Header Menu */
-
-        .menu_wrapper li > a.underline:hover {
-            /*        color: var(--colorFive);*/
-        }
-
-        .menu_wrapper li > a.underline:before {
-            background-color: var(--colorFive);
-        }
-
-        /*Hover Animationer -> Header Menu  - SLUT*/
-
-
-        /*  Cykler  */
-        .filtrering {
-            top: 20vh;
-            margin-bottom: 108px;
-        }
-
-        /* kontaktside */
-        #kontakt_side .sectionwrapper {}
-
-        #kontakt_side .col_right,
-        #kontakt_side .col_left {}
-
-        .kontakt_citat p {
-            font-size: 2rem;
-        }
-
-
+    .topnav .menuknap {
+        display: none;
     }
 
-    /*------------------------------------*\
+
+    .change .bar1,
+    .change .bar2,
+    .change .bar3 {}
+
+    .menuTop {
+        background-color: rgba(255, 255, 255, 0.97);
+    }
+
+    .searchButton {
+        filter: invert(44%) sepia(6%) saturate(553%) hue-rotate(163deg) brightness(94%) contrast(94%);
+    }
+
+    .searchButton:hover {
+        filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
+    }
+
+
+    /*Hover Animationer -> Header Menu */
+
+    .menu_wrapper li > a.underline:hover {
+        /*        color: var(--colorFive);*/
+    }
+
+    .menu_wrapper li > a.underline:before {
+        background-color: var(--colorFive);
+    }
+
+    /*Hover Animationer -> Header Menu  - SLUT*/
+
+
+    /*  Cykler  */
+    .filtrering {
+        top: 20vh;
+        margin-bottom: 108px;
+    }
+
+    /* kontaktside */
+    #kontakt_side .sectionwrapper {}
+
+    #kontakt_side .col_right,
+    #kontakt_side .col_left {}
+
+    .kontakt_citat p {
+        font-size: 2rem;
+    }
+
+
+}
+
+/*------------------------------------*\
 9: MEDIA QUERIES - SLUT
 \*------------------------------------*/
