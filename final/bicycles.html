@@ -48,33 +48,41 @@
                     <!--Filtreringsmenu-->
                     <details class="cykeltype">
                         <summary>Kategori</summary>
-                        <button class="filter valgt" data-filter="alle">Alle</button>
-                        <button class="filter" data-filter="e-bikes">Elcykler</button>
-                        <button class="filter" data-filter="city">City cykler</button>
-                        <button class="filter" data-filter="trekking">Trekking</button>
-                        <button class="filter" data-filter="race">Racer</button>
+                        <button class="filter-model valgt" data-cykeltype="alle">Alle</button>
+                        <button class="filter-model" data-cykeltype="e-bikes">Elcykler</button>
+                        <button class="filter-model" data-cykeltype="city">City cykler</button>
+                        <button class="filter-model" data-cykeltype="trekking">Trekking</button>
+                        <button class="filter-model" data-cykeltype="race">Racer</button>
                     </details>
 
+                    <!--
                     <details class="">
                         <summary>Køn</summary>
-                        <button class="filter" data-koen="alle">Alle</button>
-                        <button class="filter" data-koen="herre">Herre</button>
-                        <button class="filter" data-koen="dame">Dame</button>
+                        <button class="filter" data-filter="alle">Alle</button>
+                        <button class="filter" data-filter="herre">Herre</button>
+                        <button class="filter" data-filter="dame">Dame</button>
+                    </details>
+-->
+                    <details class="">
+                        <summary>Køn</summary>
+                        <button class="filter-koen valgt" data-koen="alle">Alle</button>
+                        <button class="filter-koen" data-koen="herre">Herre</button>
+                        <button class="filter-koen" data-koen="dame">Dame</button>
                     </details>
 
                     <details class="">
                         <summary>Vægt</summary>
-                        <button class="filter" data-vaegt="alle">Alle</button>
+                        <button class="filter valgt" data-vaegt="alle">Alle</button>
                         <button class="filter" data-vaegt="alle">Under XXX</button>
                         <button class="filter" data-vaegt="alle">Over XXX</button>
                     </details>
 
                     <details class="">
                         <summary>Farve</summary>
-                        <button class="filter" data-farve="alle">Alle</button>
-                        <button class="filter" data-farve="">farve 1</button>
-                        <button class="filter" data-farve="">farve 2</button>
-                        <button class="filter" data-farve="">farve 3</button>
+                        <button class="filter-farve valgt" data-farve="alle">Alle</button>
+                        <button class="filter-farve" data-farve="">farve 1</button>
+                        <button class="filter-farve" data-farve="">farve 2</button>
+                        <button class="filter-farve" data-farve="">farve 3</button>
                     </details>
 
                     <details class="">
@@ -208,17 +216,25 @@
     <script src="script.js"> </script>
     <script>
         let posts = [];
-        let filter = "alle";
-        let filterKøn = "alle";
+        let filterModel = "alle";
+        let filterKoen = "alle";
         const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler?per_page=100";
 
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentJson();
+            addEventListenersToButtons();
 
-            const filterKnapper = document.querySelectorAll(".filter");
-            filterKnapper.forEach(knap => knap.addEventListener("click", filtreringCykler));
+            //            const filterKnapper = document.querySelectorAll(".filter");
+            //            filterKnapper.forEach(knap => {
+            //                knap.addEventListener("click", filtreringCykler);
+            //            });
+            //            const koenKnapper = document.querySelectorAll(".koen");
+            //            filterKnapper.forEach(knap => {
+            //                knap.addEventListener("click", filterKoenCykler);
+            //            });
+
 
             //            const sortKnapper = document.querySelectorAll(".sort");
 
@@ -234,17 +250,6 @@
 
         }
 
-        // funktion der filtrerer cykler (json)
-        function filtreringCykler() {
-            console.log("filtrering");
-            filter = this.dataset.filter; // sæt variabel "filter" til aktuel værdi
-            document.querySelector(".filter.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
-            this.classList.add("valgt") // marker den nyvalgte knap
-
-            document.querySelector("#inddeling").textContent = this.textContent;
-
-            visCykler(); // kald funktionen visCykler igen med nyt filter
-        }
 
 
         function visCykler() {
@@ -255,7 +260,10 @@
             liste.textContent = "";
 
             posts.forEach(post => {
-                if (filter == "alle" || filter == post.cykeltype[0]) {
+                console.log(post.koen[0])
+
+                if ((filterModel == "alle" || filterModel == post.cykeltype[0]) && (filterKoen == "alle" || filterKoen == post.koen[0])) {
+
 
                     const klon = skabelon.cloneNode(true).content;
                     console.log(klon)
@@ -273,6 +281,68 @@
                 }
             });
         }
+
+
+
+        function addEventListenersToButtons() {
+            console.log("addEventListenersToButtons");
+            document.querySelectorAll(".filter-model").forEach(elm => {
+                elm.addEventListener("click", filtreringCykeltype);
+            })
+            document.querySelectorAll(".filter-koen").forEach(elm => {
+                elm.addEventListener("click", filtreringKoen);
+            })
+        }
+
+        // funktion der filtrerer cyklerne efter cykeltype (json)
+        function filtreringCykeltype() {
+            console.log("filtreringCykeltype");
+            filterModel = this.dataset.cykeltype; // sæt variabel "filter" til aktuel værdi
+            document.querySelector(".filter-model.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
+            this.classList.add("valgt") // marker den nyvalgte knap
+
+            document.querySelector("#inddeling").textContent = this.textContent;
+
+            visCykler(); // kald funktionen visCykler igen med nyt filter
+        }
+
+        // funktion der filtrerer cyklerne efter køn (json)
+        function filtreringKoen() {
+            console.log("filtreringKoen");
+            filterKoen = this.dataset.koen; // sæt variabel "filter" til aktuel værdi
+            document.querySelector(".filter-koen.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
+            this.classList.add("valgt") // marker den nyvalgte knap
+
+            // document.querySelector("#inddeling").textContent = this.textContent;
+
+            visCykler(); // kald funktionen visCykler igen med nyt filter
+        }
+
+        // funktion der filtrerer cyklernes farve (json)
+        function koenFarve() {
+            console.log("koenFarve");
+            filterKoen = this.dataset.farve; // sæt variabel "filter" til aktuel værdi
+            document.querySelector(".filter-farve.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
+            this.classList.add("valgt") // marker den nyvalgte knap
+
+            // document.querySelector("#inddeling").textContent = this.textContent;
+
+            visCykler(); // kald funktionen visCykler igen med nyt filter
+        }
+
+        //
+        //
+        //        function filtreringKoen() {
+        //            console.log(filtreringKoen)
+        //            filterKoen = this.dataset.hold;
+        //            let valgtKøn = document.querySelector(".valgt").textContent;
+        //            document.querySelector("h1").textContent = valgtKøn + " " + filterHold;
+        //            document.querySelectorAll(".filter-hold").forEach(elm => {
+        //                elm.classList.remove("valgt");
+        //            });
+        //            this.classList.add("valgt");
+        //            visPersoner();
+        //        }
 
     </script>
 </body>

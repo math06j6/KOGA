@@ -169,7 +169,10 @@ h4 {
     /*    font-family: 'Racing Sans One', cursive;*/
     /*    font-family: 'Bowlby One', cursive;*/
     /*    font-family: 'Wallpoet', cursive;*/
+<<<<<<< HEAD
     text-transform: uppercase;
+=======
+>>>>>>> origin/master
     font-family: 'Archivo Black', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
@@ -233,6 +236,10 @@ section {
     margin: 0 1rem;
 }
 
+.col_left,
+.col_right {
+    max-width: 500px;
+}
 
 button {
     cursor: pointer;
@@ -368,7 +375,9 @@ details {
     flex-direction: column;
 }
 
-details .filter {
+details .filter-model,
+details .filter-koen,
+details .filter-farve {
     color: var(--colorTwelve);
     background: 0;
     border: none;
@@ -383,7 +392,9 @@ details .filter {
 }
 
 details .summary:hover,
-details .filter:hover {
+details .filter-model:hover,
+details .filter-koen:hover,
+details .filter-farve:hover {
     /*    background-color: var(--colorEight);*/
     color: var(--colorFive);
 }
@@ -1439,7 +1450,10 @@ footer li > a.underline:hover:before {
     background-color: var(--colorOne);
 }
 
-.filter {
+
+.filter-model,
+.filter-koen,
+.filter-farve {
     color: var(--colorOne);
     background: var(--colorFive);
     border: 1px solid var(--colorFive);
@@ -1447,7 +1461,9 @@ footer li > a.underline:hover:before {
     transition: 0.25s;
 }
 
-.filter:hover {
+.filter-model:hover,
+.filter-koen:hover,
+.filter-farve:hover {
     color: var(--colorFive);
     background: 0;
 }
@@ -1459,7 +1475,6 @@ footer li > a.underline:hover:before {
 }
 
 
-details .valgt-cykeltype,
 details .valgt {
     color: var(--colorFive);
 }
@@ -1613,6 +1628,8 @@ button .left {
 
 .link_box {
     background-color: dimgray;
+    background-image: url(files/images/trekking1.jpg);
+    background-size: cover;
     color: white;
     margin: 10px 0;
     padding: 10px;
@@ -1647,6 +1664,7 @@ button .left {
 }
 
 
+
 @media screen and (min-width: 800px) {
 
     #singleview {
@@ -1658,6 +1676,7 @@ button .left {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
         height: 110vh;
+
     }
 
     .title_box {
@@ -1725,7 +1744,7 @@ button .left {
     }
 
     img {
-        max-width: 40vw;
+        max-width: 36vw;
     }
 
     .link_tekst {
@@ -1791,10 +1810,6 @@ table td p {
     background-color: white;
 }
 
-#om {
-    background-color: white;
-}
-
 .citat1 {
     font-size: 2rem;
     text-align: left;
@@ -1819,57 +1834,19 @@ table td p {
     background-position: 0vw;
 }
 
-
 .citat_section .citat .box_blue {
     background-color: var(--colorThirteen);
     padding: 5vw;
 
 }
 
-.billede_mereom p {
-    max-width: 1400px;
-    padding: 3rem;
-    color: white;
-    text-align: center;
-    background-color: var(--colorFourteen);
-
-
-}
-
-#service {
-    background: white;
-    margin: 0;
-    padding: 0;
-}
-
 #service h2 {
     font-size: 2rem;
 }
 
-
-.sectionwrapper_service {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1400px;
-}
-
 #om {
+    background-color: white;
     padding: 0;
-}
-
-
-.col_left_service {
-    flex-grow: 1;
-    flex-basis: 500px;
-    padding: 3rem;
-    padding-bottom: 0rem;
-}
-
-.col_right_service {
-    flex-grow: 1;
-    flex-basis: 500px;
-    padding: 3rem;
-
 }
 
 @media (min-width: 800px) {
@@ -1886,6 +1863,7 @@ table td p {
     #historie figure {
         margin-top: 28px;
     }
+
 
     .citat_section {
         padding: 0;
