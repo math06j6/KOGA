@@ -126,7 +126,7 @@ Roboto,
 sans-serif;*/
     /*    font-family: 'Racing Sans One',
 cursive;*/
-/*    font-family: 'Wallpoet',
+    /*    font-family: 'Wallpoet',
     cursive;*/
     /*    font-family: 'Bowlby One',
 cursive;*/
@@ -143,8 +143,8 @@ h2 {
     /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
     /*    font-family: 'Racing Sans One',
  cursive;*/
-/*    font-family: 'Wallpoet', cursive;*/
-font-family: 'Archivo Black', sans-serif;
+    /*    font-family: 'Wallpoet', cursive;*/
+    font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 2.5rem;
@@ -152,7 +152,7 @@ font-family: 'Archivo Black', sans-serif;
 
 h3 {
     /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
-/*    font-family: 'Wallpoet', cursive;*/
+    /*    font-family: 'Wallpoet', cursive;*/
     font-family: 'Archivo Black', sans-serif;
     /*    font-family: 'Racing Sans One', cursive;*/
     font-weight: 500;
@@ -165,7 +165,7 @@ h4 {
     /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
     /*    font-family: 'Racing Sans One', cursive;*/
     /*    font-family: 'Bowlby One', cursive;*/
-/*    font-family: 'Wallpoet', cursive;*/
+    /*    font-family: 'Wallpoet', cursive;*/
     font-family: 'Archivo Black', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
@@ -1668,7 +1668,6 @@ button .left {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
-        max-height: 110vh;
 
     }
 
