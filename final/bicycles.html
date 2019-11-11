@@ -100,7 +100,6 @@
             <div class="tilbage">
                 <div class="top_link">
                     <a href="#">
-                        <!--                        <span class="arrowUp"></span>-->
                         <i class="up"></i>
                     </a>
                 </div>
@@ -208,7 +207,7 @@
         let posts = [];
         let filter = "alle";
         let filterKøn = "alle";
-        const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler";
+        const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler?per_page=100";
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -271,5 +270,8 @@
                 }
             });
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
