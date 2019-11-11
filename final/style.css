@@ -393,7 +393,7 @@ summary&::-webkit-details-marker {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 300;
 }
 
 .topnav {
@@ -439,6 +439,7 @@ nav {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin: 0 auto;
+
 }
 
 /*MENUKNAP*/
@@ -937,25 +938,28 @@ footer li > a.underline:hover:before {
 
 /*****SPLASH BAGGRUNDSVIDEO****/
 
-
 #myVideo {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+    width: 200vw;
+    height: 100%;
+    top: 0px;
+    right: 200px;
+    position: relative;
+    margin-top: -35px;
+    z-index: 0;
+
+}
+
+#splash {
+    overflow: hidden;
+    position: relative;
 }
 
 #splash figure {
     margin-top: 10vw;
     padding: 1rem 0;
+
 }
 
-#splash .box_black {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    min-width: 100%;
-    min-height: 100%;
-}
 
 #splash .wrapper {
     padding: 2rem 1rem 0;
@@ -964,7 +968,10 @@ footer li > a.underline:hover:before {
     grid-template-rows: auto 1fr auto;
     row-gap: 0.8rem;
     margin: 0 1rem;
-    position: relative;
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: -10px;
 }
 
 #splash .card-bottom {
@@ -978,6 +985,7 @@ footer li > a.underline:hover:before {
     filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
     /*    min-width: 200px;*/
     max-width: 25%;
+    margin-bottom: -20px;
 }
 
 
@@ -1021,7 +1029,6 @@ footer li > a.underline:hover:before {
 /***** forside ******/
 
 
-
 #forside .wrapper figure {
     padding: 0;
     overflow: hidden;
@@ -1052,6 +1059,7 @@ footer li > a.underline:hover:before {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: -4vw;
 }
 
 
@@ -1952,6 +1960,9 @@ table td p {
             "trekking racer";
     }
 
+
+
+
 }
 
 @media (max-width: 800px) {
@@ -2038,6 +2049,15 @@ table td p {
 
 @media (min-width: 640px) {
 
+    #myVideo {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        top: 0px;
+        right: 0px;
+    }
+
 
     #forside .card-header,
     #forside .card-bottom {
@@ -2049,18 +2069,15 @@ table td p {
         background-color: var(--colorTwelve);
     }
 
-    #splash,
-    #splash .box_black {
-        max-height: 500px;
-        width: 100%;
-        background-size: 100vw;
-        background-position: 0vw 55vw;
+
+    #splash .wrapper {
+        top: -50px;
+        left: 20px;
     }
 
     #splash .wrapper img {
         min-width: 35vw;
         max-width: 25%;
-        margin-top: -100px;
     }
 
     #splash p {
