@@ -1576,7 +1576,7 @@ table td p {
     text-align: right;
 }
 
-.box_blue h2 {
+.citat .box_blue h2 {
     font-size: 1.7rem;
 }
 
@@ -1590,18 +1590,9 @@ table td p {
     background-position: 0vw;
 }
 
-<<<<<<< HEAD
-.citat_section .citat .box_blue {
+HEAD .citat_section .citat .box_blue {
     background-color: var(--colorThirteen);
     padding: 5vw;
-=======
-.billede_mereom p {
-    max-width: 1400px;
-    padding: 3rem;
-    color: white;
-    text-align: center;
-    background-color: var(--colorFourteen);
-
 
 }
 
@@ -1638,7 +1629,6 @@ table td p {
 
 #om {
     padding: 0;
->>>>>>> origin/master
 }
 
 @media (min-width: 800px) {
@@ -1661,7 +1651,7 @@ table td p {
         text-align: center;
     }
 
-    .box_blue h2 {
+    .citat .box_blue h2 {
         font-size: 3rem;
     }
 
