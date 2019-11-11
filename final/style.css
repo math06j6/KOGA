@@ -1581,6 +1581,8 @@ button .left {
 
 .link_box {
     background-color: dimgray;
+    background-image: url(files/images/trekking1.jpg);
+    background-size: cover;
     color: white;
     margin: 10px 0;
     padding: 10px;
@@ -1615,6 +1617,7 @@ button .left {
 }
 
 
+
 @media screen and (min-width: 800px) {
 
     #singleview {
@@ -1625,7 +1628,8 @@ button .left {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
-        height: 110vh;
+        max-height: 110vh;
+
     }
 
     .title_box {
@@ -1693,7 +1697,7 @@ button .left {
     }
 
     img {
-        max-width: 40vw;
+        max-width: 36vw;
     }
 
     .link_tekst {
