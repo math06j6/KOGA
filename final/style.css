@@ -1576,7 +1576,7 @@ table td p {
     text-align: right;
 }
 
-.box_blue h2 {
+.citat .box_blue h2 {
     font-size: 1.7rem;
 }
 
@@ -1590,9 +1590,17 @@ table td p {
     background-position: 0vw;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD .citat_section .citat .box_blue {
     background-color: var(--colorThirteen);
     padding: 5vw;
+=======
+HEAD .citat_section .citat .box_blue {
+    background-color: var(--colorThirteen);
+    padding: 5vw;
+
+}
+>>>>>>> origin/master
 
     =======.billede_mereom p {
         max-width: 1400px;
@@ -1614,11 +1622,17 @@ table td p {
         font-size: 2rem;
     }
 
+<<<<<<< HEAD
     .sectionwrapper_service {
         display: flex;
         flex-wrap: wrap;
         max-width: 1400px;
     }
+=======
+#om {
+    padding: 0;
+}
+>>>>>>> origin/master
 
 
     .col_left_service {
@@ -1642,10 +1656,16 @@ table td p {
 
     @media (min-width: 800px) {
 
+<<<<<<< HEAD
         #historie .sectionwrapper {
             display: flex;
             flex-direction: row-reverse;
         }
+=======
+    .citat .box_blue h2 {
+        font-size: 3rem;
+    }
+>>>>>>> origin/master
 
         #historie figure {
             margin-top: 28px;
