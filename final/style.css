@@ -1802,10 +1802,6 @@ table td p {
     background-color: white;
 }
 
-#om {
-    background-color: white;
-}
-
 .citat1 {
     font-size: 2rem;
     text-align: left;
@@ -1830,57 +1826,19 @@ table td p {
     background-position: 0vw;
 }
 
-
 .citat_section .citat .box_blue {
     background-color: var(--colorThirteen);
     padding: 5vw;
 
 }
 
-.billede_mereom p {
-    max-width: 1400px;
-    padding: 3rem;
-    color: white;
-    text-align: center;
-    background-color: var(--colorFourteen);
-
-
-}
-
-#service {
-    background: white;
-    margin: 0;
-    padding: 0;
-}
-
 #service h2 {
     font-size: 2rem;
 }
 
-
-.sectionwrapper_service {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1400px;
-}
-
 #om {
+    background-color: white;
     padding: 0;
-}
-
-
-.col_left_service {
-    flex-grow: 1;
-    flex-basis: 500px;
-    padding: 3rem;
-    padding-bottom: 0rem;
-}
-
-.col_right_service {
-    flex-grow: 1;
-    flex-basis: 500px;
-    padding: 3rem;
-
 }
 
 @media (min-width: 800px) {
@@ -1897,6 +1855,7 @@ table td p {
     #historie figure {
         margin-top: 28px;
     }
+
 
     .citat_section {
         padding: 0;
