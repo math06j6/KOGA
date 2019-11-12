@@ -2138,7 +2138,20 @@ table td p {
 8.5 Kontakt - SLUT
 \*------------------------------------*/
 
+/*------------------------------------*\
+8.6 Kontakt - SLUT
+\*------------------------------------*/
+#frede .col_right {
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*------------------------------------*\
+8.6 Kontakt - SLUT
+\*------------------------------------*/
 /*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
 \*------------------------------------*/
