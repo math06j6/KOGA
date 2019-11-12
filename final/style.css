@@ -228,12 +228,8 @@ section {
 .col_right {
     flex-grow: 1;
     flex-basis: 500px;
-<<<<<<< HEAD
     margin: 0 1rem;
-
-=======
     margin: 0 2.5rem;
->>>>>>> origin/master
 }
 
 
