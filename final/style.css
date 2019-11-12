@@ -1992,12 +1992,14 @@ table td p {
     }
 
     #service figure {
-        margin-top: 110px;
+        margin-top: 20px;
     }
 
     #om figure {
         margin-top: 30px;
+        max-width: 400px;
     }
+
 
 }
 
