@@ -531,16 +531,15 @@ nav {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    padding-right: 2rem;
 }
 
 .menu_wrapper li {
     font-size: 1rem;
     cursor: pointer;
     /*    margin: auto 0;*/
-    padding: 1.25rem;
+    /*    padding: 1.25rem;*/
     text-align: center;
-    height: 100%;
+    /*    height: 100%;*/
     text-transform: uppercase;
     font-weight: 500;
 
@@ -555,13 +554,14 @@ nav {
     text-decoration: none;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
+    padding: 1rem;
 
 
 }
 
 .menu_wrapper li:hover,
 .menu_wrapper li:active {
-    color: var(--colorFive);
+    /*    color: var(--colorFive);*/
 }
 
 li.menu_ikon {
@@ -661,7 +661,7 @@ a.hjem:active p {
 }
 
 .searchButton:hover {
-    filter: invert(98%) sepia(24%) saturate(207%) hue-rotate(133deg) brightness(120%) contrast(100%);
+    filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
 }
 
 /*------------------------------------*\
@@ -923,7 +923,7 @@ footer .find > a.underline:before,
 footer li > a.underline:before {
     content: "";
     position: absolute;
-    width: 100%;
+    /*    width: 100%;*/
     height: 2px;
     bottom: 0;
     left: 0;
@@ -931,6 +931,11 @@ footer li > a.underline:before {
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
+
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    /*    width: 100%;*/
 }
 
 .menu_wrapper li > a.underline:hover:before,
@@ -1892,6 +1897,10 @@ button .left {
 
 @media screen and (min-width: 800px) {
 
+    .menu_wrapper ul {
+        padding-right: 2rem;
+    }
+
     #singleview {
         background-color: white;
     }
@@ -2291,6 +2300,14 @@ table td p {
         color: var(--colorOne);
     }
 
+
+
+    .menu_wrapper li {
+        margin: 1rem;
+    }
+
+
+
     /* Tabeller på mobil */
     @media(max-width: 800px) {
         table thead {
@@ -2414,6 +2431,7 @@ table td p {
         font-size: 2rem;
     }
 
+
     /*
     article.kategori_ebike {
         background-size: 80vw;
@@ -2441,6 +2459,10 @@ table td p {
 
 @media only screen and (min-width: 800px) {
 
+
+    li.menu_ikon {
+        padding-left: 0.5rem;
+    }
 
     #forside h1 {
         font-size: 3rem;
@@ -2480,9 +2502,6 @@ table td p {
         filter: invert(44%) sepia(6%) saturate(553%) hue-rotate(163deg) brightness(94%) contrast(94%);
     }
 
-    .searchButton:hover {
-        filter: invert(43%) sepia(99%) saturate(4033%) hue-rotate(184deg) brightness(89%) contrast(89%);
-    }
 
 
     /*Hover Animationer -> Header Menu */
