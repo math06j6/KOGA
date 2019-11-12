@@ -231,10 +231,6 @@ section {
     margin: 0 1rem;
 }
 
-.col_left,
-.col_right {
-    max-width: 500px;
-}
 
 button {
     cursor: pointer;
@@ -1862,9 +1858,11 @@ button .left {
         flex-basis: 400px;
     }
 
+/*
     img {
         max-width: 36vw;
     }
+*/
 
     .link_tekst {
         margin-right: 90px;
