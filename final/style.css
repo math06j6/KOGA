@@ -231,10 +231,6 @@ section {
     margin: 0 1rem;
 }
 
-.col_left,
-.col_right {
-    max-width: 500px;
-}
 
 button {
     cursor: pointer;
