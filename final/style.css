@@ -134,7 +134,7 @@ cursive;*/
     font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 1.6rem;
     padding: 0 1rem;
 
 }
@@ -149,7 +149,7 @@ h2 {
     font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
 }
 
 h3 {
@@ -173,7 +173,7 @@ h4 {
     text-transform: uppercase;
     font-family: 'Archivo Black', sans-serif;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-style: normal;
 }
 
@@ -1018,7 +1018,6 @@ footer li > a.underline:hover:before {
     margin-bottom: -20px;
 }
 
-.card-bottom signature,
 #splash a.cta,
 #forside a.knap-cykler {
     text-decoration: none;
@@ -1086,7 +1085,7 @@ footer li > a.underline:hover:before {
 }
 
 #forside h1 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     text-align: center;
     padding-bottom: 2rem;
 }
@@ -1218,6 +1217,8 @@ footer li > a.underline:hover:before {
 
 }
 
+
+
 .signature-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1274,11 +1275,15 @@ footer li > a.underline:hover:before {
     justify-content: flex-start;
 }
 
+
+#signature_1 {
+    margin-bottom: -10px;
+}
+
 .kategori button {
     color: var(--colorOne);
     border: 1px solid var(--colorOne);
     margin: 1rem 0;
-
 }
 
 #signature a.knap-cykler,
@@ -1294,6 +1299,35 @@ footer li > a.underline:hover:before {
     color: var(--colorFive);
     background: var(--colorOne);
 }
+
+#signature_video iframe {
+    max-width: auto;
+}
+
+.card-bottom signature_1 {}
+
+
+
+
+.knap-cykler_signature {
+    display: flex;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    color: var(--colorOne);
+    max-width: 250px;
+    background: var(--colorThirteen);
+    padding: 1rem;
+    text-decoration: none;
+    margin-top: 20px;
+
+}
+
+a.knap-cykler_signature:hover {
+    color: var(--colorFive);
+    background: none;
+    border: solid var(--colorFive) 1px;
+}
+
 
 
 /***** Test SLUT******/
@@ -1921,6 +1955,8 @@ table td p {
     background-color: white;
 }
 
+
+
 .citat1 {
     font-size: 2rem;
     text-align: left;
@@ -1951,9 +1987,6 @@ table td p {
 
 }
 
-#service h2 {
-    font-size: 2rem;
-}
 
 #om {
     background-color: white;
@@ -1967,6 +2000,12 @@ table td p {
 @media (min-width: 800px) {
 
     #historie .sectionwrapper {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    #signature_1 .sectionwrapper {
         display: flex;
         flex-direction: row-reverse;
 
