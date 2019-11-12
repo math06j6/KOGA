@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Læs mere box</title>
+    <style>
+        #accordion {
+            border-bottom: 1px solid;
+        }
+
+        .collapse {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #ny-box.lille {
+            overflow: hidden;
+            max-height: 0px;
+            transition: max-height 0.5s ease-out;
+        }
+
+        #ny-box.stor {
+            max-height: 3000px;
+            transition: max-height 1s ease-in;
+        }
+
+
+        /*Laver indhold vha css*/
+
+        .collapse span {
+            background: 0;
+            margin: 0 0.5em;
+            padding: 0;
+        }
+
+        .plus span:after {
+            content: "+";
+        }
+
+        span:after {
+            content: "-";
+        }
+
+        .collapse-title {
+            margin: 0;
+        }
+
+        .plus {
+            all: inherit;
+            border: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            padding: 0.75rem 0;
+            font-weight: 700;
+            cursor: pointer;
+            border-bottom: 1px solid var(--colorTwelve);
+            color: var(--colorTwelve);
+            min-width: 150px;
+            font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+            border-top: 1px solid black;
+
+        }
+
+        .collapse-title:hover .plus,
+        .collapse-title:active .plus {
+            color: blue;
+            background: lightblue;
+        }
+
+        button.plus:hover,
+        .collapse-title .plus:active button {
+            color: blue;
+            background: lightblue;
+        }
+
+
+        i.up {
+            border: solid red;
+            border-width: 0 6px 6px 0;
+            display: inline-block;
+            padding: 7px;
+            margin-top: 10px;
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .rotate {
+            -moz-transition: all .5s linear;
+            -webkit-transition: all .5s linear;
+            transition: all .5s linear;
+        }
+
+        .rotate.down {
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <section>
+        <h1>Accordion</h1>
+        <div id="accordion" class="">
+            <div class="collapse" class="">
+                <p class="collapse-title"><button class="plus">Her kommer en liste<span class="rotate"></span>
+                    </button></p>
+
+                <div id="ny-box" class="lille">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium esse ipsam vel exercitationem natus laboriosam provident repellendus assumenda aliquid reprehenderit quaerat vero porro, doloribus, suscipit vitae mollitia placeat magni corporis.</p>
+                </div>
+            </div>
+            <div class="collapse" class="">
+                <p class="collapse-title"><button class="plus">Her kommer en liste<span class="rotate"></span>
+                    </button></p>
+
+                <div id="ny-box" class="lille">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium esse ipsam vel exercitationem natus laboriosam provident repellendus assumenda aliquid reprehenderit quaerat vero porro, doloribus, suscipit vitae mollitia placeat magni corporis.</p>
+                </div>
+            </div>
+            <div class="collapse" class="">
+                <p class="collapse-title"><button class="plus">Her kommer en liste<span class="rotate"></span>
+                    </button></p>
+
+                <div id="ny-box" class="lille">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium esse ipsam vel exercitationem natus laboriosam provident repellendus assumenda aliquid reprehenderit quaerat vero porro, doloribus, suscipit vitae mollitia placeat magni corporis.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises");
+            document.querySelector(".collapse-title").addEventListener("click", readMore);
+        }
+
+        function readMore() {
+            console.log('readMore:');
+            document.querySelector("#ny-box").classList.toggle("stor");
+            document.querySelector("#ny-box").classList.toggle("lille");
+            document.querySelector(".rotate").classList.toggle("down");
+
+        }
+
+    </script>
+</body>
+
+</html>

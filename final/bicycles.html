@@ -44,8 +44,9 @@
                 <h1 id="inddeling" data-overskrift>Vores Cykler</h1>
             </header>
             <aside class="sidebar">
+                <!--
                 <nav class="filtrering">
-                    <!--Filtreringsmenu-->
+                    Filtreringsmenu
                     <details class="cykeltype">
                         <summary>Kategori</summary>
                         <button class="filter-model valgt" data-cykeltype="alle">Alle</button>
@@ -55,14 +56,6 @@
                         <button class="filter-model" data-cykeltype="race">Racer</button>
                     </details>
 
-                    <!--
-                    <details class="">
-                        <summary>Køn</summary>
-                        <button class="filter" data-filter="alle">Alle</button>
-                        <button class="filter" data-filter="herre">Herre</button>
-                        <button class="filter" data-filter="dame">Dame</button>
-                    </details>
--->
                     <details class="">
                         <summary>Køn</summary>
                         <button class="filter-koen valgt" data-koen="alle">Alle</button>
@@ -91,15 +84,54 @@
                         <button class="filter" data-pris="">Under XXX</button>
                         <button class="filter" data-pris="">Over XXX</button>
                     </details>
-
-
-                    <!--
-                    <button class="filter valgt" data-cykel="alle">Kategori<i class="down"></i></button>
-                    <button class="filter" data-cykel="alle">Køn<i class="down"></i></button>
-                    <button class="filter" data-cykel="alle">Vægt<i class="down"></i></button>
-                    <button class="filter" data-cykel="alle">Farve<i class="down"></i></button>
-                    <button class="filter" data-cykel="alle">Pris<i class="down"></i></button>
+                </nav>
 -->
+                <nav class="filtrering">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <p class="collapse-title"><button class="accordion-knap">Kategori</button></p>
+                            <div class="content">
+                                <button class="filter-model valgt" data-cykeltype="alle">Alle</button>
+                                <button class="filter-model" data-cykeltype="e-bikes">Elcykler</button>
+                                <button class="filter-model" data-cykeltype="city">City cykler</button>
+                                <button class="filter-model" data-cykeltype="trekking">Trekking</button>
+                                <button class="filter-model" data-cykeltype="race">Racer</button>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <p class="collapse-title"><button class="accordion-knap">Køn</button></p>
+                            <div class="content">
+                                <button class="filter-koen valgt" data-koen="alle">Alle</button>
+                                <button class="filter-koen" data-koen="Herre">Herre</button>
+                                <button class="filter-koen" data-koen="Dame">Dame</button>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <p class="collapse-title"><button class="accordion-knap">Vægt</button></p>
+                            <div class="content">
+                                <button class="filter-vaegt valgt" data-vaegt="alle">Alle</button>
+                                <button class="filter-vaegt" data-vaegt="alle">Under XXX</button>
+                                <button class="filter-vaegt" data-vaegt="alle">Over XXX</button>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <p class="collapse-title"><button class="accordion-knap">Farve</button></p>
+                            <div class="content">
+                                <button class="filter-farve valgt" data-farve="alle">Alle</button>
+                                <button class="filter-farve" data-farve="">farve 1</button>
+                                <button class="filter-farve" data-farve="">farve 2</button>
+                                <button class="filter-farve" data-farve="">farve 3</button>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <p class="collapse-title"><button class="accordion-knap">Pris</button></p>
+                            <div class="content">
+                                <button class="filter-pris" data-filter-pris="">Alle</button>
+                                <button class="filter-pris" data-pris="">Under XXX</button>
+                                <button class="filter-pris" data-pris="">Over XXX</button>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </aside>
             <hr class="line">
@@ -343,5 +375,20 @@
         //            this.classList.add("valgt");
         //            visPersoner();
         //        }
+
+
+        //////Accordion til filtrering//////
+        const items = document.querySelectorAll(".collapse-title");
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+            //            this.nextElementSibling.classList.toggle('rotate');
+            // this.classList.toggle('rotate');
+            // x.classList.toggle("rotate");
+
+        }
     </script>
 </body></html>
