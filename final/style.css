@@ -1630,9 +1630,9 @@ button .left {
 .accordion .collapse-title.active::after {
     color: var(--colorFive);
     /*    border: 1px solid var(--colorFive);*/
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 .accordion-knap {
