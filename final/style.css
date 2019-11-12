@@ -724,8 +724,7 @@ social,
     display: flex;
 }
 
-address,
-.footerCykler {
+address .footerCykler {
     flex-grow: 1;
     flex-basis: 300px;
 }
@@ -2013,12 +2012,52 @@ table td p {
 \*------------------------------------*/
 
 
-#kontakt_side .section-header {
-    margin: 0 0 2rem;
+#kontakt_side .aabningstider {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-grow: 1;
+    flex-basis: 300px;
+    color: var(--colorTwelve);
 }
 
-#kontakt_side h1 {
-    padding: 0;
+
+#kontakt_side address {
+
+    padding: 1rem;
+}
+
+#kontakt_side li,
+#kontakt_side li a {
+    color: var(--colorOne);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--colorTwelve);
+}
+
+#kontakt_side li a {
+    text-decoration: none;
+    color: var(--colorTwelve);
+}
+
+#kontakt_side span.navn {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--colorTwelve);
+}
+
+#kontakt_side .find a,
+#kontakt_side .aabningstider p,
+#kontakt_side .footerCykler ul li:first-child,
+#kontakt_side .footerCykler ul li:first-child a,
+#kontakt_side .lokalitet :first-child {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--colorOne);
+    text-transform: uppercase;
+    color: var(--colorTwelve);
 }
 
 #kontakt_side .kontakt_citat {
@@ -2036,29 +2075,14 @@ table td p {
     padding: 10vw;
 }
 
-#kontakt_side .aabningstider p {
-    color: var(--colorTwelve);
-    margin-top: -5px;
 
-}
 
-#kontakt_side .aabningstider {
-    margin: 2rem 0;
-}
 
-#kontakt_side {
-    margin-top: -40px;
-}
 
 #kontakt_side .kort_map {
     margin: 2rem 0;
 }
 
-
-#kontakt_side .aabningstider {
-    display: flex;
-    flex-direction: row;
-}
 
 
 /*------------------------------------*\
