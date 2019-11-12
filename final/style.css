@@ -1038,7 +1038,7 @@ footer li > a.underline:hover:before {
     margin-bottom: -20px;
 }
 
-
+.card-bottom signature,
 #splash a.cta,
 #forside a.knap-cykler {
     text-decoration: none;
