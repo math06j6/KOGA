@@ -1038,8 +1038,9 @@ footer li > a.underline:hover:before {
 
 #splash a.cta:hover,
 #splash a.cta:active,
-#forside a.knap-cykler:hover,
-#forside a.knap-cykler:active {
+#forside .card-forside:hover a.knap-cykler,
+#forside .card-forside:focus-within a.knap-cykler,
+#forside .card-forside:active a.knap-cykler {
     color: var(--colorOne);
     background: var(--colorOne);
     background: 0;
@@ -1089,6 +1090,78 @@ footer li > a.underline:hover:before {
     text-align: center;
     padding-bottom: 2rem;
 }
+
+#cykler .card-cykel,
+#forside .card-forside {
+    position: relative;
+    box-shadow: none;
+    transition: box-shadow 400ms ease, background 100ms ease, -webkit-transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
+    transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease, -webkit-transform 300ms ease-in-out;
+
+
+}
+
+#cykler .card-cykel:hover,
+#forside .card-forside:hover,
+#cykler .card-cykel:focus-within,
+#forside .card-forside:focus-within {
+    /*    background: #111111;*/
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    -webkit-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+    cursor: pointer;
+}
+
+#cykler .card-cykel,
+#forside .card-forside {}
+
+/* Vi giver vores knapper en position static, så hele box inddrages og gøres klikbar*/
+/*
+.breakout-button {
+    font: inherit;
+    background: transparent;
+    color: currentcolor;
+    border: 1px solid;
+    transition: background 100ms ease;
+    position: static;
+}
+*/
+
+/*
+.breakout-button,
+.breakout-button::before {
+    cursor: pointer;
+}
+*/
+
+/*
+.breakout-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 61, 220, 0.27);
+
+}
+
+.breakout-button:focus {
+    outline: none;
+}
+
+.breakout-button:hover {
+    background: #333333;
+}
+
+.breakout-button:focus::before {
+    outline: 1px solid #ffffff;
+    outline-offset: -0.8rem;
+
+}*/
+
 
 
 #forside .card-forside {
@@ -1430,6 +1503,7 @@ a.knap-cykler_signature:hover {
     padding: 1rem 2rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
+
     /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
 
     row-gap: 1em;
@@ -1450,7 +1524,9 @@ a.knap-cykler_signature:hover {
     margin: 1rem;
 }
 
-#cykler .card-cykel button:hover {
+#cykler .card-cykel:hover button,
+#cykler .card-cykel:focus-within button,
+#cykler .card-cykel:active button {
     color: var(--colorFive);
     background: 0;
 }
