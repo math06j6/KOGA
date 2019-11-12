@@ -2080,7 +2080,7 @@ table td p {
 
 
 #kontakt_side .kort_map {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 
@@ -2357,8 +2357,6 @@ table td p {
     /* kontaktside */
     #kontakt_side .sectionwrapper {}
 
-    #kontakt_side .col_right,
-    #kontakt_side .col_left {}
 
     .kontakt_citat p {
         font-size: 2rem;
