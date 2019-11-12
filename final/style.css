@@ -197,8 +197,6 @@ ul {
     list-style: none;
 }
 
-
-
 section {
     width: 100%;
     padding: 2rem 0;
@@ -372,13 +370,19 @@ details {
     flex-direction: column;
 }
 
+
+.accordion .filter-model,
+.accordion .filter-koen,
+.accordion .filter-farve,
+.accordion .filter-vaegt,
+.accordion .filter-pris,
 details .filter-model,
 details .filter-koen,
 details .filter-farve {
     color: var(--colorTwelve);
     background: 0;
     border: none;
-    border-bottom: 1px solid var(--colorTwelve);
+    border-bottom: 1px solid var(--colorFour);
     margin: 0 auto;
     padding: 0.75rem;
     width: 100%;
@@ -388,6 +392,11 @@ details .filter-farve {
 
 }
 
+.accordion .filter-model:hover,
+.accordion .filter-koen:hover,
+.accordion .filter-farve:hover,
+.accordion .filter-vaegt:hover,
+.accordion .filter-pris:hover,
 details .summary:hover,
 details .filter-model:hover,
 details .filter-koen:hover,
@@ -985,7 +994,6 @@ footer li > a.underline:hover:before {
     top: 0px;
     right: 200px;
     position: relative;
-    margin-top: -35px;
     z-index: 0;
 
 }
@@ -993,6 +1001,7 @@ footer li > a.underline:hover:before {
 #splash {
     overflow: hidden;
     position: relative;
+    padding: 0;
 }
 
 #splash figure {
@@ -1099,8 +1108,7 @@ footer li > a.underline:hover:before {
 #forside h1 {
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 2rem;
-    margin-top: -4vw;
+    padding-bottom: 2rem;
 }
 
 
@@ -1472,11 +1480,13 @@ footer li > a.underline:hover:before {
 }
 
 
+.accordion .valgt,
 details .valgt {
     color: var(--colorFive);
 }
 
 /* Pile */
+
 
 button i {
     border: solid var(--colorFive);
@@ -1514,6 +1524,118 @@ button .left {
 
 /* Pile - Slut*/
 
+
+
+/****** Accordion ******/
+
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-top: 1px solid var(--colorFour);
+    /*
+    position: relative;
+    display: flex;
+    justify-content: center;
+*/
+}
+
+.accordion .collapse-title {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 3rem 1rem 0rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--colorFour);
+    margin: 0;
+}
+
+
+.accordion .collapse-title:hover,
+.accordion .collapse-title:hover::after {
+    cursor: pointer;
+    color: var(--colorFive);
+}
+
+
+.accordion .collapse-title.active {
+    color: var(--colorFive);
+    border-bottom: 1px solid var(--colorFive);
+}
+
+.accordion .content {
+    opacity: 0;
+    padding: 0 1rem;
+    max-height: 0;
+    border-bottom: 1px solid var(--colorFour);
+    overflow: hidden;
+    clear: both;
+    -webkit-transition: all 0.2s ease 0.15s;
+    -o-transition: all 0.2s ease 0.15s;
+    transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content.active {
+    opacity: 1;
+    padding: 0;
+    max-height: 100%;
+    -webkit-transition: all 0.35s ease 0.15s;
+    -o-transition: all 0.35s ease 0.15s;
+    transition: all 0.35s ease 0.15s;
+}
+
+.accordion .collapse-title::after {
+    position: absolute;
+    float: right;
+    right: 1rem;
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    /*    border: 1px solid var(--colorTwelve);*/
+    text-align: center;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    content: "+";
+}
+
+.accordion .collapse-title.active::after {
+    color: var(--colorFive);
+    /*    border: 1px solid var(--colorFive);*/
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.accordion-knap {
+    all: inherit;
+    border: 0;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 1px solid var(--colorTwelve);
+    min-width: 150px;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    border: none;
+}
+
+/****** Accordion Slut ******/
 /*------------------------------------*\
 8.2 CYKLER - SLUT
 \*------------------------------------*/
@@ -2065,9 +2187,9 @@ table td p {
         position: relative;
         right: 0;
         bottom: 0;
-        width: 100vw;
         top: 0px;
-        right: 0px;
+        width: 100vw;
+
     }
 
 
@@ -2076,9 +2198,6 @@ table td p {
         margin: 1rem 0;
     }
 
-    #forside .card-header h4 {
-        font-size: 2rem;
-    }
 
     #forside .box {
         padding: 8rem 0;
@@ -2133,6 +2252,10 @@ table td p {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:
             "ebike city trekking racer";
+    }
+
+    #forside .card-header h4 {
+        font-size: 2rem;
     }
 
     /*
