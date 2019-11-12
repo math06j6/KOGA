@@ -1710,9 +1710,11 @@ button .left {
 }
 
 
-.fordele_overskrift {
-    margin: 10px 20px;
+
+.singleview_overskrift {
+    margin: 30px 20px;
 }
+
 
 .fordel1,
 .fordel2,
@@ -1724,6 +1726,18 @@ button .left {
     padding-left: 100px;
     min-height: 52px;
 }
+
+.billedtekst_box {
+    margin: -5px 0px 30px 0px;
+    height: 120px;
+    background-color: var(--colorFive);
+    color: var(--colorOne);
+    text-align: center;
+    padding: 1rem;
+
+}
+
+
 
 .link_box {
     background-size: cover;
@@ -1830,9 +1844,6 @@ button .left {
         margin: auto;
 
     }
-
-
-
 
     .fordel1,
     .fordel2,
