@@ -1858,9 +1858,11 @@ button .left {
         flex-basis: 400px;
     }
 
+/*
     img {
         max-width: 36vw;
     }
+*/
 
     .link_tekst {
         margin-right: 90px;
