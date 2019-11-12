@@ -2220,9 +2220,6 @@ table td p {
         max-width: 25%;
     }
 
-    #splash p {
-        display: block;
-    }
 
     #forside .card-forside p {
         display: block;
@@ -2294,6 +2291,11 @@ table td p {
     .topnav .menuknap {
         display: none;
     }
+
+    #splash p {
+        display: block;
+    }
+
 
 
     .change .bar1,
