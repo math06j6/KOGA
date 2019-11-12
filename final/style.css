@@ -1726,7 +1726,6 @@ button .left {
 }
 
 
-
 .fordele_overskrift {
     margin: 10px 20px;
 }
@@ -1743,18 +1742,21 @@ button .left {
 }
 
 .link_box {
-    background-color: dimgray;
-    background-image: url(files/images/trekking1.jpg);
     background-size: cover;
     color: white;
     margin: 10px 0;
     padding: 10px;
+    position: relative;
+    background-image: url(files/images/trekking1.jpg);
+
 }
 
 .link_container {
     max-width: 950px;
     margin: auto;
     display: flex;
+    background-color: var(--colorFourteen);
+
 }
 
 .link_tekst {
@@ -1829,8 +1831,6 @@ button .left {
 
     .link_box {
         grid-area: 6 / 1 / 6 / 3;
-
-
     }
 
     .fordele_overskrift {
