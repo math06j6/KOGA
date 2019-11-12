@@ -2354,6 +2354,14 @@ table td p {
 @media only screen and (min-width: 800px) {
 
 
+    #forside h1 {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
     .col_right_service {
         margin-top: 6rem;
     }
