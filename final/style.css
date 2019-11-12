@@ -1749,6 +1749,7 @@ button .left {
 }
 
 
+
 .fordel1,
 .fordel2,
 .fordel3,
@@ -1757,8 +1758,9 @@ button .left {
     background-repeat: no-repeat;
     margin: 20px 30px;
     padding-left: 100px;
-    min-height: 52px;
+    min-height: 100px;
 }
+
 
 .billedtekst_box {
     margin: -5px 0px 30px 0px;
@@ -1769,8 +1771,6 @@ button .left {
     padding: 1rem;
 
 }
-
-
 
 .link_box {
     background-size: cover;
@@ -1858,7 +1858,6 @@ button .left {
         margin-top: 15px;
         background-color: #EEEFEF;
     }
-
 
     .link_box {
         grid-area: 6 / 1 / 6 / 3;
