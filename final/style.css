@@ -1718,7 +1718,7 @@ button .left {
 .fordel2,
 .fordel3,
 .fordel4 {
-    background-image: url(files/images/flueben.png);
+    background-image: url(files/svg/flueben.svg);
     background-repeat: no-repeat;
     margin: 20px 30px;
     padding-left: 100px;
