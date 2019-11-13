@@ -95,7 +95,7 @@
             </div>
             <div class="features_box">
                 <h3 class="singleview_overskrift">Features</h3>
-                <div class="billede_box">
+                <div class="billedef_box">
                     <img src="files/images/ebike_koga_bosch_display.jpg">
                     <p class="billedtekst_box">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -105,11 +105,19 @@
             <div class="specifikationer_box">
                 <h3 class="singleview_overskrift">Specifikationer</h3>
                 <div class="specifikationer">
-                    <div class="speci.1"></div>
-                    <div class="speci.2"></div>
-                    <div class="speci.3"></div>
-                    <div class="speci.4"></div>
-                    <div class="speci.5"></div>
+                    <div class="speci1"></div>
+                    <div class="speci2"></div>
+                    <div class="speci3"></div>
+                    <div class="speci4"></div>
+                    <div class="speci5"></div>
+                    <div class="speci6"></div>
+                    <div class="speci7"></div>
+                    <div class="speci8"></div>
+                    <div class="speci9"></div>
+                    <div class="speci10"></div>
+                    <div class="speci11"></div>
+                    <div class="speci12"></div>
+                    <div class="speci13"></div>
                 </div>
             </div>
 
@@ -257,6 +265,20 @@
             liste.querySelector(".fordel2").textContent = cykel.fordel_2;
             liste.querySelector(".fordel3").textContent = cykel.fordel_3;
             liste.querySelector(".fordel4").textContent = cykel.fordel_4;
+
+            liste.querySelector(".speci1").textContent = "Front Fork Sort: " + cykel.speci1;
+            liste.querySelector(".speci2").textContent = "Number of gears: " + cykel.speci2;
+            liste.querySelector(".speci3").textContent = "Rear brake sort: " + cykel.speci3;
+            liste.querySelector(".speci4").textContent = "Rear brake make: " + cykel.speci4;
+            liste.querySelector(".speci5").textContent = "Front brake make: " + cykel.speci5;
+            liste.querySelector(".speci6").textContent = "Front brake sort: " + cykel.speci6;
+            liste.querySelector(".speci7").textContent = "Front brake type: " + cykel.speci7;
+            liste.querySelector(".speci8").textContent = "Rear brake type: " + cykel.speci8;
+            liste.querySelector(".speci9").textContent = "Wheelset make: " + cykel.speci9;
+            liste.querySelector(".speci10").textContent = "Wheelset type: " + cykel.speci10;
+            liste.querySelector(".speci11").textContent = "Tyre make: " + cykel.speci11;
+            liste.querySelector(".speci12").textContent = "Tyre type: " + cykel.speci12;
+            liste.querySelector(".speci13").textContent = "Tyre sort: " + cykel.speci13;
 
             document.querySelector(".luk").addEventListener("click", () => {
                 history.back();
