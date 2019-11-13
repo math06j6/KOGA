@@ -1888,12 +1888,13 @@ button .left {
         background-color: white;
     }
 
+    /*her har i sat en højde på, der gør at footeren skraber over*/
+
     .liste {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
-        height: 110vh;
-
+        height: 300vh;
     }
 
     .title_box {
