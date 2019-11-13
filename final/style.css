@@ -2028,7 +2028,6 @@ table td p {
     font-size: 2rem;
 }
 
-
 .citat .box_blue h2 {
     font-size: 1.7rem;
 }
@@ -2536,7 +2535,12 @@ a.knap-cykler_signature:hover {
         display: block;
     }
 
-
+    #om img {
+        margin-top: 80px;
+        margin-left: 60px;
+        max-height: auto;
+        width: 80%;
+    }
 
     .change .bar1,
     .change .bar2,
