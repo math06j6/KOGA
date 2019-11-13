@@ -1126,7 +1126,8 @@ footer li > a.underline:hover:before {
 }
 
 #cykler .card-cykel,
-#forside .card-forside {
+#forside .card-forside,
+#forside-signature .signature-wrapper {
     position: relative;
     box-shadow: none;
     transition: box-shadow 400ms ease, background 100ms ease, -webkit-transform 300ms ease-in-out;
@@ -1137,9 +1138,11 @@ footer li > a.underline:hover:before {
 }
 
 #cykler .card-cykel:hover,
-#forside .card-forside:hover,
 #cykler .card-cykel:focus-within,
-#forside .card-forside:focus-within {
+#forside .card-forside:hover,
+#forside .card-forside:focus-within,
+#forside-signature .signature-wrapper:hover,
+#forside-signature .signature-wrapper:focus-within {
     /*    background: #111111;*/
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
     -webkit-transform: translateY(-0.5rem);
@@ -1301,7 +1304,7 @@ footer li > a.underline:hover:before {
     padding: 1rem;
 }
 
-.signature-wrapper {
+#forside-signature {
     display: flex;
     flex-wrap: wrap;
     max-width: 1400px;
@@ -1309,7 +1312,7 @@ footer li > a.underline:hover:before {
     padding: 1rem;
 }
 
-#signature {
+.signature-wrapper {
     background-image: url(files/images/city2.jpg);
     height: 60vw;
     background-size: cover;
@@ -1318,7 +1321,7 @@ footer li > a.underline:hover:before {
     background-position: 50% 0%;
 }
 
-#signature .box_blue {
+#forside-signature .box_blue {
     width: 100%;
     height: 100%;
     padding: 1rem;
@@ -1326,7 +1329,7 @@ footer li > a.underline:hover:before {
 
 }
 
-#signature .blue-container {
+#forside-signature .blue-container {
     padding: 5rem;
     margin: auto auto 0 0;
     display: flex;
@@ -1335,23 +1338,23 @@ footer li > a.underline:hover:before {
     align-items: end;
 }
 
-#signature h2,
-#signature p,
-#signature a.knap-cykler {
+#forside-signature h2,
+#forside-signature p,
+#forside-signature a.knap-cykler {
     color: var(--colorOne);
     margin: 1rem;
 }
 
-#signature h2 {
+#forside-signature h2 {
     padding-top: 2rem;
     font-size: calc(1.5rem + 3vw);
 }
 
-#signature p {
+#forside-signature p {
     padding-bottom: 2rem;
 }
 
-#signature .card-bottom {
+#forside-signature .card-bottom {
     display: flex;
     justify-content: flex-start;
 }
@@ -1362,8 +1365,7 @@ footer li > a.underline:hover:before {
     margin: 1rem 0;
 }
 
-#signature a.knap-cykler,
-#signature button {
+#forside-signature a.knap-cykler {
     text-decoration: none;
     cursor: pointer;
     font-family: futura-pt,
@@ -1379,12 +1381,11 @@ footer li > a.underline:hover:before {
     text-transform: uppercase;
     min-width: 120px;
     color: var(--colorOne);
-    background: var(--colorThirteen);
-    border: 1px solid var(--colorFive);
+    background: 0;
+    border: 1px solid var(--colorOne);
 }
 
-#signature a.knap-cykler:hover,
-#signature button:hover {
+#forside-signature:hover a.knap-cykler {
     color: var(--colorFive);
     background: var(--colorOne);
 }
