@@ -1836,6 +1836,12 @@ button .left {
 
 }
 
+.specifikationer {
+    margin: 30px 20px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
 .link_box {
     background-size: cover;
     color: white;
@@ -1880,6 +1886,10 @@ button .left {
 
 @media screen and (min-width: 800px) {
 
+    .singleview_overskrift {
+        text-align: center;
+    }
+
     .menu_wrapper ul {
         padding-right: 2rem;
     }
@@ -1894,13 +1904,9 @@ button .left {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
-<<<<<<< HEAD
-        height: 110vw;
-
-=======
         height: 300vh;
->>>>>>> origin/master
     }
+
 
     .title_box {
         grid-area: 1 / 2 / 1 / 2;
@@ -1933,9 +1939,6 @@ button .left {
         background-color: #EEEFEF;
     }
 
-    .link_box {
-        grid-area: 6 / 1 / 6 / 3;
-    }
 
     .fordele_overskrift {
         text-align: center;
@@ -1960,11 +1963,20 @@ button .left {
         flex-basis: 400px;
     }
 
-    /*
-    img {
-        max-width: 36vw;
+    .features_box {}
+
+    .billedtekst_box {
+        max-width: none;
     }
-*/
+
+    .specifikationer_box {
+        grid-area: 7 / 1 / 7 / 3;
+        text-align: center;
+    }
+
+    .link_box {
+        grid-area: 8 / 1 / 8/ 3;
+    }
 
     .link_tekst {
         margin-right: 90px;
