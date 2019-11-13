@@ -987,8 +987,10 @@ footer li > a.underline:hover:before {
     /*    font-family: 'Racing Sans One', cursive;*/
     /*    font-family: 'Wallpoet', cursive;*/
     max-width: 460px;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     line-height: 1.7;
+    color: white;
+    display: none;
 }
 
 #splash .wrapper {
@@ -1046,12 +1048,7 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--colorOne);
 }
 
-#splash p {
-    color: white;
-    display: none;
-    padding: 0;
 
-}
 
 /***** Splash - Slut *****/
 
