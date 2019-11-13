@@ -998,6 +998,7 @@ footer li > a.underline:hover:before {
     line-height: 1.7;
     color: white;
     display: none;
+    padding: 0;
 }
 
 #splash .wrapper {
@@ -1005,7 +1006,7 @@ footer li > a.underline:hover:before {
     max-width: 1200px;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    row-gap: 0.8rem;
+    row-gap: 2rem;
     margin: 0 1rem;
     position: absolute;
     z-index: 1;
@@ -2544,9 +2545,6 @@ a.knap-cykler_signature:hover {
         display: none;
     }
 
-    #splash p {
-        display: block;
-    }
 
     #om img {
         margin-top: 80px;
@@ -2611,6 +2609,14 @@ a.knap-cykler_signature:hover {
     #signature_1 .sectionwrapper iframe {
         margin-top: 100px;
     }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    #splash p {
+        display: block;
+    }
+
 }
 
 /*------------------------------------*\
