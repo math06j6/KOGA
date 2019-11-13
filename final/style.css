@@ -2014,17 +2014,20 @@ table td p {
     background-color: white;
 }
 
+#citat_om {
+    margin-top: -80px;
+}
 
-
-.citat1 {
-    font-size: 2rem;
+#citat_om .citat1_om {
     text-align: left;
+    font-size: 2rem;
 }
 
-.citat2 {
-    font-size: 2rem;
+#citat_om .citat2_om {
     text-align: right;
+    font-size: 2rem;
 }
+
 
 .citat .box_blue h2 {
     font-size: 1.7rem;
@@ -2405,6 +2408,9 @@ a.knap-cykler_signature:hover {
         margin: 1rem 0;
     }
 
+    #forside .box_blue h2 {
+        text-align: left;
+    }
 
     #forside .box {
         padding: 8rem 0;
@@ -2462,6 +2468,17 @@ a.knap-cykler_signature:hover {
         font-size: 2rem;
     }
 
+    #citat_om .citat1_om {
+        text-align: left;
+        font-size: 2rem;
+        margin-left: 100px;
+    }
+
+    #citat_om .citat2_om {
+        text-align: right;
+        font-size: 2rem;
+        margin-right: 100px;
+    }
 
     /*
     article.kategori_ebike {
@@ -2570,7 +2587,7 @@ a.knap-cykler_signature:hover {
         font-size: 2rem;
     }
 
-    .box_blue h2 {
+    .citat1_signature h2 {
         text-align: center;
     }
 
