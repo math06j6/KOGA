@@ -209,13 +209,6 @@ section {
     padding: 1rem;
 }
 
-.sectionwrapper {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
 .col_left,
 .col_right {
     flex-grow: 1;
@@ -1061,6 +1054,36 @@ footer li > a.underline:hover:before {
 /***** forside ******/
 
 
+
+#forside .card-header,
+#forside .card-bottom {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+
+#forside .card-header h4 {
+    color: var(--colorOne);
+}
+
+.kategori img {
+    object-fit: cover;
+}
+
+
+.box {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 3rem 0;
+
+}
+
 #forside .wrapper figure {
     padding: 0;
     overflow: hidden;
@@ -1253,35 +1276,13 @@ footer li > a.underline:hover:before {
 
 }
 
-
-#forside .card-header,
-#forside .card-bottom {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    margin: 1rem 0;
-}
+/***** Test SLUT******/
 
 
-#forside .card-header h4 {
-    color: var(--colorOne);
-}
-
-.kategori img {
-    object-fit: cover;
-}
 
 
-.box {
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100%;
-    padding: 3rem 0;
 
-}
+/******* Signature boks på forside START********/
 
 .box_blue {
     background-color: var(--colorFourteen);
@@ -1289,10 +1290,7 @@ footer li > a.underline:hover:before {
     width: 100%;
     height: 100%;
     padding: 1rem;
-
 }
-
-
 
 .signature-wrapper {
     display: flex;
@@ -1300,7 +1298,6 @@ footer li > a.underline:hover:before {
     max-width: 1400px;
     margin: 0 auto;
     padding: 1rem;
-
 }
 
 #signature {
@@ -1350,11 +1347,6 @@ footer li > a.underline:hover:before {
     justify-content: flex-start;
 }
 
-
-#signature_1 {
-    margin-bottom: -10px;
-}
-
 .kategori button {
     color: var(--colorOne);
     border: 1px solid var(--colorOne);
@@ -1363,10 +1355,23 @@ footer li > a.underline:hover:before {
 
 #signature a.knap-cykler,
 #signature button {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: futura-pt,
+        Arial,
+        Helvetica,
+        Roboto,
+        sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: normal;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    min-width: 120px;
     color: var(--colorOne);
-    background: none;
-    border: 1px solid var(--colorOne);
-    max-width: 200px;
+    background: var(--colorThirteen);
+    border: 1px solid var(--colorFive);
 }
 
 #signature a.knap-cykler:hover,
@@ -1375,37 +1380,9 @@ footer li > a.underline:hover:before {
     background: var(--colorOne);
 }
 
-#signature_video iframe {
-    max-width: auto;
-}
-
-.card-bottom signature_1 {}
+/******signature boks på forside SLUT******/
 
 
-
-
-.knap-cykler_signature {
-    display: flex;
-    padding: 1rem 0;
-    text-transform: uppercase;
-    color: var(--colorOne);
-    max-width: 250px;
-    background: var(--colorThirteen);
-    padding: 1rem;
-    text-decoration: none;
-    margin-top: 20px;
-
-}
-
-a.knap-cykler_signature:hover {
-    color: var(--colorFive);
-    background: none;
-    border: solid var(--colorFive) 1px;
-}
-
-
-
-/***** Test SLUT******/
 
 
 /*** YouTube Video er en mulighed ***/
@@ -2093,9 +2070,15 @@ table td p {
 
     }
 
+    .signature .citat_tekst {
+        margin: 0px;
+        text-align: center;
+    }
+
     .citat .box_blue h2 {
         font-size: 3rem;
     }
+
 
     #historie figure {
         margin-top: 28px;
@@ -2202,12 +2185,8 @@ table td p {
 }
 
 #kontakt_side .kontakt_citat .box_blue {
-    background-color: var(--colorFourteen);
-    padding: 10vw;
+    padding: 5vw;
 }
-
-
-
 
 
 #kontakt_side .kort_map {
@@ -2221,22 +2200,76 @@ table td p {
 \*------------------------------------*/
 
 /*------------------------------------*\
-8.6 Kontakt - SLUT
+8.6 Signature - START
 \*------------------------------------*/
-#frede .col_right {
 
+
+#signature_1 {
+    margin-bottom: -10px;
+}
+
+
+#signature_1 .sectionwrapper iframe {
+    max-width: 100%;
+}
+
+.knap-cykler_signature {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: futura-pt,
+        Arial,
+        Helvetica,
+        Roboto,
+        sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: normal;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    min-width: 120px;
+    color: var(--colorOne);
+    background: var(--colorThirteen);
+    border: 1px solid var(--colorFive);
+
+}
+
+a.knap-cykler_signature:hover {
+    color: var(--colorFive);
+    background: var(--colorOne);
+    border: solid var(--colorFive) 1px;
+}
+
+
+#signature_2 .col_right {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+#signature_2 .col_right img {
+    padding-bottom: 40px;
+}
+
+.citat_section {
+    padding-bottom: 0px;
+}
+
 /*------------------------------------*\
-8.6 Kontakt - SLUT
+8.6 Signature - SLUT
 \*------------------------------------*/
+
 /*------------------------------------*\
 8. STYLING AF SPECIFIKKE SIDER  - SLUT
 \*------------------------------------*/
+
+
+
+
+
+
+
 
 
 
@@ -2302,6 +2335,7 @@ table td p {
     .menu_wrapper li {
         margin: 1rem;
     }
+
 
 
 
@@ -2521,7 +2555,6 @@ table td p {
     }
 
     /* kontaktside */
-    #kontakt_side .sectionwrapper {}
 
 
     .kontakt_citat p {
@@ -2529,6 +2562,21 @@ table td p {
     }
 
 
+    #signature_1 figure {
+        margin-top: 100px;
+    }
+
+    #signature_2 h2 {
+        font-size: 2rem;
+    }
+
+    .box_blue h2 {
+        text-align: center;
+    }
+
+    #signature_1 .sectionwrapper iframe {
+        margin-top: 100px;
+    }
 }
 
 /*------------------------------------*\
