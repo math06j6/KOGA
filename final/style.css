@@ -884,6 +884,15 @@ footer .lokalitet :first-child {
     border-radius: 45;
 }
 
+
+#forside .top_link a,
+#kontakt_side .top_link a,
+    {
+    margin-top: -100px;
+    margin-right: 50px;
+
+}
+
 /* Knap: Tilbage til toppen SLUT*/
 
 /*------------------------------------*\
@@ -2191,8 +2200,10 @@ table td p {
 }
 
 
-#kontakt_side .kort_map {
-    margin: 1rem 0;
+#kontakt_side .kort_map iframe {
+    max-width: 100%;
+    max-height: 80vw;
+    margin-top: 20px;
 }
 
 
