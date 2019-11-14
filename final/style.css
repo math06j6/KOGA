@@ -119,34 +119,24 @@ ul {
 /* @font-face Slut */
 
 h1 {
-    /*    font-family: futura-pt,
-Arial,
-Helvetica,
-Roboto,
-sans-serif;*/
-    /*    font-family: 'Racing Sans One',
-cursive;*/
-    /*    font-family: 'Wallpoet',
-    cursive;*/
-    /*    font-family: 'Bowlby One',
-cursive;*/
+    font-family: futura-pt,
+        Arial,
+        Helvetica,
+        Roboto,
+        sans-serif;
     text-transform: uppercase;
-    font-family: 'Archivo Black', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.6rem;
     padding: 0 1rem;
+
 
 }
 
 
 h2 {
     text-transform: uppercase;
-    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
-    /*    font-family: 'Racing Sans One',
- cursive;*/
-    /*    font-family: 'Wallpoet', cursive;*/
-    font-family: 'Archivo Black', sans-serif;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.6rem;
@@ -154,25 +144,17 @@ h2 {
 
 h3 {
     text-transform: uppercase;
-    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
-    /*    font-family: 'Wallpoet', cursive;*/
-    font-family: 'Archivo Black', sans-serif;
-    /*    font-family: 'Racing Sans One', cursive;*/
-    font-weight: 500;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 700;
     font-style: normal;
     font-size: 1.5rem;
     margin: 1rem 0;
 }
 
 h4 {
-    /*    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;*/
-    /*    font-family: 'Racing Sans One', cursive;*/
-    /*    font-family: 'Bowlby One', cursive;*/
-    /*    font-family: 'Wallpoet', cursive;*/
-
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     text-transform: uppercase;
-    font-family: 'Archivo Black', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.2rem;
     font-style: normal;
 }
