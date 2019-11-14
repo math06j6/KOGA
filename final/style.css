@@ -1182,57 +1182,6 @@ footer li > a.underline:hover:before {
     cursor: pointer;
 }
 
-#cykler .card-cykel,
-#forside .card-forside {}
-
-/* Vi giver vores knapper en position static, så hele box inddrages og gøres klikbar*/
-/*
-.breakout-button {
-    font: inherit;
-    background: transparent;
-    color: currentcolor;
-    border: 1px solid;
-    transition: background 100ms ease;
-    position: static;
-}
-*/
-
-/*
-.breakout-button,
-.breakout-button::before {
-    cursor: pointer;
-}
-*/
-
-/*
-.breakout-button::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(20, 61, 220, 0.27);
-
-}
-
-.breakout-button:focus {
-    outline: none;
-}
-
-.breakout-button:hover {
-    background: #333333;
-}
-
-.breakout-button:focus::before {
-    outline: 1px solid #ffffff;
-    outline-offset: -0.8rem;
-
-}*/
-
-
-
 #forside .card-forside {
     /*    padding: 5rem 1rem;*/
     text-align: center;
