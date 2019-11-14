@@ -1908,7 +1908,7 @@ button .left {
 
 .link_tekst {
     min-width: 250px;
-    /*    padding: 10px 30px;*/
+        padding: 10px 30px;
 }
 
 .laes_mere_link {
