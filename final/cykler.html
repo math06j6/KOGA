@@ -96,6 +96,7 @@
                                 <button class="filter-model" data-cykeltype="city">City cykler</button>
                                 <button class="filter-model" data-cykeltype="trekking">Trekking</button>
                                 <button class="filter-model" data-cykeltype="race">Racer</button>
+                                <button class="filter-model click-signature" data-cykeltype="signature">KOGA Signature</button>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -171,7 +172,7 @@
                         <a href="cykler.html#race" class="underline">Race</a>
                     </li>
                     <li>
-                        <a href="cykler.html#signature" class="underline">KOGA Signature</a>
+                        <a href="signature.html" class="underline">KOGA Signature</a>
                     </li>
                 </ul>
             </div>
@@ -257,6 +258,7 @@
         function start() {
             hentJson();
             addEventListenersToButtons();
+            addEventListenerSignature();
 
             //            const filterKnapper = document.querySelectorAll(".filter");
             //            filterKnapper.forEach(knap => {
@@ -314,6 +316,12 @@
             });
         }
 
+        function addEventListenerSignature() {
+
+            document.querySelector(".click-signature").addEventListener("click", () => {
+                location.href = `signature.html`;
+            })
+        }
 
 
         function addEventListenersToButtons() {
