@@ -1831,6 +1831,8 @@ button .left {
 
 .praesentation {
     padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .vmf_box {
@@ -1841,7 +1843,7 @@ button .left {
 .maal,
 .farve {
     font-weight: bold;
-    color: black;
+    color: #0E7DC7;
     padding: 10px;
 }
 
@@ -1983,6 +1985,7 @@ button .left {
         /*        border-top: 1px solid #b1adad;*/
         margin-top: 15px;
         background-color: #EEEFEF;
+        padding-bottom: 50px;
     }
 
 
