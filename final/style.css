@@ -1934,11 +1934,11 @@ button .left {
 
     /*her har i sat en højde på, der gør at footeren skraber over*/
 
-    .liste {
+
+    .grid_boks {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
-        height: 300vh;
     }
 
 
@@ -1967,7 +1967,6 @@ button .left {
     }
 
     .fordele_box {
-        grid-area: 5 / 1 / 5 / 3;
         /*        border-top: 1px solid #b1adad;*/
         margin-top: 15px;
         background-color: #EEEFEF;
@@ -1997,20 +1996,14 @@ button .left {
         flex-basis: 400px;
     }
 
-    .features_box {}
 
     .billedtekst_box {
         max-width: none;
     }
 
-    .specifikationer_box {
-        grid-area: 7 / 1 / 7 / 3;
-        text-align: center;
-    }
 
-    .link_box {
-        grid-area: 8 / 1 / 8/ 3;
-    }
+
+    .link_box {}
 
     .link_tekst {
         margin-right: 90px;
