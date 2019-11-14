@@ -202,4 +202,36 @@
         </div>
     </footer>
     <script src="script.js"> </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("sidenVises");
+            addEventListenerSignature();
+            addEventListenersCards();
+
+
+        }
+
+        function addEventListenersCards() {
+            //Ved klik på "Cards" Koga Signature går man til cykel kollektionen
+            document.querySelectorAll(".card-forside").forEach(elm => {
+
+                elm.addEventListener("click", () => {
+                    location.href = `cykler.html`;
+                })
+
+
+            })
+        }
+
+        function addEventListenerSignature() {
+            //Ved klik på Koga Signature går man til signature.html
+            document.querySelector(".click-signature").addEventListener("click", () => {
+                location.href = `signature.html`;
+            })
+        }
+    </script>
+
+
 </body></html>

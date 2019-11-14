@@ -259,6 +259,8 @@
         function start() {
             hentJson();
             addEventListenersToButtons();
+            addEventListenerSignature();
+
 
             //            const filterKnapper = document.querySelectorAll(".filter");
             //            filterKnapper.forEach(knap => {
@@ -391,6 +393,13 @@
             // this.classList.toggle('rotate');
             // x.classList.toggle("rotate");
 
+        }
+
+        function addEventListenerSignature() {
+            //Ved klik på Koga Signature går man til signature.html
+            document.querySelector(".click-signature").addEventListener("click", () => {
+                location.href = `signature.html`;
+            })
         }
 
     </script>
