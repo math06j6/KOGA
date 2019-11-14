@@ -481,17 +481,17 @@ nav {
 }
 
 /* Roterer den fÃ¸rste bar */
-.change .bar1 {
+.responsive .bar1 {
     transform: rotate(-45deg) translate(-5px, 5px);
 }
 
 /* Fjerner den anden bar */
-.change .bar2 {
+.responsive .bar2 {
     opacity: 0;
 }
 
 /* Roterer den anden bar */
-.change .bar3 {
+.responsive .bar3 {
     transform: rotate(45deg) translate(-5px, -5px);
 }
 
@@ -542,6 +542,56 @@ nav {
 li.menu_ikon {
     padding: 0;
 }
+
+
+
+/* Styling af dropdown knap + content */
+
+.dropdown {
+    height: 100%;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: var(--colorOne);
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a.menubtn {
+    background-color: #2C2C2C;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    height: 100%;
+
+}
+
+.dropdown:hover {
+    background-color: var(--colorTwelve);
+
+}
+
+.dropdown:active .dropbtn,
+.dropdown:hover .dropbtn {
+    animation: farver_skifter 10s ease forwards infinite;
+    transition-timing-function: cubic-bezier(.08, .73, .83, .67);
+}
+
 
 /* logo */
 
@@ -2308,10 +2358,12 @@ a.knap-cykler_signature:hover {
 
 @media (max-width: 800px) {
 
-
+    .dropdown .dropbtn {
+        display: none;
+    }
 
     /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
-    .topnav.change {
+    .topnav.responsive {
         position: relative;
         background-color: var(--colorTwelve);
         position: fixed;
@@ -2319,10 +2371,12 @@ a.knap-cykler_signature:hover {
         left: 0;
         width: 100%;
         height: 100%;
+
+        display: block;
     }
 
-    .topnav.change .menu_wrapper li,
-    .topnav.change .menu_wrapper li a {
+    .topnav.responsive .menu_wrapper li,
+    .topnav.responsive .menu_wrapper li a {
         font-size: calc(1rem + 1vw);
         background-color: inherit;
     }
@@ -2353,6 +2407,43 @@ a.knap-cykler_signature:hover {
 
 
 
+    .topnav.responsive .dropdown {
+        width: 100%;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .responsive .dropbtn,
+    .dropbtn {
+        background-color: var(--colorOne);
+        color: white;
+
+    }
+
+    .dropdown:hover .dropbtn {
+        background: inherit;
+    }
+
+
+    .topnav responsive a:hover,
+    a.menubtn:hover {
+        /*
+        background: var(--colorOne);
+        color: var(--colorTwo);
+*/
+    }
+
+    .dropdown-content a.menubtn:hover {
+        background: #2C2C2C;
+    }
 
     /* Tabeller på mobil */
     @media(max-width: 800px) {
@@ -2386,7 +2477,7 @@ a.knap-cykler_signature:hover {
 
 }
 
-.topnav.change .menu_wrapper {
+.topnav.responsive .menu_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2552,9 +2643,9 @@ a.knap-cykler_signature:hover {
         width: 80%;
     }
 
-    .change .bar1,
-    .change .bar2,
-    .change .bar3 {}
+    .responsive .bar1,
+    .responsive .bar2,
+    .responsive .bar3 {}
 
     .menuTop {
         background-color: rgba(255, 255, 255, 0.97);
