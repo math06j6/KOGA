@@ -22,11 +22,11 @@ function opretMenu(e) {
 
 
 function menuFunction() {
-    /* Ved klik tilføjes eller fjernes "change" class på topnav */
+    /* Ved klik tilføjes eller fjernes "responsive" class på topnav */
     console.log("menuFunction");
     let x = document.querySelector("#myTopnav");
 
-    x.classList.toggle("change");
+    x.classList.toggle("responsive");
 }
 
 //document.querySelector(".luk").addEventListener("click", () => {
