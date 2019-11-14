@@ -173,6 +173,7 @@ ul {
 
 section {
     width: 100%;
+    padding: 2rem 0;
 }
 
 .section-header {
@@ -1154,7 +1155,7 @@ footer li > a.underline:hover:before {
 #forside h1 {
     font-size: 1.6rem;
     text-align: center;
-    padding: 2rem 0 1rem;
+    padding-bottom: 2rem;
 }
 
 #cykler .card-cykel,
