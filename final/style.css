@@ -1799,6 +1799,8 @@ button .left {
 
 .liste {
     padding: 0;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .title_box {
@@ -1932,6 +1934,7 @@ button .left {
 
 @media screen and (min-width: 800px) {
 
+
     .singleview_overskrift {
         text-align: center;
         margin: 0;
@@ -1983,9 +1986,9 @@ button .left {
 
     .fordele_box {
         /*        border-top: 1px solid #b1adad;*/
-        margin-top: 15px;
         background-color: #EEEFEF;
         padding-bottom: 50px;
+        padding-top: 50px;
     }
 
 
