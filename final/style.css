@@ -1938,7 +1938,7 @@ button .left {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
-        height: 300vh;
+/*        height: 300vh;*/
     }
 
 
