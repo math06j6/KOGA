@@ -2250,9 +2250,11 @@ table td p {
     background: white;
 }
 
-#blue_header {
+.blue_header {
     background-color: var(--colorFive);
-    height: 2px;
+    height: 30px;
+    width: 100vw;
+    margin: 0px;
 }
 
 #kontakt_side .aabningstider {
