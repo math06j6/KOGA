@@ -176,6 +176,11 @@ section {
     padding: 2rem 0;
 }
 
+/* Blå sektioner*/
+#blue-section {
+    padding: 0;
+}
+
 .section-header {
     margin: 0 auto;
     max-width: 1400px;
@@ -2054,20 +2059,28 @@ table td p {
 }
 
 #om_koga_center {
-    margin-bottom: -50px;
     background-color: var(--colorOne);
+}
+
+#om_koga_center .col_right {
+    padding: 1rem 0;
 }
 
 #historie {
     background-color: var(--colorTwo);
 }
 
-#citat_om .citat1_om {
+#historie figure {
+    padding: 2rem 0;
+}
+
+
+#blue-section .citat1_om {
     text-align: left;
     font-size: 2rem;
 }
 
-#citat_om .citat2_om {
+#blue-section .citat2_om {
     text-align: right;
     font-size: 2rem;
 }
@@ -2080,21 +2093,26 @@ table td p {
     background-color: var(--colorTwo);
 }
 
+#om figure {
+    max-width: 400px;
+    padding: 1.5rem 0;
+}
+
+
 .citat .box_blue h2 {
     font-size: 1.7rem;
 }
 
-.citat_section .citat {
+#blue-section .citat {
     background-image: url(files/images/trekking1.jpg);
     color: white;
-    margin-top: 50px;
     width: 100%;
     height: 100%;
     background-size: 100vw;
     background-position: 0vw;
 }
 
-.citat_section .citat .box_blue {
+#blue-section .citat .box_blue {
     background-color: var(--colorThirteen);
     padding: 5vw;
 
@@ -2108,7 +2126,6 @@ table td p {
 @media (min-width: 800px) {
 
     #historie .sectionwrapper {
-        display: flex;
         flex-direction: row-reverse;
 
     }
@@ -2128,15 +2145,6 @@ table td p {
     }
 
 
-    #historie figure {
-        margin-top: 28px;
-    }
-
-
-    .citat_section {
-        padding: 0;
-    }
-
     .citat_tekst {
         margin-left: 250px;
         text-align: center;
@@ -2147,14 +2155,9 @@ table td p {
     }
 
     #om .sectionwrapper {
-        display: flex;
         flex-direction: row-reverse;
     }
 
-
-    #om_koga_center .col_right {
-        margin-top: 20px;
-    }
 
     #om_koga_center iframe {
         height: 30vw;
@@ -2166,23 +2169,11 @@ table td p {
     }
 
     #service figure {
-        margin-top: 20px;
+        padding: 1.5rem 0;
     }
 
-    #om figure {
-        margin-top: 30px;
-        max-width: 400px;
-    }
 
-    #historie,
-    #service,
-    #om_koga_center .sectionwrapper {
-        margin-bottom: 40px;
-    }
 
-    #om .col_left {
-        margin-top: 80px;
-    }
 
 }
 
@@ -2272,7 +2263,7 @@ table td p {
 #kontakt_side .kort_map iframe {
     max-width: 100%;
     max-height: 80vw;
-    margin-top: 20px;
+    padding: 1.5rem 0;
 }
 
 
@@ -2335,9 +2326,6 @@ a.knap-cykler_signature:hover {
     padding-bottom: 40px;
 }
 
-.citat_section {
-    padding-bottom: 0px;
-}
 
 /*------------------------------------*\
 8.6 Signature - SLUT
@@ -2589,13 +2577,13 @@ a.knap-cykler_signature:hover {
         font-size: 2rem;
     }
 
-    #citat_om .citat1_om {
+    #blue-section .citat1_om {
         text-align: left;
         font-size: 2rem;
         margin-left: 100px;
     }
 
-    #citat_om .citat2_om {
+    #blue-section .citat2_om {
         text-align: right;
         font-size: 2rem;
         margin-right: 100px;
@@ -2655,10 +2643,10 @@ a.knap-cykler_signature:hover {
 
 
     #om img {
-        margin-top: 80px;
-        margin-left: 60px;
-        max-height: auto;
-        width: 80%;
+        /*        margin-top: 80px;*/
+        /*        margin-left: 60px;*/
+        height: auto;
+        width: 100%;
     }
 
     .responsive .bar1,
