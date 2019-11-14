@@ -2071,12 +2071,26 @@ table td p {
 8.4 About
 \*------------------------------------*/
 
+#om_koga_center .sectionwrapper iframe {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+#om_koga_center h2 {
+    text-align: left;
+    padding: 1rem;
+}
+
+#om_koga_center {
+    margin-bottom: -50px;
+}
+
 #historie {
     background-color: white;
 }
 
 #citat_om {
-    margin-top: -80px;
+    margin-top: -120px;
 }
 
 #citat_om .citat1_om {
@@ -2164,7 +2178,20 @@ table td p {
     #om .sectionwrapper {
         display: flex;
         flex-direction: row-reverse;
+    }
 
+
+    #om_koga_center .col_right {
+        margin-top: 20px;
+    }
+
+    #om_koga_center iframe {
+        height: 30vw;
+    }
+
+    #om_koga_center h2 {
+        margin-left: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     #service figure {
@@ -2176,6 +2203,15 @@ table td p {
         max-width: 400px;
     }
 
+    #historie,
+    #service,
+    #om_koga_center .sectionwrapper {
+        margin-bottom: 40px;
+    }
+
+    #om .col_left {
+        margin-top: 80px;
+    }
 
 }
 
