@@ -1042,7 +1042,7 @@ footer li > a.underline:hover:before {
     margin: 0 1rem;
     position: absolute;
     z-index: 1;
-    top: 60px;
+    top: 20px;
     left: -10px;
 }
 
@@ -1057,7 +1057,7 @@ footer li > a.underline:hover:before {
     filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
     /*    min-width: 200px;*/
     max-width: 25%;
-    margin-bottom: -20px;
+    margin-bottom: -40px;
 }
 
 #splash a.cta,
