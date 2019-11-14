@@ -1854,9 +1854,10 @@ button .left {
 .fordel4 {
     background-image: url(files/svg/flueben.svg);
     background-repeat: no-repeat;
-    margin: 20px 30px;
-    padding-left: 100px;
-    min-height: 100px;
+    background-size: 60px;
+    margin: 30px 30px;
+    padding: 5px 0 0 70px;
+    min-height: 80px;
 }
 
 
@@ -1996,9 +1997,10 @@ button .left {
     .fordel2,
     .fordel3,
     .fordel4 {
-        padding: 10px 10px 10px 100px;
+        padding: 10px 10px 10px 150px;
         margin: 40px;
         flex-basis: 400px;
+        background-size: 20%;
     }
 
 
