@@ -1801,7 +1801,6 @@ button .left {
     padding: 0;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .title_box {
@@ -2107,14 +2106,11 @@ table td p {
 
 #om_koga_center {
     margin-bottom: -50px;
+    background-color: var(--colorOne);
 }
 
 #historie {
-    background-color: white;
-}
-
-#citat_om {
-    margin-top: -120px;
+    background-color: var(--colorTwo);
 }
 
 #citat_om .citat1_om {
@@ -2125,6 +2121,14 @@ table td p {
 #citat_om .citat2_om {
     text-align: right;
     font-size: 2rem;
+}
+
+#service {
+    background-color: var(--colorOne);
+}
+
+#om {
+    background-color: var(--colorTwo);
 }
 
 .citat .box_blue h2 {
@@ -2147,11 +2151,6 @@ table td p {
 
 }
 
-
-#om {
-    background-color: white;
-    padding: 0;
-}
 
 #service .kursiv {
     font-style: italic;
@@ -2247,6 +2246,10 @@ table td p {
 8.5 Kontakt
 \*------------------------------------*/
 
+#kontakt_side {
+    background: white;
+}
+
 #blue_header {
     background-color: var(--colorFive);
     height: 2px;
@@ -2334,6 +2337,7 @@ table td p {
 
 #signature_1 {
     margin-bottom: -10px;
+    background-color: var(--colorOne);
 }
 
 
