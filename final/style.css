@@ -1042,7 +1042,7 @@ footer li > a.underline:hover:before {
     margin: 0 1rem;
     position: absolute;
     z-index: 1;
-    top: 60px;
+    top: 20px;
     left: -10px;
 }
 
@@ -1057,7 +1057,7 @@ footer li > a.underline:hover:before {
     filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
     /*    min-width: 200px;*/
     max-width: 25%;
-    margin-bottom: -20px;
+    margin-bottom: -40px;
 }
 
 #splash a.cta,
@@ -1808,24 +1808,31 @@ button .left {
 
 .billede_box {
     align-self: center;
-    margin: auto;
+    background-color: white;
+}
+
+.pris_box {
+    background-color: white;
 }
 
 .pris {
     text-align: right;
-    padding: 10px 20px 0 0;
+    padding: 0px 20px 0 0;
     font-size: 21px;
+
 }
 
 .pris_style {
     text-align: right;
     color: #0E7DC7;
-    padding: 0 20px;
+    padding: 0 20px 10px;
     font-size: 10px;
 }
 
 .praesentation {
     padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .vmf_box {
@@ -1835,15 +1842,16 @@ button .left {
 .vaegt,
 .maal,
 .farve {
-    font-size: 17px;
     font-weight: bold;
-    color: black;
+    color: #0E7DC7;
+    padding: 10px;
 }
 
 
 
 .singleview_overskrift {
     margin: 30px 20px;
+    font-size: 1.6rem;
 }
 
 
@@ -1854,9 +1862,10 @@ button .left {
 .fordel4 {
     background-image: url(files/svg/flueben.svg);
     background-repeat: no-repeat;
-    margin: 20px 30px;
-    padding-left: 100px;
-    min-height: 100px;
+    background-size: 60px;
+    margin: 30px 30px;
+    padding: 5px 0 0 70px;
+    min-height: 80px;
 }
 
 
@@ -1877,26 +1886,29 @@ button .left {
 }
 
 .link_box {
-    background-size: cover;
-    color: white;
-    margin: 10px 0;
-    padding: 10px;
-    position: relative;
     background-image: url(files/images/trekking1.jpg);
+    color: white;
+    width: 100%;
+    max-height: 250px;
+    background-size: 100vw;
+    background-position: 0vw;
 
 }
 
 .link_container {
-    max-width: 950px;
-    margin: auto;
     display: flex;
-    background-color: var(--colorFourteen);
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--colorThirteen);
+    padding: 10px;
+    max-height: 250px;
 
 }
 
 .link_tekst {
-    width: 430px;
-    padding: 10px 30px;
+    min-width: 250px;
+        padding: 10px 30px;
 }
 
 .laes_mere_link {
@@ -1922,6 +1934,9 @@ button .left {
 
     .singleview_overskrift {
         text-align: center;
+        margin: 0;
+        padding: 20px 0;
+        font-size: 2.5rem;
     }
 
     .menu_wrapper ul {
@@ -1934,11 +1949,11 @@ button .left {
 
     /*her har i sat en højde på, der gør at footeren skraber over*/
 
-    .liste {
+
+    .grid_boks {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr;
-        height: 300vh;
+
     }
 
 
@@ -1967,10 +1982,10 @@ button .left {
     }
 
     .fordele_box {
-        grid-area: 5 / 1 / 5 / 3;
         /*        border-top: 1px solid #b1adad;*/
         margin-top: 15px;
         background-color: #EEEFEF;
+        padding-bottom: 50px;
     }
 
 
@@ -1992,32 +2007,37 @@ button .left {
     .fordel2,
     .fordel3,
     .fordel4 {
-        padding: 10px 10px 10px 100px;
+        padding: 10px 10px 10px 150px;
         margin: 40px;
         flex-basis: 400px;
+        background-size: 20%;
     }
 
-    .features_box {}
 
     .billedtekst_box {
         max-width: none;
     }
 
-    .specifikationer_box {
-        grid-area: 7 / 1 / 7 / 3;
-        text-align: center;
-    }
 
-    .link_box {
-        grid-area: 8 / 1 / 8/ 3;
-    }
+
 
     .link_tekst {
         margin-right: 90px;
     }
 
 
+}
 
+@media screen and (min-width: 600px) {
+    .link_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        background-color: var(--colorThirteen);
+        padding: 50px;
+
+    }
 }
 
 /*
@@ -2071,12 +2091,26 @@ table td p {
 8.4 About
 \*------------------------------------*/
 
+#om_koga_center .sectionwrapper iframe {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+#om_koga_center h2 {
+    text-align: left;
+    padding: 1rem;
+}
+
+#om_koga_center {
+    margin-bottom: -50px;
+}
+
 #historie {
     background-color: white;
 }
 
 #citat_om {
-    margin-top: -80px;
+    margin-top: -120px;
 }
 
 #citat_om .citat1_om {
@@ -2164,7 +2198,20 @@ table td p {
     #om .sectionwrapper {
         display: flex;
         flex-direction: row-reverse;
+    }
 
+
+    #om_koga_center .col_right {
+        margin-top: 20px;
+    }
+
+    #om_koga_center iframe {
+        height: 30vw;
+    }
+
+    #om_koga_center h2 {
+        margin-left: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     #service figure {
@@ -2176,6 +2223,15 @@ table td p {
         max-width: 400px;
     }
 
+    #historie,
+    #service,
+    #om_koga_center .sectionwrapper {
+        margin-bottom: 40px;
+    }
+
+    #om .col_left {
+        margin-top: 80px;
+    }
 
 }
 
