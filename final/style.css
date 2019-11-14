@@ -1808,19 +1808,24 @@ button .left {
 
 .billede_box {
     align-self: center;
-    margin: auto;
+    background-color: white;
+}
+
+.pris_box {
+    background-color: white;
 }
 
 .pris {
     text-align: right;
-    padding: 10px 20px 0 0;
+    padding: 0px 20px 0 0;
     font-size: 21px;
+
 }
 
 .pris_style {
     text-align: right;
     color: #0E7DC7;
-    padding: 0 20px;
+    padding: 0 20px 10px;
     font-size: 10px;
 }
 
@@ -1835,15 +1840,16 @@ button .left {
 .vaegt,
 .maal,
 .farve {
-    font-size: 17px;
     font-weight: bold;
     color: black;
+    padding: 10px;
 }
 
 
 
 .singleview_overskrift {
     margin: 30px 20px;
+    font-size: 1.6rem;
 }
 
 
@@ -1926,6 +1932,9 @@ button .left {
 
     .singleview_overskrift {
         text-align: center;
+        margin: 0;
+        padding: 20px 0;
+        font-size: 2.5rem;
     }
 
     .menu_wrapper ul {
@@ -1942,8 +1951,6 @@ button .left {
     .grid_boks {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr;
-        /*        height: 300vh;*/
 
     }
 
