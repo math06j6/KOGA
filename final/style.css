@@ -1155,6 +1155,7 @@ footer li > a.underline:hover:before {
     font-size: 1.6rem;
     text-align: center;
     padding-bottom: 2rem;
+    margin-top: 20px;
 }
 
 #cykler .card-cykel,
