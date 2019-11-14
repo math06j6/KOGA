@@ -2143,7 +2143,6 @@ table td p {
 
     #signature_1 .sectionwrapper {
         display: flex;
-        flex-direction: row-reverse;
 
     }
 
@@ -2224,6 +2223,10 @@ table td p {
 8.5 Kontakt
 \*------------------------------------*/
 
+#blue_header {
+    background-color: var(--colorFive);
+    height: 2px;
+}
 
 #kontakt_side .aabningstider {
     display: flex;
