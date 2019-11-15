@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KOGA CENTER</title>
+    <title>KOGA CENTER CYKLER</title>
     <meta name="KOGA Center Copenhagen" content="KOGA Cykler">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
@@ -33,17 +33,24 @@
     </header>
 
     <main>
-        <div class="blue_header"></div>
+        <section id="blue-section">
+
+            <div class="header">
+                <div class="box_blue">
+                    <header class="section-header">
+                        <h1 id="inddeling" data-overskrift>Vores Cykler</h1>
+                    </header>
+                </div>
+            </div>
+        </section>
         <section id="breadcrumbs">
             <ul class="">
                 <li><a href="#">Hjem</a></li>
                 <li><a href="#">Cykler</a></li>
             </ul>
         </section>
+
         <section id="cykler">
-            <header class="section-header">
-                <h1 id="inddeling" data-overskrift>Vores Cykler</h1>
-            </header>
             <aside class="sidebar">
                 <!--
                 <nav class="filtrering">
@@ -111,9 +118,9 @@
                         <div class="accordion-item">
                             <p class="collapse-title"><button class="accordion-knap">Vægt</button></p>
                             <div class="content">
-                                <button class="filter-vaegt valgt" data-vaegt="alle">Alle</button>
-                                <button class="filter-vaegt" data-vaegt="alle">Under XXX</button>
-                                <button class="filter-vaegt" data-vaegt="alle">Over XXX</button>
+                                <button class="filter-vaegt valgt" data-vaegt="alle">Tilfældig rækkefølge</button>
+                                <button class="filter-vaegt" data-vaegt="alle">Fra højest til lavest</button>
+                                <button class="filter-vaegt" data-vaegt="alle">Fra lavest til højest</button>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -128,13 +135,26 @@
                         <div class="accordion-item">
                             <p class="collapse-title"><button class="accordion-knap">Pris</button></p>
                             <div class="content">
-                                <button class="filter-pris" data-filter-pris="">Alle</button>
-                                <button class="filter-pris" data-pris="">Under XXX</button>
-                                <button class="filter-pris" data-pris="">Over XXX</button>
+                                <button class="filter-pris" data-filter-pris="">Anbefalet</button>
+                                <button class="filter-pris" data-pris="">Lavest-Højest</button>
+                                <button class="filter-pris" data-pris="">Højest-Lavest</button>
                             </div>
                         </div>
                     </div>
                 </nav>
+                <!--<nav class="filtrering">
+                    <div id="ny-filtrering">
+                        <div class="dropdown">
+                            <p class="dropbtn"> <span class="valgt_2">Sorter efter</span> <i class="fa fa-caret-down"></i></p>
+                            <div class="sortering">
+                                 Sorteringsmenu
+                                <button class="sort">Navn</button> Hver knap har en data-attribut, som angiver den værdi vi filterer på
+                                <button data-sort="forfatter" class="sort">Forfatter</button>
+                                <button data-sort="dato2" class="sort">Dato</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>-->
             </aside>
             <hr class="line">
             <div class="grid-container">
@@ -238,6 +258,8 @@
         <article class="card-cykel">
             <header class="card-header">
                 <h4 class="cykelmodel"></h4>
+                <h4 class="cykeltype_cykler"></h4>
+                <h5 class="koen_cykler"></h5>
             </header>
             <figure>
                 <img class="billede_1" src="" alt=""> </figure>
@@ -249,10 +271,25 @@
     </template>
     <script src="script.js"> </script>
     <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let filterModel;
         let posts = [];
-        let filterModel = "alle";
         let filterKoen = "alle";
         const url = "http://marollemarie.dk/kea/2.semester/KogaWP/wordpress/wp-json/wp/v2/cykler?per_page=100";
+
+        if (urlParams.get("filterModel")) {
+            filterModel = urlParams.get("filterModel");
+            const knap = document.querySelector('button[data-cykeltype=' + filterModel + ']');
+            document.querySelector("#inddeling").textContent = filterModel;
+            document.querySelector(".filter-model.valgt").classList.remove("valgt");
+            knap.classList.add("valgt");
+            knap.parentElement.classList.add("active");
+            //filtreringCykeltype()
+        } else {
+            filterModel = "alle";
+        }
+
+
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -304,7 +341,9 @@
                     const klon = skabelon.cloneNode(true).content;
                     console.log(klon)
                     klon.querySelector(".billede_1").src = post.billede_side.guid;
-                    klon.querySelector("h4").textContent = post.cykelmodel;
+                    klon.querySelector(".cykelmodel").textContent = post.cykelmodel;
+                    klon.querySelector(".cykeltype_cykler").textContent = post.cykeltype;
+                    klon.querySelector(".koen_cykler").textContent = post.koen;
                     //                    klon.querySelector("h4").textContent = post.cykelmodel + "_" + post.cykeltype[0];
                     //                    klon.querySelector("h5").textContent = post.cykeltype[0];
                     klon.querySelector(".kort").textContent = post.kort;
@@ -336,6 +375,7 @@
             filterModel = this.dataset.cykeltype; // sæt variabel "filter" til aktuel værdi
             document.querySelector(".filter-model.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
             this.classList.add("valgt") // marker den nyvalgte knap
+
 
             document.querySelector("#inddeling").textContent = this.textContent;
 
