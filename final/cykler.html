@@ -93,11 +93,11 @@
                             <p class="collapse-title"><button class="accordion-knap">Kategori</button></p>
                             <div class="content">
                                 <button class="filter-model valgt" data-cykeltype="alle">Alle</button>
-                                <button class="filter-model" data-cykeltype="e-bikes">Elcykler</button>
-                                <button class="filter-model" data-cykeltype="city">City cykler</button>
-                                <button class="filter-model" data-cykeltype="trekking">Trekking</button>
-                                <button class="filter-model" data-cykeltype="race">Racercykler</button>
-                                <button class="filter-model click-signature" data-cykeltype="signature">KOGA Signature</button>
+                                <button class="filter-model" data-cykeltype="Elcykel">Elcykler</button>
+                                <button class="filter-model" data-cykeltype="City">City cykler</button>
+                                <button class="filter-model" data-cykeltype="Trekking">Trekking</button>
+                                <button class="filter-model" data-cykeltype="Racercykel">Racercykler</button>
+                                <button class="filter-model click-signature" data-cykeltype="Signature">KOGA Signature</button>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -259,6 +259,8 @@
         function start() {
             hentJson();
             addEventListenersToButtons();
+            addEventListenerSignature();
+
 
             //            const filterKnapper = document.querySelectorAll(".filter");
             //            filterKnapper.forEach(knap => {
@@ -393,7 +395,11 @@
 
         }
 
+        function addEventListenerSignature() {
+            //Ved klik på Koga Signature går man til signature.html
+            document.querySelector(".click-signature").addEventListener("click", () => {
+                location.href = `signature.html`;
+            })
+        }
     </script>
-</body>
-
-</html>
+</body></html>
