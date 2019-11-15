@@ -258,14 +258,15 @@
         <article class="card-cykel">
             <header class="card-header">
                 <h4 class="cykelmodel"></h4>
-                <h4 class="cykeltype_cykler"></h4>
-                <h5 class="koen_cykler"></h5>
+                <p class="cykeltype_cykler"></p>
+                <p class="koen_cykler"></p>
             </header>
             <figure>
                 <img class="billede_1" src="" alt=""> </figure>
 
             <p class="kort"></p>
 
+            <p class="pris"></p>
             <button>Læs mere</button>
         </article>
     </template>
@@ -344,9 +345,8 @@
                     klon.querySelector(".cykelmodel").textContent = post.cykelmodel;
                     klon.querySelector(".cykeltype_cykler").textContent = post.cykeltype;
                     klon.querySelector(".koen_cykler").textContent = post.koen;
-                    //                    klon.querySelector("h4").textContent = post.cykelmodel + "_" + post.cykeltype[0];
-                    //                    klon.querySelector("h5").textContent = post.cykeltype[0];
                     klon.querySelector(".kort").textContent = post.kort;
+                    klon.querySelector(".pris").textContent = "DKK " + post.pris + ",-";
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = `singleview.html?id=${post.id}`;
                     })

@@ -1515,9 +1515,7 @@ footer li > a.underline:hover:before {
     row-gap: 1em;
 }
 
-#cykler .card-cykel button:hover {
-    background: 0;
-}
+
 
 #cykler .card-cykel img {
     object-fit: cover;
@@ -1527,7 +1525,11 @@ footer li > a.underline:hover:before {
     color: var(--colorOne);
     background: var(--colorFive);
     border: 1px solid var(--colorFive);
-    margin: 1rem;
+    margin-bottom: 1rem;
+}
+
+#cykler .card-cykel button:hover {
+    background: 0;
 }
 
 #cykler .card-cykel:hover button,
@@ -1536,6 +1538,34 @@ footer li > a.underline:hover:before {
     color: var(--colorFive);
     background: 0;
 }
+
+#cykler .card-cykel .cykeltype_cykler {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.25rem 0 0;
+    color: var(--colorThree);
+}
+
+#cykler .card-cykel .koen_cykler {
+    font-size: 0.85rem;
+    color: var(--colorFive);
+    padding: 0.25rem 0 0;
+}
+
+#cykler .card-cykel .kort {
+    font-size: 0.85rem;
+    color: var(--colorThree);
+    padding: 1rem 0;
+}
+
+#cykler .card-cykel .pris {
+    padding: 1rem;
+    font-size: 1rem;
+    padding: 0;
+    font-weight: 700;
+    font-size: 0.85rem
+}
+
 
 .filtrering {
     display: grid;
