@@ -412,7 +412,7 @@ summary&::-webkit-details-marker {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 300;
+    z-index: 10;
 }
 
 .topnav {
@@ -554,6 +554,7 @@ li.menu_ikon {
 
 .dropdown {
     height: 100%;
+
 }
 
 .dropdown .dropbtn {
@@ -586,7 +587,7 @@ li.menu_ikon {
 
 }
 
-.dropdown:hover {
+#myTopnav .dropdown:hover {
     background-color: var(--colorTwelve);
 
 }
@@ -1588,6 +1589,88 @@ button .left {
 */
 
 /* Pile - Slut*/
+
+
+/****** ny-filtrering ******/
+#ny-filtrering .sortering button {
+    border-style: none;
+    padding: 0 1rem;
+    margin-right: 1rem;
+    margin-left: auto;
+}
+
+#ny-filtrering .sortering button:hover {
+    /*    background-color: var(--colorFourteen);*/
+    color: var(--colorOne);
+}
+
+#ny-filtrering .dropdown {
+    height: 100%;
+    display: block;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin: 0 2rem;
+    padding: 1rem 0;
+}
+
+#ny-filtrering .dropbtn {
+    border: none;
+    outline: none;
+    color: var(--colorFive);
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: inherit;
+    text-decoration: underline;
+    margin: 0;
+    margin-left: 1rem;
+    padding: 0;
+}
+
+#ny-filtrering .dropbtn {
+    font-weight: 600;
+}
+
+#ny-filtrering .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#ny-filtrering .sortering {
+    /*Sortering er skjult*/
+    display: none;
+    position: absolute;
+    background-color: var(--colorFive);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin: 2rem 1rem;
+}
+
+#ny-filtrering .dropdown:hover .sortering {
+    /*  Sorterings muligheder åbner ved hover*/
+    display: block;
+}
+
+#ny-filtrering .sort {
+    background-color: transparent;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    height: 100%;
+    font-weight: 300;
+}
+
+#ny-filtrering .valgte_retter {
+    margin-top: 4rem;
+}
+
+#ny-filtrering article p {
+    padding: 0px;
+    text-align: center;
+}
+
+/****** ny-filtrering ******/
 
 
 
