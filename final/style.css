@@ -1441,6 +1441,21 @@ footer li > a.underline:hover:before {
     text-transform: uppercase;
 }
 
+.card-cykel .card-header {
+    text-align: left;
+}
+
+.cykelmodel {
+    font-size: 1.2rem;
+}
+
+.cykeltype_cykler {
+    font-size: 1rem;
+}
+
+.koen_cykler {
+    text-transform: none;
+}
 
 #cykler hr.line {
     grid-area: line;
