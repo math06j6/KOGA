@@ -1161,6 +1161,7 @@ footer li > a.underline:hover:before {
     font-size: 1.6rem;
     text-align: center;
     padding-bottom: 2rem;
+    margin-top: 20px;
 }
 
 #cykler .card-cykel,
@@ -1431,9 +1432,23 @@ footer li > a.underline:hover:before {
 
 #cykler .section-header {
     grid-area: hd;
-    padding: 2.5rem 0;
+    padding: 2.7rem 0;
+    background-color: var(--colorFourteen);
+    text-align: center;
+    color: white;
+    background-repeat: no-repeat;
+
 }
 
+#blue-section .header {
+    background-image: url(files/images/trekking3.jpg);
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-size: 100vw;
+    background-position: 0vw;
+    text-align: center;
+}
 
 #cykler .card-header,
 #cykler .cardBottom {
@@ -1441,6 +1456,21 @@ footer li > a.underline:hover:before {
     text-transform: uppercase;
 }
 
+.card-cykel .card-header {
+    text-align: left;
+}
+
+.cykelmodel {
+    font-size: 1.2rem;
+}
+
+.cykeltype_cykler {
+    font-size: 1rem;
+}
+
+.koen_cykler {
+    text-transform: none;
+}
 
 #cykler hr.line {
     grid-area: line;
@@ -1577,6 +1607,7 @@ button i {
     padding: 3px;
     margin: 3px 8px;
 }
+
 
 
 /* Pile */
@@ -2064,6 +2095,9 @@ button .left {
         margin-right: 90px;
     }
 
+    #cykler .box_blue_cykler {}
+
+    #cykler .section-header {}
 
 }
 

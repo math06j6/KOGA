@@ -33,18 +33,29 @@
     </header>
 
     <main>
-        <div class="blue_header"></div>
-        <section id="breadcrumbs">
-            <ul class="">
-                <li><a href="#">Hjem</a></li>
-                <li><a href="#">Cykler</a></li>
-            </ul>
+
+        <section id="blue-section">
+
+            <div class="header">
+                <div class="box_blue">
+                    <header class="section-header">
+                        <h1 id="inddeling" data-overskrift>Vores Cykler</h1>
+                    </header>
+                </div>
+            </div>
         </section>
+
+
         <section id="cykler">
-            <header class="section-header">
-                <h1 id="inddeling" data-overskrift>Vores Cykler</h1>
-            </header>
+
+
             <aside class="sidebar">
+                <section id="breadcrumbs">
+                    <ul class="">
+                        <li><a href="#">Hjem</a></li>
+                        <li><a href="#">Cykler</a></li>
+                    </ul>
+                </section>
                 <!--
                 <nav class="filtrering">
                     Filtreringsmenu
@@ -251,6 +262,8 @@
         <article class="card-cykel">
             <header class="card-header">
                 <h4 class="cykelmodel"></h4>
+                <h4 class="cykeltype_cykler"></h4>
+                <h5 class="koen_cykler"></h5>
             </header>
             <figure>
                 <img class="billede_1" src="" alt=""> </figure>
@@ -332,7 +345,9 @@
                     const klon = skabelon.cloneNode(true).content;
                     console.log(klon)
                     klon.querySelector(".billede_1").src = post.billede_side.guid;
-                    klon.querySelector("h4").textContent = post.cykelmodel;
+                    klon.querySelector(".cykelmodel").textContent = post.cykelmodel;
+                    klon.querySelector(".cykeltype_cykler").textContent = post.cykeltype;
+                    klon.querySelector(".koen_cykler").textContent = post.koen;
                     //                    klon.querySelector("h4").textContent = post.cykelmodel + "_" + post.cykeltype[0];
                     //                    klon.querySelector("h5").textContent = post.cykeltype[0];
                     klon.querySelector(".kort").textContent = post.kort;
@@ -430,5 +445,8 @@
                 location.href = `signature.html`;
             })
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
