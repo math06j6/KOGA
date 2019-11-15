@@ -1922,6 +1922,7 @@ button .left {
 
     .billede_box {
         grid-area: 1 / 1 / 5 / 1;
+        margin-left: 50px;
     }
 
     .pris_box {
