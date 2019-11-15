@@ -116,7 +116,7 @@
                                 <h4>Elcykler</h4>
                             </header>
                             <div class="card-bottom">
-                                <a href="cykler.html" class="knap-cykler breakout-button">Se cyklerne</a>
+                                <a href="cykler.html?filterModel=Elcykel" class="knap-cykler breakout-button">Se cyklerne</a>
                             </div>
                         </div>
                     </article>
@@ -126,7 +126,7 @@
                                 <h4>City cykler</h4>
                             </header>
                             <div class="card-bottom">
-                                <a href="cykler.html" class="knap-cykler breakout-button">Se cyklerne</a>
+                                <a href="cykler.html?filterModel=City" class="knap-cykler breakout-button">Se cyklerne</a>
                             </div>
                         </div>
                     </article>
@@ -264,22 +264,19 @@
         function start() {
             console.log("sidenVises");
             addEventListenerSignature();
-            addEventListenersCards();
-
-
         }
-
-        function addEventListenersCards() {
-            //Ved klik på "Cards" går man til cykel kollektionen
-            document.querySelectorAll(".card-forside").forEach(elm => {
-
-                elm.addEventListener("click", () => {
-                    location.href = `cykler.html`;
-                })
-
-
-            })
-        }
+        //
+        //        function addEventListenersCards() {
+        //            //Ved klik på "Cards" går man til cykel kollektionen
+        //            document.querySelectorAll(".card-forside").forEach(elm => {
+        //
+        //                elm.addEventListener("click", () => {
+        //                    location.href = `cykler.html?filterModel=`;
+        //                })
+        //
+        //
+        //            })
+        //        }
 
         function addEventListenerSignature() {
             //Ved klik på Koga Signature går man til signature.html
