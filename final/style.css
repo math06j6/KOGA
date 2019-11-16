@@ -1455,9 +1455,8 @@ footer li > a.underline:hover:before {
     text-align: center;
 }
 
-#cykler .card-header,
-#cykler .cardBottom {
-    padding: 1rem 0;
+#cykler .card-header {
+    padding: 1rem 0 0;
     text-transform: uppercase;
 }
 
@@ -1547,20 +1546,20 @@ footer li > a.underline:hover:before {
 #cykler .card-cykel .cykeltype_cykler {
     font-size: 0.85rem;
     font-weight: 700;
-    padding: 0.25rem 0 0;
-    color: var(--three-color);
+    padding: 0;
+    color: var(--five-color);
 }
 
 #cykler .card-cykel .koen_cykler {
     font-size: 0.85rem;
-    color: var(--five-color);
-    padding: 0.25rem 0 0;
+    color: var(--three-color);
+    padding: 0;
 }
 
 #cykler .card-cykel .kort {
     font-size: 0.85rem;
     color: var(--three-color);
-    padding: 1rem 0;
+    padding: 0;
 }
 
 #cykler .card-cykel .pris {
