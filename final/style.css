@@ -28,19 +28,19 @@ INDHOLDSFORTEGNELSE:
 
 :root {
     /* Nøjagtig de samme farvekoder som anvendes på www.koga.com */
-    --colorOne: #fff;
-    --colorTwo: #EEEFEF;
-    --colorThree: #656D73;
-    --colorFour: #DCDCE5;
-    --colorFive: #0E7DC7;
-    --colorSix: #FF8700;
-    --colorSeven: #E75F41;
-    --colorEight: #B7D8EE;
-    --colorNine: #27333B;
-    --colorTen: #6E7D87;
-    --colorTwelve: #313131;
-    --colorThirteen: rgba(14, 125, 199, 0.8);
-    --colorFourteen: rgba(14, 125, 199, 0.6);
+    --one-color: #fff;
+    --two-color: #EEEFEF;
+    --three-color: #656D73;
+    --four-color: #DCDCE5;
+    --five-color: #0E7DC7;
+    --six-color: #FF8700;
+    --seven-color: #E75F41;
+    --eight-color: #B7D8EE;
+    --nine-color: #27333B;
+    --ten-color: #6E7D87;
+    --twelve-color: #313131;
+    --thirteen-color: rgba(14, 125, 199, 0.8);
+    --fourteen-color: rgba(14, 125, 199, 0.6);
 
 
 }
@@ -73,7 +73,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #EEEFEF;
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
     overflow-wrap: break-word;
     hyphens: auto;
     font-family: Arial, Verdana, Sans-Serif;
@@ -289,8 +289,8 @@ button {
 
 #breadcrumbs li {
     display: inline;
-    color: var(--colorThree);
-    /*    color: var(--colorTwelve);*/
+    color: var(--three-color);
+    /*    color: var(--twelve-color);*/
     font-size: 0.75rem;
 }
 
@@ -310,8 +310,8 @@ button {
 }
 
 #breadcrumbs li a {
-    color: var(--colorThree);
-    /*    color: var(--colorTwelve);*/
+    color: var(--three-color);
+    /*    color: var(--twelve-color);*/
     text-decoration: none;
     font-size: 0.75rem;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
@@ -320,7 +320,7 @@ button {
 
 #breadcrumbs li:hover a,
 #breadcrumbs li:hover {
-    color: var(--colorFive);
+    color: var(--five-color);
 }
 
 
@@ -348,16 +348,16 @@ details {
 details .filter-model,
 details .filter-koen,
 details .filter-farve {
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
     background: 0;
     border: none;
-    border-bottom: 1px solid var(--colorFour);
+    border-bottom: 1px solid var(--four-color);
     margin: 0 auto;
     padding: 0.75rem;
     width: 100%;
     text-align: left;
     text-transform: capitalize;
-    color: var(--colorThree);
+    color: var(--three-color);
 
 }
 
@@ -370,8 +370,8 @@ details .summary:hover,
 details .filter-model:hover,
 details .filter-koen:hover,
 details .filter-farve:hover {
-    /*    background-color: var(--colorEight);*/
-    color: var(--colorFive);
+    /*    background-color: var(--eight-color);*/
+    color: var(--five-color);
 }
 
 
@@ -382,8 +382,8 @@ summary {
     position: relative;
     font-weight: bold;
     cursor: pointer;
-    border-bottom: 1px solid var(--colorTwelve);
-    color: var(--colorTwelve);
+    border-bottom: 1px solid var(--twelve-color);
+    color: var(--twelve-color);
     min-width: 150px;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
 
@@ -437,19 +437,19 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: var(--colorTwelve);
+    background-color: var(--twelve-color);
 }
 
 
 
 .menuTop {
-    background-color: var(--colorTwelve);
+    background-color: var(--twelve-color);
 
 
 }
 
 .menu_bottom {
-    background-color: var(--colorTwelve);
+    background-color: var(--twelve-color);
     display: none;
 }
 
@@ -465,7 +465,7 @@ nav {
 .menuknap {
     display: inline-block;
     cursor: pointer;
-    color: var(--colorOne);
+    color: var(--one-color);
     padding: 1.25rem;
 }
 
@@ -474,7 +474,7 @@ nav {
 .bar3 {
     width: 30px;
     height: 3px;
-    background-color: var(--colorOne);
+    background-color: var(--one-color);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -482,7 +482,7 @@ nav {
 .menuknap:hover .bar1,
 .menuknap:hover .bar2,
 .menuknap:hover .bar3 {
-    background-color: var(--colorOne);
+    background-color: var(--one-color);
 }
 
 /* Roterer den fÃ¸rste bar */
@@ -541,7 +541,7 @@ nav {
 
 .menu_wrapper li:hover,
 .menu_wrapper li:active {
-    /*    color: var(--colorFive);*/
+    /*    color: var(--five-color);*/
 }
 
 li.menu_ikon {
@@ -560,7 +560,7 @@ li.menu_ikon {
 .dropdown .dropbtn {
     border: none;
     outline: none;
-    color: var(--colorOne);
+    color: var(--one-color);
     font-size: 1rem;
     padding: 1rem;
     background-color: inherit;
@@ -588,7 +588,7 @@ li.menu_ikon {
 }
 
 #myTopnav .dropdown:hover {
-    background-color: var(--colorTwelve);
+    background-color: var(--twelve-color);
 
 }
 
@@ -610,7 +610,7 @@ li.menu_ikon {
     flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: center;
-    background-color: var(--colorTwelve);
+    background-color: var(--twelve-color);
 }
 
 .logo-container svg {
@@ -649,7 +649,7 @@ a.hjem:active .nyt_logo {
 
 /* Styling af link i navigations bar */
 a.hjem {
-    color: var(--colorOne);
+    color: var(--one-color);
     text-decoration: none;
     cursor: pointer;
     transition: 0.25s;
@@ -670,7 +670,7 @@ a.hjem p {
 
 a.hjem:hover p,
 a.hjem:active p {
-    color: var(--colorEight);
+    color: var(--eight-color);
 }
 
 .searchButton {
@@ -705,8 +705,8 @@ a.hjem:active p {
 \*------------------------------------*/
 
 footer {
-    background: var(--colorTwelve);
-    color: var(--colorOne);
+    background: var(--twelve-color);
+    color: var(--one-color);
     width: 100%;
     left: 0;
     bottom: 0;
@@ -739,14 +739,14 @@ a.github_link {
 
 .social .fa {
     font-size: 24px;
-    color: var(--colorOne);
+    color: var(--one-color);
     padding: 1rem;
     cursor: pointer;
 
 }
 
 .social .fa:hover {
-    color: var(--colorOne);
+    color: var(--one-color);
 }
 
 address,
@@ -805,7 +805,7 @@ footer .aabningstider {
 }
 
 .find a:hover {
-    color: var(--colorOne);
+    color: var(--one-color);
 }
 
 a.map {
@@ -819,7 +819,7 @@ a.map {
 
 footer li,
 footer li a {
-    color: var(--colorOne);
+    color: var(--one-color);
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -842,7 +842,7 @@ footer .lokalitet :first-child {
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.6;
-    color: var(--colorOne);
+    color: var(--one-color);
     text-transform: uppercase;
 }
 
@@ -896,7 +896,7 @@ footer .lokalitet :first-child {
     display: block;
     width: 60px;
     height: 60px;
-    background: var(--colorFive);
+    background: var(--five-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -905,7 +905,7 @@ footer .lokalitet :first-child {
 }
 
 .top_link a i.up {
-    border: solid var(--colorOne);
+    border: solid var(--one-color);
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 7px;
@@ -913,7 +913,7 @@ footer .lokalitet :first-child {
 }
 
 .top_link a:hover i.up {
-    border: solid var(--colorEight);
+    border: solid var(--eight-color);
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 8px;
@@ -954,7 +954,7 @@ footer li > a.underline {
 .menu_wrapper li > a.underline:hover,
 footer .find > a.underline:hover,
 footer li > a.underline:hover {
-    color: var(--colorOne);
+    color: var(--one-color);
 }
 
 .menu_wrapper li > a.underline:before,
@@ -966,7 +966,7 @@ footer li > a.underline:before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--colorTwo);
+    background-color: var(--two-color);
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
@@ -1077,9 +1077,9 @@ footer li > a.underline:hover:before {
     padding: 0.75rem 2rem;
     text-transform: uppercase;
     min-width: 120px;
-    color: var(--colorOne);
-    background: var(--colorThirteen);
-    border: 1px solid var(--colorFive);
+    color: var(--one-color);
+    background: var(--thirteen-color);
+    border: 1px solid var(--five-color);
 }
 
 
@@ -1088,10 +1088,10 @@ footer li > a.underline:hover:before {
 #forside .card-forside:hover a.knap-cykler,
 #forside .card-forside:focus-within a.knap-cykler,
 #forside .card-forside:active a.knap-cykler {
-    color: var(--colorOne);
-    background: var(--colorOne);
+    color: var(--one-color);
+    background: var(--one-color);
     background: 0;
-    border: 1px solid var(--colorOne);
+    border: 1px solid var(--one-color);
 }
 
 
@@ -1112,7 +1112,7 @@ footer li > a.underline:hover:before {
 
 
 #forside .card-header h4 {
-    color: var(--colorOne);
+    color: var(--one-color);
 }
 
 .kategori img {
@@ -1138,23 +1138,23 @@ footer li > a.underline:hover:before {
 }
 
 #forside button {
-    background-color: var(--colorThirteen);
+    background-color: var(--thirteen-color);
     border: 0px;
 }
 
 #forside p {
-    color: var(--colorOne);
+    color: var(--one-color);
     margin: 0rem 1rem;
 }
 
 #forside .card-bottom button {
-    color: var(--colorOne);
+    color: var(--one-color);
 }
 
 .forside_overskrift h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
 }
 
 #forside h1 {
@@ -1192,7 +1192,7 @@ footer li > a.underline:hover:before {
 #forside .card-forside {
     /*    padding: 5rem 1rem;*/
     text-align: center;
-    /*    background: var(--colorOne);*/
+    /*    background: var(--one-color);*/
     /*
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -1285,7 +1285,7 @@ footer li > a.underline:hover:before {
 /******* Signature boks på forside START********/
 
 .box_blue {
-    background-color: var(--colorFourteen);
+    background-color: var(--fourteen-color);
     height: 60vw;
     width: 100%;
     height: 100%;
@@ -1329,7 +1329,7 @@ footer li > a.underline:hover:before {
 #forside-signature h2,
 #forside-signature p,
 #forside-signature a.knap-cykler {
-    color: var(--colorOne);
+    color: var(--one-color);
     margin: 1rem;
 }
 
@@ -1348,8 +1348,8 @@ footer li > a.underline:hover:before {
 }
 
 .kategori button {
-    color: var(--colorOne);
-    border: 1px solid var(--colorOne);
+    color: var(--one-color);
+    border: 1px solid var(--one-color);
     margin: 1rem 0;
 }
 
@@ -1368,14 +1368,16 @@ footer li > a.underline:hover:before {
     padding: 0.75rem 2rem;
     text-transform: uppercase;
     min-width: 120px;
-    color: var(--colorOne);
+    color: var(--one-color);
     background: 0;
-    border: 1px solid var(--colorOne);
+    border: 1px solid var(--one-color);
 }
 
 #forside-signature:hover a.knap-cykler {
-    color: var(--colorFive);
-    background: var(--colorOne);
+    color: var(--five-color);
+    background: var(--one-color);
+
+
 }
 
 /******signature boks på forside SLUT******/
@@ -1420,7 +1422,7 @@ footer li > a.underline:hover:before {
     display: grid;
     grid-gap: 1rem;
     padding-bottom: 0;
-    background: var(--colorTwo);
+    background: var(--two-color);
     padding: 0;
     grid-template-areas:
         "hd"
@@ -1433,7 +1435,7 @@ footer li > a.underline:hover:before {
 #cykler .section-header {
     grid-area: hd;
     padding: 2.7rem 0;
-    background-color: var(--colorFourteen);
+    background-color: var(--fourteen-color);
     text-align: center;
     color: white;
     background-repeat: no-repeat;
@@ -1476,7 +1478,7 @@ footer li > a.underline:hover:before {
     grid-area: line;
 
     margin: 0 1rem;
-    border: 1px solid var(--colorFour);
+    border: 1px solid var(--four-color);
 }
 
 #cykler .grid-container {
@@ -1488,7 +1490,7 @@ footer li > a.underline:hover:before {
 
 .sidebar {
     grid-area: sidebar;
-    /*    background-color: var(--colorOne);*/
+    /*    background-color: var(--one-color);*/
     margin: 1rem;
 }
 
@@ -1505,7 +1507,7 @@ footer li > a.underline:hover:before {
 #cykler .card-cykel {
     /*    padding: 5rem 1rem;*/
     text-align: center;
-    background: var(--colorOne);
+    background: var(--one-color);
     padding: 1rem 2rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -1522,9 +1524,9 @@ footer li > a.underline:hover:before {
 }
 
 #cykler .card-cykel button {
-    color: var(--colorOne);
-    background: var(--colorFive);
-    border: 1px solid var(--colorFive);
+    color: var(--one-color);
+    background: var(--five-color);
+    border: 1px solid var(--five-color);
     margin-bottom: 1rem;
 }
 
@@ -1535,7 +1537,7 @@ footer li > a.underline:hover:before {
 #cykler .card-cykel:hover button,
 #cykler .card-cykel:focus-within button,
 #cykler .card-cykel:active button {
-    color: var(--colorFive);
+    color: var(--five-color);
     background: 0;
 }
 
@@ -1543,18 +1545,18 @@ footer li > a.underline:hover:before {
     font-size: 0.85rem;
     font-weight: 700;
     padding: 0.25rem 0 0;
-    color: var(--colorThree);
+    color: var(--three-color);
 }
 
 #cykler .card-cykel .koen_cykler {
     font-size: 0.85rem;
-    color: var(--colorFive);
+    color: var(--five-color);
     padding: 0.25rem 0 0;
 }
 
 #cykler .card-cykel .kort {
     font-size: 0.85rem;
-    color: var(--colorThree);
+    color: var(--three-color);
     padding: 1rem 0;
 }
 
@@ -1578,16 +1580,16 @@ footer li > a.underline:hover:before {
     top: 20vh;
     margin-bottom: 108px;
 */
-    background-color: var(--colorOne);
+    background-color: var(--one-color);
 }
 
 
 .filter-model,
 .filter-koen,
 .filter-farve {
-    color: var(--colorOne);
-    background: var(--colorFive);
-    border: 1px solid var(--colorFive);
+    color: var(--one-color);
+    background: var(--five-color);
+    border: 1px solid var(--five-color);
     margin: 1rem;
     transition: 0.25s;
 }
@@ -1595,27 +1597,27 @@ footer li > a.underline:hover:before {
 .filter-model:hover,
 .filter-koen:hover,
 .filter-farve:hover {
-    color: var(--colorFive);
+    color: var(--five-color);
     background: 0;
 }
 
 
 
 .cykeltype summary {
-    border-top: 1px solid var(--colorTwelve);
+    border-top: 1px solid var(--twelve-color);
 }
 
 
 .accordion .valgt,
 details .valgt {
-    color: var(--colorFive);
+    color: var(--five-color);
 }
 
 /* Pile */
 
 
 button i {
-    border: solid var(--colorFive);
+    border: solid var(--five-color);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -1623,7 +1625,7 @@ button i {
 }
 
 #cykler button i {
-    border: solid var(--colorOne);
+    border: solid var(--one-color);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -1631,7 +1633,7 @@ button i {
 }
 
 #cykler button:hover i {
-    border: solid var(--colorFive);
+    border: solid var(--five-color);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -1661,8 +1663,8 @@ button .left {
 }
 
 #ny-filtrering .sortering button:hover {
-    /*    background-color: var(--colorFourteen);*/
-    color: var(--colorOne);
+    /*    background-color: var(--fourteen-color);*/
+    color: var(--one-color);
 }
 
 #ny-filtrering .dropdown {
@@ -1678,7 +1680,7 @@ button .left {
 #ny-filtrering .dropbtn {
     border: none;
     outline: none;
-    color: var(--colorFive);
+    color: var(--five-color);
     font-size: 1rem;
     padding: 1rem;
     background-color: inherit;
@@ -1700,7 +1702,7 @@ button .left {
     /*Sortering er skjult*/
     display: none;
     position: absolute;
-    background-color: var(--colorFive);
+    background-color: var(--five-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -1744,7 +1746,7 @@ button .left {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    border-top: 1px solid var(--colorFour);
+    border-top: 1px solid var(--four-for);
     /*
     position: relative;
     display: flex;
@@ -1766,7 +1768,7 @@ button .left {
     width: 100%;
     padding: 1rem 3rem 1rem 0rem;
     font-weight: 400;
-    border-bottom: 1px solid var(--colorFour);
+    border-bottom: 1px solid var(--four-color);
     margin: 0;
 }
 
@@ -1774,20 +1776,20 @@ button .left {
 .accordion .collapse-title:hover,
 .accordion .collapse-title:hover::after {
     cursor: pointer;
-    color: var(--colorFive);
+    color: var(--five-color);
 }
 
 
 .accordion .collapse-title.active {
-    color: var(--colorFive);
-    border-bottom: 1px solid var(--colorFive);
+    color: var(--five-color);
+    border-bottom: 1px solid var(--five-color);
 }
 
 .accordion .content {
     opacity: 0;
     padding: 0 1rem;
     max-height: 0;
-    border-bottom: 1px solid var(--colorFour);
+    border-bottom: 1px solid var(--four-for);
     overflow: hidden;
     clear: both;
     -webkit-transition: all 0.2s ease 0.15s;
@@ -1814,7 +1816,7 @@ button .left {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    /*    border: 1px solid var(--colorTwelve);*/
+    /*    border: 1px solid var(--twelve-color);*/
     text-align: center;
     -moz-transition: all .5s linear;
     -webkit-transition: all .5s linear;
@@ -1823,8 +1825,8 @@ button .left {
 }
 
 .accordion .collapse-title.active::after {
-    color: var(--colorFive);
-    /*    border: 1px solid var(--colorFive);*/
+    color: var(--five-color);
+    /*    border: 1px solid var(--five-color);*/
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
@@ -1838,7 +1840,7 @@ button .left {
     padding: 0;
     font-weight: 700;
     cursor: pointer;
-    border-bottom: 1px solid var(--colorTwelve);
+    border-bottom: 1px solid var(--twelve-color);
     min-width: 150px;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     border: none;
@@ -1866,7 +1868,7 @@ button .left {
     padding: 2rem;
     margin: auto;
     padding: 2rem;
-    background: var(--colorOne);
+    background: var(--one-color);
 }
 
 .single-header {
@@ -1876,7 +1878,7 @@ button .left {
 
 .single-header h4 {
     text-transform: uppercase;
-    color: var(--colorFive);
+    color: var(--five-color);
     padding: 0;
 }
 
@@ -1971,8 +1973,8 @@ button .left {
 .billedtekst_box {
     margin: -5px 0px 30px 0px;
     height: 120px;
-    background-color: var(--colorFive);
-    color: var(--colorOne);
+    background-color: var(--five-color);
+    color: var(--one-color);
     text-align: center;
     padding: 1rem;
 
@@ -1999,7 +2001,7 @@ button .left {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    background-color: var(--colorThirteen);
+    background-color: var(--thirteen-color);
     padding: 10px;
     max-height: 250px;
 
@@ -2137,7 +2139,7 @@ button .left {
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: row;
-        background-color: var(--colorThirteen);
+        background-color: var(--thirteen-color);
         padding: 50px;
 
     }
@@ -2152,7 +2154,7 @@ table {
 }
 
 table tr {
-    background: var(--colorOne);
+    background: var(--one-color);
     border-bottom: 1px solid
 }
 
@@ -2162,8 +2164,8 @@ table td {
 }
 
 table td span {
-    background: var(--colorTwo);
-    color: var(--colorThree);
+    background: var(--two-color);
+    color: var(--three-color);
     display: none;
     font-size: 10px;
     font-weight: bold;
@@ -2210,7 +2212,7 @@ table td p {
 }
 
 #om_koga_center {
-    background-color: var(--colorOne);
+    background-color: var(--one-color);
 }
 
 #om_koga_center .col_right {
@@ -2218,7 +2220,7 @@ table td p {
 }
 
 #historie {
-    background-color: var(--colorTwo);
+    background-color: var(--one-color);
 }
 
 #historie figure {
@@ -2237,11 +2239,11 @@ table td p {
 }
 
 #service {
-    background-color: var(--colorOne);
+    background-color: var(--one-color);
 }
 
 #om {
-    background-color: var(--colorTwo);
+    background-color: var(--two-color);
 }
 
 #om figure {
@@ -2264,7 +2266,7 @@ table td p {
 }
 
 #blue-section .citat .box_blue {
-    background-color: var(--colorThirteen);
+    background-color: var(--thirteen-color);
     padding: 5vw;
 
 }
@@ -2342,7 +2344,7 @@ table td p {
 }
 
 .blue_header {
-    background-color: var(--colorFive);
+    background-color: var(--five-color);
     height: 30px;
     width: 100vw;
     margin: 0px;
@@ -2354,7 +2356,7 @@ table td p {
     padding: 1rem;
     flex-grow: 1;
     flex-basis: 300px;
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
 }
 
 
@@ -2365,21 +2367,21 @@ table td p {
 
 #kontakt_side li,
 #kontakt_side li a {
-    color: var(--colorOne);
+    color: var(--one-color);
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
 }
 
 #kontakt_side li a {
     text-decoration: none;
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
 }
 
 #kontakt_side span.navn {
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
 }
 
 #kontakt_side .find a,
@@ -2391,9 +2393,9 @@ table td p {
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.6;
-    color: var(--colorOne);
+    color: var(--one-color);
     text-transform: uppercase;
-    color: var(--colorTwelve);
+    color: var(--twelve-color);
 }
 
 #kontakt_side .kontakt_citat {
@@ -2430,7 +2432,7 @@ table td p {
 
 #signature_1 {
     margin-bottom: -10px;
-    background-color: var(--colorOne);
+    background-color: var(--one-color);
 }
 
 
@@ -2453,16 +2455,16 @@ table td p {
     padding: 0.75rem 2rem;
     text-transform: uppercase;
     min-width: 120px;
-    color: var(--colorOne);
-    background: var(--colorThirteen);
-    border: 1px solid var(--colorFive);
+    color: var(--one-color);
+    background: var(--thirteen-color);
+    border: 1px solid var(--five-color);
 
 }
 
 a.knap-cykler_signature:hover {
-    color: var(--colorFive);
-    background: var(--colorOne);
-    border: solid var(--colorFive) 1px;
+    color: var(--five-color);
+    background: var(--one-color);
+    border: solid var(--five-color) 1px;
 }
 
 
@@ -2522,7 +2524,7 @@ a.knap-cykler_signature:hover {
     /* Der tilføjes en class ("change") til topnav vha. JavaScript, når der klikkes på menuknappen. */
     .topnav.responsive {
         position: relative;
-        background-color: var(--colorTwelve);
+        background-color: var(--twelve-color);
         position: fixed;
         top: 0;
         left: 0;
@@ -2553,7 +2555,7 @@ a.knap-cykler_signature:hover {
     }
 
     .menu_wrapper li a {
-        color: var(--colorOne);
+        color: var(--one-color);
     }
 
 
@@ -2580,7 +2582,7 @@ a.knap-cykler_signature:hover {
 
     .responsive .dropbtn,
     .dropbtn {
-        background-color: var(--colorOne);
+        background-color: var(--one-color);
         color: white;
 
     }
@@ -2593,8 +2595,8 @@ a.knap-cykler_signature:hover {
     .topnav responsive a:hover,
     a.menubtn:hover {
         /*
-        background: var(--colorOne);
-        color: var(--colorTwo);
+        background: var(--one-color);
+        color: var(--two-color);
 */
     }
 
@@ -2677,8 +2679,8 @@ a.knap-cykler_signature:hover {
     }
 
     .menu_wrapper {
-        color: var(--colorOne);
-        background-color: var(--colorTwelve);
+        color: var(--one-color);
+        background-color: var(--twelve-color);
     }
 
 
@@ -2817,11 +2819,11 @@ a.knap-cykler_signature:hover {
     /*Hover Animationer -> Header Menu */
 
     .menu_wrapper li > a.underline:hover {
-        /*        color: var(--colorFive);*/
+        /*        color: var(--five-color);*/
     }
 
     .menu_wrapper li > a.underline:before {
-        background-color: var(--colorFive);
+        background-color: var(--five-color);
     }
 
     /*Hover Animationer -> Header Menu  - SLUT*/
