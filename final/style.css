@@ -1497,7 +1497,7 @@ footer li > a.underline:hover:before {
 
     /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
 
-    row-gap: 1em;
+    row-gap: 0.5rem;
 }
 
 
@@ -2828,65 +2828,16 @@ a.knap-cykler_signature:hover {
     }
 
 
-
-    #breadcrumbs {
-        display: block;
-    }
-
-    #cykler hr.streg {
-        display: block;
-    }
-
     /***    Cykler ***/
-    #cykler {
-        grid-gap: 1rem;
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas:
-            "hd      hd   hd   hd"
-            "line    line line   line"
-            "sidebar modeller modeller modeller"
-            "sidebar ft   ft   ft";
-    }
-
-    #mobil-filtrering {
-        display: none;
-
-    }
-
-    #desktop-filtrering {
-        display: grid;
-    }
 
 
-    .sidebar {
-        grid-area: sidebar;
-        margin: 1rem;
-        top: 65px;
-        width: 100%;
-        background-color: inherit;
-        top: initial;
-        position: static;
-    }
-
-    .filtrering {
-        padding: 2rem;
-    }
-
-    .accordion-item {
-        padding: 0;
-    }
-
-
-    #cykler .card-cykel {
-        padding: 1rem 2rem;
-    }
-
-    #cykler .auto-grid {
-        --auto-grid-min-size: 268px;
-    }
 
     #cykler .card-cykel button {
         font-size: 1rem
+    }
+
+    #cykler .card-cykel {
+        row-gap: 1rem;
     }
 
 }
@@ -2975,7 +2926,7 @@ a.knap-cykler_signature:hover {
     }
 */
 
-    /*****  FORSIDE - GRID  *****/
+
 }
 
 @media only screen and (min-width: 800px) {
@@ -3040,12 +2991,6 @@ a.knap-cykler_signature:hover {
     /*Hover Animationer -> Header Menu  - SLUT*/
 
 
-    /*  Cykler  */
-    #desktop-filtrering {
-        top: 20vh;
-        margin-bottom: 108px;
-    }
-
     /* kontaktside */
 
 
@@ -3069,12 +3014,87 @@ a.knap-cykler_signature:hover {
     #signature_1 .sectionwrapper iframe {
         margin-top: 100px;
     }
+
+
+    /***    Cykler ***/
+    #breadcrumbs {
+        display: block;
+    }
+
+    #cykler hr.streg {
+        display: block;
+    }
+
+
+    #cykler {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "hd      hd   hd   hd"
+            "line    line line   line"
+            "sidebar modeller modeller modeller"
+            "sidebar ft   ft   ft";
+    }
+
+    #mobil-filtrering {
+        display: none;
+
+    }
+
+    #desktop-filtrering {
+        display: grid;
+    }
+
+
+    #desktop-filtrering {
+        top: 20vh;
+        margin-bottom: 108px;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        margin: 1rem;
+        top: 65px;
+        width: 100%;
+        background-color: inherit;
+        top: initial;
+        position: static;
+    }
+
+    .filtrering {
+        padding: 2rem;
+    }
+
+    .accordion-item {
+        padding: 0;
+    }
+
+
+    #cykler .card-cykel {
+        padding: 1rem 1.5rem;
+    }
+
+    #cykler .auto-grid {
+        --auto-grid-min-size: 220px;
+    }
+
+
+
 }
 
 @media only screen and (min-width: 1000px) {
 
     #splash p {
         display: block;
+    }
+
+    #cykler .auto-grid {
+        --auto-grid-min-size: 268px;
+    }
+
+    #cykler .card-cykel {
+        padding: 1rem 1.5rem;
+        padding: 1rem 2rem;
     }
 
 }
