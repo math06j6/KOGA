@@ -997,9 +997,8 @@ footer li > a.underline:hover:before {
 #splash p {
     /*    font-family: 'Racing Sans One', cursive;*/
     /*    font-family: 'Wallpoet', cursive;*/
-    max-width: 460px;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    max-width: 400px;
+    font-size: 0.85rem;
     color: white;
     display: none;
     padding: 0;
@@ -1010,7 +1009,7 @@ footer li > a.underline:hover:before {
     max-width: 1200px;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    row-gap: 2rem;
+    grid-row-gap: 1rem;
     margin: 0 1rem;
     position: absolute;
     z-index: 1;
@@ -1029,7 +1028,6 @@ footer li > a.underline:hover:before {
     filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
     /*    min-width: 200px;*/
     max-width: 25%;
-    margin-bottom: -40px;
 }
 
 #splash a.cta,
@@ -1166,8 +1164,7 @@ footer li > a.underline:hover:before {
     display: grid;
     grid-template-rows: auto 1fr auto;
 */
-    /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
-    /*    row-gap: 1em;*/
+
     width: 100%;
     height: 100%;
     display: block;
@@ -1494,10 +1491,7 @@ footer li > a.underline:hover:before {
     padding: 1rem 1rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
-
-    /*    Bemærk at "row-gap" fungerer i alle relevante browsere. Men Brackets er formentlig ikke opdateret farver det derfor rødt */
-
-    row-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
 }
 
 
@@ -1632,12 +1626,6 @@ footer li > a.underline:hover:before {
 .filter-farve:hover {
     color: var(--five-color);
     background: 0;
-}
-
-
-
-.cykeltype summary {
-    border-top: 1px solid var(--twelve-color);
 }
 
 
@@ -2812,7 +2800,7 @@ a.knap-cykler_signature:hover {
     }
 
     #splash .wrapper img {
-        min-width: 35vw;
+        min-width: 400px;
         max-width: 25%;
     }
 
@@ -2828,6 +2816,7 @@ a.knap-cykler_signature:hover {
     }
 
 
+
     /***    Cykler ***/
 
 
@@ -2837,7 +2826,14 @@ a.knap-cykler_signature:hover {
     }
 
     #cykler .card-cykel {
-        row-gap: 1rem;
+        grid-row-gap: 1rem;
+        padding: 1rem 2rem;
+    }
+
+
+    #cykler .auto-grid {
+        --auto-grid-min-size: 240px;
+
     }
 
 }
@@ -2956,7 +2952,6 @@ a.knap-cykler_signature:hover {
         display: none;
     }
 
-
     #om img {
         /*        margin-top: 80px;*/
         /*        margin-left: 60px;*/
@@ -3069,32 +3064,52 @@ a.knap-cykler_signature:hover {
         padding: 0;
     }
 
-
-    #cykler .card-cykel {
-        padding: 1rem 1.5rem;
-    }
-
     #cykler .auto-grid {
         --auto-grid-min-size: 220px;
-    }
 
+    }
 
 
 }
 
 @media only screen and (min-width: 1000px) {
 
+    #splash p {}
+
+    #splash .wrapper {
+        grid-row-gap: 1rem;
+    }
+
+    #splash .wrapper img {
+        min-width: 450px;
+
+    }
+
     #splash p {
         display: block;
+        font-size: 1rem;
     }
 
     #cykler .auto-grid {
         --auto-grid-min-size: 268px;
+
     }
 
-    #cykler .card-cykel {
-        padding: 1rem 1.5rem;
-        padding: 1rem 2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #splash p {
+        max-width: 500px;
+    }
+
+    #splash .wrapper img {
+        min-width: 500px;
+
+    }
+
+    #splash .wrapper {
+        grid-row-gap: 1.5rem;
     }
 
 }
