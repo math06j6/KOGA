@@ -843,13 +843,7 @@ footer .lokalitet :first-child {
 6. KNAPPER
 \*------------------------------------*/
 
-
 /* Knap: Tilbage til toppen */
-.tilbage {
-    max-width: 1400px;
-    margin: 0 auto;
-
-}
 
 .top_link {
     display: flex;
@@ -871,7 +865,7 @@ footer .lokalitet :first-child {
 
 }
 
-.top_link a i.up {
+#knap-top i.up {
     border: solid var(--one-color);
     border-width: 0 6px 6px 0;
     display: inline-block;
@@ -879,7 +873,7 @@ footer .lokalitet :first-child {
     margin-top: 10px;
 }
 
-.top_link a:hover i.up {
+#knap-top:hover i.up {
     border: solid var(--eight-color);
     border-width: 0 6px 6px 0;
     display: inline-block;
@@ -896,6 +890,53 @@ footer .lokalitet :first-child {
     margin-right: 50px;
 
 }
+
+#knap-top {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 100%;
+    margin: 0 1rem 1rem auto;
+    width: 60px;
+    height: 60px;
+    background: var(--five-color);
+    margin: 0 1rem 1rem auto;
+    min-width: initial;
+    padding: 0;
+    position: fixed;
+    bottom: 100px;
+    right: 16px;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
 
 /* Knap: Tilbage til toppen SLUT*/
 
@@ -1472,13 +1513,6 @@ footer li > a.underline:hover:before {
     max-width: none;
 }
 
-
-
-#cykler .tilbage {
-    grid-area: ft;
-
-    margin: 0;
-}
 
 #cykler .auto-grid {
     --auto-grid-min-size: 140px;
@@ -3027,8 +3061,7 @@ a.knap-cykler_signature:hover {
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
             "hd      hd   hd   hd"
-            "sidebar modeller modeller modeller"
-            "sidebar ft   ft   ft";
+            "sidebar modeller modeller modeller";
     }
 
     #mobil-filtrering {
