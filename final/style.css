@@ -1428,7 +1428,7 @@ footer li > a.underline:hover:before {
 }
 
 .cykelmodel {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .cykeltype_cykler {
@@ -1439,6 +1439,7 @@ footer li > a.underline:hover:before {
     text-transform: none;
 }
 
+/*
 #cykler hr.streg {
     display: none;
     grid-area: line;
@@ -1447,6 +1448,7 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--four-color);
 
 }
+*/
 
 #cykler .grid-container {
     grid-area: modeller;
@@ -2618,6 +2620,9 @@ a.knap-cykler_signature:hover {
         display: block;
     }
 
+    .cykelmodel {
+        font-size: 1.2rem;
+    }
 
 
 }
@@ -2849,7 +2854,7 @@ a.knap-cykler_signature:hover {
     }
 
     #forside .card-header h4 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #blue-section .citat1_om {
@@ -3010,15 +3015,11 @@ a.knap-cykler_signature:hover {
         margin-top: 100px;
     }
 
-
-    /***    Cykler ***/
     #breadcrumbs {
         display: block;
     }
 
-    #cykler hr.streg {
-        display: block;
-    }
+    /***    Cykler ***/
 
 
     #cykler {
@@ -3026,7 +3027,6 @@ a.knap-cykler_signature:hover {
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
             "hd      hd   hd   hd"
-            "line    line line   line"
             "sidebar modeller modeller modeller"
             "sidebar ft   ft   ft";
     }
@@ -3048,12 +3048,17 @@ a.knap-cykler_signature:hover {
 
     .sidebar {
         grid-area: sidebar;
-        margin: 1rem;
+        margin: 0 1rem 1rem;
         top: 65px;
         width: 100%;
         background-color: inherit;
         top: initial;
         position: static;
+    }
+
+    #cykler .grid-container {
+        margin: 0 1rem 1rem;
+
     }
 
     .filtrering {
@@ -3088,6 +3093,10 @@ a.knap-cykler_signature:hover {
     #splash p {
         display: block;
         font-size: 1rem;
+    }
+
+    #forside .card-header h4 {
+        font-size: 2rem;
     }
 
     #cykler .auto-grid {
