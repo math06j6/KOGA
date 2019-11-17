@@ -92,9 +92,10 @@ ul {
     list-style: none;
 }
 
-/*------------------------------------*\
-2. LAYOUT - SLUT
-\*------------------------------------*/
+.skjult {
+    display: none;
+}
+
 
 /*------------------------------------*\
 2. LAYOUT - SLUT
@@ -280,7 +281,9 @@ button {
 
 #breadcrumbs {
     padding: 1rem 0;
+    display: none;
 }
+
 
 #breadcrumbs ul {
     list-style: none;
@@ -292,7 +295,7 @@ button {
     display: inline;
     color: var(--three-color);
     /*    color: var(--twelve-color);*/
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 #breadcrumbs ul li + li:before {
@@ -314,7 +317,7 @@ button {
     color: var(--three-color);
     /*    color: var(--twelve-color);*/
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 700;
 }
@@ -361,6 +364,8 @@ details .filter-farve {
     color: var(--three-color);
 
 }
+
+
 
 .accordion .filter-model:hover,
 .accordion .filter-koen:hover,
@@ -1423,7 +1428,7 @@ footer li > a.underline:hover:before {
     margin: 0 auto;
     background-color: #fff;
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 0;
     padding-bottom: 0;
     background: var(--two-color);
     padding: 0;
@@ -1476,11 +1481,13 @@ footer li > a.underline:hover:before {
     text-transform: none;
 }
 
-#cykler hr.line {
+#cykler hr.streg {
+    display: none;
     grid-area: line;
 
     margin: 0 1rem;
     border: 1px solid var(--four-color);
+
 }
 
 #cykler .grid-container {
@@ -1492,9 +1499,20 @@ footer li > a.underline:hover:before {
 
 .sidebar {
     grid-area: sidebar;
-    /*    background-color: var(--one-color);*/
-    margin: 1rem;
+    margin: 0;
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    z-index: 3;
+    top: initial;
+    position: static;
 }
+
+.sidebar p {
+    max-width: none;
+}
+
+
 
 #cykler .tilbage {
     grid-area: ft;
@@ -1503,6 +1521,8 @@ footer li > a.underline:hover:before {
 }
 
 #cykler .auto-grid {
+    --auto-grid-min-size: 140px;
+
     padding: 0;
 }
 
@@ -1510,7 +1530,7 @@ footer li > a.underline:hover:before {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--one-color);
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
 
@@ -1518,7 +1538,6 @@ footer li > a.underline:hover:before {
 
     row-gap: 1em;
 }
-
 
 
 #cykler .card-cykel img {
@@ -1530,7 +1549,10 @@ footer li > a.underline:hover:before {
     background: var(--five-color);
     border: 1px solid var(--five-color);
     margin-bottom: 1rem;
+    min-width: initial;
+    font-size: 0.85rem;
 }
+
 
 #cykler .card-cykel button:hover {
     background: 0;
@@ -1560,15 +1582,17 @@ footer li > a.underline:hover:before {
     font-size: 0.85rem;
     color: var(--three-color);
     padding: 0;
+    display: none;
 }
 
 #cykler .card-cykel .pris {
     padding: 1rem;
     font-size: 1rem;
-    padding: 0;
+    padding: 0 0.1rem;
     font-weight: 700;
     font-size: 0.85rem
 }
+
 
 
 .filtrering {
@@ -1576,14 +1600,60 @@ footer li > a.underline:hover:before {
     grid-auto-rows: auto;
     grid-gap: 0;
     max-width: 1400px;
-    padding: 2rem;
+    padding: 0rem;
     margin: 0 auto;
     /*
     top: 20vh;
     margin-bottom: 108px;
 */
     background-color: var(--one-color);
+    overflow-y: auto;
+    max-height: 100vh;
 }
+
+
+#desktop-filtrering {
+    display: none;
+    color: var(--five-color);
+}
+
+#desktop-filtrering h4 {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--five-color);
+    color: var(--twelve-color);
+}
+
+#mobil-collapse {
+    padding: 0;
+    border-bottom: none;
+    padding: 1rem;
+    background-color: var(--five-color);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+#mobil-collapse i.down {
+    border-width: 0 5px 5px 0;
+    padding: 5px;
+    border-color: var(--one-color);
+}
+
+
+
+.collapse-title i.down {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    transition: 0.4s;
+
+}
+
+.collapse-title i.down.active::after {
+    transform: rotate(180deg);
+}
+
+
 
 
 .filter-model,
@@ -1619,22 +1689,6 @@ details .valgt {
 
 
 button i {
-    border: solid var(--five-color);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    margin: 3px 8px;
-}
-
-#cykler button i {
-    border: solid var(--one-color);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    margin: 3px 8px;
-}
-
-#cykler button:hover i {
     border: solid var(--five-color);
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -1742,18 +1796,27 @@ button .left {
 /****** Accordion ******/
 
 
+#cykler button:focus {
+    outline: 0;
+}
+
+#cykler button i {
+    border: solid var(--five-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 8px;
+}
+
+#cykler button:hover i {}
+
+
 .accordion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    border-top: 1px solid var(--four-for);
-    /*
-    position: relative;
-    display: flex;
-    justify-content: center;
-*/
 }
 
 .accordion .collapse-title {
@@ -1768,11 +1831,80 @@ button .left {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
-    padding: 1rem 3rem 1rem 0rem;
+    /*    padding: 1rem 3rem 1rem 0rem;*/
     font-weight: 400;
     border-bottom: 1px solid var(--four-color);
     margin: 0;
 }
+
+
+.acc {
+    background: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    border: none;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: none;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    border: 0;
+    width: 100%;
+    padding: 0;
+    min-width: 150px;
+    font-weight: 700;
+    cursor: pointer;
+    min-width: 150px;
+    font-weight: 500;
+}
+
+
+.accord {
+    background: inherit;
+    cursor: pointer;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    border: none;
+    width: 100%;
+    padding: 0;
+    border-bottom: none;
+    color: var(--one-color);
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+
+.accordion-item {
+    padding: 0 2rem;
+}
+
+
+/* Roter pile tilbage*/
+.rotate_tilbage {
+    transform: rotate(0deg);
+    transition: 1.5s;
+}
+
+.rotate .down {
+    transform: rotate(225deg);
+}
+
 
 
 .accordion .collapse-title:hover,
@@ -1791,7 +1923,6 @@ button .left {
     opacity: 0;
     padding: 0 1rem;
     max-height: 0;
-    border-bottom: 1px solid var(--four-for);
     overflow: hidden;
     clear: both;
     -webkit-transition: all 0.2s ease 0.15s;
@@ -1808,6 +1939,13 @@ button .left {
     transition: all 0.35s ease 0.15s;
 }
 
+.accordion .content.mobil-drop.active {
+    padding: 0 0 2rem;
+
+}
+
+
+/*
 .accordion .collapse-title::after {
     position: absolute;
     float: right;
@@ -1818,21 +1956,23 @@ button .left {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    /*    border: 1px solid var(--twelve-color);*/
+        border: 1px solid var(--twelve-color);
     text-align: center;
     -moz-transition: all .5s linear;
     -webkit-transition: all .5s linear;
     transition: all .5s linear;
     content: "+";
 }
-
+*/
+/*
 .accordion .collapse-title.active::after {
     color: var(--five-color);
-    /*    border: 1px solid var(--five-color);*/
+    border: 1px solid var(--five-color);
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
+*/
 
 .accordion-knap {
     all: inherit;
@@ -2513,10 +2653,28 @@ a.knap-cykler_signature:hover {
             "trekking racer";
     }
 
+    #cykler .auto-grid {
+        --auto-grid-min-size: 150px;
+    }
+
+
+}
+
+@media (min-width: 450px) {
+    #cykler .auto-grid {
+        --auto-grid-min-size: 200px;
+    }
+
+    #cykler .card-cykel .kort {
+        display: block;
+    }
 
 
 
 }
+
+
+
 
 @media (max-width: 800px) {
 
@@ -2709,7 +2867,18 @@ a.knap-cykler_signature:hover {
     }
 
 
+
+    #breadcrumbs {
+        display: block;
+    }
+
+    #cykler hr.streg {
+        display: block;
+    }
+
+    /***    Cykler ***/
     #cykler {
+        grid-gap: 1rem;
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
             "hd      hd   hd   hd"
@@ -2717,6 +2886,48 @@ a.knap-cykler_signature:hover {
             "sidebar modeller modeller modeller"
             "sidebar ft   ft   ft";
     }
+
+    #mobil-filtrering {
+        display: none;
+
+    }
+
+    #desktop-filtrering {
+        display: grid;
+    }
+
+
+    .sidebar {
+        grid-area: sidebar;
+        margin: 1rem;
+        top: 65px;
+        width: 100%;
+        background-color: inherit;
+        top: initial;
+        position: static;
+    }
+
+    .filtrering {
+        padding: 2rem;
+    }
+
+    .accordion-item {
+        padding: 0;
+    }
+
+
+    #cykler .card-cykel {
+        padding: 1rem 2rem;
+    }
+
+    #cykler .auto-grid {
+        --auto-grid-min-size: 268px;
+    }
+
+    #cykler .card-cykel button {
+        font-size: 1rem
+    }
+
 }
 
 
@@ -2869,7 +3080,7 @@ a.knap-cykler_signature:hover {
 
 
     /*  Cykler  */
-    .filtrering {
+    #desktop-filtrering {
         top: 20vh;
         margin-bottom: 108px;
     }
