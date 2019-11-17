@@ -970,7 +970,6 @@ footer .find > a.underline:before,
 footer li > a.underline:before {
     content: "";
     position: absolute;
-    /*    width: 100%;*/
     height: 2px;
     bottom: 0;
     left: 0;
@@ -979,10 +978,18 @@ footer li > a.underline:before {
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
 
+
+}
+
+footer .find > a.underline:before,
+footer li > a.underline:before {
+    width: 100%;
+}
+
+.menu_wrapper li > a.underline:before {
     bottom: 1rem;
     left: 1rem;
     right: 1rem;
-    /*    width: 100%;*/
 }
 
 .menu_wrapper li > a.underline:hover:before,
