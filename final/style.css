@@ -332,78 +332,6 @@ button {
 /***** Breadcrumbs - Slut *****/
 
 
-
-/***** Accordion/Collapsible *****/
-
-details {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.accordion .filter-model,
-.accordion .filter-koen,
-.accordion .filter-farve,
-.accordion .filter-vaegt,
-.accordion .filter-pris,
-details .filter-model,
-details .filter-koen,
-details .filter-farve {
-    color: var(--twelve-color);
-    background: 0;
-    border: none;
-    border-bottom: 1px solid var(--four-color);
-    margin: 0 auto;
-    padding: 0.75rem;
-    width: 100%;
-    text-align: left;
-    text-transform: capitalize;
-    color: var(--three-color);
-
-}
-
-
-
-.accordion .filter-model:hover,
-.accordion .filter-koen:hover,
-.accordion .filter-farve:hover,
-.accordion .filter-vaegt:hover,
-.accordion .filter-pris:hover,
-details .summary:hover,
-details .filter-model:hover,
-details .filter-koen:hover,
-details .filter-farve:hover {
-    /*    background-color: var(--eight-color);*/
-    color: var(--five-color);
-}
-
-
-
-summary {
-    padding: 0.75rem;
-    display: block;
-    position: relative;
-    font-weight: bold;
-    cursor: pointer;
-    border-bottom: 1px solid var(--twelve-color);
-    color: var(--twelve-color);
-    min-width: 150px;
-    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
-
-
-    &::-webkit-details-marker {
-        display: none;
-    }
-}
-
-summary&::-webkit-details-marker {
-    display: none;
-}
-
-/***** Accordion/Collapsible - Slut *****/
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
 \*------------------------------------*/
@@ -1944,36 +1872,6 @@ button .left {
 
 }
 
-
-/*
-.accordion .collapse-title::after {
-    position: absolute;
-    float: right;
-    right: 1rem;
-    font-size: 1rem;
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-        border: 1px solid var(--twelve-color);
-    text-align: center;
-    -moz-transition: all .5s linear;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
-    content: "+";
-}
-*/
-/*
-.accordion .collapse-title.active::after {
-    color: var(--five-color);
-    border: 1px solid var(--five-color);
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-*/
-
 .accordion-knap {
     all: inherit;
     border: 0;
@@ -1989,6 +1887,38 @@ button .left {
 }
 
 /****** Accordion Slut ******/
+
+
+/***** Accordion/Collapsible *****/
+
+.accordion .filter-model,
+.accordion .filter-koen,
+.accordion .filter-farve,
+.accordion .filter-vaegt,
+.accordion .filter-pris {
+    color: var(--twelve-color);
+    background: 0;
+    border: none;
+    border-bottom: 1px solid var(--four-color);
+    margin: 0 auto;
+    padding: 0.75rem;
+    width: 100%;
+    text-align: left;
+    text-transform: capitalize;
+    color: var(--three-color);
+
+}
+
+.accordion .filter-model:hover,
+.accordion .filter-koen:hover,
+.accordion .filter-farve:hover,
+.accordion .filter-vaegt:hover,
+.accordion .filter-pris:hover {
+    /*    background-color: var(--eight-color);*/
+    color: var(--five-color);
+}
+
+/***** Accordion/Collapsible - Slut *****/
 /*------------------------------------*\
 8.2 CYKLER - SLUT
 \*------------------------------------*/
