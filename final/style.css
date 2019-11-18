@@ -2135,7 +2135,7 @@ button .left {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    background-color: var(--thirteen-color);
+    background-color: var(--fourteen-color);
     padding: 10px;
     max-height: 250px;
 
@@ -2274,7 +2274,7 @@ button .left {
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: row;
-        background-color: var(--thirteen-color);
+        background-color: var(--fourteen-color);
         padding: 50px;
 
     }
@@ -2395,14 +2395,14 @@ table td p {
     background-image: url(files/images/trekking1.jpg);
     color: white;
     width: 100%;
-    height: 100%;
+    height: 160px;
     background-size: 100vw;
     background-position: 0vw;
 }
 
 #blue-section .citat .box_blue {
-    background-color: var(--thirteen-color);
-    padding: 5vw;
+    background-color: var(--fourteen-color);
+    padding-top: 2.5vw;
 
 }
 
@@ -2429,7 +2429,7 @@ table td p {
     }
 
     .citat .box_blue h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
 
