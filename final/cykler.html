@@ -44,15 +44,13 @@
             </div>
         </section>
         <section id="breadcrumbs">
-            <div class="sectionwrapper">
-                <ul class="">
-                    <li><a href="#">Hjem</a></li>
-                    <li><a href="#">Cykler</a></li>
-                </ul>
-            </div>
+            <ul class="">
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#">Cykler</a></li>
+            </ul>
         </section>
-
         <section id="cykler">
+
             <aside class="sidebar">
                 <nav id="mobil-filtrering" class="filtrering">
                     <div class="accordion">
@@ -143,23 +141,15 @@
                     </div>
                 </nav>
             </aside>
-            <hr class="streg">
+            <!--            <hr class="streg">-->
             <div class="grid-container">
                 <section class="auto-grid">
 
                 </section>
             </div>
-            <div class="tilbage">
-                <div class="top_link">
-                    <a href="#">
-                        <i class="up"></i>
-                    </a>
-                </div>
-            </div>
         </section>
-
     </main>
-
+    <button id="knap-top"><i class="up"></i></button>
     <footer>
         <div class="footer_wrapper">
             <div class="footerCykler">
@@ -286,17 +276,6 @@
             addEventListenersToButtons();
             addEventListenerSignature();
 
-
-            //            const filterKnapper = document.querySelectorAll(".filter");
-            //            filterKnapper.forEach(knap => {
-            //                knap.addEventListener("click", filtreringCykler);
-            //            });
-            //            const koenKnapper = document.querySelectorAll(".koen");
-            //            filterKnapper.forEach(knap => {
-            //                knap.addEventListener("click", filterKoenCykler);
-            //            });
-
-
             //            const sortKnapper = document.querySelectorAll(".sort");
 
             //            sortKnapper.forEach(knap => knap.addEventListener("click", sorterRetter)); //gør filtreringsknapper klikbare
@@ -420,31 +399,6 @@
             this.classList.toggle("rotate");
             this.nextElementSibling.classList.toggle("rotate");
             this.nextElementSibling.classList.toggle("rotate");
-
-
-            //            let x = document.querySelector(".down");
-            //
-            // x.classList.toggle("rotate");
-
-            //            this.classList.toggle("down");
-
-
-
-
-            //            let erÅben = document.querySelector(".collapse-title").classList.contains('active');
-
-
-            //            if (erÅben == true) {
-            // console.log("skjul kryds");
-            // document.querySelector(".accord").classList = "rotate_tilbage";
-            // document.querySelector("#menuknap2").classList = "rotate_remove";
-            //
-            // }
-
-            //            collapse - title active
-            //            this.nextElementSibling.classList.toggle('rotate');
-            // this.classList.toggle('rotate');
-            // x.classList.toggle("rotate");
 
         }
 
