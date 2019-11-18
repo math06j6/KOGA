@@ -390,9 +390,11 @@
         //////Accordion til filtrering//////
         const items = document.querySelectorAll(".collapse-title");
 
+
         items.forEach(item => item.addEventListener('click', toggleAccordion));
 
         function toggleAccordion() {
+            console.log("toggleAccordion");
             this.classList.toggle('active');
 
             this.nextElementSibling.classList.toggle('active');
@@ -404,9 +406,18 @@
 
         function addEventListenerSignature() {
             //Ved klik på Koga Signature går man til signature.html
+
+            //Mobil klik:
             document.querySelector(".click-signature").addEventListener("click", () => {
                 location.href = `signature.html`;
             })
+
+            //Desktop klik:
+            document.querySelector("#desktop-filtrering .click-signature").addEventListener("click", () => {
+                location.href = `signature.html`;
+            })
+
+
         }
     </script>
 </body></html>

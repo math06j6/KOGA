@@ -913,6 +913,7 @@ footer .lokalitet :first-child {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
     animation-duration: 2s;
+
 }
 
 @-webkit-keyframes fadeIn {
@@ -1093,6 +1094,7 @@ footer li > a.underline:hover:before {
     color: var(--one-color);
     background: var(--thirteen-color);
     border: 1px solid var(--five-color);
+    transition: 0.4s;
 }
 
 
@@ -1531,7 +1533,7 @@ footer li > a.underline:hover:before {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--one-color);
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-row-gap: 0.5rem;
@@ -1549,6 +1551,7 @@ footer li > a.underline:hover:before {
     margin-bottom: 1rem;
     min-width: initial;
     font-size: 0.85rem;
+    transition: 0.4s;
 }
 
 
@@ -1632,9 +1635,10 @@ footer li > a.underline:hover:before {
 }
 
 #mobil-collapse i.down {
-    border-width: 0 5px 5px 0;
-    padding: 5px;
+    border-width: 0 4px 4px 0;
+    padding: 4px;
     border-color: var(--one-color);
+    margin: auto 12px 8px;
 }
 
 
@@ -2124,10 +2128,10 @@ button .left {
     background-image: url(files/images/trekking1.jpg);
     color: white;
     width: 100%;
-    max-height: 250px;
-    /*    background-size: 100vw;*/
+    height: 100%;
+    background-size: 100vw;
     background-position: 0vw;
-
+    background-repeat: no-repeat;
 }
 
 .link_container {
@@ -2135,7 +2139,7 @@ button .left {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    background-color: var(--thirteen-color);
+    background-color: var(--fourteen-color);
     padding: 10px;
     max-height: 250px;
 
@@ -2146,24 +2150,32 @@ button .left {
     padding: 10px 30px;
 }
 
+
+
 .laes_mere_link {
-    text-align: center;
-
-}
-
-.laes_mere_link p {
-    border: 2px solid white;
-    padding: 10px;
-    width: 130px;
-    color: white;
-}
-
-.link_container a {
-    text-decoration: none;
     align-self: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: normal;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    min-width: 120px;
+    color: var(--one-color);
+    background: 0;
+    border: 1px solid var(--one-color);
+    transition: 0.4s;
+
 }
 
 
+.laes_mere_link:hover {
+    color: var(--five-color);
+    background: var(--one-color);
+}
 
 @media screen and (min-width: 800px) {
 
@@ -2274,7 +2286,7 @@ button .left {
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: row;
-        background-color: var(--thirteen-color);
+        background-color: var(--fourteen-color);
         padding: 50px;
 
     }
@@ -2395,14 +2407,14 @@ table td p {
     background-image: url(files/images/trekking1.jpg);
     color: white;
     width: 100%;
-    height: 100%;
+    height: 160px;
     background-size: 100vw;
     background-position: 0vw;
 }
 
 #blue-section .citat .box_blue {
-    background-color: var(--thirteen-color);
-    padding: 5vw;
+    background-color: var(--fourteen-color);
+    padding-top: 2.5vw;
 
 }
 
@@ -2429,7 +2441,7 @@ table td p {
     }
 
     .citat .box_blue h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
 
@@ -2578,11 +2590,7 @@ table td p {
 .knap-cykler_signature {
     text-decoration: none;
     cursor: pointer;
-    font-family: futura-pt,
-        Arial,
-        Helvetica,
-        Roboto,
-        sans-serif;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
@@ -2593,6 +2601,7 @@ table td p {
     color: var(--one-color);
     background: var(--thirteen-color);
     border: 1px solid var(--five-color);
+    transition: 0.4s;
 
 }
 
@@ -3064,6 +3073,7 @@ a.knap-cykler_signature:hover {
 
 
     #cykler {
+        padding: 0 0 2rem;
         grid-gap: 1rem;
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
