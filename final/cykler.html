@@ -45,8 +45,9 @@
         </section>
         <section id="breadcrumbs">
             <ul class="">
-                <li><a href="#">Hjem</a></li>
-                <li><a href="#">Cykler</a></li>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="cykler.html">Cykler</a></li>
+                <li><a href="#" id="inddeling">Vores cykler</a></li>
             </ul>
         </section>
         <section id="cykler">
@@ -258,7 +259,7 @@
         if (urlParams.get("filterModel")) {
             filterModel = urlParams.get("filterModel");
             const knap = document.querySelector('button[data-cykeltype=' + filterModel + ']');
-            document.querySelector("#inddeling").textContent = filterModel;
+            document.querySelectorAll("#inddeling").textContent = filterModel;
             document.querySelector(".filter-model.valgt").classList.remove("valgt");
             knap.classList.add("valgt");
             //            knap.parentElement.classList.add("active");

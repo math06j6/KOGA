@@ -38,10 +38,10 @@
     <main id="singleview">
         <section id="breadcrumbs">
             <ul class="">
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="#">Cykler</a></li>
-                <li><a href="#" class="">Cykeltype</a></li>
-                <li><a href="#" class="">Cykelmodel</a></li>
+                 <li><a href="index.html">Hjem</a></li>
+                <li><a href="cykler.html">Cykler</a></li>
+                <li class="tilbage"><a href="#">Vores cykler</a></li>
+<!--                <li><a href="#" class="">Cykelmodel</a></li>-->
             </ul>
         </section>
 
@@ -237,19 +237,9 @@
             liste.querySelector(".fordel3").textContent = cykel.fordel_3;
             liste.querySelector(".fordel4").textContent = cykel.fordel_4;
 
-            //            liste.querySelector(".speci1").textContent = "Front Fork Sort: " + cykel.speci1;
-            //            liste.querySelector(".speci2").textContent = "Number of gears: " + cykel.speci2;
-            //            liste.querySelector(".speci3").textContent = "Rear brake sort: " + cykel.speci3;
-            //            liste.querySelector(".speci4").textContent = "Rear brake make: " + cykel.speci4;
-            //            liste.querySelector(".speci5").textContent = "Front brake make: " + cykel.speci5;
-            //            liste.querySelector(".speci6").textContent = "Front brake sort: " + cykel.speci6;
-            //            liste.querySelector(".speci7").textContent = "Front brake type: " + cykel.speci7;
-            //            liste.querySelector(".speci8").textContent = "Rear brake type: " + cykel.speci8;
-            //            liste.querySelector(".speci9").textContent = "Wheelset make: " + cykel.speci9;
-            //            liste.querySelector(".speci10").textContent = "Wheelset type: " + cykel.speci10;
-            //            liste.querySelector(".speci11").textContent = "Tyre make: " + cykel.speci11;
-            //            liste.querySelector(".speci12").textContent = "Tyre type: " + cykel.speci12;
-            //            liste.querySelector(".speci13").textContent = "Tyre sort: " + cykel.speci13;
+            document.querySelector(".tilbage").addEventListener("click", () => {
+                history.back();
+            });
 
             document.querySelector(".luk").addEventListener("click", () => {
                 history.back();
