@@ -161,6 +161,14 @@ h4 {
     font-style: normal;
 }
 
+h5 {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    font-style: normal;
+}
+
 p {
     font-family: Arial, Helvetica, Roboto, sans-serif;
     font-size: 1rem;
@@ -2041,13 +2049,26 @@ button .left {
 
 .liste {
     padding: 0;
-    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.fordele_box {
     margin: 0 auto;
 }
 
 .title_box {
     background-color: white;
     padding: 10px;
+}
+
+.title_box h4 {
+    color: var(--five-color);
+
+}
+
+.title_box h5 {
+    color: var(--three-color);
+    line-height: 1.6;
 }
 
 .billede_box {
@@ -2060,23 +2081,30 @@ button .left {
 }
 
 .pris {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
     text-align: right;
     padding: 0px 20px 0 0;
-    font-size: 21px;
+    font-size: 1.5rem;
 
 }
 
 .pris_style {
     text-align: right;
     color: #0E7DC7;
-    padding: 0 20px 10px;
+    padding: 0 20px 32px;
     font-size: 10px;
 }
 
 .praesentation {
     padding: 20px;
+    color: var(--three-color);
+
+    /*  Kommentar: Nedstående er udkommenteret for ændre på forholdet i mellem brødtekst og overskrifter */
+    /*
     font-size: 1.2rem;
     font-weight: bold;
+*/
 }
 
 .vmf_box {
@@ -2088,7 +2116,7 @@ button .left {
 .farve {
     font-weight: bold;
     color: #0E7DC7;
-    padding: 10px;
+    padding: 5px 10px
 }
 
 
@@ -2096,6 +2124,14 @@ button .left {
 .singleview_overskrift {
     margin: 30px 20px;
     font-size: 1.6rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#singleview .grid_boks {
+    max-width: 1400px;
+    margin: 0 auto;
+
 }
 
 
@@ -2201,7 +2237,6 @@ button .left {
     }
 
     /*her har i sat en højde på, der gør at footeren skraber over*/
-
 
     .grid_boks {
         display: grid;
@@ -3131,6 +3166,16 @@ a.knap-cykler_signature:hover {
         grid-row-gap: 1rem;
     }
 
+    /***** Singleview *****/
+    #singleview .title_box h4 {
+        font-size: 1.5rem;
+    }
+
+    #singleview .title_box h5 {
+        font-size: 1.2rem;
+    }
+
+    /***** Singleview - Slut *****/
 
 }
 
