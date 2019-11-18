@@ -295,12 +295,12 @@ button {
     display: inline;
     color: var(--three-color);
     /*    color: var(--twelve-color);*/
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 #breadcrumbs ul li + li:before {
     padding: 8px;
-    color: black;
+    color: inherit;
     content: "/\00a0";
 }
 
@@ -315,11 +315,11 @@ button {
 
 #breadcrumbs li a {
     color: var(--three-color);
-    /*    color: var(--twelve-color);*/
+    color: var(--twelve-color);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 #breadcrumbs li:hover a,
@@ -1085,7 +1085,7 @@ footer li > a.underline:hover:before {
     cursor: pointer;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.4;
     font-style: normal;
     padding: 0.75rem 2rem;
@@ -2813,6 +2813,12 @@ a.knap-cykler_signature:hover {
 }
 
 @media (min-width: 640px) {
+
+    #splash a.cta,
+    #forside a.knap-cykler {
+        font-size: 1rem;
+    }
+
 
     #myVideo {
         position: relative;
