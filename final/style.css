@@ -1533,7 +1533,7 @@ footer li > a.underline:hover:before {
     /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--one-color);
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-row-gap: 0.5rem;
@@ -1635,9 +1635,10 @@ footer li > a.underline:hover:before {
 }
 
 #mobil-collapse i.down {
-    border-width: 0 5px 5px 0;
-    padding: 5px;
+    border-width: 0 4px 4px 0;
+    padding: 4px;
     border-color: var(--one-color);
+    margin: auto 12px 8px;
 }
 
 
