@@ -1428,7 +1428,7 @@ footer li > a.underline:hover:before {
 }
 
 .cykelmodel {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .cykeltype_cykler {
@@ -2867,12 +2867,12 @@ a.knap-cykler_signature:hover {
 
     #splash_arrow {
         background-image: url(files/svg/arrow_scroll_ned_hvid.svg);
-        width: 70px;
-        height: 42px;
+        width: 40px;
+        height: 24px;
         background-size: 100%;
         position: absolute;
         z-index: 1;
-        top: 85%;
+        top: 90%;
         left: 45%;
     }
 
