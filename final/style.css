@@ -2892,7 +2892,6 @@ a.knap-cykler_signature:hover {
     }
 
     #cykler .card-cykel {
-        grid-row-gap: 1rem;
         padding: 1rem 2rem;
     }
 
@@ -2907,15 +2906,8 @@ a.knap-cykler_signature:hover {
 
 @media screen and (min-width:800px) {
 
-    /*****  FORSIDE - GRID  *****/
-    .test-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "ebike city trekking racer";
-    }
-
     #forside .card-header h4 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #blue-section .citat1_om {
@@ -3135,6 +3127,10 @@ a.knap-cykler_signature:hover {
 
     }
 
+    #cykler .card-cykel {
+        grid-row-gap: 1rem;
+    }
+
 
 }
 
@@ -3156,13 +3152,16 @@ a.knap-cykler_signature:hover {
         font-size: 1rem;
     }
 
-    #forside .card-header h4 {
-        font-size: 2rem;
-    }
-
     #cykler .auto-grid {
         --auto-grid-min-size: 268px;
 
+    }
+
+    /*  Grid på Forside */
+    .test-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "ebike city trekking racer";
     }
 
 }
