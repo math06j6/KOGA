@@ -2150,10 +2150,6 @@ button .left {
     padding: 10px 30px;
 }
 
-.laes_mere_link {
-    text-align: center;
-
-}
 
 
 .laes_mere_link {
@@ -2161,19 +2157,6 @@ button .left {
     text-decoration: none;
     cursor: pointer;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
-
-}
-
-/*
-.laes_mere_link p {
-    text-decoration: none;
-    cursor: pointer;
-    font-family: futura-pt,
-        Arial,
-        Helvetica,
-        Roboto,
-        sans-serif;
-
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
@@ -2185,32 +2168,14 @@ button .left {
     background: 0;
     border: 1px solid var(--one-color);
     transition: 0.4s;
+
 }
-*/
+
 
 .laes_mere_link:hover {
     color: var(--five-color);
     background: var(--one-color);
-
 }
-
-/*
-
-.laes_mere_link p:hover {
-    color: var(--five-color);
-    background: var(--one-color);
-    border: solid var(--five-color) 1px;
-}
-*/
-
-
-.link_container a {
-    text-decoration: none;
-    align-self: center;
-
-}
-
-
 
 @media screen and (min-width: 800px) {
 
