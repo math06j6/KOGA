@@ -2124,9 +2124,10 @@ button .left {
     background-image: url(files/images/trekking1.jpg);
     color: white;
     width: 100%;
-    max-height: 250px;
-    /*    background-size: 100vw;*/
+    height: 100%;
+    background-size: 100vw;
     background-position: 0vw;
+    background-repeat: no-repeat;
 
 }
 
@@ -2151,12 +2152,34 @@ button .left {
 
 }
 
+
 .laes_mere_link p {
-    border: 2px solid white;
-    padding: 10px;
-    width: 130px;
-    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: futura-pt,
+        Arial,
+        Helvetica,
+        Roboto,
+        sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: normal;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    min-width: 120px;
+    color: var(--one-color);
+    background: 0;
+    border: 1px solid var(--one-color);
 }
+
+
+.laes_mere_link p:hover {
+    color: var(--five-color);
+    background: var(--one-color);
+    border: solid var(--five-color) 1px;
+}
+
 
 .link_container a {
     text-decoration: none;
@@ -2919,7 +2942,7 @@ a.knap-cykler_signature:hover {
         position: absolute;
         z-index: 1;
         top: 90%;
-        left: 45%;
+        left: 48%;
     }
 
     .pulse {
