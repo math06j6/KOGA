@@ -1555,12 +1555,13 @@ footer li > a.underline:hover:before {
 
 .filter-koen {
     color: var(--five-color);
-    background: 0;
     border: none;
     padding: 0.5rem;
     min-width: initial;
-    /* color: var(--one-color); */
-    background: var(--one-color);
+    /* color: var(--one-color);
+*/
+     background: 0;
+/*    background: var(--one-color);*/
     border: 1px solid var(--five-color);
     min-width: initial;
     font-size: 0.85rem;
