@@ -1049,13 +1049,22 @@ footer li > a.underline:hover:before {
 
 /*****SPLASH BAGGRUNDSVIDEO****/
 
-#myVideo {
+#video-bg {
     width: 200vw;
     height: 100%;
     top: 0px;
     right: 200px;
     position: relative;
     z-index: 0;
+
+
+    display: block;
+    object-fit: cover;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 
 }
 
@@ -2855,7 +2864,7 @@ a.knap-cykler_signature:hover {
     }
 
 
-    #myVideo {
+    #video-bg {
         position: relative;
         right: 0;
         bottom: 0;
