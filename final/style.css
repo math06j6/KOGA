@@ -1057,15 +1057,6 @@ footer li > a.underline:hover:before {
     position: relative;
     z-index: 0;
 
-
-    display: block;
-    object-fit: cover;
-    background-size: cover;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-
 }
 
 #splash {
@@ -1125,7 +1116,7 @@ footer li > a.underline:hover:before {
     font-size: 0.85rem;
     line-height: 1.4;
     font-style: normal;
-    padding: 0.75rem 2rem;
+    padding: 0.5rem 1.5rem;
     text-transform: uppercase;
     min-width: 120px;
     color: var(--one-color);
@@ -1133,7 +1124,6 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--five-color);
     transition: 0.4s;
 }
-
 
 #splash a.cta:hover,
 #splash a.cta:active,
@@ -1436,29 +1426,6 @@ footer li > a.underline:hover:before {
 /******signature boks på forside SLUT******/
 
 
-
-
-/*** YouTube Video er en mulighed ***/
-.video_wrapper {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    position: relative;
-    margin-top: 1rem;
-}
-
-#youtubeVideo {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-
-/***** YouTube Video  - SLUT *****/
-
 /*------------------------------------*\
 8.1 FORSIDE - SLUT
 \*------------------------------------*/
@@ -1586,21 +1553,15 @@ footer li > a.underline:hover:before {
     border: none;
     padding: 0.5rem;
     min-width: initial;
-    /* color: var(--one-color);
-*/
     background: 0;
     /*    background: var(--one-color);*/
     border: 1px solid var(--five-color);
     min-width: initial;
     font-size: 0.85rem;
     transition: 0.4s;
-    margin: 0 0.5rem;
-    width: 100px;
-    margin: 0 0 1rem 0.5rem;
-}
 
-.filter-koen:last-child button.top-knapper {
-    margin: 0 0.5rem 0 0;
+    margin: auto;
+    min-width: 80px;
 }
 
 .filter-koen:hover {
@@ -2397,9 +2358,27 @@ table td p {
 \*------------------------------------*/
 
 /*------------------------------------*\
-8.4 About
+8.4 Om Koga Center
 \*------------------------------------*/
 
+
+/*** YouTube Video ***/
+.video_wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+#youtube-video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/***** YouTube Video - SLUT *****/
 
 #om_koga_center h1 {
     text-align: center;
@@ -2532,6 +2511,12 @@ table td p {
 8.5 Kontakt
 \*------------------------------------*/
 
+.kontakt-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 #kontakt_side {
     background: white;
 }
@@ -2546,16 +2531,17 @@ table td p {
 #kontakt_side .aabningstider {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 200px;
     color: var(--twelve-color);
+    padding: 0.5rem 1rem;
 }
 
 
 #kontakt_side address {
-
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 
 #kontakt_side li,
@@ -2606,11 +2592,24 @@ table td p {
 }
 
 
-#kontakt_side .kort_map iframe {
-    padding: 1.5rem 0;
+.kort_map {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin: 1rem;
 }
 
-
+#google-maps {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    max-width: 600px;
+}
 
 /*------------------------------------*\
 8.5 Kontakt - SLUT
@@ -2702,10 +2701,18 @@ a.knap-cykler_signature:hover {
         --auto-grid-min-size: 150px;
     }
 
-
 }
 
 @media (min-width: 450px) {
+
+    #splash a.cta,
+    #forside a.knap-cykler {
+        padding: 0.75rem 2rem;
+    }
+
+
+
+    /*** Cykler   ***/
     #cykler .auto-grid {
         --auto-grid-min-size: 200px;
     }
@@ -2719,9 +2726,12 @@ a.knap-cykler_signature:hover {
     }
 
 
+    .filter-koen {
+        width: 100px;
+        margin: 0 0 0 0.5rem;
+
+    }
 }
-
-
 
 
 @media (max-width: 800px) {
@@ -2920,6 +2930,10 @@ a.knap-cykler_signature:hover {
         font-size: 1rem;
     }
 
+    .kontakt-wrapper {
+        flex-direction: initial;
+
+    }
 
 
     /***    Cykler ***/
@@ -2997,28 +3011,6 @@ a.knap-cykler_signature:hover {
         display: none;
     }
 
-    /*
-    article.kategori_ebike {
-        background-size: 80vw;
-        background-position: 48vw;
-    }
-
-    article.kategori_city {
-        background-size: 80vw;
-        background-position: -30vw;
-    }
-
-    article.kategori_trekking {
-        background-size: 80vw;
-        background-position: 25vw;
-    }
-
-    article.kategori_racer {
-        background-size: 80vw;
-        background-position: -55vw;
-    }
-*/
-
 
 }
 
@@ -3050,8 +3042,6 @@ a.knap-cykler_signature:hover {
     }
 
     #om img {
-        /*        margin-top: 80px;*/
-        /*        margin-left: 60px;*/
         height: auto;
         width: 100%;
     }
@@ -3130,6 +3120,14 @@ a.knap-cykler_signature:hover {
     #cykler .top-tekst p {
         display: block;
         padding: 0 0 1rem;
+    }
+
+    .filter-koen {
+        margin: 0 0 1rem 0.5rem;
+    }
+
+    .filter-koen:last-child button.top-knapper {
+        margin: 0 0.5rem 0 0;
     }
 
     #mobil-filtrering {
@@ -3222,6 +3220,7 @@ a.knap-cykler_signature:hover {
             "ebike city trekking racer";
     }
 
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -3237,6 +3236,10 @@ a.knap-cykler_signature:hover {
 
     #splash .wrapper {
         grid-row-gap: 1.5rem;
+    }
+
+    .kontakt-wrapper {
+        flex-direction: column;
     }
 
 }
