@@ -231,6 +231,10 @@ button {
 
 }
 
+button:focus {
+    outline: none;
+
+}
 
 /***** Pile (benyttes bl.a. til knapper) *****/
 .up {
@@ -1528,19 +1532,21 @@ footer li > a.underline:hover:before {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 1rem 1rem 0;
 }
 
 #cykler .top-tekst {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #cykler .top-tekst p {
-    padding: 0 0 1rem;
+    display: none;
     max-width: 650px;
     text-align: center;
+    font-size: 0.85rem;
 }
 
 
@@ -1770,7 +1776,7 @@ button i {
     display: inline-block;
     padding: 3px;
     margin: 3px 8px;
-    display: block;
+    /*    display: block;*/
 }
 
 
@@ -3107,8 +3113,9 @@ a.knap-cykler_signature:hover {
             "sidebar modeller modeller modeller";
     }
 
-    #cykler .top-tekst {
-        display: none;
+    #cykler .top-tekst p {
+        display: block;
+        padding: 0 0 1rem;
     }
 
     #mobil-filtrering {
