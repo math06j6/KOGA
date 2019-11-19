@@ -729,7 +729,7 @@ a.github_link {
 }
 
 .social .fa:hover {
-    color: var(--one-color);
+    color: var(--five-color);
 }
 
 address,
@@ -1433,6 +1433,22 @@ footer li > a.underline:hover:before {
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+/***** Fade-in animation - Splash*****/
+.fade-in {
+    animation: fade-in 3.5s ease-in-out both;
+    /* display: none; */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /***** YouTube Video  - SLUT *****/
@@ -3066,8 +3082,12 @@ a.knap-cykler_signature:hover {
         /*        color: var(--five-color);*/
     }
 
-    .menu_wrapper li > a.underline:before {
+
+    .menu_wrapper li > a.underline:before,
+    footer .find > a.underline:hover:before,
+    footer li > a.underline:hover:before {
         background-color: var(--five-color);
+
     }
 
     /*Hover Animationer -> Header Menu  - SLUT*/
