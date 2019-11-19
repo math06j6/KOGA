@@ -1532,15 +1532,25 @@ footer li > a.underline:hover:before {
 }
 
 .filter-koen {
-    color: var(--twelve-color);
+    color: var(--five-color);
     background: 0;
     border: none;
-    padding: 1rem;
+    padding: 0.5rem;
     min-width: initial;
+    /* color: var(--one-color); */
+    background: var(--one-color);
+    border: 1px solid var(--five-color);
+    margin-bottom: 1rem;
+    min-width: initial;
+    font-size: 0.85rem;
+    transition: 0.4s;
+    margin: 0 0.5rem;
+    width: 100px;
 }
 
-.filter-koen:hover {
-    color: var(--five-color);
+.filter-koen {
+    background: var(--thirteen-color);
+
 }
 
 .sidebar {
@@ -1710,6 +1720,17 @@ footer li > a.underline:hover:before {
 .accordion .valgt,
 .top .valgt {
     color: var(--five-color);
+}
+
+
+.top .valgt {
+    color: var(--one-color);
+    background: var(--five-color);
+
+}
+
+.top .valgt:hover {
+    background: var(--thirteen-color);
 }
 
 /* Pile */
