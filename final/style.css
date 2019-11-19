@@ -3107,6 +3107,10 @@ a.knap-cykler_signature:hover {
             "sidebar modeller modeller modeller";
     }
 
+    #cykler .top-tekst {
+        display: none;
+    }
+
     #mobil-filtrering {
         display: none;
 
