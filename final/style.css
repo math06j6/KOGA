@@ -348,7 +348,7 @@ button {
 /***** Accordion/Collapsible *****/
 
 .accordion .filter-model,
-.accordion .filter-koen,
+/*.accordion .filter-koen,*/
 .accordion .filter-farve,
 .accordion .filter-vaegt,
 .accordion .filter-pris {
@@ -368,7 +368,7 @@ button {
 
 
 .accordion .filter-model:hover,
-.accordion .filter-koen:hover,
+/*.accordion .filter-koen:hover,*/
 .accordion .filter-farve:hover,
 .accordion .filter-vaegt:hover,
 .accordion .filter-pris:hover {
@@ -1453,15 +1453,13 @@ footer li > a.underline:hover:before {
     background: var(--two-color);
     padding: 0;
     grid-template-areas:
-        "hd"
         "sidebar"
-        "line"
-        "modeller"
-        "ft";
+        "køn"
+        "modeller";
 }
 
 #cykler .section-header {
-    grid-area: hd;
+    /*    grid-area: hd;*/
     padding: 2.7rem 0;
     background-color: var(--fourteen-color);
     text-align: center;
@@ -1501,6 +1499,7 @@ footer li > a.underline:hover:before {
     text-transform: none;
 }
 
+
 /*
 #cykler hr.streg {
     display: none;
@@ -1518,6 +1517,31 @@ footer li > a.underline:hover:before {
     padding: 0;
 }
 
+#cykler .top {
+    grid-area: køn;
+    /*
+    display: grid;
+    vertical-align: middle;
+    grid: row;
+    align-content: end;
+*/
+    display: flex;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.filter-koen {
+    color: var(--twelve-color);
+    background: 0;
+    border: none;
+    padding: 1rem;
+    min-width: initial;
+}
+
+.filter-koen:hover {
+    color: var(--five-color);
+}
 
 .sidebar {
     grid-area: sidebar;
@@ -1667,11 +1691,7 @@ footer li > a.underline:hover:before {
     transform: rotate(180deg);
 }
 
-
-
-
 .filter-model,
-.filter-koen,
 .filter-farve {
     color: var(--one-color);
     background: var(--five-color);
@@ -1681,15 +1701,14 @@ footer li > a.underline:hover:before {
 }
 
 .filter-model:hover,
-.filter-koen:hover,
+/*.filter-koen:hover,*/
 .filter-farve:hover {
     color: var(--five-color);
     background: 0;
 }
 
-
 .accordion .valgt,
-details .valgt {
+.top .valgt {
     color: var(--five-color);
 }
 
@@ -1717,88 +1736,6 @@ button .left {
 */
 
 /* Pile - Slut*/
-
-
-/****** ny-filtrering ******/
-#ny-filtrering .sortering button {
-    border-style: none;
-    padding: 0 1rem;
-    margin-right: 1rem;
-    margin-left: auto;
-}
-
-#ny-filtrering .sortering button:hover {
-    /*    background-color: var(--fourteen-color);*/
-    color: var(--one-color);
-}
-
-#ny-filtrering .dropdown {
-    height: 100%;
-    display: block;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    margin: 0 2rem;
-    padding: 1rem 0;
-}
-
-#ny-filtrering .dropbtn {
-    border: none;
-    outline: none;
-    color: var(--five-color);
-    font-size: 1rem;
-    padding: 1rem;
-    background-color: inherit;
-    text-decoration: underline;
-    margin: 0;
-    margin-left: 1rem;
-    padding: 0;
-}
-
-#ny-filtrering .dropbtn {
-    font-weight: 600;
-}
-
-#ny-filtrering .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-#ny-filtrering .sortering {
-    /*Sortering er skjult*/
-    display: none;
-    position: absolute;
-    background-color: var(--five-color);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    margin: 2rem 1rem;
-}
-
-#ny-filtrering .dropdown:hover .sortering {
-    /*  Sorterings muligheder åbner ved hover*/
-    display: block;
-}
-
-#ny-filtrering .sort {
-    background-color: transparent;
-    padding: 1rem;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    height: 100%;
-    font-weight: 300;
-}
-
-#ny-filtrering .valgte_retter {
-    margin-top: 4rem;
-}
-
-#ny-filtrering article p {
-    padding: 0px;
-    text-align: center;
-}
-
-/****** ny-filtrering ******/
 
 
 
@@ -3115,7 +3052,7 @@ a.knap-cykler_signature:hover {
         grid-gap: 1rem;
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
-            "hd      hd   hd   hd"
+            "køn      køn   køn   køn"
             "sidebar modeller modeller modeller";
     }
 
