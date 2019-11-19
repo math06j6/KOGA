@@ -932,31 +932,6 @@ footer .lokalitet :first-child {
 
 }
 
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-
-
-/* Knap: Tilbage til toppen SLUT*/
-
 /*------------------------------------*\
 6. KNAPPER - SLUT
 \*------------------------------------*/
@@ -964,7 +939,7 @@ footer .lokalitet :first-child {
 
 
 /*------------------------------------*\
-7. ANIMATIONER - SLUT
+7. ANIMATIONER
 \*------------------------------------*/
 
 /*Hover animation*/
@@ -1018,6 +993,43 @@ footer li > a.underline:hover:before {
 }
 
 /* Hover Animation - SLUT*/
+
+
+/* Fade-in animation - SLUT*/
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out both;
+}
+
+.fade-to {
+    animation: fadeIn 2.5s ease-in-out both;
+}
+
+.fade-tre {
+    animation: fadeIn 3.5s ease-in-out both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation - SLUT*/
 
 /*------------------------------------*\
 7. ANIMATIONER - SLUT
@@ -1435,21 +1447,6 @@ footer li > a.underline:hover:before {
     width: 100%;
 }
 
-/***** Fade-in animation - Splash*****/
-.fade-in {
-    animation: fade-in 3.5s ease-in-out both;
-    /* display: none; */
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 /***** YouTube Video  - SLUT *****/
 
@@ -1623,6 +1620,7 @@ footer li > a.underline:hover:before {
     --auto-grid-min-size: 140px;
 
     padding: 0;
+
 }
 
 #cykler .card-cykel {
@@ -2393,10 +2391,6 @@ table td p {
 8.4 About
 \*------------------------------------*/
 
-#om_koga_center .sectionwrapper iframe {
-    max-width: 100%;
-    max-height: 80%;
-}
 
 #om_koga_center h1 {
     text-align: center;
@@ -2509,10 +2503,6 @@ table td p {
     }
 
 
-    #om_koga_center iframe {
-        height: 30vw;
-    }
-
     #om_koga_center h2 {
         margin-left: 1.5rem;
         margin-bottom: 2rem;
@@ -2521,9 +2511,6 @@ table td p {
     #service figure {
         padding: 1.5rem 0;
     }
-
-
-
 
 }
 
@@ -2611,8 +2598,6 @@ table td p {
 
 
 #kontakt_side .kort_map iframe {
-    max-width: 100%;
-    max-height: 80vw;
     padding: 1.5rem 0;
 }
 
