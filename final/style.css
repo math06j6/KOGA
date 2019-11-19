@@ -2633,15 +2633,15 @@ table td p {
     text-transform: uppercase;
     min-width: 120px;
     color: var(--one-color);
-    background: var(--thirteen-color);
+    background: var(--five-color);
     border: 1px solid var(--five-color);
     transition: 0.4s;
 
 }
 
 a.knap-cykler_signature:hover {
-    color: var(--five-color);
-    background: var(--one-color);
+    color: white;
+    background: var(--thirteen-color);
     border: solid var(--five-color) 1px;
 }
 
