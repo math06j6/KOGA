@@ -1560,8 +1560,8 @@ footer li > a.underline:hover:before {
     min-width: initial;
     /* color: var(--one-color);
 */
-     background: 0;
-/*    background: var(--one-color);*/
+    background: 0;
+    /*    background: var(--one-color);*/
     border: 1px solid var(--five-color);
     min-width: initial;
     font-size: 0.85rem;
@@ -1850,12 +1850,13 @@ button .left {
     transition: all .5s linear;
     border: 0;
     width: 100%;
-    padding: 0;
     min-width: 150px;
     font-weight: 700;
     cursor: pointer;
     min-width: 150px;
     font-weight: 500;
+    padding: 0;
+    padding: 0 0.05rem 0;
 }
 
 
