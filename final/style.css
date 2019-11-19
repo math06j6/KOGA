@@ -1526,10 +1526,32 @@ footer li > a.underline:hover:before {
     align-content: end;
 */
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+#cykler .top-tekst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cykler .top-tekst p {
+    padding: 0 0 1rem;
+    max-width: 650px;
+    text-align: center;
+}
+
+
+#cykler .top-knapper {
+    grid-area: køn;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    padding: 0;
 }
+
 
 .filter-koen {
     color: var(--five-color);
@@ -1540,15 +1562,20 @@ footer li > a.underline:hover:before {
     /* color: var(--one-color); */
     background: var(--one-color);
     border: 1px solid var(--five-color);
-    margin-bottom: 1rem;
     min-width: initial;
     font-size: 0.85rem;
     transition: 0.4s;
     margin: 0 0.5rem;
     width: 100px;
+    margin: 0 0 1rem 0.5rem;
 }
 
-.filter-koen {
+.filter-koen:last-child button.top-knapper {
+    margin: 0 0.5rem 0 0;
+}
+
+.filter-koen:hover {
+    color: var(--one-color);
     background: var(--thirteen-color);
 
 }
