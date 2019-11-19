@@ -1770,7 +1770,7 @@ button i {
     display: inline-block;
     padding: 3px;
     margin: 3px 8px;
-
+    display: block;
 }
 
 
@@ -1801,6 +1801,7 @@ button .left {
     display: inline-block;
     padding: 3px;
     margin: 3px 8px;
+    display: block;
 }
 
 #cykler button:hover i {}
