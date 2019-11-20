@@ -243,6 +243,7 @@
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
+            document.querySelector(".sorter-pris.valgt").classList.remove("valgt");
             hentJson();
             addEventListenersToButtons();
             addEventListenerSignature();
@@ -338,7 +339,6 @@
                 })
 
             }
-
 
             document.querySelector(".sorter-pris.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
             this.classList.add("valgt") // marker den nyvalgte knap
