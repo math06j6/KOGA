@@ -231,7 +231,6 @@
             const knap = document.querySelector('button[data-cykeltype=' + filterModel + ']');
             document.querySelectorAll("#inddeling").textContent = filterModel;
             document.querySelector(".filter-model.valgt").classList.remove("valgt");
-            document.querySelector(".sorter-pris.valgt").classList.remove("valgt");
             knap.classList.add("valgt");
             //            knap.parentElement.classList.add("active");
 
@@ -340,8 +339,9 @@
 
             }
 
-            this.classList.remove("valgt");
-            this.classList.add("valgt");
+
+            document.querySelector(".sorter-pris.valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
+            this.classList.add("valgt") // marker den nyvalgte knap
 
             visCykler();
 
@@ -405,5 +405,8 @@
 
 
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
