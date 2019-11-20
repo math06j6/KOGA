@@ -14,13 +14,17 @@ INDHOLDSFORTEGNELSE:
 7. ANIMATIONER
 8. STYLING AF SPECIFIKKE SIDER
     8.1 FORSIDE
-    8.2 ???
-    8.3
-    8.4
+    8.2 Cykler
+    8.3 Singleview
+    8.4 Om Koga Center
+    8.5 Kontakt
+    8.6 KOGA Signature
 9. MEDIA QUERIES
 
 ****************************************
 \*------------------------------------*/
+
+
 
 /*------------------------------------*\
 1: VARIABLER
@@ -38,11 +42,11 @@ INDHOLDSFORTEGNELSE:
     --eight-color: #B7D8EE;
     --nine-color: #27333B;
     --ten-color: #6E7D87;
+
+    /* Vores tilføjelser */
     --twelve-color: #313131;
     --thirteen-color: rgba(14, 125, 199, 0.8);
     --fourteen-color: rgba(14, 125, 199, 0.6);
-
-
 }
 
 /*------------------------------------*\
@@ -100,6 +104,7 @@ ul {
 /*------------------------------------*\
 2. LAYOUT - SLUT
 \*------------------------------------*/
+
 
 /*------------------------------------*\
 3. TYPOGRAFI
@@ -316,10 +321,6 @@ button:focus {
     content: "/\00a0";
 }
 
-/*
-#breadcrumb li:before {
-    content: " / "
-}*/
 
 #breadcrumbs li:first-child:before {
     content: normal;
@@ -342,8 +343,6 @@ button:focus {
 #breadcrumbs li:hover {
     color: var(--five-color);
 }
-
-
 
 /***** Breadcrumbs - Slut *****/
 
@@ -381,6 +380,7 @@ button:focus {
 }
 
 /***** Accordion/Collapsible - Slut *****/
+
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
 \*------------------------------------*/
@@ -423,12 +423,8 @@ nav {
     background-color: var(--twelve-color);
 }
 
-
-
 .menuTop {
     background-color: var(--twelve-color);
-
-
 }
 
 .menu_bottom {
@@ -499,13 +495,9 @@ nav {
 .menu_wrapper li {
     font-size: 1rem;
     cursor: pointer;
-    /*    margin: auto 0;*/
-    /*    padding: 1.25rem;*/
     text-align: center;
-    /*    height: 100%;*/
     text-transform: uppercase;
     font-weight: 500;
-
 
 }
 
@@ -518,8 +510,6 @@ nav {
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     padding: 1rem;
-
-
 }
 
 .menu_wrapper li:hover,
@@ -532,12 +522,10 @@ li.menu_ikon {
 }
 
 
-
 /* Styling af dropdown knap + content */
 
 .dropdown {
     height: 100%;
-
 }
 
 .dropdown .dropbtn {
@@ -630,6 +618,7 @@ a.hjem:active .nyt_logo {
 
 /* logo - slut */
 
+
 /* Styling af link i navigations bar */
 a.hjem {
     color: var(--one-color);
@@ -681,6 +670,7 @@ a.hjem:active p {
 /*------------------------------------*\
 4. HEADER - SLUT
 \*------------------------------------*/
+
 
 
 /*------------------------------------*\
@@ -839,8 +829,6 @@ footer .lokalitet :first-child {
     flex-wrap: nowrap;
 }
 
-
-
 .dage ul,
 .tider ul {
     padding: 0;
@@ -854,6 +842,8 @@ footer .lokalitet :first-child {
 /*------------------------------------*\
 5. FOOTER - SLUT
 \*------------------------------------*/
+
+
 
 /*------------------------------------*\
 6. KNAPPER
@@ -1072,8 +1062,6 @@ footer li > a.underline:hover:before {
 }
 
 #splash p {
-    /*    font-family: 'Racing Sans One', cursive;*/
-    /*    font-family: 'Wallpoet', cursive;*/
     max-width: 400px;
     font-size: 0.85rem;
     color: white;
@@ -1103,7 +1091,6 @@ footer li > a.underline:hover:before {
     min-width: 60vw;
     max-width: 25%;
     filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
-    /*    min-width: 200px;*/
     max-width: 25%;
 }
 
@@ -1136,15 +1123,10 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--one-color);
 }
 
-
-
-
-
 /***** Splash - Slut *****/
 
+
 /***** forside ******/
-
-
 
 #forside .card-header,
 #forside .card-bottom {
@@ -1226,7 +1208,6 @@ footer li > a.underline:hover:before {
 #forside .card-forside:focus-within,
 #forside-signature .signature-wrapper:hover,
 #forside-signature .signature-wrapper:focus-within {
-    /*    background: #111111;*/
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
     -webkit-transform: translateY(-0.5rem);
     transform: translateY(-0.5rem);
@@ -1234,13 +1215,7 @@ footer li > a.underline:hover:before {
 }
 
 #forside .card-forside {
-    /*    padding: 5rem 1rem;*/
     text-align: center;
-    /*    background: var(--one-color);*/
-    /*
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-*/
 
     width: 100%;
     height: 100%;
@@ -1273,31 +1248,19 @@ footer li > a.underline:hover:before {
     grid-area: city;
     background-image: url(files/images/city6.jpg);
     background-position: 90% 0%;
-    /*
-    background-size: 110vw;
-    background-position: -55vw;
-*/
 }
 
 .kategori_trekking {
     grid-area: trekking;
     background-image: url(files/images/trekking1.jpg);
     background-position: 100% 0;
-    /*
-    background-size: 110vw;
-    background-position: -65vw;
-*/
-
 }
 
 .kategori_racer {
     grid-area: racer;
     background-image: url(files/images/race1.jpg);
     background-position: 100% 100%;
-    /*
-    background-size: 110vw;
-    background-position: -65vw;
-*/
+
 }
 
 .test-container > div {
@@ -1320,8 +1283,6 @@ footer li > a.underline:hover:before {
 }
 
 /***** Test SLUT******/
-
-
 
 
 
@@ -1399,11 +1360,7 @@ footer li > a.underline:hover:before {
 #forside-signature a.knap-cykler {
     text-decoration: none;
     cursor: pointer;
-    font-family: futura-pt,
-        Arial,
-        Helvetica,
-        Roboto,
-        sans-serif;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
@@ -1492,18 +1449,6 @@ footer li > a.underline:hover:before {
     text-transform: none;
 }
 
-
-/*
-#cykler hr.streg {
-    display: none;
-    grid-area: line;
-
-    margin: 0 1rem;
-    border: 1px solid var(--four-color);
-
-}
-*/
-
 #cykler .grid-container {
     grid-area: modeller;
     margin: 1rem;
@@ -1512,12 +1457,6 @@ footer li > a.underline:hover:before {
 
 #cykler .top {
     grid-area: køn;
-    /*
-    display: grid;
-    vertical-align: middle;
-    grid: row;
-    align-content: end;
-*/
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -1590,11 +1529,9 @@ footer li > a.underline:hover:before {
     --auto-grid-min-size: 140px;
 
     padding: 0;
-
 }
 
 #cykler .card-cykel {
-    /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--one-color);
     padding: 0rem 1rem;
@@ -1667,10 +1604,6 @@ footer li > a.underline:hover:before {
     max-width: 1400px;
     padding: 0rem;
     margin: 0 auto;
-    /*
-    top: 20vh;
-    margin-bottom: 108px;
-*/
     background-color: var(--one-color);
     overflow-y: auto;
     max-height: 100vh;
@@ -1729,7 +1662,6 @@ footer li > a.underline:hover:before {
 }
 
 .filter-model:hover,
-/*.filter-koen:hover,*/
 .filter-farve:hover {
     color: var(--five-color);
     background: 0;
@@ -1763,16 +1695,6 @@ button i {
     /*    display: block;*/
 }
 
-
-
-/* Pile */
-
-/*
-button .left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-}
-*/
 
 /* Pile - Slut*/
 
@@ -1823,7 +1745,6 @@ button .left {
     margin: 0;
 }
 
-
 .acc {
     background: inherit;
     font-weight: 700;
@@ -1873,14 +1794,12 @@ button .left {
     justify-content: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-
 }
 
 
 .accordion-item {
     padding: 0 2rem;
 }
-
 
 /* Roter pile tilbage*/
 .rotate_tilbage {
@@ -1931,36 +1850,6 @@ button .left {
 
 }
 
-
-/*
-.accordion .collapse-title::after {
-    position: absolute;
-    float: right;
-    right: 1rem;
-    font-size: 1rem;
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-        border: 1px solid var(--twelve-color);
-    text-align: center;
-    -moz-transition: all .5s linear;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
-    content: "+";
-}
-*/
-/*
-.accordion .collapse-title.active::after {
-    color: var(--five-color);
-    border: 1px solid var(--five-color);
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-*/
-
 .accordion-knap {
     all: inherit;
     border: 0;
@@ -1976,6 +1865,7 @@ button .left {
 }
 
 /****** Accordion Slut ******/
+
 /*------------------------------------*\
 8.2 CYKLER - SLUT
 \*------------------------------------*/
@@ -2014,8 +1904,6 @@ button .left {
 .single-content {
     max-width: 800px;
 }
-
-/* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
 
 .luk {
     font-size: 1rem;
@@ -2064,7 +1952,6 @@ button .left {
     text-align: right;
     padding: 0px 20px 0 0;
     font-size: 1.5rem;
-
 }
 
 .pris_style {
@@ -2077,12 +1964,6 @@ button .left {
 .praesentation {
     padding: 20px;
     color: var(--three-color);
-
-    /*  Kommentar: Nedstående er udkommenteret for ændre på forholdet i mellem brødtekst og overskrifter */
-    /*
-    font-size: 1.2rem;
-    font-weight: bold;
-*/
 }
 
 .vmf_box {
@@ -2097,8 +1978,6 @@ button .left {
     padding: 5px 10px
 }
 
-
-
 .singleview_overskrift {
     margin: 30px 20px;
     font-size: 1.6rem;
@@ -2109,9 +1988,7 @@ button .left {
 #singleview .grid_boks {
     max-width: 1400px;
     margin: 0 auto;
-
 }
-
 
 
 .fordel1,
@@ -2169,8 +2046,6 @@ button .left {
     padding: 10px 30px;
 }
 
-
-
 .laes_mere_link {
     align-self: center;
     text-decoration: none;
@@ -2214,14 +2089,10 @@ button .left {
         background-color: white;
     }
 
-    /*her har i sat en højde på, der gør at footeren skraber over*/
-
     .grid_boks {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
     }
-
 
     .title_box {
         grid-area: 1 / 2 / 1 / 2;
@@ -2249,7 +2120,6 @@ button .left {
     }
 
     .fordele_box {
-        /*        border-top: 1px solid #b1adad;*/
         background-color: #EEEFEF;
         padding-bottom: 50px;
         padding-top: 50px;
@@ -2310,52 +2180,11 @@ button .left {
     }
 }
 
-/*
-table {
-    border-collapse: collapse;
-    text-align: left;
-    width: 100%;
-    margin: 2rem 0 1rem;
-}
-
-table tr {
-    background: var(--one-color);
-    border-bottom: 1px solid
-}
-
-table th,
-table td {
-    padding: 10px 20px;
-}
-
-table td span {
-    background: var(--two-color);
-    color: var(--three-color);
-    display: none;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 5px;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0;
-    left: 0;
-
-}
-
-table td p {
-    padding: 0;
-    text-transform: capitalize;
-
-}
-*/
-
-
-
-
-
 /*------------------------------------*\
 8.3 Singleview - SLUT
 \*------------------------------------*/
+
+
 
 /*------------------------------------*\
 8.4 Om Koga Center
@@ -2812,12 +2641,7 @@ a.knap-cykler_signature:hover {
 
 
     .topnav responsive a:hover,
-    a.menubtn:hover {
-        /*
-        background: var(--one-color);
-        color: var(--two-color);
-*/
-    }
+    a.menubtn:hover {}
 
     .dropdown-content a.menubtn:hover {
         background: #2C2C2C;
