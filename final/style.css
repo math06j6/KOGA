@@ -355,7 +355,7 @@ button:focus {
 /*.accordion .filter-koen,*/
 .accordion .filter-farve,
 .accordion .filter-vaegt,
-.accordion .filter-pris {
+.accordion .sorter-pris {
     color: var(--twelve-color);
     background: 0;
     border: none;
@@ -375,7 +375,7 @@ button:focus {
 /*.accordion .filter-koen:hover,*/
 .accordion .filter-farve:hover,
 .accordion .filter-vaegt:hover,
-.accordion .filter-pris:hover {
+.accordion .sorter-pris:hover {
     /*    background-color: var(--eight-color);*/
     color: var(--five-color);
 }
