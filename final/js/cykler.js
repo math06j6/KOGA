@@ -46,13 +46,11 @@
       liste.textContent = "";
 
       posts.forEach(post => {
-          console.log(post.koen[0])
 
           if ((filterModel == "alle" || filterModel == post.cykeltype[0]) && (filterKoen == "alle" || filterKoen == post.koen[0])) {
 
-
               const klon = skabelon.cloneNode(true).content;
-              console.log(klon)
+
               klon.querySelector(".billede_1").src = post.billede_side.guid;
               klon.querySelector(".cykelmodel").textContent = post.cykelmodel;
               klon.querySelector(".cykeltype_cykler").textContent = post.cykeltype;
@@ -149,9 +147,7 @@
 
 
   //////////////////////////////////////////////////////////////////
-  //////Accordion til filtrering//////
-
-
+  /////-----Accordion til filtrering-----/////
 
   items.forEach(item => item.addEventListener('click', toggleAccordion));
 
