@@ -396,6 +396,7 @@ button:focus {
     top: 0;
     width: 100%;
     z-index: 10;
+    background: var(--twelve-color);
 }
 
 .topnav {
@@ -437,6 +438,7 @@ nav {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin: 0 auto;
+    z-index: 1;
 
 }
 
@@ -1046,6 +1048,7 @@ footer li > a.underline:hover:before {
     right: 200px;
     position: relative;
     z-index: 0;
+    background-color: var(--twelve-color);
 
 }
 
