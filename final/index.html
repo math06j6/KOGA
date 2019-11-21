@@ -18,8 +18,6 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/sbr1wbe.css">
-    <!-- googlefont forslag-->
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Bowlby+One|Jockey+One|Racing+Sans+One|Wallpoet&display=swap" rel="stylesheet">
     <!--  Vi gør brug af ikoner fra Font Awesome - via W3schools.
    Link: https://www.w3schools.com/icons/fontawesome_icons_intro.asp  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,82 +26,25 @@
 <body>
     <header class="site_header">
         <!--       Vores Menu Loades med JS -->
-        <nav id="myTopnav" class="topnav">
-            <!--       Vores Menu indsættes med JS -->
-            <div class="menuTop">
-                <div class="navbar">
-                    <div class="home">
-                        <div class="logo-container">
-                            <a href="index.html" class="hjem">
-                                <div class="nyt_logo"></div>
-                            </a>
-                        </div>
-                        <div class="menuknap">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                        </div>
-                    </div>
-                    <div class="menu_wrapper">
-                        <a href="om.html" class="menubtn">Om os
-                        </a>
-                        <div class="dropdown">
-                            <a href="cykler.html" class="dropbtn">Cykler</a>
-                            <!--                 <a href="cykler.html" class="dropbtn underline">Cykler</a>-->
-                            <div class="dropdown-content">
-                                <a href="cykler.html" class="menubtn">Elcykler</a>
-                                <a href="cykler.html" class="menubtn">City cykler</a>
-                                <a href="cykler.html" class="menubtn">Trekking</a>
-                                <a href="cykler.html" class="menubtn">Racercykler</a>
-                                <a href="signature.html" class="menubtn">Signature</a>
-                            </div>
-                        </div>
-                        <a href="kontakt.html" class="menubtn underline">Kontakt
-                        </a>
-                    </div>
-                    <!--
-            <ul>
-
-                <li>
-                    <a href="cykler.html" class="dropbtn underline">Cykler
-                    </a>
-                </li>
-                <li>
-
-                </li>
-                <li>
-
-                </li>
-                <li class="menu_ikon">
-                    <div class="searchButton"></div>
-
-                </li>
-                <input type="text" placeholder="Search..">
-            </ul>
--->
-
-                </div>
-            </div>
-
-        </nav>
+        <nav id="myTopnav" class="topnav"></nav>
     </header>
     <main>
         <section id="splash">
-            <video autoplay muted loop id="myVideo">
-                <source src="video/myVideo.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline muted id="video-bg" poster="files/images/videofoto.jpg">
+                <source src="files/video/myVideo.mp4" type="video/mp4">
             </video>
-            <a href="index.html#forside">
+            <a href="index.html#forside" class="fade-in">
                 <div class="pulse" id="splash_arrow"></div>
             </a>
             <div class="wrapper">
                 <figure>
-                    <img src="files/svg/nyt_logo.svg" alt="Logo">
+                    <img class="fade-in" src="files/svg/nyt_logo.svg" alt="Logo">
                 </figure>
-                <p>Vores butik er den eneste i verden kun med KOGA cykler. Besøg os og få professionel rådgivning samt en prøvetur og mærk forskellen..</p>
+                <p class="fade-in">Vores butik er den eneste i verden kun med KOGA cykler. Besøg os og få professionel rådgivning samt en prøvetur og mærk forskellen..</p>
                 <!--<p>Den eneste butik på verdensplan kun med Koga cykler.<br>Besøg butikken for professionel rådgivning samt en<br>prøvetur og mærk forskellen..</p>-->
                 <div class="card-bottom">
                     <!-- CTA = Forkortelse for Call to Action-->
-                    <a href="cykler.html" class="cta">Se vores cykler</a>
+                    <a href="cykler.html" class="cta fade-in">Se vores cykler</a>
                 </div>
             </div>
         </section>
@@ -252,7 +193,7 @@
             </address>
         </div>
     </footer>
-    <script src="script.js"> </script>
+    <script src="js/script.js"> </script>
     <script>
         document.addEventListener("DOMContentLoaded", start);
 
@@ -260,18 +201,6 @@
             console.log("sidenVises");
             addEventListenerSignature();
         }
-        //
-        //        function addEventListenersCards() {
-        //            //Ved klik på "Cards" går man til cykel kollektionen
-        //            document.querySelectorAll(".card-forside").forEach(elm => {
-        //
-        //                elm.addEventListener("click", () => {
-        //                    location.href = `cykler.html?filterModel=`;
-        //                })
-        //
-        //
-        //            })
-        //        }
 
         function addEventListenerSignature() {
             //Ved klik på Koga Signature går man til signature.html

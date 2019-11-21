@@ -14,13 +14,17 @@ INDHOLDSFORTEGNELSE:
 7. ANIMATIONER
 8. STYLING AF SPECIFIKKE SIDER
     8.1 FORSIDE
-    8.2 ???
-    8.3
-    8.4
+    8.2 Cykler
+    8.3 Singleview
+    8.4 Om Koga Center
+    8.5 Kontakt
+    8.6 KOGA Signature
 9. MEDIA QUERIES
 
 ****************************************
 \*------------------------------------*/
+
+
 
 /*------------------------------------*\
 1: VARIABLER
@@ -38,11 +42,11 @@ INDHOLDSFORTEGNELSE:
     --eight-color: #B7D8EE;
     --nine-color: #27333B;
     --ten-color: #6E7D87;
+
+    /* Vores tilføjelser */
     --twelve-color: #313131;
     --thirteen-color: rgba(14, 125, 199, 0.8);
     --fourteen-color: rgba(14, 125, 199, 0.6);
-
-
 }
 
 /*------------------------------------*\
@@ -101,6 +105,7 @@ ul {
 2. LAYOUT - SLUT
 \*------------------------------------*/
 
+
 /*------------------------------------*\
 3. TYPOGRAFI
 \*------------------------------------*/
@@ -158,6 +163,14 @@ h4 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.2rem;
+    font-style: normal;
+}
+
+h5 {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
     font-style: normal;
 }
 
@@ -223,6 +236,10 @@ button {
 
 }
 
+button:focus {
+    outline: none;
+
+}
 
 /***** Pile (benyttes bl.a. til knapper) *****/
 .up {
@@ -295,19 +312,15 @@ button {
     display: inline;
     color: var(--three-color);
     /*    color: var(--twelve-color);*/
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 #breadcrumbs ul li + li:before {
     padding: 8px;
-    color: black;
+    color: inherit;
     content: "/\00a0";
 }
 
-/*
-#breadcrumb li:before {
-    content: " / "
-}*/
 
 #breadcrumbs li:first-child:before {
     content: normal;
@@ -315,19 +328,21 @@ button {
 
 #breadcrumbs li a {
     color: var(--three-color);
-    /*    color: var(--twelve-color);*/
+    color: var(--twelve-color);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
+}
+
+#breadcrumbs li:last-child a {
+    color: var(--five-color);
 }
 
 #breadcrumbs li:hover a,
 #breadcrumbs li:hover {
     color: var(--five-color);
 }
-
-
 
 /***** Breadcrumbs - Slut *****/
 
@@ -336,10 +351,10 @@ button {
 /***** Accordion/Collapsible *****/
 
 .accordion .filter-model,
-.accordion .filter-koen,
+/*.accordion .filter-koen,*/
 .accordion .filter-farve,
 .accordion .filter-vaegt,
-.accordion .filter-pris {
+.accordion .sorter-pris {
     color: var(--twelve-color);
     background: 0;
     border: none;
@@ -356,15 +371,16 @@ button {
 
 
 .accordion .filter-model:hover,
-.accordion .filter-koen:hover,
+/*.accordion .filter-koen:hover,*/
 .accordion .filter-farve:hover,
 .accordion .filter-vaegt:hover,
-.accordion .filter-pris:hover {
+.accordion .sorter-pris:hover {
     /*    background-color: var(--eight-color);*/
     color: var(--five-color);
 }
 
 /***** Accordion/Collapsible - Slut *****/
+
 /*------------------------------------*\
 3. TYPOGRAFI - SLUT
 \*------------------------------------*/
@@ -380,6 +396,7 @@ button {
     top: 0;
     width: 100%;
     z-index: 10;
+    background: var(--twelve-color);
 }
 
 .topnav {
@@ -407,12 +424,8 @@ nav {
     background-color: var(--twelve-color);
 }
 
-
-
 .menuTop {
     background-color: var(--twelve-color);
-
-
 }
 
 .menu_bottom {
@@ -425,6 +438,7 @@ nav {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin: 0 auto;
+    z-index: 1;
 
 }
 
@@ -483,13 +497,9 @@ nav {
 .menu_wrapper li {
     font-size: 1rem;
     cursor: pointer;
-    /*    margin: auto 0;*/
-    /*    padding: 1.25rem;*/
     text-align: center;
-    /*    height: 100%;*/
     text-transform: uppercase;
     font-weight: 500;
-
 
 }
 
@@ -502,8 +512,6 @@ nav {
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     padding: 1rem;
-
-
 }
 
 .menu_wrapper li:hover,
@@ -516,12 +524,10 @@ li.menu_ikon {
 }
 
 
-
 /* Styling af dropdown knap + content */
 
 .dropdown {
     height: 100%;
-
 }
 
 .dropdown .dropbtn {
@@ -614,6 +620,7 @@ a.hjem:active .nyt_logo {
 
 /* logo - slut */
 
+
 /* Styling af link i navigations bar */
 a.hjem {
     color: var(--one-color);
@@ -667,6 +674,7 @@ a.hjem:active p {
 \*------------------------------------*/
 
 
+
 /*------------------------------------*\
 5. FOOTER
 \*------------------------------------*/
@@ -713,7 +721,7 @@ a.github_link {
 }
 
 .social .fa:hover {
-    color: var(--one-color);
+    color: var(--five-color);
 }
 
 address,
@@ -823,8 +831,6 @@ footer .lokalitet :first-child {
     flex-wrap: nowrap;
 }
 
-
-
 .dage ul,
 .tider ul {
     padding: 0;
@@ -838,6 +844,8 @@ footer .lokalitet :first-child {
 /*------------------------------------*\
 5. FOOTER - SLUT
 \*------------------------------------*/
+
+
 
 /*------------------------------------*\
 6. KNAPPER
@@ -916,31 +924,6 @@ footer .lokalitet :first-child {
 
 }
 
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-
-
-/* Knap: Tilbage til toppen SLUT*/
-
 /*------------------------------------*\
 6. KNAPPER - SLUT
 \*------------------------------------*/
@@ -948,7 +931,7 @@ footer .lokalitet :first-child {
 
 
 /*------------------------------------*\
-7. ANIMATIONER - SLUT
+7. ANIMATIONER
 \*------------------------------------*/
 
 /*Hover animation*/
@@ -1003,6 +986,43 @@ footer li > a.underline:hover:before {
 
 /* Hover Animation - SLUT*/
 
+
+/* Fade-in animation - SLUT*/
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out both;
+}
+
+.fade-to {
+    animation: fadeIn 2.5s ease-in-out both;
+}
+
+.fade-tre {
+    animation: fadeIn 3.5s ease-in-out both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation - SLUT*/
+
 /*------------------------------------*\
 7. ANIMATIONER - SLUT
 \*------------------------------------*/
@@ -1021,13 +1041,14 @@ footer li > a.underline:hover:before {
 
 /*****SPLASH BAGGRUNDSVIDEO****/
 
-#myVideo {
+#video-bg {
     width: 200vw;
     height: 100%;
     top: 0px;
     right: 200px;
     position: relative;
     z-index: 0;
+    background-color: var(--twelve-color);
 
 }
 
@@ -1044,8 +1065,6 @@ footer li > a.underline:hover:before {
 }
 
 #splash p {
-    /*    font-family: 'Racing Sans One', cursive;*/
-    /*    font-family: 'Wallpoet', cursive;*/
     max-width: 400px;
     font-size: 0.85rem;
     color: white;
@@ -1075,7 +1094,6 @@ footer li > a.underline:hover:before {
     min-width: 60vw;
     max-width: 25%;
     filter: invert(100%) sepia(28%) saturate(0%) hue-rotate(68deg) brightness(113%) contrast(100%);
-    /*    min-width: 200px;*/
     max-width: 25%;
 }
 
@@ -1085,10 +1103,10 @@ footer li > a.underline:hover:before {
     cursor: pointer;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.4;
     font-style: normal;
-    padding: 0.75rem 2rem;
+    padding: 0.5rem 1.5rem;
     text-transform: uppercase;
     min-width: 120px;
     color: var(--one-color);
@@ -1096,7 +1114,6 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--five-color);
     transition: 0.4s;
 }
-
 
 #splash a.cta:hover,
 #splash a.cta:active,
@@ -1109,15 +1126,10 @@ footer li > a.underline:hover:before {
     border: 1px solid var(--one-color);
 }
 
-
-
-
-
 /***** Splash - Slut *****/
 
+
 /***** forside ******/
-
-
 
 #forside .card-header,
 #forside .card-bottom {
@@ -1199,7 +1211,6 @@ footer li > a.underline:hover:before {
 #forside .card-forside:focus-within,
 #forside-signature .signature-wrapper:hover,
 #forside-signature .signature-wrapper:focus-within {
-    /*    background: #111111;*/
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
     -webkit-transform: translateY(-0.5rem);
     transform: translateY(-0.5rem);
@@ -1207,13 +1218,7 @@ footer li > a.underline:hover:before {
 }
 
 #forside .card-forside {
-    /*    padding: 5rem 1rem;*/
     text-align: center;
-    /*    background: var(--one-color);*/
-    /*
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-*/
 
     width: 100%;
     height: 100%;
@@ -1246,31 +1251,19 @@ footer li > a.underline:hover:before {
     grid-area: city;
     background-image: url(files/images/city1.jpg);
     background-position: 90% 0%;
-    /*
-    background-size: 110vw;
-    background-position: -55vw;
-*/
 }
 
 .kategori_trekking {
     grid-area: trekking;
     background-image: url(files/images/trekking1.jpg);
     background-position: 100% 0;
-    /*
-    background-size: 110vw;
-    background-position: -65vw;
-*/
-
 }
 
 .kategori_racer {
     grid-area: racer;
     background-image: url(files/images/race1.jpg);
     background-position: 100% 100%;
-    /*
-    background-size: 110vw;
-    background-position: -65vw;
-*/
+
 }
 
 .test-container > div {
@@ -1293,8 +1286,6 @@ footer li > a.underline:hover:before {
 }
 
 /***** Test SLUT******/
-
-
 
 
 
@@ -1372,11 +1363,7 @@ footer li > a.underline:hover:before {
 #forside-signature a.knap-cykler {
     text-decoration: none;
     cursor: pointer;
-    font-family: futura-pt,
-        Arial,
-        Helvetica,
-        Roboto,
-        sans-serif;
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
@@ -1399,28 +1386,6 @@ footer li > a.underline:hover:before {
 /******signature boks på forside SLUT******/
 
 
-
-
-/*** YouTube Video er en mulighed ***/
-.video_wrapper {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    position: relative;
-    margin-top: 1rem;
-}
-
-#youtubeVideo {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-/***** YouTube Video  - SLUT *****/
-
 /*------------------------------------*\
 8.1 FORSIDE - SLUT
 \*------------------------------------*/
@@ -1441,15 +1406,13 @@ footer li > a.underline:hover:before {
     background: var(--two-color);
     padding: 0;
     grid-template-areas:
-        "hd"
         "sidebar"
-        "line"
-        "modeller"
-        "ft";
+        "køn"
+        "modeller";
 }
 
 #cykler .section-header {
-    grid-area: hd;
+    /*    grid-area: hd;*/
     padding: 2.7rem 0;
     background-color: var(--fourteen-color);
     text-align: center;
@@ -1489,23 +1452,65 @@ footer li > a.underline:hover:before {
     text-transform: none;
 }
 
-/*
-#cykler hr.streg {
-    display: none;
-    grid-area: line;
-
-    margin: 0 1rem;
-    border: 1px solid var(--four-color);
-
-}
-*/
-
 #cykler .grid-container {
     grid-area: modeller;
     margin: 1rem;
     padding: 0;
 }
 
+#cykler .top {
+    grid-area: køn;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 1rem 1rem 0;
+}
+
+#cykler .top-tekst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#cykler .top-tekst p {
+    display: none;
+    max-width: 650px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+
+#cykler .top-knapper {
+    grid-area: køn;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+
+.filter-koen {
+    color: var(--five-color);
+    border: none;
+    padding: 0.5rem;
+    min-width: initial;
+    background: 0;
+    /*    background: var(--one-color);*/
+    border: 1px solid var(--five-color);
+    min-width: initial;
+    font-size: 0.85rem;
+    transition: 0.4s;
+
+    margin: auto;
+    min-width: 80px;
+}
+
+.filter-koen:hover {
+    color: var(--one-color);
+    background: var(--thirteen-color);
+
+}
 
 .sidebar {
     grid-area: sidebar;
@@ -1530,7 +1535,6 @@ footer li > a.underline:hover:before {
 }
 
 #cykler .card-cykel {
-    /*    padding: 5rem 1rem;*/
     text-align: center;
     background: var(--one-color);
     padding: 0rem 1rem;
@@ -1603,10 +1607,6 @@ footer li > a.underline:hover:before {
     max-width: 1400px;
     padding: 0rem;
     margin: 0 auto;
-    /*
-    top: 20vh;
-    margin-bottom: 108px;
-*/
     background-color: var(--one-color);
     overflow-y: auto;
     max-height: 100vh;
@@ -1655,11 +1655,7 @@ footer li > a.underline:hover:before {
     transform: rotate(180deg);
 }
 
-
-
-
 .filter-model,
-.filter-koen,
 .filter-farve {
     color: var(--one-color);
     background: var(--five-color);
@@ -1669,123 +1665,41 @@ footer li > a.underline:hover:before {
 }
 
 .filter-model:hover,
-.filter-koen:hover,
 .filter-farve:hover {
     color: var(--five-color);
     background: 0;
 }
 
-
 .accordion .valgt,
-details .valgt {
+.top .valgt {
     color: var(--five-color);
+}
+
+
+.top .valgt {
+    color: var(--one-color);
+    background: var(--five-color);
+
+}
+
+.top .valgt:hover {
+    background: var(--thirteen-color);
 }
 
 /* Pile */
 
 
 button i {
-    border: solid var(--five-color);
+    border: solid var(--twelve-color);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
     margin: 3px 8px;
+    /*    display: block;*/
 }
 
-
-
-/* Pile */
-
-/*
-button .left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-}
-*/
 
 /* Pile - Slut*/
-
-
-/****** ny-filtrering ******/
-#ny-filtrering .sortering button {
-    border-style: none;
-    padding: 0 1rem;
-    margin-right: 1rem;
-    margin-left: auto;
-}
-
-#ny-filtrering .sortering button:hover {
-    /*    background-color: var(--fourteen-color);*/
-    color: var(--one-color);
-}
-
-#ny-filtrering .dropdown {
-    height: 100%;
-    display: block;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    margin: 0 2rem;
-    padding: 1rem 0;
-}
-
-#ny-filtrering .dropbtn {
-    border: none;
-    outline: none;
-    color: var(--five-color);
-    font-size: 1rem;
-    padding: 1rem;
-    background-color: inherit;
-    text-decoration: underline;
-    margin: 0;
-    margin-left: 1rem;
-    padding: 0;
-}
-
-#ny-filtrering .dropbtn {
-    font-weight: 600;
-}
-
-#ny-filtrering .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-#ny-filtrering .sortering {
-    /*Sortering er skjult*/
-    display: none;
-    position: absolute;
-    background-color: var(--five-color);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    margin: 2rem 1rem;
-}
-
-#ny-filtrering .dropdown:hover .sortering {
-    /*  Sorterings muligheder åbner ved hover*/
-    display: block;
-}
-
-#ny-filtrering .sort {
-    background-color: transparent;
-    padding: 1rem;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    height: 100%;
-    font-weight: 300;
-}
-
-#ny-filtrering .valgte_retter {
-    margin-top: 4rem;
-}
-
-#ny-filtrering article p {
-    padding: 0px;
-    text-align: center;
-}
-
-/****** ny-filtrering ******/
 
 
 
@@ -1798,10 +1712,11 @@ button .left {
 
 #cykler button i {
     border: solid var(--five-color);
-    border-width: 0 3px 3px 0;
+    border-width: 0 4px 4px 0;
     display: inline-block;
-    padding: 3px;
-    margin: 3px 8px;
+    padding: 4px;
+    margin: 0px 6px 4px;
+    display: block;
 }
 
 #cykler button:hover i {}
@@ -1833,7 +1748,6 @@ button .left {
     margin: 0;
 }
 
-
 .acc {
     background: inherit;
     font-weight: 700;
@@ -1851,12 +1765,13 @@ button .left {
     transition: all .5s linear;
     border: 0;
     width: 100%;
-    padding: 0;
     min-width: 150px;
     font-weight: 700;
     cursor: pointer;
     min-width: 150px;
     font-weight: 500;
+    padding: 0;
+    padding: 0 0.05rem 0;
 }
 
 
@@ -1882,14 +1797,12 @@ button .left {
     justify-content: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-
 }
 
 
 .accordion-item {
     padding: 0 2rem;
 }
-
 
 /* Roter pile tilbage*/
 .rotate_tilbage {
@@ -1940,36 +1853,6 @@ button .left {
 
 }
 
-
-/*
-.accordion .collapse-title::after {
-    position: absolute;
-    float: right;
-    right: 1rem;
-    font-size: 1rem;
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-        border: 1px solid var(--twelve-color);
-    text-align: center;
-    -moz-transition: all .5s linear;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
-    content: "+";
-}
-*/
-/*
-.accordion .collapse-title.active::after {
-    color: var(--five-color);
-    border: 1px solid var(--five-color);
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-*/
-
 .accordion-knap {
     all: inherit;
     border: 0;
@@ -1985,6 +1868,7 @@ button .left {
 }
 
 /****** Accordion Slut ******/
+
 /*------------------------------------*\
 8.2 CYKLER - SLUT
 \*------------------------------------*/
@@ -2024,8 +1908,6 @@ button .left {
     max-width: 800px;
 }
 
-/* Vores reponsive tabeller er inspireret af artiklen "Making Tables Responsive With Minimal CSS" fra CSS-Tricks. Link: https://css-tricks.com/making-tables-responsive-with-minimal-css/ */
-
 .luk {
     font-size: 1rem;
     cursor: pointer;
@@ -2036,13 +1918,26 @@ button .left {
 
 .liste {
     padding: 0;
-    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.fordele_box {
     margin: 0 auto;
 }
 
 .title_box {
     background-color: white;
     padding: 10px;
+}
+
+.title_box h4 {
+    color: var(--five-color);
+
+}
+
+.title_box h5 {
+    color: var(--three-color);
+    line-height: 1.6;
 }
 
 .billede_box {
@@ -2055,23 +1950,23 @@ button .left {
 }
 
 .pris {
+    font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
+    font-weight: 500;
     text-align: right;
     padding: 0px 20px 0 0;
-    font-size: 21px;
-
+    font-size: 1.5rem;
 }
 
 .pris_style {
     text-align: right;
     color: #0E7DC7;
-    padding: 0 20px 10px;
+    padding: 0 20px 32px;
     font-size: 10px;
 }
 
 .praesentation {
     padding: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: var(--three-color);
 }
 
 .vmf_box {
@@ -2083,16 +1978,20 @@ button .left {
 .farve {
     font-weight: bold;
     color: #0E7DC7;
-    padding: 10px;
+    padding: 5px 10px
 }
-
-
 
 .singleview_overskrift {
     margin: 30px 20px;
     font-size: 1.6rem;
+    margin: 0 auto;
+    text-align: center;
 }
 
+#singleview .grid_boks {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 
 .fordel1,
@@ -2151,29 +2050,10 @@ button .left {
 }
 
 .laes_mere_link {
-    text-align: center;
-
-}
-
-
-.laes_mere_link {
     align-self: center;
     text-decoration: none;
     cursor: pointer;
     font-family: futura-pt, Arial, Helvetica, Roboto, sans-serif;
-
-}
-
-/*
-.laes_mere_link p {
-    text-decoration: none;
-    cursor: pointer;
-    font-family: futura-pt,
-        Arial,
-        Helvetica,
-        Roboto,
-        sans-serif;
-
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
@@ -2185,32 +2065,14 @@ button .left {
     background: 0;
     border: 1px solid var(--one-color);
     transition: 0.4s;
+
 }
-*/
+
 
 .laes_mere_link:hover {
     color: var(--five-color);
     background: var(--one-color);
-
 }
-
-/*
-
-.laes_mere_link p:hover {
-    color: var(--five-color);
-    background: var(--one-color);
-    border: solid var(--five-color) 1px;
-}
-*/
-
-
-.link_container a {
-    text-decoration: none;
-    align-self: center;
-
-}
-
-
 
 @media screen and (min-width: 800px) {
 
@@ -2230,15 +2092,10 @@ button .left {
         background-color: white;
     }
 
-    /*her har i sat en højde på, der gør at footeren skraber over*/
-
-
     .grid_boks {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
     }
-
 
     .title_box {
         grid-area: 1 / 2 / 1 / 2;
@@ -2266,7 +2123,6 @@ button .left {
     }
 
     .fordele_box {
-        /*        border-top: 1px solid #b1adad;*/
         background-color: #EEEFEF;
         padding-bottom: 50px;
         padding-top: 50px;
@@ -2327,61 +2183,34 @@ button .left {
     }
 }
 
-/*
-table {
-    border-collapse: collapse;
-    text-align: left;
-    width: 100%;
-    margin: 2rem 0 1rem;
-}
-
-table tr {
-    background: var(--one-color);
-    border-bottom: 1px solid
-}
-
-table th,
-table td {
-    padding: 10px 20px;
-}
-
-table td span {
-    background: var(--two-color);
-    color: var(--three-color);
-    display: none;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 5px;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0;
-    left: 0;
-
-}
-
-table td p {
-    padding: 0;
-    text-transform: capitalize;
-
-}
-*/
-
-
-
-
-
 /*------------------------------------*\
 8.3 Singleview - SLUT
 \*------------------------------------*/
 
+
+
 /*------------------------------------*\
-8.4 About
+8.4 Om Koga Center
 \*------------------------------------*/
 
-#om_koga_center .sectionwrapper iframe {
-    max-width: 100%;
-    max-height: 80%;
+
+/*** YouTube Video ***/
+.video_wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
 }
+
+#youtube-video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/***** YouTube Video - SLUT *****/
 
 #om_koga_center h1 {
     text-align: center;
@@ -2402,7 +2231,7 @@ table td p {
 }
 
 #historie {
-    background-color: var(--one-color);
+    background-color: var(--two-color);
 }
 
 #historie figure {
@@ -2494,10 +2323,6 @@ table td p {
     }
 
 
-    #om_koga_center iframe {
-        height: 30vw;
-    }
-
     #om_koga_center h2 {
         margin-left: 1.5rem;
         margin-bottom: 2rem;
@@ -2506,9 +2331,6 @@ table td p {
     #service figure {
         padding: 1.5rem 0;
     }
-
-
-
 
 }
 
@@ -2520,6 +2342,12 @@ table td p {
 /*------------------------------------*\
 8.5 Kontakt
 \*------------------------------------*/
+
+.kontakt-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
 #kontakt_side {
     background: white;
@@ -2535,16 +2363,17 @@ table td p {
 #kontakt_side .aabningstider {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 200px;
     color: var(--twelve-color);
+    padding: 0.5rem 1rem;
 }
 
 
 #kontakt_side address {
-
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 
 #kontakt_side li,
@@ -2595,13 +2424,24 @@ table td p {
 }
 
 
-#kontakt_side .kort_map iframe {
-    max-width: 100%;
-    max-height: 80vw;
-    padding: 1.5rem 0;
+.kort_map {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin: 1rem;
 }
 
-
+#google-maps {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    max-width: 600px;
+}
 
 /*------------------------------------*\
 8.5 Kontakt - SLUT
@@ -2634,15 +2474,15 @@ table td p {
     text-transform: uppercase;
     min-width: 120px;
     color: var(--one-color);
-    background: var(--thirteen-color);
+    background: var(--five-color);
     border: 1px solid var(--five-color);
     transition: 0.4s;
 
 }
 
 a.knap-cykler_signature:hover {
-    color: var(--five-color);
-    background: var(--one-color);
+    color: white;
+    background: var(--thirteen-color);
     border: solid var(--five-color) 1px;
 }
 
@@ -2693,10 +2533,18 @@ a.knap-cykler_signature:hover {
         --auto-grid-min-size: 150px;
     }
 
-
 }
 
 @media (min-width: 450px) {
+
+    #splash a.cta,
+    #forside a.knap-cykler {
+        padding: 0.75rem 2rem;
+    }
+
+
+
+    /*** Cykler   ***/
     #cykler .auto-grid {
         --auto-grid-min-size: 200px;
     }
@@ -2710,9 +2558,12 @@ a.knap-cykler_signature:hover {
     }
 
 
+    .filter-koen {
+        width: 100px;
+        margin: 0 0 0 0.5rem;
+
+    }
 }
-
-
 
 
 @media (max-width: 800px) {
@@ -2793,12 +2644,7 @@ a.knap-cykler_signature:hover {
 
 
     .topnav responsive a:hover,
-    a.menubtn:hover {
-        /*
-        background: var(--one-color);
-        color: var(--two-color);
-*/
-    }
+    a.menubtn:hover {}
 
     .dropdown-content a.menubtn:hover {
         background: #2C2C2C;
@@ -2849,7 +2695,13 @@ a.knap-cykler_signature:hover {
 
 @media (min-width: 640px) {
 
-    #myVideo {
+    #splash a.cta,
+    #forside a.knap-cykler {
+        font-size: 1rem;
+    }
+
+
+    #video-bg {
         position: relative;
         right: 0;
         bottom: 0;
@@ -2905,6 +2757,10 @@ a.knap-cykler_signature:hover {
         font-size: 1rem;
     }
 
+    .kontakt-wrapper {
+        flex-direction: initial;
+
+    }
 
 
     /***    Cykler ***/
@@ -2916,7 +2772,6 @@ a.knap-cykler_signature:hover {
     }
 
     #cykler .card-cykel {
-        grid-row-gap: 1rem;
         padding: 1rem 2rem;
     }
 
@@ -2931,15 +2786,8 @@ a.knap-cykler_signature:hover {
 
 @media screen and (min-width:800px) {
 
-    /*****  FORSIDE - GRID  *****/
-    .test-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "ebike city trekking racer";
-    }
-
     #forside .card-header h4 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #blue-section .citat1_om {
@@ -2990,28 +2838,6 @@ a.knap-cykler_signature:hover {
         display: none;
     }
 
-    /*
-    article.kategori_ebike {
-        background-size: 80vw;
-        background-position: 48vw;
-    }
-
-    article.kategori_city {
-        background-size: 80vw;
-        background-position: -30vw;
-    }
-
-    article.kategori_trekking {
-        background-size: 80vw;
-        background-position: 25vw;
-    }
-
-    article.kategori_racer {
-        background-size: 80vw;
-        background-position: -55vw;
-    }
-*/
-
 
 }
 
@@ -3043,8 +2869,6 @@ a.knap-cykler_signature:hover {
     }
 
     #om img {
-        /*        margin-top: 80px;*/
-        /*        margin-left: 60px;*/
         height: auto;
         width: 100%;
     }
@@ -3069,8 +2893,10 @@ a.knap-cykler_signature:hover {
         /*        color: var(--five-color);*/
     }
 
+
     .menu_wrapper li > a.underline:before {
         background-color: var(--five-color);
+
     }
 
     /*Hover Animationer -> Header Menu  - SLUT*/
@@ -3112,8 +2938,21 @@ a.knap-cykler_signature:hover {
         grid-gap: 1rem;
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
-            "hd      hd   hd   hd"
+            "køn      køn   køn   køn"
             "sidebar modeller modeller modeller";
+    }
+
+    #cykler .top-tekst p {
+        display: block;
+        padding: 0 0 1rem;
+    }
+
+    .filter-koen {
+        margin: 0 0 1rem 0.5rem;
+    }
+
+    .filter-koen:last-child button.top-knapper {
+        margin: 0 0.5rem 0 0;
     }
 
     #mobil-filtrering {
@@ -3159,6 +2998,20 @@ a.knap-cykler_signature:hover {
 
     }
 
+    #cykler .card-cykel {
+        grid-row-gap: 1rem;
+    }
+
+    /***** Singleview *****/
+    #singleview .title_box h4 {
+        font-size: 1.5rem;
+    }
+
+    #singleview .title_box h5 {
+        font-size: 1.2rem;
+    }
+
+    /***** Singleview - Slut *****/
 
 }
 
@@ -3180,14 +3033,18 @@ a.knap-cykler_signature:hover {
         font-size: 1rem;
     }
 
-    #forside .card-header h4 {
-        font-size: 2rem;
-    }
-
     #cykler .auto-grid {
         --auto-grid-min-size: 268px;
 
     }
+
+    /*  Grid på Forside */
+    .test-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "ebike city trekking racer";
+    }
+
 
 }
 
@@ -3204,6 +3061,10 @@ a.knap-cykler_signature:hover {
 
     #splash .wrapper {
         grid-row-gap: 1.5rem;
+    }
+
+    .kontakt-wrapper {
+        flex-direction: column;
     }
 
 }
