@@ -2242,6 +2242,7 @@ button i {
 #blue-section .citat1_om {
     text-align: left;
     font-size: 2rem;
+    margin-top: 40px;
 }
 
 #blue-section .citat2_om {
@@ -2793,13 +2794,15 @@ a.knap-cykler_signature:hover {
     #blue-section .citat1_om {
         text-align: left;
         font-size: 2rem;
-        margin-left: 100px;
+        margin-left: 150px;
+        margin-top: 10px;
     }
 
     #blue-section .citat2_om {
         text-align: right;
         font-size: 2rem;
-        margin-right: 100px;
+        margin-right: 150px;
+        margin-top: -10px;
     }
 
 
