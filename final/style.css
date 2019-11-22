@@ -900,6 +900,7 @@ footer .lokalitet :first-child {
 }
 
 #knap-top {
+    background: var(--five-color);
     display: none;
     justify-content: center;
     align-items: center;
@@ -908,7 +909,6 @@ footer .lokalitet :first-child {
     margin: 0 1rem 1rem auto;
     width: 60px;
     height: 60px;
-    background: var(--five-color);
     margin: 0 1rem 1rem auto;
     min-width: initial;
     padding: 0;
@@ -921,7 +921,12 @@ footer .lokalitet :first-child {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
     animation-duration: 2s;
+}
 
+
+
+.til-top.responsive {
+    opacity: 0;
 }
 
 /*------------------------------------*\
@@ -1923,6 +1928,7 @@ button i {
 
 .fordele_box {
     margin: 0 auto;
+    padding: 2rem 0
 }
 
 .title_box {
@@ -1978,7 +1984,9 @@ button i {
 .farve {
     font-weight: bold;
     color: #0E7DC7;
-    padding: 5px 10px
+    padding: 0 0 10px;
+    line-height: 1;
+
 }
 
 .singleview_overskrift {
@@ -1991,6 +1999,7 @@ button i {
 #singleview .grid_boks {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 0 1rem
 }
 
 
@@ -2001,9 +2010,11 @@ button i {
     background-image: url(files/svg/flueben.svg);
     background-repeat: no-repeat;
     background-size: 60px;
-    margin: 30px 30px;
+    margin: 1rem;
     padding: 5px 0 0 70px;
     min-height: 80px;
+    line-height: 1.6;
+    color: var(--three-color);
 }
 
 
@@ -2028,9 +2039,14 @@ button i {
     color: white;
     width: 100%;
     height: 100%;
-    background-size: 100vw;
+    background-size: 100%;
     background-position: 0vw;
     background-repeat: no-repeat;
+    background-position: 0vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .link_container {
@@ -2045,6 +2061,7 @@ button i {
 }
 
 .link_tekst {
+    font-size: 0.85rem;
     min-width: 250px;
     padding: 10px 30px;
 }
@@ -2065,6 +2082,7 @@ button i {
     background: 0;
     border: 1px solid var(--one-color);
     transition: 0.4s;
+    margin: 10px 0;
 
 }
 
@@ -2095,6 +2113,7 @@ button i {
     .grid_boks {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
     }
 
     .title_box {
@@ -2124,8 +2143,7 @@ button i {
 
     .fordele_box {
         background-color: #EEEFEF;
-        padding-bottom: 50px;
-        padding-top: 50px;
+        padding: 2.5rem 0
     }
 
 
@@ -2137,8 +2155,8 @@ button i {
     .fordele {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        max-width: 1000px;
+        justify-content: space-around;
+        max-width: 1400px;
         margin: auto;
 
     }
@@ -2147,12 +2165,17 @@ button i {
     .fordel2,
     .fordel3,
     .fordel4 {
-        padding: 10px 10px 10px 150px;
-        margin: 40px;
-        flex-basis: 400px;
-        background-size: 20%;
+        padding: 0px 6px 10px 100px;
+        margin: 1rem 2rem;
+        flex-basis: 500px;
+        background-size: 15%;
     }
 
+    .vaegt,
+    .maal,
+    .farve {
+        font-size: 0.85rem;
+    }
 
     .billedtekst_box {
         max-width: none;
@@ -2162,7 +2185,8 @@ button i {
 
 
     .link_tekst {
-        margin-right: 90px;
+        font-size: 1rem;
+
     }
 
     #cykler .box_blue_cykler {}
@@ -2175,7 +2199,7 @@ button i {
     .link_container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         flex-direction: row;
         background-color: var(--fourteen-color);
         padding: 50px;
@@ -3070,6 +3094,13 @@ a.knap-cykler_signature:hover {
         flex-direction: column;
     }
 
+    #singleview .grid_boks {
+        grid-column-gap: 5rem;
+    }
+
+    .liste p {
+        max-width: 600px;
+    }
 }
 
 /*------------------------------------*\

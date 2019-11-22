@@ -25,8 +25,10 @@ function menuFunction() {
     /* Ved klik tilføjes eller fjernes "responsive" class på topnav */
     console.log("menuFunction");
     let x = document.querySelector("#myTopnav");
+    let y = document.querySelector("#knap-top");
 
     x.classList.toggle("responsive");
+    y.classList.toggle("responsive");
 }
 
 
